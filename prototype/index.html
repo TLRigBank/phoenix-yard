@@ -8,41 +8,38 @@
   :root {
     --ink: #1c1916;
     --pine: #1B3A2F;
-    --pine-2: #2F5A45;
     --sand: #F4EDE1;
     --paper: #FFFBF4;
     --line: #D9D0C0;
-    --muted: #6A6358;
+    --muted: #4E493F;
     --ember: #C45A28;
     --ok: #DCE8DC;
     --warn: #F3D7B3;
-    --danger: #E8B8B2;
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0; background: var(--sand); color: var(--ink);
     font: 17px/1.45 "Avenir Next", "Segoe UI", sans-serif;
   }
+  button:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
   #app {
     max-width: 430px; margin: 0 auto; min-height: 100dvh;
     background: var(--paper); display: flex; flex-direction: column;
   }
-  header {
-    padding: 16px 20px 0; display: flex; justify-content: space-between; align-items: center;
-  }
+  header { padding: 16px 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
   .brand { font-weight: 700; color: var(--pine); }
-  .dots-prog { display: flex; gap: 5px; }
-  .dots-prog i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); display: block; }
-  .dots-prog i.on { background: var(--pine); }
+  .count { font-size: 16px; color: var(--muted); }
   main { flex: 1; padding: 12px 20px 16px; }
   h1 { font-size: 28px; line-height: 1.15; color: var(--pine); margin: 12px 0 10px; letter-spacing: -0.02em; }
   h1.sm { font-size: 22px; }
   .lead { color: var(--muted); margin: 0 0 18px; }
-  .hint { font-size: 14px; color: var(--muted); background: var(--ok); border-radius: 12px; padding: 12px 14px; margin: 0 0 16px; }
+  .place { margin: 0 0 6px; color: var(--pine); font-weight: 700; }
+  .hint { font-size: 16px; color: var(--ink); background: var(--ok); border-radius: 12px; padding: 12px 14px; margin: 0 0 16px; }
   .hint.warn { background: var(--warn); }
+  .kept { font-size: 16px; background: var(--warn); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
   footer { padding: 8px 20px 28px; display: flex; gap: 8px; }
-  button.pri, button.ghost, button.ans {
-    border-radius: 14px; padding: 16px; font-size: 17px; font-weight: 650; cursor: pointer;
+  button.pri, button.ghost, button.ans, button.extra {
+    border-radius: 14px; min-height: 48px; padding: 12px 16px; font-size: 17px; font-weight: 650; cursor: pointer;
   }
   button.pri { flex: 1; background: var(--pine); color: #fff; border: 0; }
   button.ghost { flex: 1; background: transparent; border: 1px solid var(--line); color: var(--pine); }
@@ -52,16 +49,16 @@
   }
   button.ans.on { background: var(--pine); color: #fff; border-color: var(--pine); }
   .yard {
-    position: relative; height: 300px; margin: 8px 0 12px;
+    position: relative; height: 280px; margin: 8px 0 12px;
     background: #EFE6D4; border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
   }
-  .gravel { position: absolute; inset: 0; background:
+  .gravel-bed { position: absolute; inset: 0; background:
     repeating-linear-gradient(45deg, #e8dcc6 0 8px, #efe6d4 8px 16px); opacity: .55; }
   .house {
-    position: absolute; left: 50%; top: 50%; width: 118px; height: 88px;
-    transform: translate(-50%, -58%); background: var(--pine); color: #fff;
+    position: absolute; left: 50%; top: 46%; width: 118px; height: 88px;
+    transform: translate(-50%, -50%); background: var(--pine); color: #fff;
     border-radius: 8px; display: flex; align-items: center; justify-content: center;
-    font-size: 13px; font-weight: 650; z-index: 2;
+    font-size: 16px; font-weight: 650; z-index: 2;
   }
   .house:after {
     content: ""; position: absolute; top: -22px; left: 12px; right: 12px; height: 28px;
@@ -69,125 +66,167 @@
   }
   .side {
     position: absolute; border: 2px dashed #b7ab95; background: rgba(255,255,255,.55);
-    color: var(--muted); font-size: 12px; font-weight: 650; display: flex; align-items: center;
+    color: var(--ink); font-size: 14px; font-weight: 650; display: flex; align-items: center;
     justify-content: center; text-align: center; padding: 4px; cursor: pointer; z-index: 3;
   }
-  .side.on { background: var(--ok); border-style: solid; border-color: var(--pine); color: var(--pine); }
-  .side.hot { background: #f3d0b8; border-color: var(--ember); color: #7a3210; }
-  .side[data-id="front"] { left: 28%; right: 28%; top: 18px; height: 46px; border-radius: 10px; }
-  .side[data-id="back"] { left: 28%; right: 28%; bottom: 62px; height: 44px; border-radius: 10px; }
-  .side[data-id="left"] { left: 10px; top: 78px; width: 58px; height: 86px; border-radius: 10px; writing-mode: horizontal-tb; }
-  .side[data-id="right"] { right: 10px; top: 78px; width: 58px; height: 86px; border-radius: 10px; }
-  .spot {
-    position: absolute; z-index: 3; border-radius: 999px; border: 2px dashed #b7ab95;
-    background: rgba(255,255,255,.7); font-size: 11px; font-weight: 650; color: var(--muted);
-    padding: 6px 10px; cursor: pointer;
+  .side.hot { background: #f3d0b8; border-color: var(--ember); color: #7a3210; border-style: solid; }
+  .side[data-id="front"] { left: 22%; right: 22%; top: 14px; height: 52px; border-radius: 10px; }
+  .side[data-id="back"] { left: 22%; right: 22%; bottom: 14px; height: 52px; border-radius: 10px; }
+  .side[data-id="left"] { left: 10px; top: 78px; width: 64px; height: 96px; border-radius: 10px; }
+  .side[data-id="right"] { right: 10px; top: 78px; width: 64px; height: 96px; border-radius: 10px; }
+  .extra-row { display: flex; gap: 8px; margin: 0 0 8px; }
+  button.extra {
+    flex: 1; background: #fff; border: 1px solid var(--line); color: var(--muted); font-weight: 650;
   }
-  .spot.on { background: var(--ok); border-color: var(--pine); color: var(--pine); border-style: solid; }
-  .spot[data-id="gate"] { left: 14px; bottom: 12px; }
-  .spot[data-id="pots"] { right: 14px; bottom: 12px; }
-  .spot[data-id="gravel"] { left: 50%; bottom: 12px; transform: translateX(-50%); }
+  button.extra.on { background: var(--ok); border-color: var(--pine); color: var(--pine); }
   .card {
     background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px; margin: 0 0 10px;
   }
-  .card.gone { opacity: .45; text-decoration: line-through; }
   .swatch { height: 56px; border-radius: 10px; margin: 0 0 10px; }
   .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
   .name { font-weight: 750; font-size: 18px; }
-  .job { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
-  .chips { display: flex; flex-wrap: wrap; gap: 5px; margin: 8px 0 6px; }
-  .mini { font-size: 12px; border-radius: 999px; padding: 4px 8px; background: var(--sand); color: var(--muted); }
-  .mini.warn { background: var(--warn); color: #6b3a12; }
+  .job { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .meta { margin: 2px 0 0; font-size: 16px; color: var(--muted); }
+  .botanical { margin: 0; font-size: 15px; color: var(--muted); font-style: italic; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .mini { font-size: 14px; border-radius: 999px; padding: 4px 8px; background: var(--sand); color: var(--ink); }
+  .mini.warn { background: var(--warn); }
   .mini.ok { background: var(--ok); color: var(--pine); }
-  .why { margin: 0; font-size: 15px; color: var(--muted); }
-  .same { font-size: 12px; color: var(--pine); margin: 6px 0 0; font-weight: 650; }
-  .strip-nav { display: flex; justify-content: space-between; align-items: center; margin: 0 0 10px; }
-  .strip-nav strong { color: var(--pine); }
-  .tiny { font-size: 13px; color: var(--muted); }
+  .why { margin: 0; font-size: 16px; }
+  .same { font-size: 15px; color: var(--pine); margin: 8px 0 0; font-weight: 650; }
+  .strip-nav { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .strip-nav strong { color: var(--pine); font-size: 20px; }
   .dogbar {
     display: flex; align-items: center; justify-content: space-between; gap: 8px;
     background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; margin: 0 0 12px;
   }
+  .sum { padding: 12px 0; border-top: 1px solid var(--line); }
+  .sum h2 { margin: 0 0 6px; font-size: 18px; color: var(--pine); }
+  .sum p { margin: 0 0 4px; }
 </style>
 </head>
 <body>
 <div id="app"></div>
 <script>
+/* Walk only. The twelve plants are tests/fixtures/default.json from engine/match.js. This file does not score. */
 const STRIPS = [
   { id: "wall", title: "Afternoon wall", caption: "Blades, then a flower, then something low. Almost no extra water." },
-  { id: "gate", title: "The gate", caption: "Safe to brush past. Black Dalea feeds the soil." },
-  { id: "pots", title: "The pots", caption: "Small enough for a patio. Color in the front pot." },
-  { id: "gravel", title: "Open gravel", caption: "Blades, a grass that moves, a small cactus." }
+  { id: "gate", title: "The gate", caption: "Safe to brush past." },
+  { id: "pots", title: "The pots", caption: "Small enough for a patio." },
+  { id: "gravel", title: "Open gravel", caption: "Blades, a grass that moves, then something low." }
 ];
+const NEXT = {
+  wall: "Next — the afternoon wall",
+  gate: "Next — the gate",
+  pots: "Next — the pots",
+  gravel: "Next — open gravel"
+};
+const PLACE = { front: "Front side", back: "Back side", left: "Left side", right: "Right side" };
+const KEPT = "Kept off the gate: Jumping cholla. Joints that jump.";
+const SESSION = "Oleander and sago stay off the whole list.";
 
 const CARDS = {
   wall: [
-    { name: "Red Yucca", job: "Bone", texture: "Blades", colors: ["#c0392b"], chips: ["Almost no water", "Takes afternoon heat", "Safe to brush"],
-      why: "Upright plant for the hot wall. Native. Low care." },
-    { name: "Flame Honeysuckle", job: "Bloom", texture: "Leaves", colors: ["#c0392b", "#e67e22"], chips: ["Almost no water", "Hummingbirds"],
-      why: "Flower after the yucca starts. Same dry water." },
-    { name: "Native Hedgehog", job: "Floor", texture: "Mound", colors: ["#d46a9a"], chips: ["Almost no water", "Spines — not for the gate"],
-      why: "Low spring color. Keep it off the path.", warn: true }
+    { name: "Red Yucca", botanical: "Hesperaloe parviflora", job: "Bone", texture: "Blades", height: "2–3 ft", colors: ["#9E2B2B"],
+      chips: ["Almost no extra water", "Takes afternoon heat", "Grows here already"],
+      why: "Bone for the afternoon wall. Almost no extra water. Grows here already." },
+    { name: "Parry’s Penstemon", botanical: "Penstemon parryi", job: "Bloom", texture: "Mound", height: "2–4 ft", colors: ["#C46B8A"],
+      chips: ["Almost no extra water", "Takes afternoon heat", "Grows here already"],
+      why: "Bloom for the afternoon wall. Almost no extra water. Grows here already." },
+    { name: "Native Hedgehog", botanical: "Echinocereus engelmannii", job: "Floor", texture: "Blades", height: "1–2 ft", colors: ["#C46B8A"],
+      chips: ["Spines", "Almost no extra water", "Takes afternoon heat", "Grows here already"], warn: true,
+      why: "Floor for the afternoon wall. Almost no extra water. Keep it off the path." }
   ],
   gate: [
-    { name: "Red Yucca", job: "Bone", texture: "Blades", colors: ["#c0392b"], chips: ["Safe to brush", "Almost no water"],
-      why: "Same plant as the afternoon wall — now at the gate.", same: "Same as the afternoon wall" },
-    { name: "Black Dalea", job: "Bloom", texture: "Low shrub", colors: ["#6b4f8a"], chips: ["Safe to brush", "Feeds the soil", "Fall flower"],
-      why: "Color without thorns. Blooms later so the hummingbird still has a job." },
-    { name: "Texas Tuberose", job: "Floor", texture: "Blades", colors: ["#d46a9a"], chips: ["Safe to brush", "Almost no water"],
-      why: "Low form by the latch. Soft edge." }
+    { name: "Red Yucca", botanical: "Hesperaloe parviflora", job: "Bone", texture: "Blades", height: "2–3 ft", colors: ["#9E2B2B"],
+      chips: ["Safe to brush", "Almost no extra water", "Grows here already"],
+      why: "Bone for the gate. Almost no extra water. Grows here already.", same: "Same as the afternoon wall" },
+    { name: "Desert Honeysuckle", botanical: "Anisacanthus thurberi", job: "Bloom", texture: "Leaves", height: "2–4 ft", colors: ["#D4652F"],
+      chips: ["Safe to brush", "Almost no extra water", "Grows here already"],
+      why: "Bloom for the gate. Almost no extra water. Grows here already." },
+    { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Floor", texture: "Blades", height: "0.5–1 ft", colors: ["#C46B8A"],
+      chips: ["Safe to brush", "Almost no extra water", "Grows here already"],
+      why: "Floor for the gate. Almost no extra water. Grows here already." }
   ],
   pots: [
-    { name: "Texas Tuberose", job: "Bone", texture: "Blades", colors: ["#d46a9a"], chips: ["Fits a pot", "Safe to brush"],
-      why: "Shape in a container. Stays small enough for the patio." },
-    { name: "Desert Marigold", job: "Bloom", texture: "Mound", colors: ["#e2b007"], chips: ["Fits a pot", "Gold flower"],
-      why: "The color in the front pot." },
-    { name: "Claret Cup", job: "Floor", texture: "Mound", colors: ["#c0392b"], chips: ["Spines", "Fits a pot"],
-      why: "Small cactus for color. Not for hands or a chewing dog.", warn: true, hideIfHands: true }
+    { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Bone", texture: "Blades", height: "0.5–1 ft", colors: ["#C46B8A"],
+      chips: ["Fits a pot", "Almost no extra water", "Grows here already"],
+      why: "Bone for the pots. Almost no extra water. Grows here already.", same: "Same as the gate" },
+    { name: "Desert Marigold", botanical: "Baileya multiradiata", job: "Bloom", texture: "Mound", height: "1–2 ft", colors: ["#C8960A"],
+      chips: ["Fits a pot", "Almost no extra water", "Grows here already"],
+      why: "Bloom for the pots. Almost no extra water. Grows here already." },
+    { name: "Beavertail Prickly Pear", botanical: "Opuntia basilaris", job: "Floor", texture: "Mound", height: "1–2 ft", colors: ["#C46B8A"],
+      chips: ["Spines", "Fits a pot", "Almost no extra water", "Grows here already"], warn: true,
+      why: "Floor for the pots. Almost no extra water. Keep it off the path." }
   ],
   gravel: [
-    { name: "Giant Hesperaloe", job: "Bone", texture: "Blades", colors: ["#f4f0e6"], chips: ["Almost no water", "Safe to brush"],
-      why: "The tall bone in the gravel." },
-    { name: "Pine Muhly", job: "Bloom", texture: "Cloud", colors: ["#c4b48a"], chips: ["Almost no water", "Moves in wind"],
-      why: "The grass that moves when monsoon wind hits." },
-    { name: "Native Hedgehog", job: "Floor", texture: "Mound", colors: ["#d46a9a"], chips: ["Spines", "Spring flower"],
-      why: "Small cactus in the open. Not next to the gate.", warn: true }
+    { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", texture: "Blades", height: "3–5 ft", colors: ["#8AA0B4"],
+      chips: ["Spines", "Almost no extra water", "Grows here already"], warn: true,
+      why: "Bone for the gravel. Almost no extra water. Keep it off the path." },
+    { name: "Pine Muhly", botanical: "Muhlenbergia dubia", job: "Bloom", texture: "Cloud", height: "2–3 ft", colors: ["#C5CDC6"],
+      chips: ["Almost no extra water", "Grows here already"],
+      why: "Bloom for the gravel. Almost no extra water. Grows here already." },
+    { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", texture: "Mound", height: "0.5–1 ft", colors: ["#6B4F8A"],
+      chips: ["Almost no extra water", "Grows here already", "Feeds the soil"],
+      why: "Floor for the gravel. Almost no extra water. Feeds the soil." }
   ]
 };
 
-const POTS_SAFE = { name: "Desert Marigold", job: "Floor", texture: "Mound", colors: ["#e2b007"], chips: ["Fits a pot", "Safe to brush"],
-  why: "Replaces the cactus in the pot when kids or a chewing dog are in the yard." };
+const QUESTIONS = [
+  { key: "kids", title: "Do kids play in the plants?",
+    hint: "If yes, we hide plants that can make a child very sick.",
+    answers: [["No", false], ["Yes", true]] },
+  { key: "chew", title: "Does a dog or cat chew leaves?",
+    hint: "If yes, sago and oleander leave the list. Aloe stays, marked as a problem if they chew.",
+    answers: [["No", false], ["Yes — they chew", true]] },
+  { key: "wildlife", title: "Do you want birds and butterflies?",
+    hint: "If yes, we keep plants that feed them. Native milkweed can stay when kids or a pet chew, and the card says it is still toxic.",
+    answers: [["Not a goal", false], ["Yes", true]] },
+  { key: "care", title: "How much time do you have?",
+    hint: "Almost none means gravel plants. Weekends can add one extra-water plant at the gate or in a pot.",
+    answers: [["Almost none", "Low"], ["Weekends", "Weekend"], ["It’s a hobby", "Hobby"]] }
+];
 
 const state = {
-  screen: "home",
-  q: 0,
-  hot: "right",
+  screen: "home", q: 0, hot: "right",
   extras: { gate: true, pots: true, gravel: true },
   kids: null, chew: null, wildlife: true, care: null,
-  strip: 0,
-  lastChange: ""
+  strip: 0, lastChange: ""
 };
 
-function prog(nOn) {
-  return `<div class="dots-prog">${[0,1,2,3,4,5].map(i => `<i class="${i<=nOn?"on":""}"></i>`).join("")}</div>`;
+try {
+  const saved = JSON.parse(localStorage.getItem("phoenix-yard-v1") || "null");
+  if (saved && saved.hot && saved.extras) {
+    Object.assign(state, saved, { lastChange: "" });
+  }
+} catch (err) { /* private mode */ }
+
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&", "<": "<", ">": ">", '"': """ }[c]));
+}
+function placeLine() { return PLACE[state.hot] + " · afternoon sun"; }
+function visibleStrips() {
+  return STRIPS.filter((strip) => strip.id === "wall" || state.extras[strip.id]);
+}
+function advanceQ() {
+  const key = QUESTIONS[state.q].key;
+  if (state[key] === null || state[key] === undefined) return;
+  if (state.q < QUESTIONS.length - 1) state.q += 1;
+  else state.screen = "pieces";
 }
 
 function house(showExtras) {
   const sideLabel = { front: "Front", back: "Back", left: "Left", right: "Right" };
-  const sides = ["front","left","right","back"].map(id => {
+  const sides = ["front", "left", "right", "back"].map((id) => {
     const hot = state.hot === id;
-    return `<button class="side ${hot?"hot":""}" data-act="hot" data-id="${id}">${hot ? "Afternoon sun" : sideLabel[id]}</button>`;
+    return `<button class="side ${hot ? "hot" : ""}" data-act="hot" data-id="${id}">${hot ? "Afternoon sun" : sideLabel[id]}</button>`;
   }).join("");
-  const extras = showExtras ? `
-    <button class="spot ${state.extras.gate?"on":""}" data-act="extra" data-id="gate">Gate</button>
-    <button class="spot ${state.extras.pots?"on":""}" data-act="extra" data-id="pots">Pots</button>
-    <button class="spot ${state.extras.gravel?"on":""}" data-act="extra" data-id="gravel">Gravel</button>` : "";
-  return `<div class="yard">
-    <div class="gravel"></div>
-    ${sides}
-    <div class="house">House</div>
-    ${extras}
-  </div>`;
+  const extras = showExtras ? `<div class="extra-row">
+      <button class="extra ${state.extras.gate ? "on" : ""}" data-act="extra" data-id="gate">Gate</button>
+      <button class="extra ${state.extras.pots ? "on" : ""}" data-act="extra" data-id="pots">Pots</button>
+      <button class="extra ${state.extras.gravel ? "on" : ""}" data-act="extra" data-id="gravel">Gravel</button>
+    </div>` : "";
+  return `<div class="yard"><div class="gravel-bed"></div>${sides}<div class="house">House</div></div>${extras}`;
 }
 
 function screenHome() {
@@ -201,32 +240,17 @@ function screenHome() {
     <footer><button class="pri" data-act="go" data-to="ask">That’s the hot wall</button></footer>`;
 }
 
-const QUESTIONS = [
-  { key: "kids", title: "Do kids play in the plants?",
-    hint: "If yes, we hide plants that can make a child very sick, and keep jump-cholla off the gate.",
-    answers: [["No", false], ["Yes", true]] },
-  { key: "chew", title: "Does a dog or cat chew leaves?",
-    hint: "If yes, sago and oleander leave the list. Aloe is marked as a problem if they chew.",
-    answers: [["No", false], ["Yes — they chew", true]] },
-  { key: "wildlife", title: "Do you want birds and butterflies?",
-    hint: "If yes, we keep plants that feed them. Native milkweed can stay even when kids are around.",
-    answers: [["Not a goal", false], ["Yes", true]] },
-  { key: "care", title: "How much time do you have?",
-    hint: "Almost none means gravel plants. Weekends can add one extra-water pot.",
-    answers: [["Almost none", "Low"], ["Weekends", "Weekend"], ["It’s a hobby", "Hobby"]] }
-];
-
 function screenAsk() {
   const q = QUESTIONS[state.q];
   const btns = q.answers.map(([label, val]) => {
     const on = state[q.key] === val;
-    return `<button class="ans ${on?"on":""}" data-act="answer" data-key="${q.key}" data-val="${val}">${label}</button>`;
+    return `<button class="ans ${on ? "on" : ""}" data-act="answer" data-key="${q.key}" data-val="${val}">${esc(label)}</button>`;
   }).join("");
   return `
-    <header><span class="brand">Just asking</span>${prog(state.q+1)}</header>
+    <header><span class="brand">Phoenix Yard</span><span class="count">${state.q + 1} of 4</span></header>
     <main>
-      <h1 class="sm">${q.title}</h1>
-      <p class="hint">${q.hint}</p>
+      <h1 class="sm">${esc(q.title)}</h1>
+      <p class="hint">${esc(q.hint)}</p>
       ${btns}
     </main>
     <footer>
@@ -237,48 +261,31 @@ function screenAsk() {
 
 function screenPieces() {
   return `
-    <header><span class="brand">What else is in the yard?</span>${prog(5)}</header>
+    <header><span class="brand">Phoenix Yard</span></header>
     <main>
       <h1 class="sm">Keep the pieces you have.</h1>
-      <p class="lead">The shaded wall is the afternoon one. Gate, pots, and gravel are extra strips.</p>
+      <p class="lead">The marked wall is the afternoon one. Gate, pots, and gravel are extra strips.</p>
       ${house(true)}
     </main>
     <footer>
-      <button class="ghost" data-act="go" data-to="ask">Back</button>
-      <button class="pri" data-act="go" data-to="results">See the three</button>
+      <button class="ghost" data-act="back-pieces">Back</button>
+      <button class="pri" data-act="go" data-to="results">See the afternoon wall</button>
     </footer>`;
 }
 
-function visibleStrips() {
-  const list = [{ id: "wall", title: "Afternoon wall" }];
-  if (state.extras.gate) list.push(STRIPS.find(s => s.id === "gate"));
-  if (state.extras.pots) list.push(STRIPS.find(s => s.id === "pots"));
-  if (state.extras.gravel) list.push(STRIPS.find(s => s.id === "gravel"));
-  return list;
-}
-
-function cardsFor(id) {
-  let list = CARDS[id].map(c => ({ ...c }));
-  const hands = state.kids || state.chew;
-  if (id === "pots" && hands) {
-    list = list.filter(c => !c.hideIfHands);
-    if (list.length < 3) list.push(POTS_SAFE);
-  }
-  return list;
-}
-
 function cardEl(c) {
-  const sw = `linear-gradient(135deg, ${c.colors[0]}, #1B3A2F)`;
-  const chips = (c.chips || []).map(t => {
-    const w = /spine|sick|not for/i.test(t);
-    return `<span class="mini ${w?"warn":"ok"}">${t}</span>`;
+  const chips = (c.chips || []).map((t) => {
+    const warn = c.warn && /spine|path|chew|toxic/i.test(t) || /Spines|Problem|Joints|toxic/i.test(t);
+    return `<span class="mini ${warn ? "warn" : "ok"}">${esc(t)}</span>`;
   }).join("");
   return `<article class="card">
-    <div class="swatch" style="background:${sw}"></div>
-    <div class="top"><span class="name">${c.name}</span><span class="job">${c.job}</span></div>
+    <div class="swatch" style="background:linear-gradient(135deg, ${c.colors[0]}, #1B3A2F)"></div>
+    <div class="top"><span class="name">${esc(c.name)}</span><span class="job">${esc(c.job)}</span></div>
+    <p class="botanical">${esc(c.botanical)}</p>
+    <p class="meta">${esc(c.texture)} · ${esc(c.height)}</p>
     <div class="chips">${chips}</div>
-    <p class="why">${c.why}</p>
-    ${c.same ? `<p class="same">${c.same}</p>` : ""}
+    <p class="why">${esc(c.why)}</p>
+    ${c.same ? `<p class="same">${esc(c.same)}</p>` : ""}
   </article>`;
 }
 
@@ -286,41 +293,63 @@ function screenResults() {
   const strips = visibleStrips();
   if (state.strip >= strips.length) state.strip = 0;
   const strip = strips[state.strip];
-  const cards = cardsFor(strip.id);
-  const change = state.lastChange
-    ? `<p class="hint warn">${state.lastChange}</p>`
-    : (state.chew || state.kids
-        ? `<p class="hint">Kids or a chewing pet are on. Plants that can make them very sick stay off this list.</p>`
-        : "");
-  const nextLabel = strips.length > 1
-    ? "Next — " + strips[(state.strip + 1) % strips.length].title.toLowerCase()
-    : "That’s the yard";
+  const cards = CARDS[strip.id];
+  const banner = state.lastChange
+    ? `<p class="hint warn">${esc(state.lastChange)}</p>`
+    : (state.chew || state.kids ? `<p class="hint">${esc(SESSION)}</p>` : "");
+  const kept = strip.id === "gate" ? `<p class="kept">${esc(KEPT)}</p>` : "";
+  const next = state.strip >= strips.length - 1 ? "That's the yard" : NEXT[strips[state.strip + 1].id];
   return `
-    <header><span class="brand">Your three</span>${prog(5)}</header>
+    <header><span class="brand">Phoenix Yard</span><span class="count">${state.strip + 1} of ${strips.length}</span></header>
     <main>
-      <div class="strip-nav">
-        <strong>${strip.title}</strong>
-        <span class="tiny">${state.strip + 1} of ${strips.length}</span>
-      </div>
-      <p class="lead">${strip.caption}</p>
+      <p class="place">${esc(placeLine())}</p>
+      <div class="strip-nav"><strong>${esc(strip.title)}</strong></div>
+      <p class="lead">${esc(strip.caption)}</p>
       <div class="dogbar">
         <span>A dog or cat chews leaves</span>
-        <button class="chip-like ${state.chew?"pri":"ghost"}" data-act="flipchew" style="flex:0;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:${state.chew?"var(--pine)":"#fff"};color:${state.chew?"#fff":"var(--pine)"};font-weight:650;cursor:pointer">
-          ${state.chew ? "On" : "Off"}
-        </button>
+        <button class="extra ${state.chew ? "on" : ""}" data-act="flipchew" style="flex:0">${state.chew ? "On" : "Off"}</button>
       </div>
-      ${change}
+      ${banner}
+      ${kept}
       ${cards.map(cardEl).join("")}
     </main>
     <footer>
       <button class="ghost" data-act="go" data-to="pieces">Yard</button>
-      <button class="pri" data-act="nextstrip">${nextLabel}</button>
+      <button class="pri" data-act="nextstrip">${esc(next)}</button>
+    </footer>`;
+}
+
+function screenYard() {
+  const strips = visibleStrips();
+  const blocks = strips.map((strip) => {
+    const names = CARDS[strip.id].map((c) => esc(c.name)).join(" · ");
+    const kept = strip.id === "gate" ? `<p class="meta">${esc(KEPT)}</p>` : "";
+    return `<section class="sum"><h2>${esc(strip.title)}</h2><p>${names}</p>${kept}</section>`;
+  }).join("");
+  const note = state.chew || state.kids ? `<p class="hint">${esc(SESSION)}</p>` : "";
+  return `
+    <header><span class="brand">Phoenix Yard</span></header>
+    <main>
+      <p class="place">${esc(placeLine())}</p>
+      <h1 class="sm">That's the yard.</h1>
+      <p class="lead">Three plants for each piece you kept. Not a catalog.</p>
+      ${note}
+      ${blocks}
+    </main>
+    <footer>
+      <button class="ghost" data-act="back-yard">Back</button>
+      <button class="pri" data-act="reset">Start over</button>
     </footer>`;
 }
 
 function render() {
-  const map = { home: screenHome, ask: screenAsk, pieces: screenPieces, results: screenResults };
-  document.getElementById("app").innerHTML = map[state.screen]();
+  const map = { home: screenHome, ask: screenAsk, pieces: screenPieces, results: screenResults, yard: screenYard };
+  const screen = map[state.screen] || screenHome;
+  document.getElementById("app").innerHTML = screen();
+  try {
+    const { lastChange, ...rest } = state;
+    localStorage.setItem("phoenix-yard-v1", JSON.stringify(rest));
+  } catch (err) { /* ignore */ }
 }
 
 function parseVal(v) {
@@ -333,37 +362,55 @@ document.getElementById("app").addEventListener("click", (e) => {
   const b = e.target.closest("[data-act]");
   if (!b) return;
   const act = b.dataset.act;
-  if (act === "go") { state.screen = b.dataset.to; if (b.dataset.to === "ask") state.q = 0; }
+  if (act === "go") {
+    if (b.dataset.to === "ask") state.q = 0;
+    if (b.dataset.to === "results") state.strip = 0;
+    state.screen = b.dataset.to;
+    state.lastChange = "";
+  }
   if (act === "hot") state.hot = b.dataset.id;
   if (act === "extra") state.extras[b.dataset.id] = !state.extras[b.dataset.id];
-  if (act === "answer") state[b.dataset.key] = parseVal(b.dataset.val);
-  if (act === "nextq") {
-    if (state[QUESTIONS[state.q].key] === null || state[QUESTIONS[state.q].key] === undefined) return;
-    if (state.q < QUESTIONS.length - 1) state.q += 1;
-    else state.screen = "pieces";
+  if (act === "answer") {
+    state[b.dataset.key] = parseVal(b.dataset.val);
+    advanceQ();
   }
+  if (act === "nextq") advanceQ();
   if (act === "backq") {
     if (state.q === 0) state.screen = "home";
     else state.q -= 1;
   }
+  if (act === "back-pieces") {
+    state.screen = "ask";
+    state.q = QUESTIONS.length - 1;
+  }
   if (act === "nextstrip") {
     const n = visibleStrips().length;
-    state.strip = (state.strip + 1) % n;
     state.lastChange = "";
+    if (state.strip >= n - 1) state.screen = "yard";
+    else state.strip += 1;
+  }
+  if (act === "back-yard") {
+    state.screen = "results";
+    state.strip = Math.max(0, visibleStrips().length - 1);
   }
   if (act === "flipchew") {
-    const was = !!state.chew;
     state.chew = !state.chew;
-    const onPots = visibleStrips()[state.strip]?.id === "pots";
-    if (state.chew && onPots) {
-      state.lastChange = "Claret Cup left the pots. Thorns next to hands and a chewing dog. Desert Marigold stayed.";
-    } else if (!state.chew && onPots && was) {
-      state.lastChange = "Claret Cup can come back. It still has spines — keep it off the gate.";
-    } else if (state.chew) {
-      state.lastChange = "This strip was already safe to chew. Oleander and sago stay off the whole list.";
-    } else {
-      state.lastChange = "";
-    }
+    state.lastChange = state.chew
+      ? "This strip was already safe to chew. Oleander and sago stay off the whole list."
+      : "Chew is off. This strip did not change.";
+  }
+  if (act === "reset") {
+    try { localStorage.removeItem("phoenix-yard-v1"); } catch (err) { /* ignore */ }
+    state.screen = "home";
+    state.q = 0;
+    state.hot = "right";
+    state.extras = { gate: true, pots: true, gravel: true };
+    state.kids = null;
+    state.chew = null;
+    state.wildlife = true;
+    state.care = null;
+    state.strip = 0;
+    state.lastChange = "";
   }
   render();
 });

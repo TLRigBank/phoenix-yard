@@ -1,16 +1,11 @@
 # engine/
 
-Phase 0 lives here.
+`match.js` is the v1 matcher. Stages, points, and seat tables are `docs/DECISION_TREE.md`. Face strings are `docs/COPY_MAP.md`. Change both together.
 
-Suggested files (create in W0.1–W0.7):
+```
+node tests/run.js
+```
 
-- `load_catalog.js` or `.py` — concat data parts
-- `brief.js` — map UI brief → rooms + flags
-- `gates.js` — Stage 1–2
-- `score.js` — Stage 3
-- `slots.js` — Stage 4
-- `copy.js` — docs/COPY_MAP.md
-- `match.js` — public `match(brief) → strips`
-- `server.js` — optional HTTP wrapper for POST /match
+`guilds: true` is accepted and ignored. `hot_side` is echoed as `place_label` and does not filter.
 
-Guilds stay behind `brief.guilds === true`.
+Do not retune weights to recreate the old prototype sketch. Locked card ids are `tests/fixtures/default.json`.

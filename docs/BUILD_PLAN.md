@@ -4,34 +4,38 @@
 
 | Phase | Goal | Exit |
 |---|---|---|
-| 0 | Engine: brief → strips JSON | Fixtures `default` vs `pets_on` differ; jumping cholla not on gate |
-| 1 | v02 screens call match | Driveway: tap hot wall, Low, three live names |
-| 2 | Banner, empty seats, card sheet, list | Chew flip names what left |
-| 3 | House checks, near-miss ghost, local save | No account |
-| 4 | Oleander titles, AA, 20 fixtures | Nobody asks what R1 means |
+| 0 | Spec lock and `engine/match.js` | `node tests/run.js` passes. Default card ids are the fixture, not “any three legal plants.” |
+| 1 | Driveway walk on live match | Tap a wall, four one-tap questions, side still visible, three live names, last button opens the yard summary. Brief survives refresh. 44px targets, 16px body. No hardcoded `CARDS`. |
+| 2 | Trust | Chew diff uses the copy-map sentences. Empty seats. Card sheet with re-gated substitutes. Gate shows the jumping-cholla line. Share list. |
+| 3 | Memory, still no account | Planted checks, one greyed near-miss. |
+| 4 | More briefs | Kids only, hobby, wildlife off, each extra off. Face names below are already fixed. |
 
-One builder ~3 weeks. Two people 8–10 days after engine exists.
+Phase 0 is in the repo. Do not retune weights to chase the old prototype sketch (Flame Honeysuckle, Black Dalea, Claret Cup leaving a pot). The default yard is Red Yucca, Parry’s Penstemon, Native Hedgehog, then the gate, pots, and gravel ids in the fixture.
 
 ## Work IDs
 
-- **W0.1** Load catalog parts, high-confidence only (already slim).
-- **W0.2** Apply `docs/COPY_MAP.md`.
-- **W0.3** Map brief → rooms + toxic_veto + care flags.
-- **W0.4** Gates + room filter using `toxic_class` and `spine_class`.
-- **W0.5** Score + slots + genus lock + Cloud pin on R4 B.
-- **W0.6** Guild flag default false.
-- **W0.7** `POST /match` or in-process; commit `tests/fixtures/default.json` and `pets_on.json`.
-- **W1.1–W1.5** App shell from `prototype/index.html`, house, questions, wire match, one-strip results.
-- **W2.1–W2.5** same-as, chew diff, empty seats, card sheet, share list.
-- **W3.1–W3.3** planted checks, ghosts, localStorage.
-- **W4.1** Fix Nerium/Thevetia `display_name` in data (not “Pink, Red, White”).
-- **W4.2** 44px targets, 16px type, contrast, match_failed sentence.
-- **W4.3** ≥20 fixture briefs.
+- **W0.1–W0.7** Done. Catalog load, gates, v1 scores, slots, genus lock, Cloud pin, `match()`, golden fixtures.
+- **W1.1** App shell from `prototype/index.html` screens only. Delete the hardcoded card table.
+- **W1.2** Call `match`. Render one strip. Echo `place_label`.
+- **W1.3** One-tap answers. Back from the pieces screen returns to the last question, not question 1.
+- **W1.4** `That's the yard` is a summary, not a loop.
+- **W1.5** Save the brief in localStorage. No account.
+- **W1.6** 44px targets and 16px body before any later phase.
+- **W2.1** Chew control reruns the whole match and uses the copy-map diff. On the default brief the picks do not change; the banner still runs.
+- **W2.2** Empty-seat sentences. No catalog fallback.
+- **W2.3** Card sheet: botanical, height, toxic who, spine, setback if > 0, support, up to 4 substitutes from the response (already gated).
+- **W2.4** Kept-off line on the gate. Session note when kids or chew.
+- **W2.5** Plain list by strip for sharing.
+- **W3.1–W3.3** Planted checks, one ghost, local save already shipped in W1.5.
+- **W4.1** Done for the known bad titles (nursery head counts, color-only names, Ocotillo Bareroot, Call for Varieties, duplicate Desert Rose / Golden Saguaro / Madagascar Palm). Oleander titles were already real names. Do not reopen them.
+- **W4.2** Contrast pass in afternoon glare. Match-failed sentence.
+- **W4.3** More than the two golden briefs. Toy gates already live in `tests/run.js`.
 
 ## Risks
 
-- UI re-implements filters → one match function only.
-- 18-card feed returns → Results renders one strip.
-- Oleander/sago on chew brief → `pets_on` fixture.
-- Jumping cholla on gate → `spine_class == jumping` fails R6.
-- Scope creep → `docs/NOT_V1.md`.
+- A second filter in the UI. Only `match` decides.
+- An 18-card feed. Results render one strip, then the summary.
+- Treating “already safe” as a bug and stuffing oleander into the default strip so the diff is visible. The fixture says the diff is empty. The banner is the feature.
+- String-matching fountain grass or oleander instead of `native_class` / `toxic_class`.
+- Using `hot_side` as west. It is a label.
+- Scope creep. `docs/NOT_V1.md`.

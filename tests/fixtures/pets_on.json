@@ -10,9 +10,15 @@
     "guilds": false
   },
   "expect": {
+    "strip_ids": ["wall", "gate", "pots", "gravel"],
+    "place_label": "Right side",
+    "session_notes": ["Oleander and sago stay off the whole list."],
+    "card_ids_same_as_default": true,
     "no_toxic_class_any_pick": ["deadly", "ingest"],
     "except_milkweed_if_wildlife": ["Asclepias linaria", "Asclepias subulata"],
     "gate_no_jumping": true,
-    "diff_vs_default_may_be_empty_on_already_safe_strips": true
+    "gate_kept_off": "Kept off the gate: Jumping cholla. Joints that jump.",
+    "diff_vs_default_may_be_empty_on_already_safe_strips": true,
+    "note": "On this brief the twelve picks do not change. The chew control must still say the strip was already safe, and name oleander and sago."
   }
 }

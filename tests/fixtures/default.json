@@ -11,8 +11,17 @@
   },
   "expect": {
     "strip_ids": ["wall", "gate", "pots", "gravel"],
+    "place_label": "Right side",
+    "session_notes": [],
+    "card_ids": {
+      "wall": ["CCF-YUCC-010", "CCF-PERN-039", "CCF-CACT-020"],
+      "gate": ["CCF-YUCC-010", "CCF-FSHB-003", "CCF-OSUC-034"],
+      "pots": ["CCF-OSUC-034", "CCF-PERN-007", "CCF-CACT-055"],
+      "gravel": ["CCF-YUCC-014", "CCF-GRAS-006", "CCF-PERN-016"]
+    },
+    "gate_kept_off": "Kept off the gate: Jumping cholla. Joints that jump.",
     "no_spine_class_on_gate": ["jumping", "puncture"],
-    "no_toxic_class_global": ["deadly"],
-    "max_picks_per_strip": 3
+    "max_picks_per_strip": 3,
+    "note": "Deadly and ingest may be seated only when kids and chew are both false. These winners are clean. Do not retune weights to chase the old hardcoded prototype."
   }
 }

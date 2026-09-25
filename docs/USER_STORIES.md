@@ -2,61 +2,68 @@
 
 Persona: Phoenix homeowner, phone in the driveway, does not know R-codes.
 
-Happy path: tap afternoon wall → four questions → keep Gate/Pots/Gravel → three on the wall → Next strip → optional chew toggle.
+Happy path: tap afternoon wall → four questions, one tap each → keep Gate/Pots/Gravel → three on the wall, with the side still named → next strip → last button is the whole yard → optional chew toggle, which may change nothing and must say so.
 
 ## P0
 
 **US-00** As a homeowner I tap the wall that cooks so the first room is that strip.  
-AC: House shows Front/Left/Right/Back. Tapped side labeled Afternoon sun. Payload `hot_side` + `rooms.R1`. Never shows R1 or west.
+AC: House shows Front/Left/Right/Back. Tapped side labeled Afternoon sun. Payload `hot_side`. Results echo `Right side · afternoon sun` (or whichever side). Never shows R1, west, or a compass.
 
 **US-01** Copy says four short questions then three plants. Primary: That’s the hot wall.
 
-**US-10** Kids question with consequence line. Writes `kids`, `toxic_veto ||= kids`.
+**US-10** Kids question with a consequence line about plants that can make a child very sick. Does not mention cholla. Writes `kids`. `toxic_veto` if yes.
 
-**US-11** Chew question. Names sago and oleander leaving. Writes `chew`, `toxic_veto`.
+**US-11** Chew question. Names sago and oleander leaving the list. Says aloe stays, marked if they chew. Writes `chew`.
 
-**US-12** Wildlife. Default yes. Milkweed exception only if wildlife and toxic_veto.
+**US-12** Wildlife. Default yes, so Next accepts it without a second tap. Milkweed exception only if wildlife and toxic_veto, and the card carries the caution line.
 
-**US-13** Time: Almost none / Weekends / It’s a hobby → care Low/Weekend/Hobby.
+**US-13** Time: Almost none / Weekends / It’s a hobby → care Low/Weekend/Hobby. Hint matches the water table (weekends may add water L at the gate or in a pot).
 
-**US-14** Back preserves hot_side and prior answers.
+**US-14** Back preserves `hot_side` and prior answers. Back from the pieces screen opens the last question, not question 1.
 
-**US-20** Gate, Pots, Gravel on the same house, default on. Wall always remains.
+**US-15** An answer tap selects and advances. Next remains for a default that is already selected.
 
-**US-30** First results strip is Afternoon wall. At most three cards Bone/Bloom/Floor. No other strips. No scores.
+**US-20** Gate, Pots, Gravel on a row under the house, default on. They do not cover the back wall. Wall always remains.
 
-**US-31** Face uses copy map. Engine strings never render.
+**US-30** First results strip is Afternoon wall. At most three cards Bone/Bloom/Floor. No other strips yet. No scores. Side label visible.
 
-**US-32** Repeat card_id stamped Same as {prior strip}.
+**US-31** Face uses the copy map, including height and texture. Engine strings never render. “Takes afternoon heat” only on the wall.
 
-**US-33** Next — {next title}. Last strip: That’s the yard.
+**US-32** Repeat card_id stamped with the copy-map same-as line. Default brief: Red Yucca on the gate, Texas Tuberose in the pots.
 
-**US-34** Chew control on Results reruns match and banners a diff.
+**US-33** Next uses the copy-map button. Last strip: That’s the yard, a summary of every strip’s three names, not a wrap.
+
+**US-34** Chew control reruns match on the whole brief and banners a diff using the copy map. If nothing left, it says the strip was already safe and names oleander and sago. It does not remove a cactus for having spines.
 
 **US-35** Empty job is a sentence. Zero picks is a room sentence. No catalog.
 
-**US-40** UI posts brief. Engine returns strips. Client does not filter 543 rows.
+**US-38** Gate strip shows `Kept off the gate: Jumping cholla. Joints that jump.`
 
-**US-41** Copy map owns words.
+**US-39** When kids or chew is on, one session line: oleander and sago stay off the whole list.
 
-**US-50** Defaults: kids no, chew no, wildlife yes, care Low, extras on, feeling none.
+**US-40** UI calls `match`. Engine returns strips. Client does not filter 543 rows.
+
+**US-41** Copy map owns words. Decision tree owns points.
+
+**US-50** Questions start unset except wildlife Yes. Care, kids, and chew require a tap.
 
 **US-51** Engine failure → human sentence + back to house.
+
+**US-52** 44px targets, 16px body, questions as buttons. Part of the first driveway build, not a later pass.
+
+**US-63** localStorage save of the brief. Refresh keeps the wall and the answers. No account.
 
 **US-90** See `docs/NOT_V1.md`.
 
 ## P1
 
-**US-36** Card sheet: botanical, toxic who, spine, setback if >0, support, up to 4 substitutes that still pass the room.
+**US-36** Card sheet: botanical, height, toxic who, spine, setback if > 0, support, up to 4 substitutes that still pass the room. The response has already dropped illegal substitutes.
 
-**US-37** Plain list by strip. Footer if kids/chew: hidden deadly/ingest.
+**US-37** Plain list by strip for sharing. Footer if kids or chew: the oleander and sago line.
 
-**US-42** Optional guilds flag; UI prints caption only.
+**US-42** `guilds` may be sent. v1 ignores it. UI prints no guild score.
 
-**US-52** 44px targets, 16px type, AA, questions as buttons.
-
-## Optional engagement (Phase 3)
+## Later
 
 **US-60** House spot checks when a strip is finished this session.  
-**US-62** Chew-on may show one greyed deadly/ingest ghost on the gate.  
-**US-63** localStorage or querystring save. No account.
+**US-62** One greyed near-miss is optional. It is not a substitute for the jumping-cholla line, which ships with the gate.
