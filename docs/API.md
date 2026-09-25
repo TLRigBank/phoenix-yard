@@ -2,83 +2,53 @@
 
 ## match(brief) or POST /match
 
-Phase 1 calls `engine/match.js` in process. JSON must stay identical if a server is added later. `guilds: true` is accepted and does not change v1 picks.
+`engine/match.js`. `guilds: true` does not change v1 picks.
 
 ### Request
 
 ```json
 {
   "hot_side": "right",
+  "project_scale": "yard",
   "kids": false,
   "chew": false,
   "wildlife": true,
   "care": "Low",
-  "extras": { "gate": true, "pots": true, "gravel": true },
+  "extras": { "wall": true, "gate": true, "pots": true, "gravel": true },
+  "exclude": { "wall": [], "gate": [], "pots": [], "gravel": [] },
   "guilds": false
 }
 ```
 
-`hot_side`: `front` | `left` | `right` | `back`. A label, not a climate input.  
-`care`: `Low` | `Weekend` | `Hobby`
+- `hot_side`: `front` | `left` | `right` | `back`. Label only.
+- `project_scale` (optional): `pots` | `bed` | `path` | `yard` | `unsure`. UI uses it to seed extras. Engine does not infer rooms from it.
+- `care`: `Low` | `Weekend` | `Hobby`
+- `extras.wall` is required and may be false.
+- `exclude` optional. Card ids already shown on that strip. Reroll skips them.
 
 ### Response
 
-```json
-{
-  "brief_echo": {},
-  "place_label": "Right side",
-  "session_notes": [],
-  "strips": [
-    {
-      "id": "wall",
-      "title": "Afternoon wall",
-      "caption": "Blades, then a flower, then something low. Almost no extra water.",
-      "room_code": "R1",
-      "picks": [
-        {
-          "card_id": "CCF-YUCC-010",
-          "job": "Bone",
-          "display_name": "Red Yucca",
-          "botanical_name": "Hesperaloe parviflora",
-          "colors": ["red"],
-          "texture_plain": "Blades",
-          "height_label": "2–3 ft",
-          "chips_plain": ["Almost no extra water", "Takes afternoon heat", "Grows here already"],
-          "why_line": "Bone for the afternoon wall. Almost no extra water. Grows here already.",
-          "same_as": null,
-          "toxic_class": "none",
-          "spine_class": "none",
-          "setback_ft": 0,
-          "needs_support": "none",
-          "caution": null,
-          "substitute_ids": []
-        }
-      ],
-      "empty_jobs": [],
-      "kept_off": [],
-      "ghosts": []
-    }
-  ]
-}
-```
+Same shape as before, plus on every strip:
 
-The UI prints `place_label`, titles, captions, picks, `kept_off[].line`, and `session_notes`. It does not print `room_code`.
+- `reroll_available`: true when another full Bone/Bloom/Floor exists in that room after excluding current picks and `exclude[strip]`.
 
-`kept_off` is empty except on the gate, where it is the jumping-cholla line. `ghosts` stays empty until a later near-miss story. `caution` is set only for milkweed kept under a kids or chew veto.
-
-`substitute_ids` are already gated. At most four.
-
-`session_notes` is empty unless kids or chew is on, then one string: `Oleander and sago stay off the whole list.`
+`place_label` is always the tapped side, even when the wall strip is off.
 
 ### Errors
 
-- invalid brief → `{ "error": "invalid_brief", "field": "hot_side" }` (HTTP 400 if wrapped)
-- engine failure → `{ "error": "match_failed" }` and the UI sentence in `docs/COPY_MAP.md`
+- `{ "error": "invalid_brief", "field": "extras" }` when every room is off, or `extras.wall` is missing
+- `{ "error": "invalid_brief", "field": "hot_side" }`
+- `{ "error": "match_failed" }`
 
 ### Strip order
 
-Always: wall, then gate if on, then pots if on, then gravel if on.
+wall if `extras.wall`, then gate if on, then pots if on, then gravel if on.  
+Pots-only → `[pots]`. Path-only → `[gate]`.
+
+### Reroll
+
+UI keeps the first-set ids per strip. Each Three others appends the visible trio to `exclude[strip]` and calls match again. Other strips use the same brief and their own exclude lists.
 
 ### Default winners
 
-See `tests/fixtures/default.json`. Pets-on keeps those card ids and adds the session note.
+`tests/fixtures/default.json` when extras.wall is true and exclude is empty. Pets-on keeps those ids.

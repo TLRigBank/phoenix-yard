@@ -6,11 +6,16 @@ This is the only climate table. `engine/match.js` implements it. The workbook is
 
 ## Stage 0 — payload
 
-Required: `hot_side` (`front|left|right|back`), `kids`, `chew`, `wildlife`, `guilds` (booleans), `care` (`Low|Weekend|Hobby`), `extras.gate|pots|gravel` (booleans). Anything else → `{ "error": "invalid_brief", "field" }`.
+Required: `hot_side` (`front|left|right|back`), `kids`, `chew`, `wildlife`, `guilds` (booleans), `care` (`Low|Weekend|Hobby`), `extras.wall|gate|pots|gravel` (booleans). `project_scale` and `exclude` are optional. Anything else required-and-missing → `{ "error": "invalid_brief", "field" }`.
 
-Strip order: wall, then gate if on, then pots if on, then gravel if on. If every extra is off, still return the wall.
+`hot_side` is stored and echoed as `place_label`. It is not a filter and it does not create a wall strip.
+
+Strip order: wall if `extras.wall`, then gate if on, then pots if on, then gravel if on. If every extra is false → `invalid_brief` field `extras`. A pots-only project returns only pots.
+
+`exclude[room]` is a list of `card_id`s already shown on that strip. Stage 4 drops those ids for that strip only.
 
 `toxic_veto = kids || chew`.
+
 
 ## Stage 1 — global gates
 

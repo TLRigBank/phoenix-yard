@@ -6,7 +6,7 @@
     "chew": false,
     "wildlife": true,
     "care": "Low",
-    "extras": { "gate": true, "pots": true, "gravel": true },
+    "extras": { "wall": true, "gate": true, "pots": true, "gravel": true },
     "guilds": false
   },
   "expect": {

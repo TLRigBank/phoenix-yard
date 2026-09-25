@@ -224,8 +224,21 @@ function validate(brief) {
   }
   if (brief.care !== "Low" && brief.care !== "Weekend" && brief.care !== "Hobby") return "care";
   if (!brief.extras || typeof brief.extras !== "object") return "extras";
-  for (const key of ["gate", "pots", "gravel"]) {
+  for (const key of ["wall", "gate", "pots", "gravel"]) {
     if (typeof brief.extras[key] !== "boolean") return "extras." + key;
+  }
+  if (!brief.extras.wall && !brief.extras.gate && !brief.extras.pots && !brief.extras.gravel) {
+    return "extras";
+  }
+  if (brief.project_scale != null) {
+    const scales = ["pots", "bed", "path", "yard", "unsure"];
+    if (!scales.includes(brief.project_scale)) return "project_scale";
+  }
+  if (brief.exclude != null) {
+    if (typeof brief.exclude !== "object") return "exclude";
+    for (const key of ["wall", "gate", "pots", "gravel"]) {
+      if (brief.exclude[key] != null && !Array.isArray(brief.exclude[key])) return "exclude." + key;
+    }
   }
   return null;
 }
@@ -333,8 +346,16 @@ function keptOffGate(catalog, brief) {
   return [{ display_name: "Jumping cholla", line: KEPT_OFF_LINE }];
 }
 
+function excludedIds(brief, room) {
+  const list = brief.exclude && Array.isArray(brief.exclude[room]) ? brief.exclude[room] : [];
+  return new Set(list);
+}
+
 function fillStrip(catalog, brief, room, prior) {
-  const pool = catalog.filter((card) => passesGlobal(card, brief) && passesRoom(card, room, brief));
+  const blocked = excludedIds(brief, room);
+  const pool = catalog.filter(
+    (card) => passesGlobal(card, brief) && passesRoom(card, room, brief) && !blocked.has(card.card_id)
+  );
   const usedGenus = new Set();
   const usedGroups = [];
   const picks = [];
@@ -378,6 +399,7 @@ function fillStrip(catalog, brief, room, prior) {
     usedGroups.push(best.plant_group);
   }
   const meta = STRIP_META[room];
+  const shown = picks.map((pick) => pick.card_id);
   return {
     id: room,
     title: meta.title,
@@ -387,7 +409,29 @@ function fillStrip(catalog, brief, room, prior) {
     empty_jobs: emptyJobs,
     kept_off: room === "gate" ? keptOffGate(catalog, brief) : [],
     ghosts: [],
+    reroll_available: canReroll(catalog, brief, room, shown),
   };
+}
+
+function canReroll(catalog, brief, room, shown) {
+  if (shown.length < 3) return false;
+  const nextExclude = Array.from(new Set([...(brief.exclude && brief.exclude[room] ? brief.exclude[room] : []), ...shown]));
+  const probe = { ...brief, exclude: { ...(brief.exclude || {}), [room]: nextExclude } };
+  const blocked = excludedIds(probe, room);
+  const pool = catalog.filter(
+    (card) => passesGlobal(card, brief) && passesRoom(card, room, brief) && !blocked.has(card.card_id)
+  );
+  const genera = new Set();
+  let seats = 0;
+  for (const seat of ["A", "B", "C"]) {
+    let cands = pool.filter((card) => !genera.has(genusOf(card)));
+    const grouped = cands.filter((card) => SEATS[room][seat].includes(card.plant_group));
+    if (grouped.length) cands = grouped;
+    if (!cands.length) return false;
+    genera.add(genusOf(cands[0]));
+    seats += 1;
+  }
+  return seats === 3;
 }
 
 function match(brief, catalog) {
@@ -395,7 +439,8 @@ function match(brief, catalog) {
   if (problem) return { error: "invalid_brief", field: problem };
   if (!Array.isArray(catalog)) return { error: "match_failed" };
   substitutesFor.byId = new Map(catalog.map((card) => [card.card_id, card]));
-  const rooms = ["wall"];
+  const rooms = [];
+  if (brief.extras.wall) rooms.push("wall");
   if (brief.extras.gate) rooms.push("gate");
   if (brief.extras.pots) rooms.push("pots");
   if (brief.extras.gravel) rooms.push("gravel");
@@ -404,11 +449,18 @@ function match(brief, catalog) {
   return {
     brief_echo: {
       hot_side: brief.hot_side,
+      project_scale: brief.project_scale || null,
       kids: brief.kids,
       chew: brief.chew,
       wildlife: brief.wildlife,
       care: brief.care,
-      extras: { gate: brief.extras.gate, pots: brief.extras.pots, gravel: brief.extras.gravel },
+      extras: {
+        wall: brief.extras.wall,
+        gate: brief.extras.gate,
+        pots: brief.extras.pots,
+        gravel: brief.extras.gravel,
+      },
+      exclude: brief.exclude || {},
       guilds: brief.guilds,
     },
     place_label: PLACE[brief.hot_side],

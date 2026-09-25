@@ -172,6 +172,20 @@ const CARDS = {
   ]
 };
 
+const ALT = {
+  wall: [
+    { name: "Desert Spoon", botanical: "Dasylirion wheeleri", job: "Bone", texture: "Blades", height: "3–5 ft", colors: ["#8AA0B4"],
+      chips: ["Almost no extra water", "Takes afternoon heat", "Grows here already"],
+      why: "Bone for the afternoon wall. Almost no extra water. Grows here already." },
+    { name: "Flame Honeysuckle", botanical: "Anisacanthus quadrifidus", job: "Bloom", texture: "Leaves", height: "3–4 ft", colors: ["#D4652F"],
+      chips: ["Almost no extra water", "Takes afternoon heat"],
+      why: "Bloom for the afternoon wall. Almost no extra water." },
+    { name: "Beavertail Prickly Pear", botanical: "Opuntia basilaris", job: "Floor", texture: "Mound", height: "1–2 ft", colors: ["#C46B8A"],
+      chips: ["Spines", "Almost no extra water", "Takes afternoon heat", "Grows here already"], warn: true,
+      why: "Floor for the afternoon wall. Almost no extra water. Keep it off the path." }
+  ]
+};
+
 const QUESTIONS = [
   { key: "kids", title: "Do kids play in the plants?",
     hint: "If yes, we hide plants that can make a child very sick.",
@@ -188,14 +202,14 @@ const QUESTIONS = [
 ];
 
 const state = {
-  screen: "home", q: 0, hot: "right",
-  extras: { gate: true, pots: true, gravel: true },
+  screen: "home", q: 0, hot: "right", scale: null,
+  extras: { wall: true, gate: true, pots: true, gravel: true },
   kids: null, chew: null, wildlife: true, care: null,
-  strip: 0, lastChange: ""
+  strip: 0, lastChange: "", usedAlt: {}
 };
 
 try {
-  const saved = JSON.parse(localStorage.getItem("phoenix-yard-v1") || "null");
+  const saved = JSON.parse(localStorage.getItem("phoenix-yard-v2") || "null");
   if (saved && saved.hot && saved.extras) {
     Object.assign(state, saved, { lastChange: "" });
   }
@@ -206,7 +220,7 @@ function esc(s) {
 }
 function placeLine() { return PLACE[state.hot] + " · afternoon sun"; }
 function visibleStrips() {
-  return STRIPS.filter((strip) => strip.id === "wall" || state.extras[strip.id]);
+  return STRIPS.filter((strip) => state.extras[strip.id]);
 }
 function advanceQ() {
   const key = QUESTIONS[state.q].key;
@@ -222,6 +236,7 @@ function house(showExtras) {
     return `<button class="side ${hot ? "hot" : ""}" data-act="hot" data-id="${id}">${hot ? "Afternoon sun" : sideLabel[id]}</button>`;
   }).join("");
   const extras = showExtras ? `<div class="extra-row">
+      <button class="extra ${state.extras.wall ? "on" : ""}" data-act="extra" data-id="wall">Wall</button>
       <button class="extra ${state.extras.gate ? "on" : ""}" data-act="extra" data-id="gate">Gate</button>
       <button class="extra ${state.extras.pots ? "on" : ""}" data-act="extra" data-id="pots">Pots</button>
       <button class="extra ${state.extras.gravel ? "on" : ""}" data-act="extra" data-id="gravel">Gravel</button>
@@ -234,10 +249,47 @@ function screenHome() {
     <header><span class="brand">Phoenix Yard</span></header>
     <main>
       <h1>Tap the wall that cooks in the afternoon.</h1>
-      <p class="lead">Then four short questions. You get three plants for that wall — not a catalog.</p>
+      <p class="lead">That is only which side gets the sun. Next you say what you are planting.</p>
       ${house(false)}
     </main>
-    <footer><button class="pri" data-act="go" data-to="ask">That’s the hot wall</button></footer>`;
+    <footer><button class="pri" data-act="go" data-to="project">That’s the afternoon side</button></footer>`;
+}
+
+function applyScale(scale) {
+  state.scale = scale;
+  const map = {
+    pots: { wall: false, gate: false, pots: true, gravel: false },
+    bed: { wall: true, gate: false, pots: false, gravel: true },
+    path: { wall: false, gate: true, pots: false, gravel: false },
+    yard: { wall: true, gate: true, pots: true, gravel: true },
+    unsure: { wall: true, gate: true, pots: true, gravel: true }
+  };
+  state.extras = Object.assign({}, map[scale]);
+}
+
+function screenProject() {
+  const opts = [
+    ["pots", "Pots on the patio"],
+    ["bed", "One bed"],
+    ["path", "Gate and path"],
+    ["yard", "Whole yard"],
+    ["unsure", "Not sure"]
+  ];
+  const btns = opts.map(([id, label]) =>
+    `<button class="ans ${state.scale === id ? "on" : ""}" data-act="scale" data-id="${id}">${label}</button>`
+  ).join("");
+  return `
+    <header><span class="brand">Phoenix Yard</span></header>
+    <main>
+      <p class="place">${esc(placeLine())}</p>
+      <h1 class="sm">What are you planting?</h1>
+      <p class="lead">The afternoon side is already marked. This chooses which pieces start on.</p>
+      ${btns}
+    </main>
+    <footer>
+      <button class="ghost" data-act="go" data-to="home">Back</button>
+      <button class="pri" data-act="go" data-to="ask">Next</button>
+    </footer>`;
 }
 
 function screenAsk() {
@@ -263,13 +315,13 @@ function screenPieces() {
   return `
     <header><span class="brand">Phoenix Yard</span></header>
     <main>
-      <h1 class="sm">Keep the pieces you have.</h1>
-      <p class="lead">The marked wall is the afternoon one. Gate, pots, and gravel are extra strips.</p>
+      <h1 class="sm">Keep the pieces this project uses.</h1>
+      <p class="lead">Afternoon sun is already marked. Turn the wall off if you are not planting that bed.</p>
       ${house(true)}
     </main>
     <footer>
       <button class="ghost" data-act="back-pieces">Back</button>
-      <button class="pri" data-act="go" data-to="results">See the afternoon wall</button>
+      <button class="pri" data-act="go" data-to="results">See the plants</button>
     </footer>`;
 }
 
@@ -293,7 +345,8 @@ function screenResults() {
   const strips = visibleStrips();
   if (state.strip >= strips.length) state.strip = 0;
   const strip = strips[state.strip];
-  const cards = CARDS[strip.id];
+  const cards = (state.usedAlt[strip.id] && ALT[strip.id]) ? ALT[strip.id] : CARDS[strip.id];
+  const rerollLabel = state.usedAlt[strip.id] ? "Back to this strip’s first set" : "Three others for this strip";
   const banner = state.lastChange
     ? `<p class="hint warn">${esc(state.lastChange)}</p>`
     : (state.chew || state.kids ? `<p class="hint">${esc(SESSION)}</p>` : "");
@@ -312,6 +365,8 @@ function screenResults() {
       ${banner}
       ${kept}
       ${cards.map(cardEl).join("")}
+      <button class="ghost" data-act="reroll" style="width:100%;margin-top:8px">${esc(rerollLabel)}</button>
+
     </main>
     <footer>
       <button class="ghost" data-act="go" data-to="pieces">Yard</button>
@@ -343,12 +398,12 @@ function screenYard() {
 }
 
 function render() {
-  const map = { home: screenHome, ask: screenAsk, pieces: screenPieces, results: screenResults, yard: screenYard };
+  const map = { home: screenHome, project: screenProject, ask: screenAsk, pieces: screenPieces, results: screenResults, yard: screenYard };
   const screen = map[state.screen] || screenHome;
   document.getElementById("app").innerHTML = screen();
   try {
     const { lastChange, ...rest } = state;
-    localStorage.setItem("phoenix-yard-v1", JSON.stringify(rest));
+    localStorage.setItem("phoenix-yard-v2", JSON.stringify(rest));
   } catch (err) { /* ignore */ }
 }
 
@@ -362,9 +417,16 @@ document.getElementById("app").addEventListener("click", (e) => {
   const b = e.target.closest("[data-act]");
   if (!b) return;
   const act = b.dataset.act;
+  if (act === "scale") applyScale(b.dataset.id);
   if (act === "go") {
-    if (b.dataset.to === "ask") state.q = 0;
-    if (b.dataset.to === "results") state.strip = 0;
+    if (b.dataset.to === "ask") {
+      if (!state.scale) applyScale("unsure");
+      state.q = 0;
+    }
+    if (b.dataset.to === "results") {
+      if (!visibleStrips().length) return;
+      state.strip = 0;
+    }
     state.screen = b.dataset.to;
     state.lastChange = "";
   }
@@ -376,7 +438,7 @@ document.getElementById("app").addEventListener("click", (e) => {
   }
   if (act === "nextq") advanceQ();
   if (act === "backq") {
-    if (state.q === 0) state.screen = "home";
+    if (state.q === 0) state.screen = "project";
     else state.q -= 1;
   }
   if (act === "back-pieces") {
@@ -393,6 +455,14 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.screen = "results";
     state.strip = Math.max(0, visibleStrips().length - 1);
   }
+  if (act === "reroll") {
+    const strips = visibleStrips();
+    const id = strips[state.strip] && strips[state.strip].id;
+    if (id) state.usedAlt[id] = !state.usedAlt[id];
+    state.lastChange = state.usedAlt[id]
+      ? "Another legal set for this strip. The live engine uses exclude so these ids do not come back."
+      : "First set for this strip.";
+  }
   if (act === "flipchew") {
     state.chew = !state.chew;
     state.lastChange = state.chew
@@ -400,11 +470,13 @@ document.getElementById("app").addEventListener("click", (e) => {
       : "Chew is off. This strip did not change.";
   }
   if (act === "reset") {
-    try { localStorage.removeItem("phoenix-yard-v1"); } catch (err) { /* ignore */ }
+    try { localStorage.removeItem("phoenix-yard-v2"); } catch (err) { /* ignore */ }
     state.screen = "home";
     state.q = 0;
     state.hot = "right";
-    state.extras = { gate: true, pots: true, gravel: true };
+    state.extras = { wall: true, gate: true, pots: true, gravel: true };
+    state.scale = null;
+    state.usedAlt = {};
     state.kids = null;
     state.chew = null;
     state.wildlife = true;

@@ -1,109 +1,109 @@
 # GROK.md — build Phoenix Yard from this repo
 
-You are building the **Phoenix Yard** digital experience. This file is the contract for scope and face language. If a request conflicts with this file on scope, this file wins unless the user explicitly changes scope.
+You are building the **Phoenix Yard** digital experience. This file is the contract. If a request conflicts with this file on scope, this file wins unless the user explicitly changes scope.
 
-Gates, scores, and slots live only in `docs/DECISION_TREE.md`. Words on screen live only in `docs/COPY_MAP.md`. If a point value and this file disagree, the decision tree wins. Do not invent a second scoring table.
+Gates, scores, and slots live only in `docs/DECISION_TREE.md`. Words on screen live only in `docs/COPY_MAP.md`.
+
+## The mistake this file exists to prevent
+
+**The hot wall is orientation, not the project.**
+
+Tap the afternoon wall so the house knows which side cooks. That writes `hot_side` and `place_label` only. It does **not** turn the wall strip on. It does **not** mean “this job is a west-heat bed.” A person can be planting pots on the patio, a gate, open gravel, or the hot wall. They say that next.
+
+If you ship a walk whose first results are always “Afternoon wall,” you missed the spec.
 
 ## What you are building
 
 A phone-wide web app:
 
-1. House with four sides. User taps the wall that cooks in the afternoon.
-2. Four questions, one screen each. One tap answers and advances. Back still works.
-3. Same house: keep or drop Gate, Pots, Gravel. The wall always stays.
-4. Results: **three cards for one strip**, with the side they tapped still visible (`Right side · afternoon sun`). Button: `Next — the gate` (or the pots, open gravel). The last strip’s button is `That's the yard`, which opens one summary of every strip. It does not wrap.
-5. Persistent control: “A dog or cat chews leaves.” Flipping it reruns match on the whole brief and **names what left**, including when the change is on a strip they are not looking at.
-6. The gate strip always says why jumping cholla is gone, even though that plant is never seated.
+1. **Orient.** House with four sides. Tap the wall that cooks in the afternoon. Copy: that side is how we name afternoon sun. It is not the plant list yet.
+2. **Project.** One screen: what is this project? Pots / One bed / Gate and path / Whole yard / Not sure. That writes `project_scale` and **default rooms**. The wall is on only when the scale needs it (one bed, whole yard, not sure).
+3. **Household.** Four questions, one screen each: kids, chew, wildlife, care. One tap answers and advances.
+4. **Rooms.** Same house. Toggle Wall, Gate, Pots, Gravel. Any mix. At least one on. Wall can be off.
+5. **Results.** Three cards for **one chosen strip**, labeled with the side they tapped (`Right side · afternoon sun`) so they still know orientation. Button `Next — {strip}`. Last strip: `That's the yard`.
+6. **Three others.** Every strip has `Three others for this strip`. The engine returns a new Bone / Bloom / Floor that still passes that room and does not reuse the three just shown. `Back to this strip’s first set` clears the exclude list for that strip only.
+7. Chew toggle reruns the whole brief and names what left.
 
-Prototype of the walk (visual only, cards copied from the default fixture): `prototype/index.html`. Live names come from `engine/match.js`, not from the prototype.
+Live names come from `engine/match.js`. Do not filter 543 cards in the UI.
 
 ## Architecture
 
 ```
-UI  →  match(brief)  →  strips
+UI  →  match(brief)  →  strips that extras turned on
 ```
 
-- Catalog: `data/cards_v019_part1.json` + `part2.json`, concatenated inside the engine. The UI does not load 543 cards to filter them.
-- `match(brief, catalog)` in `engine/match.js` is the only matcher. `POST /match` is optional and must return the same JSON.
-- `brief.guilds` is accepted and ignored in v1.
-- `hot_side` is a **label**, not a compass and not a filter. The person already pointed at the wall that cooks. Every strip echoes `place_label`. Do not treat right as west.
+`hot_side` is a **label**, not a compass and not a room filter. Do not treat right as west. Do not require a wall strip.
 
-## Brief the UI sends
+## Brief
 
 ```json
 {
   "hot_side": "front|left|right|back",
+  "project_scale": "pots|bed|path|yard|unsure",
   "kids": false,
   "chew": false,
   "wildlife": true,
   "care": "Low",
-  "extras": { "gate": true, "pots": true, "gravel": true },
+  "extras": { "wall": false, "gate": false, "pots": true, "gravel": false },
+  "exclude": { "wall": [], "gate": [], "pots": [], "gravel": [] },
   "guilds": false
 }
 ```
 
-The questions force a choice (nothing is pre-committed except wildlife, which starts on Yes). Engine defaults if a field is missing are not allowed: missing fields are `invalid_brief`.
+`project_scale` defaults rooms. The room toggles are source of truth at match time.
 
-Mapped rooms:
+| project_scale | Default extras |
+|---|---|
+| pots | wall off, gate off, pots on, gravel off |
+| bed | wall on, gate off, pots off, gravel on |
+| path | wall off, gate on, pots off, gravel off |
+| yard | all on |
+| unsure | all on |
 
-| UI | Engine room | Always? |
-|---|---|---|
-| Afternoon wall | R1 | yes |
-| Gate | R6 | extras.gate |
-| Pots | R3 | extras.pots |
-| Gravel | R4 | extras.gravel |
-| North fence R2, frost R5, structure R7 | — | **off in v1** |
+`exclude[strip]` is card_ids the user already saw on that strip this session. Reroll fills the strip from the remaining legal pool. Other strips unchanged. If fewer than three legal plants remain, return what is left plus empty-job sentences and `reroll_available: false`.
 
-Derived: `toxic_veto = kids || chew`.
+Missing required fields → `invalid_brief`. Required: `hot_side`, `kids`, `chew`, `wildlife`, `guilds`, `care`, `extras.wall|gate|pots|gravel`. `project_scale` and `exclude` may be omitted. If `exclude` is omitted, treat as empty. If every extra is false → `invalid_brief` field `extras`.
 
-Water and care: one table, in `docs/DECISION_TREE.md`. Short version: water `M` never; water `L` only in pots on Low, and in pots or the gate on Weekend or Hobby; the wall and the gravel stay `VL`. Moderate maintenance is allowed at every care level. High maintenance only on Hobby.
+`toxic_veto = kids || chew`.
+
+Water and care: `docs/DECISION_TREE.md`. Wall and gravel stay VL. Water L only in pots (any care) and at the gate on Weekend or Hobby.
 
 ## Hard gates
 
-Owned by the decision tree. The ones that must never be “pretty enough”:
+Owned by the decision tree. Never “pretty enough”:
 
-- `native_class == invasive_risk` drops. Do not string-match “fountain grass” — Coral Fountain Grass is *Russelia* and stays. Purple Fountain Grass is the invasive.
-- `toxic_class` in `deadly`, `ingest` drops when `toxic_veto`, except `Asclepias linaria` and `Asclepias subulata` when `wildlife` is true. Blood flower (`Asclepias currasavica`, catalog spelling) still drops. A kept milkweed card must show the caution in `docs/COPY_MAP.md`. It is still toxic.
-- Gate: no `jumping`, no `puncture`, no `spine_hazard`, no `pedestrian_avoid`. On this catalog every puncture card also has a pedestrian flag; the rule is still “no puncture on the gate,” so a future card cannot slip through.
-- Landmark size and the four tree groups drop on this scale (one bed + pots).
-- The gate strip includes the jumping-cholla kept-off line whenever a jumping card passed the global gates.
+- `native_class == invasive_risk` drops. Do not string-match “fountain grass.”
+- `toxic_class` in `deadly`, `ingest` drops when `toxic_veto`, except `Asclepias linaria` and `Asclepias subulata` when `wildlife`. Blood flower still drops.
+- Gate: no jumping, no puncture, no spine_hazard, no pedestrian_avoid.
+- Landmark size and the four tree groups drop on this scale.
+- Gate strip includes the jumping-cholla kept-off line when that strip is on.
 
 ## Slots
 
-Not top-3 score. Fill Bone, then Bloom, then Floor, using the seat tables in the decision tree. Lock genus inside the strip. Floor must change `plant_group` when a legal plant exists. Gravel Bloom prefers `texture_body == Cloud` when any Cloud plant is legal. Empty seat → sentence, not a catalog.
+Not top-3 score. Fill Bone, Bloom, Floor. Lock genus inside the strip. Floor changes `plant_group` when it can. Gravel Bloom prefers Cloud. Empty seat → sentence.
 
-`hot_side` does not change which plants win.
+`hot_side` does not change which plants win. `exclude` does: those ids lose that strip this reroll.
 
 ## Face language
 
 Never print: R1, R3, R4, R6, VL, west-heat, chip_pack, short_why, scores, eligible_count, room_code.
 
-Do print: display_name, Bone/Bloom/Floor, height, texture word, up to four chips from the copy map (warnings first; do not print “Takes afternoon heat” off the wall), why-line ≤ 140 chars.
-
-If the same `card_id` appeared on an earlier strip: stamp the copy-map same-as line.
-
-Substitutes on the card sheet are the card’s `substitute_ids` re-run through the same gates, capped at 4. Never print a substitute that the room would refuse.
-
-## Chew toggle
-
-Rerun `match` with `chew` flipped. Diff `card_id`s. Copy is in `docs/COPY_MAP.md`.
-
-On the default brief, pets-on does **not** change the twelve picks. The banner is still required: “This strip was already safe to chew. Oleander and sago stay off the whole list.” Spines do not leave a strip when chew flips. Only the gate refuses spines, and it always does.
+Do print: display_name, Bone/Bloom/Floor, height, texture, up to four chips, why-line ≤ 140 chars, `Three others for this strip` when `reroll_available`.
 
 ## Phase order
 
-0. **Done in repo.** Decision tree has the v1 weights (the workbook is not in this repo; do not go hunt it and do not add a second table). `node tests/run.js` locks the default card ids.
-1. Wire the prototype screens to `match`. Delete the hardcoded `CARDS` list. Keep the walk: one-tap answers, side label, last strip opens the summary, extras sit under the house, brief saved locally.
-2. Chew diff, empty seats, card sheet, kept-off line, share list.
-3. Planted checks on the house, one greyed near-miss, still no account.
-4. More fixture briefs (kids only, hobby, wildlife off, each extra off). Access is not deferred: 44px targets and 16px body type are part of phase 1.
+0. Engine already matches a default yard (wall on). Keep those golden ids when extras.wall is true.
+1. Rebuild the walk: orient → project → questions → rooms (wall optional) → live match. Delete hardcoded `CARDS` as the matcher source. Stub reroll in the UI only if `match` already honors `exclude`.
+2. Chew diff, empty seats, card sheet, kept-off line, share list, three-others on every strip.
+3. Planted checks, optional near-miss. No account.
+4. Fixtures: pots-only, path-only, wall-off, reroll-wall.
 
 ## Do not build
 
-Accounts, compass-auto wall, camera, AR, feeling chips, year wheel, water bill, nursery cart, 543-plant browse, chatbot, Tucson, XP/leaderboards, R2/R5/R7, trees-on scale, client-side filtering, printing `short_why`.
+Accounts, compass-auto wall, camera, AR, feeling chips, year wheel, nursery cart, catalog browse, chatbot, Tucson, XP, trees-on scale, client-side filtering.
 
-See `docs/NOT_V1.md`.
+R2 / R5 / R7 stay off unless the user reopens them. They are not required to fix orientation-vs-project.
 
 ## Done when
 
-`node tests/run.js` passes, and a person with an afternoon wall and a dog finishes on one summary screen and can say why jumping cholla is gone. The UI never says “R1”.
+`node tests/run.js` passes, a pots-only brief returns only the pots strip, and a person can tap Three others and see a different legal trio without the wall turning back on.

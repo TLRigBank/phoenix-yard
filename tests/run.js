@@ -82,7 +82,7 @@ const defaultBrief = {
   chew: false,
   wildlife: true,
   care: "Low",
-  extras: { gate: true, pots: true, gravel: true },
+  extras: { wall: true, gate: true, pots: true, gravel: true },
   guilds: false,
 };
 const petsBrief = { ...defaultBrief, chew: true };
@@ -160,11 +160,34 @@ const guilds = match({ ...defaultBrief, guilds: true }, catalog);
 assert(JSON.stringify(ids(guilds)) === JSON.stringify(ids(def)), "guilds flag must not change v1 picks");
 
 const gateOff = match(
-  { ...defaultBrief, extras: { gate: false, pots: true, gravel: false } },
+  { ...defaultBrief, extras: { wall: true, gate: false, pots: true, gravel: false } },
   catalog
 );
 assert(gateOff.strips.map((strip) => strip.id).join() === "wall,pots", "gate off order");
 assert(gateOff.strips.every((strip) => strip.kept_off.length === 0), "kept off only on the gate strip");
+
+const potsOnly = match(
+  { ...defaultBrief, project_scale: "pots", extras: { wall: false, gate: false, pots: true, gravel: false } },
+  catalog
+);
+assert(potsOnly.strips.map((strip) => strip.id).join() === "pots", "pots-only must not invent a wall strip");
+assert(potsOnly.place_label === "Right side", "orientation still echoed when wall is off");
+
+const emptyRooms = match(
+  { ...defaultBrief, extras: { wall: false, gate: false, pots: false, gravel: false } },
+  catalog
+);
+assert(emptyRooms.error === "invalid_brief" && emptyRooms.field === "extras", "empty extras");
+
+const rerollWall = match(
+  { ...defaultBrief, exclude: { wall: expected.wall } },
+  catalog
+);
+assert(!rerollWall.error, "reroll failed");
+const rerollIds = rerollWall.strips.find((strip) => strip.id === "wall").picks.map((pick) => pick.card_id);
+assert(rerollIds.length === 3, "reroll wall should still fill three");
+assert(rerollIds.every((id) => !expected.wall.includes(id)), "reroll reused a wall id " + rerollIds.join());
+assert(def.strips[0].reroll_available === true, "default wall should offer three others");
 
 const bad = match({ ...defaultBrief, hot_side: "west" }, catalog);
 assert(bad.error === "invalid_brief" && bad.field === "hot_side", "invalid hot_side");
@@ -209,7 +232,7 @@ const toyBrief = {
   chew: true,
   wildlife: true,
   care: "Low",
-  extras: { gate: true, pots: true, gravel: false },
+  extras: { wall: true, gate: true, pots: true, gravel: false },
   guilds: false,
 };
 const toy = [
@@ -310,15 +333,25 @@ assert(!milkPick.substitute_ids.includes("BLOOD"), "blood flower substitute");
 assert(!milkPick.substitute_ids.includes("INV"), "invasive substitute");
 assert(!milkPick.substitute_ids.includes("LWATER"), "L water substitute on the wall");
 
+const wallAndPots = match(
+  { ...toyBrief, kids: false, chew: false, wildlife: false, extras: { wall: true, gate: false, pots: true, gravel: false } },
+  toy
+);
+const wallIds = wallAndPots.strips.find((strip) => strip.id === "wall").picks.map((pick) => pick.card_id);
+assert(!wallIds.includes("LWATER"), "Low care wall accepted water L");
+
 const noWildlife = match({ ...toyBrief, wildlife: false }, toy);
 const noWildIds = noWildlife.strips.flatMap((strip) => strip.picks.map((pick) => pick.card_id));
 assert(!noWildIds.includes("MILK"), "milkweed kept without wildlife");
 
-const potsOnly = match({ ...toyBrief, kids: false, chew: false, wildlife: false, extras: { gate: false, pots: true, gravel: false } }, toy);
-const potIds = potsOnly.strips.flatMap((strip) => strip.picks.map((pick) => pick.card_id));
-assert(potIds.includes("LWATER") || potsOnly.strips.some((strip) => strip.id === "pots"), "pots strip exists");
-const wallIds = potsOnly.strips.find((strip) => strip.id === "wall").picks.map((pick) => pick.card_id);
-assert(!wallIds.includes("LWATER"), "Low care wall accepted water L");
+
+const potsOnlyToy = match(
+  { ...toyBrief, kids: false, chew: false, wildlife: false, extras: { wall: false, gate: false, pots: true, gravel: false } },
+  toy
+);
+assert(potsOnlyToy.strips.map((strip) => strip.id).join() === "pots", "toy pots-only invented extra strips");
+const potIds = potsOnlyToy.strips.flatMap((strip) => strip.picks.map((pick) => pick.card_id));
+assert(potIds.includes("LWATER") || potIds.includes("POT"), "pots strip should seat a pot-scale plant");
 
 if (failed) {
   console.error(failed + " failed");

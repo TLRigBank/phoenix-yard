@@ -1,7 +1,9 @@
 # Phoenix Yard agent instructions
 
-Read `GROK.md`, then `docs/DECISION_TREE.md` and `docs/COPY_MAP.md`, before writing code.
+Read `GROK.md` first.
 
-The matcher is `engine/match.js`. Run `node tests/run.js`. Do not add a second score table, and do not retune weights to chase the old prototype sketch.
+The hot wall is orientation. Do not require a wall strip. Do not open results on Afternoon wall unless `extras.wall` is true.
 
-`hot_side` is a label, not a compass. Never put R-codes, scores, `short_why`, or `chip_pack` on the face. Never filter the catalog in the UI.
+`match(brief)` in `engine/match.js` is the only matcher. `brief.exclude` is how a strip gets three others. Do not shuffle in the UI.
+
+Run `node tests/run.js` after every engine change.

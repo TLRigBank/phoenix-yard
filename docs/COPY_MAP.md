@@ -11,7 +11,24 @@ Single place for face language. Climate code stays on enums. Never render `chip_
 | right | Right side | Right side · afternoon sun |
 | back | Back side | Back side · afternoon sun |
 
-The side stays on every strip and on the summary. It does not change the plants.
+The side stays on every strip and on the summary. It does not change the plants. It does not mean the project is the wall.
+
+## Project scale
+
+| value | button | default rooms |
+|---|---|---|
+| pots | Pots on the patio | pots on; wall off |
+| bed | One bed | wall + gravel |
+| path | Gate and path | gate on; wall off |
+| yard | Whole yard | all on |
+| unsure | Not sure | all on |
+
+Home primary: `That’s the afternoon side.`  
+Rooms primary: `See the plants.`  
+Rooms empty: `Turn on at least one piece.`  
+Reroll: `Three others for this strip.`  
+Undo reroll: `Back to this strip’s first set.`
+
 
 ## Strip titles
 

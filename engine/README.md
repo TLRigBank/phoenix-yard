@@ -6,6 +6,9 @@
 node tests/run.js
 ```
 
-`guilds: true` is accepted and ignored. `hot_side` is echoed as `place_label` and does not filter.
+- `hot_side` is echoed as `place_label` and does not filter.
+- `extras.wall` may be false. Do not insert a wall strip.
+- `exclude[strip]` skips already-shown ids (Three others).
+- `guilds: true` is accepted and ignored.
 
-Do not retune weights to recreate the old prototype sketch. Locked card ids are `tests/fixtures/default.json`.
+Locked card ids for a full-yard brief are `tests/fixtures/default.json`.

@@ -5,7 +5,8 @@
 | Phase | Goal | Exit |
 |---|---|---|
 | 0 | Spec lock and `engine/match.js` | `node tests/run.js` passes. Default card ids are the fixture, not “any three legal plants.” |
-| 1 | Driveway walk on live match | Tap a wall, four one-tap questions, side still visible, three live names, last button opens the yard summary. Brief survives refresh. 44px targets, 16px body. No hardcoded `CARDS`. |
+| 1 | Driveway walk on live match | Orient → project scale → questions → rooms (wall optional) → first **on** strip. Pots-only never shows Afternoon wall. Three others calls `exclude`. |
+
 | 2 | Trust | Chew diff uses the copy-map sentences. Empty seats. Card sheet with re-gated substitutes. Gate shows the jumping-cholla line. Share list. |
 | 3 | Memory, still no account | Planted checks, one greyed near-miss. |
 | 4 | More briefs | Kids only, hobby, wildlife off, each extra off. Face names below are already fixed. |
@@ -15,8 +16,9 @@ Phase 0 is in the repo. Do not retune weights to chase the old prototype sketch 
 ## Work IDs
 
 - **W0.1–W0.7** Done. Catalog load, gates, v1 scores, slots, genus lock, Cloud pin, `match()`, golden fixtures.
-- **W1.1** App shell from `prototype/index.html` screens only. Delete the hardcoded card table.
-- **W1.2** Call `match`. Render one strip. Echo `place_label`.
+- **W1.1** App shell: home (orientation) → project → ask → rooms → results. Delete hardcoded `CARDS` as source of picks.
+- **W1.2** Call `match` with `extras.wall` and `exclude`. Render the first on strip, not always the wall.
+- **W1.7** Three others: accumulate `exclude[strip]`, keep a first-set snapshot, undo on that strip only.
 - **W1.3** One-tap answers. Back from the pieces screen returns to the last question, not question 1.
 - **W1.4** `That's the yard` is a summary, not a loop.
 - **W1.5** Save the brief in localStorage. No account.
