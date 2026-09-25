@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Phoenix Yard</title>
+<style>
+  :root {
+    --ink: #1c1916;
+    --pine: #1B3A2F;
+    --pine-2: #2F5A45;
+    --sand: #F4EDE1;
+    --paper: #FFFBF4;
+    --line: #D9D0C0;
+    --muted: #6A6358;
+    --ember: #C45A28;
+    --ok: #DCE8DC;
+    --warn: #F3D7B3;
+    --danger: #E8B8B2;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; background: var(--sand); color: var(--ink);
+    font: 17px/1.45 "Avenir Next", "Segoe UI", sans-serif;
+  }
+  #app {
+    max-width: 430px; margin: 0 auto; min-height: 100dvh;
+    background: var(--paper); display: flex; flex-direction: column;
+  }
+  header {
+    padding: 16px 20px 0; display: flex; justify-content: space-between; align-items: center;
+  }
+  .brand { font-weight: 700; color: var(--pine); }
+  .dots-prog { display: flex; gap: 5px; }
+  .dots-prog i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); display: block; }
+  .dots-prog i.on { background: var(--pine); }
+  main { flex: 1; padding: 12px 20px 16px; }
+  h1 { font-size: 28px; line-height: 1.15; color: var(--pine); margin: 12px 0 10px; letter-spacing: -0.02em; }
+  h1.sm { font-size: 22px; }
+  .lead { color: var(--muted); margin: 0 0 18px; }
+  .hint { font-size: 14px; color: var(--muted); background: var(--ok); border-radius: 12px; padding: 12px 14px; margin: 0 0 16px; }
+  .hint.warn { background: var(--warn); }
+  footer { padding: 8px 20px 28px; display: flex; gap: 8px; }
+  button.pri, button.ghost, button.ans {
+    border-radius: 14px; padding: 16px; font-size: 17px; font-weight: 650; cursor: pointer;
+  }
+  button.pri { flex: 1; background: var(--pine); color: #fff; border: 0; }
+  button.ghost { flex: 1; background: transparent; border: 1px solid var(--line); color: var(--pine); }
+  button.ans {
+    width: 100%; background: #fff; border: 1px solid var(--line); color: var(--ink);
+    text-align: left; margin: 0 0 10px;
+  }
+  button.ans.on { background: var(--pine); color: #fff; border-color: var(--pine); }
+  .yard {
+    position: relative; height: 300px; margin: 8px 0 12px;
+    background: #EFE6D4; border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
+  }
+  .gravel { position: absolute; inset: 0; background:
+    repeating-linear-gradient(45deg, #e8dcc6 0 8px, #efe6d4 8px 16px); opacity: .55; }
+  .house {
+    position: absolute; left: 50%; top: 50%; width: 118px; height: 88px;
+    transform: translate(-50%, -58%); background: var(--pine); color: #fff;
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 650; z-index: 2;
+  }
+  .house:after {
+    content: ""; position: absolute; top: -22px; left: 12px; right: 12px; height: 28px;
+    background: #143028; clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  }
+  .side {
+    position: absolute; border: 2px dashed #b7ab95; background: rgba(255,255,255,.55);
+    color: var(--muted); font-size: 12px; font-weight: 650; display: flex; align-items: center;
+    justify-content: center; text-align: center; padding: 4px; cursor: pointer; z-index: 3;
+  }
+  .side.on { background: var(--ok); border-style: solid; border-color: var(--pine); color: var(--pine); }
+  .side.hot { background: #f3d0b8; border-color: var(--ember); color: #7a3210; }
+  .side[data-id="front"] { left: 28%; right: 28%; top: 18px; height: 46px; border-radius: 10px; }
+  .side[data-id="back"] { left: 28%; right: 28%; bottom: 62px; height: 44px; border-radius: 10px; }
+  .side[data-id="left"] { left: 10px; top: 78px; width: 58px; height: 86px; border-radius: 10px; writing-mode: horizontal-tb; }
+  .side[data-id="right"] { right: 10px; top: 78px; width: 58px; height: 86px; border-radius: 10px; }
+  .spot {
+    position: absolute; z-index: 3; border-radius: 999px; border: 2px dashed #b7ab95;
+    background: rgba(255,255,255,.7); font-size: 11px; font-weight: 650; color: var(--muted);
+    padding: 6px 10px; cursor: pointer;
+  }
+  .spot.on { background: var(--ok); border-color: var(--pine); color: var(--pine); border-style: solid; }
+  .spot[data-id="gate"] { left: 14px; bottom: 12px; }
+  .spot[data-id="pots"] { right: 14px; bottom: 12px; }
+  .spot[data-id="gravel"] { left: 50%; bottom: 12px; transform: translateX(-50%); }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px; margin: 0 0 10px;
+  }
+  .card.gone { opacity: .45; text-decoration: line-through; }
+  .swatch { height: 56px; border-radius: 10px; margin: 0 0 10px; }
+  .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .name { font-weight: 750; font-size: 18px; }
+  .job { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; margin: 8px 0 6px; }
+  .mini { font-size: 12px; border-radius: 999px; padding: 4px 8px; background: var(--sand); color: var(--muted); }
+  .mini.warn { background: var(--warn); color: #6b3a12; }
+  .mini.ok { background: var(--ok); color: var(--pine); }
+  .why { margin: 0; font-size: 15px; color: var(--muted); }
+  .same { font-size: 12px; color: var(--pine); margin: 6px 0 0; font-weight: 650; }
+  .strip-nav { display: flex; justify-content: space-between; align-items: center; margin: 0 0 10px; }
+  .strip-nav strong { color: var(--pine); }
+  .tiny { font-size: 13px; color: var(--muted); }
+  .dogbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; margin: 0 0 12px;
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const STRIPS = [
+  { id: "wall", title: "Afternoon wall", caption: "Blades, then a flower, then something low. Almost no extra water." },
+  { id: "gate", title: "The gate", caption: "Safe to brush past. Black Dalea feeds the soil." },
+  { id: "pots", title: "The pots", caption: "Small enough for a patio. Color in the front pot." },
+  { id: "gravel", title: "Open gravel", caption: "Blades, a grass that moves, a small cactus." }
+];
+
+const CARDS = {
+  wall: [
+    { name: "Red Yucca", job: "Bone", texture: "Blades", colors: ["#c0392b"], chips: ["Almost no water", "Takes afternoon heat", "Safe to brush"],
+      why: "Upright plant for the hot wall. Native. Low care." },
+    { name: "Flame Honeysuckle", job: "Bloom", texture: "Leaves", colors: ["#c0392b", "#e67e22"], chips: ["Almost no water", "Hummingbirds"],
+      why: "Flower after the yucca starts. Same dry water." },
+    { name: "Native Hedgehog", job: "Floor", texture: "Mound", colors: ["#d46a9a"], chips: ["Almost no water", "Spines — not for the gate"],
+      why: "Low spring color. Keep it off the path.", warn: true }
+  ],
+  gate: [
+    { name: "Red Yucca", job: "Bone", texture: "Blades", colors: ["#c0392b"], chips: ["Safe to brush", "Almost no water"],
+      why: "Same plant as the afternoon wall — now at the gate.", same: "Same as the afternoon wall" },
+    { name: "Black Dalea", job: "Bloom", texture: "Low shrub", colors: ["#6b4f8a"], chips: ["Safe to brush", "Feeds the soil", "Fall flower"],
+      why: "Color without thorns. Blooms later so the hummingbird still has a job." },
+    { name: "Texas Tuberose", job: "Floor", texture: "Blades", colors: ["#d46a9a"], chips: ["Safe to brush", "Almost no water"],
+      why: "Low form by the latch. Soft edge." }
+  ],
+  pots: [
+    { name: "Texas Tuberose", job: "Bone", texture: "Blades", colors: ["#d46a9a"], chips: ["Fits a pot", "Safe to brush"],
+      why: "Shape in a container. Stays small enough for the patio." },
+    { name: "Desert Marigold", job: "Bloom", texture: "Mound", colors: ["#e2b007"], chips: ["Fits a pot", "Gold flower"],
+      why: "The color in the front pot." },
+    { name: "Claret Cup", job: "Floor", texture: "Mound", colors: ["#c0392b"], chips: ["Spines", "Fits a pot"],
+      why: "Small cactus for color. Not for hands or a chewing dog.", warn: true, hideIfHands: true }
+  ],
+  gravel: [
+    { name: "Giant Hesperaloe", job: "Bone", texture: "Blades", colors: ["#f4f0e6"], chips: ["Almost no water", "Safe to brush"],
+      why: "The tall bone in the gravel." },
+    { name: "Pine Muhly", job: "Bloom", texture: "Cloud", colors: ["#c4b48a"], chips: ["Almost no water", "Moves in wind"],
+      why: "The grass that moves when monsoon wind hits." },
+    { name: "Native Hedgehog", job: "Floor", texture: "Mound", colors: ["#d46a9a"], chips: ["Spines", "Spring flower"],
+      why: "Small cactus in the open. Not next to the gate.", warn: true }
+  ]
+};
+
+const POTS_SAFE = { name: "Desert Marigold", job: "Floor", texture: "Mound", colors: ["#e2b007"], chips: ["Fits a pot", "Safe to brush"],
+  why: "Replaces the cactus in the pot when kids or a chewing dog are in the yard." };
+
+const state = {
+  screen: "home",
+  q: 0,
+  hot: "right",
+  extras: { gate: true, pots: true, gravel: true },
+  kids: null, chew: null, wildlife: true, care: null,
+  strip: 0,
+  lastChange: ""
+};
+
+function prog(nOn) {
+  return `<div class="dots-prog">${[0,1,2,3,4,5].map(i => `<i class="${i<=nOn?"on":""}"></i>`).join("")}</div>`;
+}
+
+function house(showExtras) {
+  const sideLabel = { front: "Front", back: "Back", left: "Left", right: "Right" };
+  const sides = ["front","left","right","back"].map(id => {
+    const hot = state.hot === id;
+    return `<button class="side ${hot?"hot":""}" data-act="hot" data-id="${id}">${hot ? "Afternoon sun" : sideLabel[id]}</button>`;
+  }).join("");
+  const extras = showExtras ? `
+    <button class="spot ${state.extras.gate?"on":""}" data-act="extra" data-id="gate">Gate</button>
+    <button class="spot ${state.extras.pots?"on":""}" data-act="extra" data-id="pots">Pots</button>
+    <button class="spot ${state.extras.gravel?"on":""}" data-act="extra" data-id="gravel">Gravel</button>` : "";
+  return `<div class="yard">
+    <div class="gravel"></div>
+    ${sides}
+    <div class="house">House</div>
+    ${extras}
+  </div>`;
+}
+
+function screenHome() {
+  return `
+    <header><span class="brand">Phoenix Yard</span></header>
+    <main>
+      <h1>Tap the wall that cooks in the afternoon.</h1>
+      <p class="lead">Then four short questions. You get three plants for that wall — not a catalog.</p>
+      ${house(false)}
+    </main>
+    <footer><button class="pri" data-act="go" data-to="ask">That’s the hot wall</button></footer>`;
+}
+
+const QUESTIONS = [
+  { key: "kids", title: "Do kids play in the plants?",
+    hint: "If yes, we hide plants that can make a child very sick, and keep jump-cholla off the gate.",
+    answers: [["No", false], ["Yes", true]] },
+  { key: "chew", title: "Does a dog or cat chew leaves?",
+    hint: "If yes, sago and oleander leave the list. Aloe is marked as a problem if they chew.",
+    answers: [["No", false], ["Yes — they chew", true]] },
+  { key: "wildlife", title: "Do you want birds and butterflies?",
+    hint: "If yes, we keep plants that feed them. Native milkweed can stay even when kids are around.",
+    answers: [["Not a goal", false], ["Yes", true]] },
+  { key: "care", title: "How much time do you have?",
+    hint: "Almost none means gravel plants. Weekends can add one extra-water pot.",
+    answers: [["Almost none", "Low"], ["Weekends", "Weekend"], ["It’s a hobby", "Hobby"]] }
+];
+
+function screenAsk() {
+  const q = QUESTIONS[state.q];
+  const btns = q.answers.map(([label, val]) => {
+    const on = state[q.key] === val;
+    return `<button class="ans ${on?"on":""}" data-act="answer" data-key="${q.key}" data-val="${val}">${label}</button>`;
+  }).join("");
+  return `
+    <header><span class="brand">Just asking</span>${prog(state.q+1)}</header>
+    <main>
+      <h1 class="sm">${q.title}</h1>
+      <p class="hint">${q.hint}</p>
+      ${btns}
+    </main>
+    <footer>
+      <button class="ghost" data-act="backq">Back</button>
+      <button class="pri" data-act="nextq">Next</button>
+    </footer>`;
+}
+
+function screenPieces() {
+  return `
+    <header><span class="brand">What else is in the yard?</span>${prog(5)}</header>
+    <main>
+      <h1 class="sm">Keep the pieces you have.</h1>
+      <p class="lead">The shaded wall is the afternoon one. Gate, pots, and gravel are extra strips.</p>
+      ${house(true)}
+    </main>
+    <footer>
+      <button class="ghost" data-act="go" data-to="ask">Back</button>
+      <button class="pri" data-act="go" data-to="results">See the three</button>
+    </footer>`;
+}
+
+function visibleStrips() {
+  const list = [{ id: "wall", title: "Afternoon wall" }];
+  if (state.extras.gate) list.push(STRIPS.find(s => s.id === "gate"));
+  if (state.extras.pots) list.push(STRIPS.find(s => s.id === "pots"));
+  if (state.extras.gravel) list.push(STRIPS.find(s => s.id === "gravel"));
+  return list;
+}
+
+function cardsFor(id) {
+  let list = CARDS[id].map(c => ({ ...c }));
+  const hands = state.kids || state.chew;
+  if (id === "pots" && hands) {
+    list = list.filter(c => !c.hideIfHands);
+    if (list.length < 3) list.push(POTS_SAFE);
+  }
+  return list;
+}
+
+function cardEl(c) {
+  const sw = `linear-gradient(135deg, ${c.colors[0]}, #1B3A2F)`;
+  const chips = (c.chips || []).map(t => {
+    const w = /spine|sick|not for/i.test(t);
+    return `<span class="mini ${w?"warn":"ok"}">${t}</span>`;
+  }).join("");
+  return `<article class="card">
+    <div class="swatch" style="background:${sw}"></div>
+    <div class="top"><span class="name">${c.name}</span><span class="job">${c.job}</span></div>
+    <div class="chips">${chips}</div>
+    <p class="why">${c.why}</p>
+    ${c.same ? `<p class="same">${c.same}</p>` : ""}
+  </article>`;
+}
+
+function screenResults() {
+  const strips = visibleStrips();
+  if (state.strip >= strips.length) state.strip = 0;
+  const strip = strips[state.strip];
+  const cards = cardsFor(strip.id);
+  const change = state.lastChange
+    ? `<p class="hint warn">${state.lastChange}</p>`
+    : (state.chew || state.kids
+        ? `<p class="hint">Kids or a chewing pet are on. Plants that can make them very sick stay off this list.</p>`
+        : "");
+  const nextLabel = strips.length > 1
+    ? "Next — " + strips[(state.strip + 1) % strips.length].title.toLowerCase()
+    : "That’s the yard";
+  return `
+    <header><span class="brand">Your three</span>${prog(5)}</header>
+    <main>
+      <div class="strip-nav">
+        <strong>${strip.title}</strong>
+        <span class="tiny">${state.strip + 1} of ${strips.length}</span>
+      </div>
+      <p class="lead">${strip.caption}</p>
+      <div class="dogbar">
+        <span>A dog or cat chews leaves</span>
+        <button class="chip-like ${state.chew?"pri":"ghost"}" data-act="flipchew" style="flex:0;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:${state.chew?"var(--pine)":"#fff"};color:${state.chew?"#fff":"var(--pine)"};font-weight:650;cursor:pointer">
+          ${state.chew ? "On" : "Off"}
+        </button>
+      </div>
+      ${change}
+      ${cards.map(cardEl).join("")}
+    </main>
+    <footer>
+      <button class="ghost" data-act="go" data-to="pieces">Yard</button>
+      <button class="pri" data-act="nextstrip">${nextLabel}</button>
+    </footer>`;
+}
+
+function render() {
+  const map = { home: screenHome, ask: screenAsk, pieces: screenPieces, results: screenResults };
+  document.getElementById("app").innerHTML = map[state.screen]();
+}
+
+function parseVal(v) {
+  if (v === "true") return true;
+  if (v === "false") return false;
+  return v;
+}
+
+document.getElementById("app").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-act]");
+  if (!b) return;
+  const act = b.dataset.act;
+  if (act === "go") { state.screen = b.dataset.to; if (b.dataset.to === "ask") state.q = 0; }
+  if (act === "hot") state.hot = b.dataset.id;
+  if (act === "extra") state.extras[b.dataset.id] = !state.extras[b.dataset.id];
+  if (act === "answer") state[b.dataset.key] = parseVal(b.dataset.val);
+  if (act === "nextq") {
+    if (state[QUESTIONS[state.q].key] === null || state[QUESTIONS[state.q].key] === undefined) return;
+    if (state.q < QUESTIONS.length - 1) state.q += 1;
+    else state.screen = "pieces";
+  }
+  if (act === "backq") {
+    if (state.q === 0) state.screen = "home";
+    else state.q -= 1;
+  }
+  if (act === "nextstrip") {
+    const n = visibleStrips().length;
+    state.strip = (state.strip + 1) % n;
+    state.lastChange = "";
+  }
+  if (act === "flipchew") {
+    const was = !!state.chew;
+    state.chew = !state.chew;
+    const onPots = visibleStrips()[state.strip]?.id === "pots";
+    if (state.chew && onPots) {
+      state.lastChange = "Claret Cup left the pots. Thorns next to hands and a chewing dog. Desert Marigold stayed.";
+    } else if (!state.chew && onPots && was) {
+      state.lastChange = "Claret Cup can come back. It still has spines — keep it off the gate.";
+    } else if (state.chew) {
+      state.lastChange = "This strip was already safe to chew. Oleander and sago stay off the whole list.";
+    } else {
+      state.lastChange = "";
+    }
+  }
+  render();
+});
+
+render();
+</script>
+</body>
+</html>

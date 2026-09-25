@@ -1,0 +1,18 @@
+{
+  "name": "default",
+  "brief": {
+    "hot_side": "right",
+    "kids": false,
+    "chew": false,
+    "wildlife": true,
+    "care": "Low",
+    "extras": { "gate": true, "pots": true, "gravel": true },
+    "guilds": false
+  },
+  "expect": {
+    "strip_ids": ["wall", "gate", "pots", "gravel"],
+    "no_spine_class_on_gate": ["jumping", "puncture"],
+    "no_toxic_class_global": ["deadly"],
+    "max_picks_per_strip": 3
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "pets_on",
+  "brief": {
+    "hot_side": "right",
+    "kids": false,
+    "chew": true,
+    "wildlife": true,
+    "care": "Low",
+    "extras": { "gate": true, "pots": true, "gravel": true },
+    "guilds": false
+  },
+  "expect": {
+    "no_toxic_class_any_pick": ["deadly", "ingest"],
+    "except_milkweed_if_wildlife": ["Asclepias linaria", "Asclepias subulata"],
+    "gate_no_jumping": true,
+    "diff_vs_default_may_be_empty_on_already_safe_strips": true
+  }
+}
