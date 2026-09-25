@@ -474,6 +474,34 @@ const bedFront = match(
 assert(bedFront.strips.some((s) => s.id === "front"), "one bed on the north side should quote front");
 assert(!bedFront.strips.some((s) => s.id === "wall"), "one bed on the north side should not quote the west wall");
 
+const multi = match(
+  {
+    ...defaultBrief,
+    extras: { wall: false, gate: false, pots: false, gravel: false },
+    surfaces: {
+      front: ["pots", "gate"],
+      back: ["pots", "bed"],
+      left: ["gate"],
+      right: ["bed"],
+    },
+  },
+  catalog
+);
+assert(
+  multi.strips.map((s) => s.id).join() === "front,wall,pots-front,gate-front,pots-back,gate-left,gravel-back".split(",").filter(Boolean).join() ||
+    multi.strips.some((s) => s.id === "pots-front") && multi.strips.some((s) => s.id === "pots-back"),
+  "multi surfaces " + multi.strips.map((s) => s.id).join()
+);
+assert(multi.strips.filter((s) => s.id.startsWith("pots-")).length === 2, "pots on two sides");
+assert(multi.strips.filter((s) => s.id.startsWith("gate-")).length === 2, "gate on two sides");
+const potFront = multi.strips.find((s) => s.id === "pots-front");
+const potBack = multi.strips.find((s) => s.id === "pots-back");
+assert(potFront.bearing === "N" && potBack.bearing === "S", "pots inherit north and south");
+assert(
+  JSON.stringify(potFront.picks.map((p) => p.card_id)) !== JSON.stringify(potBack.picks.map((p) => p.card_id)),
+  "north pots copied south pots"
+);
+
 if (failed) {
   console.error(failed + " failed");
   process.exit(1);

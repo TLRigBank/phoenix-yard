@@ -18,7 +18,8 @@ A phone-wide web app:
 
 1. **Orient.** Tap the wall that cooks in the afternoon. That side **is West**. Relabel the house North / South / East / West. Stop saying “right side.”
 2. **Project.** Pots / One bed / Gate and path / Whole yard / Not sure.
-3. **Which side** (pots, one bed, gate only). Same house, now compass-labeled. That writes `project_side` and binds the job to that bearing.
+3. **Pieces on sides.** After orientation, the house stays on screen. Each compass side can take any mix of **bed, pots, gate, gravel, block wall**. A west patio and a north patio are two pot strips. A gate can exist on more than one side. `project_scale` only seeds the first piece; it does not lock the job to one wall.
+
 4. **Household.** Kids, chew, wildlife, care.
 5. **Rooms / micro.** Whole-yard can still toggle sides. Cover and block wall per side.
 6. **Results.** Titles like `West · Afternoon sun`, `North · Front`. One strip at a time.
@@ -62,9 +63,12 @@ UI  →  match(brief)  →  strips that extras turned on
   },
   "block_wall": { "front": false, "left": false, "right": true, "back": false },
   "cover": { "front": "none", "left": "tree", "right": "none", "back": "eave" },
-  "pots_side": "front",
-  "gravel_side": null,
-  "gate_side": "front",
+  "surfaces": {
+    "front": ["pots", "gate"],
+    "left": ["gate"],
+    "right": ["bed", "block_wall"],
+    "back": ["pots", "gravel"]
+  },
 ```
 
 | extra | Meaning | Climate |

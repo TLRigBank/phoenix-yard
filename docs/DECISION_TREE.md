@@ -28,18 +28,25 @@ The UI must relabel the house to North / South / East / West after the tap. Do n
 
 North is not East. South is not West.
 
-## Project → side
+## Project → sides
 
-`project_scale` + `project_side` bind the job to one wall:
+Pieces are **per side**, not global.
 
-| Scale | What turns on |
-|---|---|
-| pots | pots only, `pots_side = project_side` |
-| path | gate only, `gate_side = project_side` |
-| bed | that side’s bed + gravel on that side |
-| yard / unsure | extras as toggled; all four bearings available |
+```json
+"surfaces": {
+  "front": ["pots", "gate"],
+  "right": ["bed", "block_wall"],
+  "back": ["pots"],
+  "left": ["gate"]
+}
+```
 
-One bed on the north wall must not quote the west strip.
+Allowed on every side: `bed`, `pots`, `gate`, `gravel`, `block_wall`.
+
+`project_scale` + `project_side` only **seed** one side. They must not wipe pieces on the other three sides. If `surfaces` is present, it wins.
+
+Strip ids: `pots-front`, `pots-back`, `gate-left`, `gravel-back`, plus the bed/block ids already defined. Each strip uses that side’s bearing after cover.
+
 
 ## Cover shift (after bearing)
 

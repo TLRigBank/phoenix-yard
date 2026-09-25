@@ -35,7 +35,10 @@ AC: House shows Front/Left/Right/Back. Tapped side labeled Afternoon sun. Payloa
 
 **US-27** After the afternoon-sun tap, the four house buttons read North, South, East, West. The tapped side reads West.
 
-**US-28** Pots, one bed, and gate ask which compass side the project is on before plants. One bed on North does not return the West trio.
+**US-30** User can put pots, a bed, a gate, gravel, and a block wall on any combination of the four sides. Two pot strips on North and South are different quotes.
+
+**US-31** Project scale seeds the first piece. Adding a gate on East later does not remove the west bed.
+
 
 **US-29** North and South quotes are different plants. East is morning sun / afternoon house-shade. West is the roast.
 

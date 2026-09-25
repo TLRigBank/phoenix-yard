@@ -227,7 +227,7 @@ const QUESTIONS = [
 const state = {
   screen: "home", q: 0, hot: "right", scale: null,
   extras: { wall: true, shade: true, front: true, back: true, gate: true, pots: true, gravel: true },
-  project_side: null,
+  surfaces: { front: [], left: [], right: [], back: [] },
   cover: { front: "none", left: "none", right: "none", back: "none" },
   block_wall: { front: false, left: false, right: false, back: false },
   kids: null, chew: null, wildlife: true, care: null,
@@ -412,6 +412,13 @@ function screenMicro() {
     ).join("");
     return `<section class="sum">
       <h2>${label}${hot}${shade}</h2>
+      <p class="meta">What is on this side?</p>
+      <div class="extra-row">
+        ${["bed", "pots", "gate", "gravel"].map((kind) => {
+          const on = (state.surfaces[id] || []).indexOf(kind) >= 0;
+          return `<button class="extra ${on ? "on" : ""}" data-act="surface" data-side="${id}" data-id="${kind}">${kind}</button>`;
+        }).join("")}
+      </div>
       <p class="meta">What already shades this side?</p>
       <div class="extra-row">${coverBtns}</div>
       <button class="extra ${state.block_wall[id] ? "on" : ""}" data-act="block" data-id="${id}" style="width:100%;margin-top:8px">Block wall against the plants</button>
@@ -526,7 +533,15 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.screen = (state.scale === "pots" || state.scale === "bed" || state.scale === "path") ? "projectside" : "ask";
     if (!state.scale) applyScale("unsure");
   }
-  if (act === "project-side") state.project_side = b.dataset.id;
+  if (act === "surface") {
+    const side = b.dataset.side;
+    const kind = b.dataset.id;
+    const list = (state.surfaces[side] || []).slice();
+    const i = list.indexOf(kind);
+    if (i >= 0) list.splice(i, 1);
+    else list.push(kind);
+    state.surfaces[side] = list;
+  }
   if (act === "extra") state.extras[b.dataset.id] = !state.extras[b.dataset.id];
   if (act === "answer") {
     state[b.dataset.key] = parseVal(b.dataset.val);
