@@ -2,7 +2,9 @@
 
 Read `GROK.md` first.
 
-The tap names afternoon sun. Opposite wall = shade climate. Front and back use sun, shade, or shoulder depending on the tap. Do not quote every side with the hot-wall filter.
+Read `GROK.md` then `docs/DECISION_TREE.md`.
+
+Climate = side role from `hot_side`, then shifted by `cover`, then gated by `block_wall`. Do not quote a tree-shaded sun side as a roasting wall. Do not seat a tender plant at the base of a shade-side block wall.
 
 `match(brief)` in `engine/match.js` is the only matcher. `brief.exclude` is how a strip gets three others. Do not shuffle in the UI.
 

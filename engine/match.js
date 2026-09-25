@@ -39,6 +39,16 @@ const SEATS = {
     B: ["Flowering Shrubs", "Perennials and Groundcover", "Vines and Climbers"],
     C: ["Cacti", "Perennials and Groundcover", "Other Succulents", "Aloe"],
   },
+  left: {
+    A: ["Yucca and Allies", "Agave", "Foliage Shrubs"],
+    B: ["Flowering Shrubs", "Perennials and Groundcover", "Vines and Climbers"],
+    C: ["Cacti", "Perennials and Groundcover", "Other Succulents", "Aloe"],
+  },
+  right: {
+    A: ["Yucca and Allies", "Agave", "Foliage Shrubs"],
+    B: ["Flowering Shrubs", "Perennials and Groundcover", "Vines and Climbers"],
+    C: ["Cacti", "Perennials and Groundcover", "Other Succulents", "Aloe"],
+  },
   gate: {
     A: ["Yucca and Allies", "Foliage Shrubs", "Other Succulents"],
     B: ["Perennials and Groundcover", "Flowering Shrubs", "Ornamental Grasses"],
@@ -61,6 +71,8 @@ const SIZE_POINTS = {
   shade: { small: 6, medium: 4, container_scale: 2, large: 0 },
   front: { small: 6, medium: 4, container_scale: 2, large: 0 },
   back: { small: 6, medium: 4, container_scale: 2, large: 0 },
+  left: { small: 6, medium: 4, container_scale: 2, large: 0 },
+  right: { small: 6, medium: 4, container_scale: 2, large: 0 },
   gate: { small: 8, container_scale: 6, medium: 2 },
   pots: { container_scale: 8, small: 4 },
   gravel: { small: 6, medium: 4, container_scale: 2, large: 0 },
@@ -90,10 +102,66 @@ const STRIP_META = {
   },
   back: {
     title: "Back",
-    caption: "The back bed. Not the roasting wall unless the back is the afternoon sun.",
+    caption: "The back bed.",
     room_code: "R-back",
     why: "back bed",
     same: "Same as the back",
+  },
+  left: {
+    title: "Left",
+    caption: "The left bed.",
+    room_code: "R-left",
+    why: "left bed",
+    same: "Same as the left",
+  },
+  right: {
+    title: "Right",
+    caption: "The right bed.",
+    room_code: "R-right",
+    why: "right bed",
+    same: "Same as the right",
+  },
+  "wall-block": {
+    title: "Afternoon sun · block wall",
+    caption: "Against the cooking block wall. Reflected heat.",
+    room_code: "R1-block",
+    why: "block wall in afternoon sun",
+    same: "Same as the afternoon sun block wall",
+  },
+  "shade-block": {
+    title: "Afternoon shade · block wall",
+    caption: "Against the shade-side block wall. Frost pocket at the base.",
+    room_code: "R2-block",
+    why: "block wall in afternoon shade",
+    same: "Same as the afternoon shade block wall",
+  },
+  "front-block": {
+    title: "Front · block wall",
+    caption: "Against the front block wall.",
+    room_code: "R-front-block",
+    why: "front block wall",
+    same: "Same as the front block wall",
+  },
+  "back-block": {
+    title: "Back · block wall",
+    caption: "Against the back block wall.",
+    room_code: "R-back-block",
+    why: "back block wall",
+    same: "Same as the back block wall",
+  },
+  "left-block": {
+    title: "Left · block wall",
+    caption: "Against the left block wall.",
+    room_code: "R-left-block",
+    why: "left block wall",
+    same: "Same as the left block wall",
+  },
+  "right-block": {
+    title: "Right · block wall",
+    caption: "Against the right block wall.",
+    room_code: "R-right-block",
+    why: "right block wall",
+    same: "Same as the right block wall",
   },
   gate: {
     title: "The gate",
@@ -124,6 +192,50 @@ function oppositeSide(hot) {
   return OPPOSITE[hot];
 }
 
+function isBlockRoom(room) {
+  return String(room).endsWith("-block");
+}
+
+function baseRoom(room) {
+  return isBlockRoom(room) ? room.slice(0, -6) : room;
+}
+
+function seatsFor(room) {
+  return SEATS[baseRoom(room)] || SEATS.wall;
+}
+
+function sizesFor(room) {
+  return SIZE_POINTS[baseRoom(room)] || SIZE_POINTS.wall;
+}
+
+function sideForRoom(room, brief) {
+  const base = baseRoom(room);
+  if (base === "wall") return brief.hot_side;
+  if (base === "shade") return oppositeSide(brief.hot_side);
+  if (base === "front" || base === "back" || base === "left" || base === "right") return base;
+  if (base === "pots") return brief.pots_side || null;
+  if (base === "gravel") return brief.gravel_side || null;
+  if (base === "gate") return brief.gate_side || null;
+  return null;
+}
+
+function coverOf(brief, side) {
+  if (!side || !brief.cover) return "none";
+  const cover = brief.cover[side];
+  return cover === "tree" || cover === "eave" || cover === "structure" ? cover : "none";
+}
+
+function blockOf(brief, side) {
+  return !!(side && brief.block_wall && brief.block_wall[side]);
+}
+
+function shiftClimate(role, cover) {
+  if (cover === "none") return role;
+  if (role === "sun") return cover === "tree" ? "shade" : "shoulder";
+  if (role === "shoulder") return "shade";
+  return "shade";
+}
+
 function sideRole(hot, side) {
   if (side === hot) return "sun";
   if (side === oppositeSide(hot)) return "shade";
@@ -131,11 +243,19 @@ function sideRole(hot, side) {
 }
 
 function climateOf(room, brief) {
-  if (room === "wall") return "sun";
-  if (room === "shade") return "shade";
-  if (room === "front") return sideRole(brief.hot_side, "front");
-  if (room === "back") return sideRole(brief.hot_side, "back");
-  return room;
+  const side = sideForRoom(room, brief);
+  if (!side) return room === "shade" ? "shade" : room === "wall" ? "sun" : null;
+  return shiftClimate(sideRole(brief.hot_side, side), coverOf(brief, side));
+}
+
+function passesBlock(card, climate) {
+  if (climate === "sun") return !!card.reflected_heat_ok && !card.afternoon_shade_pref;
+  if (climate === "shade") return card.phoenix_winter_fit === "reliable_including_cold_pockets";
+  if (climate === "shoulder") {
+    if (card.reflected_heat_ok) return true;
+    return card.sun_class === "full_to_part" && !card.afternoon_shade_pref;
+  }
+  return false;
 }
 
 const JOB = { A: "Bone", B: "Bloom", C: "Floor" };
@@ -173,7 +293,8 @@ function waterAllowed(card, room, care) {
   if (water === "M") return false;
   if (water === "VL") return true;
   if (water !== "L") return false;
-  if (["wall", "shade", "front", "back", "gravel"].includes(room)) return false;
+  const bed = ["wall", "shade", "front", "back", "left", "right", "gravel"];
+  if (bed.includes(baseRoom(room))) return false;
   if (room === "pots") return true;
   if (room === "gate") return care === "Weekend" || care === "Hobby";
   return false;
@@ -223,11 +344,15 @@ function passesClimate(card, climate) {
 
 function passesRoom(card, room, brief) {
   if (!waterAllowed(card, room, brief.care)) return false;
-  if (room === "wall" || room === "shade" || room === "front" || room === "back") {
-    return passesClimate(card, climateOf(room, brief));
+  const climate = climateOf(room, brief);
+  const house = ["wall", "shade", "front", "back", "left", "right"].includes(baseRoom(room));
+  if (house) {
+    if (!passesClimate(card, climate)) return false;
+    if (isBlockRoom(room) && !passesBlock(card, climate)) return false;
+    return true;
   }
   if (room === "gate") {
-    return !(
+    const spineOk = !(
       card.spine_hazard ||
       card.pedestrian_avoid ||
       card.spine_class === "jumping" ||
@@ -235,13 +360,20 @@ function passesRoom(card, room, brief) {
       card.size_class === "large" ||
       card.size_class === "landmark"
     );
+    if (!spineOk) return false;
+    if (brief.gate_side && climate && !passesClimate(card, climate)) return false;
+    return true;
   }
   if (room === "pots") {
     const widthOk = card.width_max_ft == null || card.width_max_ft <= 5;
     const sizeOk = card.container_ok || card.size_class === "container_scale" || card.size_class === "small";
-    return sizeOk && widthOk && card.size_class !== "large" && card.size_class !== "landmark";
+    if (!(sizeOk && widthOk && card.size_class !== "large" && card.size_class !== "landmark")) return false;
+    if (brief.pots_side && climate && !passesClimate(card, climate)) return false;
+    if (brief.pots_side && blockOf(brief, brief.pots_side) && !passesBlock(card, climate)) return false;
+    return true;
   }
   if (room === "gravel") {
+    if (brief.gravel_side && climate) return passesClimate(card, climate);
     return (
       (card.sun_class === "full" ||
         card.sun_class === "full_plus_reflected" ||
@@ -270,7 +402,7 @@ function baseScore(card, room, brief) {
     if (card.sun_class === "full_to_part") score += 4;
     if (card.afternoon_shade_pref) score += 2;
   }
-  score += (SIZE_POINTS[room] && SIZE_POINTS[room][card.size_class]) || 0;
+  score += (sizesFor(room) && sizesFor(room)[card.size_class]) || 0;
   const care = brief.care;
   const maintenance = card.maintenance_level;
   if (care === "Low") score += maintenance === "low" ? 8 : 0;
@@ -295,7 +427,7 @@ function seatBonus(card, room, seat) {
   if (seat === "C" && height <= 2) score += 6;
   if (room === "gravel" && seat === "A" && height >= 5 && height <= 8) score += 8;
   if (room === "wall" && seat === "A" && height >= 2 && height <= 4) score += 4;
-  if ((room === "shade" || room === "front" || room === "back") && seat === "A" && height >= 2 && height <= 4) score += 4;
+  if ((room === "shade" || room === "front" || room === "back" || room === "left" || room === "right" || isBlockRoom(room)) && seat === "A" && height >= 2 && height <= 4) score += 4;
   return score;
 }
 
@@ -318,21 +450,40 @@ function validate(brief) {
   }
   if (brief.care !== "Low" && brief.care !== "Weekend" && brief.care !== "Hobby") return "care";
   if (!brief.extras || typeof brief.extras !== "object") return "extras";
-  for (const key of ["wall", "gate", "pots", "gravel", "shade", "front", "back"]) {
+  for (const key of ["wall", "gate", "pots", "gravel", "shade", "front", "back", "left", "right"]) {
     if (brief.extras[key] != null && typeof brief.extras[key] !== "boolean") return "extras." + key;
   }
   for (const key of ["wall", "gate", "pots", "gravel"]) {
     if (typeof brief.extras[key] !== "boolean") return "extras." + key;
   }
-  const anyRoom = ["wall", "shade", "front", "back", "gate", "pots", "gravel"].some((key) => brief.extras[key]);
+  const anyRoom =
+    ["wall", "shade", "front", "back", "left", "right", "gate", "pots", "gravel"].some((key) => brief.extras[key]) ||
+    (brief.block_wall && ["front", "left", "right", "back"].some((side) => brief.block_wall[side]));
   if (!anyRoom) return "extras";
+  if (brief.cover != null) {
+    if (typeof brief.cover !== "object") return "cover";
+    for (const side of ["front", "left", "right", "back"]) {
+      if (brief.cover[side] != null && !["none", "tree", "eave", "structure"].includes(brief.cover[side])) {
+        return "cover." + side;
+      }
+    }
+  }
+  if (brief.block_wall != null) {
+    if (typeof brief.block_wall !== "object") return "block_wall";
+    for (const side of ["front", "left", "right", "back"]) {
+      if (brief.block_wall[side] != null && typeof brief.block_wall[side] !== "boolean") return "block_wall." + side;
+    }
+  }
+  for (const key of ["pots_side", "gravel_side", "gate_side"]) {
+    if (brief[key] != null && !PLACE[brief[key]]) return key;
+  }
   if (brief.project_scale != null) {
     const scales = ["pots", "bed", "path", "yard", "unsure"];
     if (!scales.includes(brief.project_scale)) return "project_scale";
   }
   if (brief.exclude != null) {
     if (typeof brief.exclude !== "object") return "exclude";
-    for (const key of ["wall", "gate", "pots", "gravel", "shade", "front", "back"]) {
+    for (const key of ["wall", "gate", "pots", "gravel", "shade", "front", "back", "left", "right"]) {
       if (brief.exclude[key] != null && !Array.isArray(brief.exclude[key])) return "exclude." + key;
     }
   }
@@ -372,8 +523,10 @@ function chipsFor(card, room, brief) {
   if (room === "pots") chips.push("Fits a pot");
   if (card.water_class === "VL") chips.push("Almost no extra water");
   else if (card.water_class === "L") chips.push("A little extra water");
+  if (isBlockRoom(room)) chips.push("Against a block wall");
   if (climateOf(room, brief) === "sun" && card.reflected_heat_ok) chips.push("Takes afternoon heat");
   if (climateOf(room, brief) === "shade") chips.push("Afternoon shade");
+  if (["tree", "eave", "structure"].includes(coverOf(brief, sideForRoom(room, brief)))) chips.push("Existing shade");
   if (card.native_class === "sw_us" || card.native_class === "sw_us_mexico") chips.push("Grows here already");
   if (card.n_fixer) chips.push("Feeds the soil");
   if (card.needs_support === "trellis") chips.push("Needs a trellis");
@@ -459,7 +612,7 @@ function fillStrip(catalog, brief, room, prior) {
   const emptyJobs = [];
   for (const seat of ["A", "B", "C"]) {
     let cands = pool.filter((card) => !usedGenus.has(genusOf(card)));
-    const grouped = cands.filter((card) => SEATS[room][seat].includes(card.plant_group));
+    const grouped = cands.filter((card) => seatsFor(room)[seat].includes(card.plant_group));
     if (grouped.length) cands = grouped;
     if (seat === "C" && usedGroups.length) {
       const different = cands.filter((card) => !usedGroups.includes(card.plant_group));
@@ -522,7 +675,7 @@ function canReroll(catalog, brief, room, shown) {
   let seats = 0;
   for (const seat of ["A", "B", "C"]) {
     let cands = pool.filter((card) => !genera.has(genusOf(card)));
-    const grouped = cands.filter((card) => SEATS[room][seat].includes(card.plant_group));
+    const grouped = cands.filter((card) => seatsFor(room)[seat].includes(card.plant_group));
     if (grouped.length) cands = grouped;
     if (!cands.length) return false;
     genera.add(genusOf(cands[0]));
@@ -538,14 +691,34 @@ function match(brief, catalog) {
   substitutesFor.byId = new Map(catalog.map((card) => [card.card_id, card]));
   const hot = brief.hot_side;
   const rooms = [];
-  const wantWall = !!(brief.extras.wall || (brief.extras.front && sideRole(hot, "front") === "sun") || (brief.extras.back && sideRole(hot, "back") === "sun"));
-  const wantShade = !!(brief.extras.shade || (brief.extras.front && sideRole(hot, "front") === "shade") || (brief.extras.back && sideRole(hot, "back") === "shade"));
-  const wantFront = !!(brief.extras.front && sideRole(hot, "front") === "shoulder");
-  const wantBack = !!(brief.extras.back && sideRole(hot, "back") === "shoulder");
+  const roleOn = (side) =>
+    !!(
+      brief.extras[side] ||
+      (side === "front" && brief.extras.front) ||
+      (side === "back" && brief.extras.back) ||
+      (side === "left" && brief.extras.left) ||
+      (side === "right" && brief.extras.right)
+    );
+  const wantWall = !!(
+    brief.extras.wall ||
+    ["front", "back", "left", "right"].some((side) => brief.extras[side] && sideRole(hot, side) === "sun")
+  );
+  const wantShade = !!(
+    brief.extras.shade ||
+    ["front", "back", "left", "right"].some((side) => brief.extras[side] && sideRole(hot, side) === "shade")
+  );
   if (wantWall) rooms.push("wall");
   if (wantShade) rooms.push("shade");
-  if (wantFront) rooms.push("front");
-  if (wantBack) rooms.push("back");
+  if (brief.extras.front && sideRole(hot, "front") === "shoulder") rooms.push("front");
+  if (brief.extras.back && sideRole(hot, "back") === "shoulder") rooms.push("back");
+  if (brief.extras.left && sideRole(hot, "left") === "shoulder") rooms.push("left");
+  if (brief.extras.right && sideRole(hot, "right") === "shoulder") rooms.push("right");
+  for (const side of ["front", "left", "right", "back"]) {
+    if (!blockOf(brief, side)) continue;
+    const role = sideRole(hot, side);
+    const id = role === "sun" ? "wall-block" : role === "shade" ? "shade-block" : side + "-block";
+    if (!rooms.includes(id)) rooms.push(id);
+  }
   if (brief.extras.gate) rooms.push("gate");
   if (brief.extras.pots) rooms.push("pots");
   if (brief.extras.gravel) rooms.push("gravel");
@@ -564,10 +737,17 @@ function match(brief, catalog) {
         shade: !!brief.extras.shade,
         front: !!brief.extras.front,
         back: !!brief.extras.back,
+        left: !!brief.extras.left,
+        right: !!brief.extras.right,
         gate: brief.extras.gate,
         pots: brief.extras.pots,
         gravel: brief.extras.gravel,
       },
+      block_wall: brief.block_wall || {},
+      cover: brief.cover || {},
+      pots_side: brief.pots_side || null,
+      gravel_side: brief.gravel_side || null,
+      gate_side: brief.gate_side || null,
       exclude: brief.exclude || {},
       guilds: brief.guilds,
     },

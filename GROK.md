@@ -19,8 +19,9 @@ A phone-wide web app:
 1. **Orient.** House with four sides. Tap the wall that cooks in the afternoon. Copy: that side is how we name afternoon sun. It is not the plant list yet.
 2. **Project.** One screen: what is this project? Pots / One bed / Gate and path / Whole yard / Not sure. That writes `project_scale` and **default rooms**. The wall is on only when the scale needs it (one bed, whole yard, not sure).
 3. **Household.** Four questions, one screen each: kids, chew, wildlife, care. One tap answers and advances.
-4. **Rooms.** Same house. Toggle Afternoon sun, Afternoon shade, Front, Back, Gate, Pots, Gravel. Climate is **not** the same on every side. The tap only says which side is afternoon sun; the opposite side is afternoon shade; the other two are shoulders (morning or late sun, not the roasting wall).
-5. **Results.** Three cards for one **on** strip. Sun, shade, front, and back use different room filters. A shade quote must not be the sun trio with a new title.
+4. **Rooms.** Toggle the four sides (sun, shade, front, back, plus left/right when they are shoulders), Gate, Pots, Gravel.
+5. **Microclimate per side.** For each side that is on: Is there a block wall? Is there already shade — open / tree / eave / patio cover? That writes `block_wall` and `cover`. A tree on the afternoon-sun side is **not** quoted as a roasting wall.
+6. **Results.** One strip at a time. Block wall is its own strip (`Afternoon sun · block wall`). Three others still works.
 6. **Three others.** Every strip has `Three others for this strip`. The engine returns a new Bone / Bloom / Floor that still passes that room and does not reuse the three just shown. `Back to this strip’s first set` clears the exclude list for that strip only.
 7. Chew toggle reruns the whole brief and names what left.
 
@@ -53,9 +54,11 @@ UI  →  match(brief)  →  strips that extras turned on
     "pots": true,
     "gravel": false
   },
-  "exclude": {},
-  "guilds": false
-}
+  "block_wall": { "front": false, "left": false, "right": true, "back": false },
+  "cover": { "front": "none", "left": "tree", "right": "none", "back": "eave" },
+  "pots_side": "front",
+  "gravel_side": null,
+  "gate_side": "front",
 ```
 
 | extra | Meaning | Climate |

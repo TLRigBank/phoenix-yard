@@ -78,6 +78,9 @@ At most four. Warnings first. Skip the rest.
 | water L | A little extra water |
 | wall and `reflected_heat_ok` | Takes afternoon heat |
 | shade climate | Afternoon shade |
+| block-wall strip | Against a block wall |
+| cover tree / eave / structure | Existing shade |
+
 | `sw_us` or `sw_us_mexico` | Grows here already |
 | `n_fixer` | Feeds the soil |
 | `needs_support == trellis` | Needs a trellis |

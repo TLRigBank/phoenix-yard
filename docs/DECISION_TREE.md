@@ -1,165 +1,98 @@
 # Decision tree (engine)
 
-This is the only climate table. `engine/match.js` implements it. The workbook is not in the repo; these points are the v1 lock, not a recovered spreadsheet. Do not add a second table in the UI. Feeling bonuses are off. `brief.guilds` is accepted and ignored.
+This is the only climate table. `engine/match.js` implements it.
 
-`hot_side` is stored and echoed as `place_label`. It is not a filter.
+A quote is **side + surface + cover + household**, not a single extras flag.
 
 ## Stage 0 — payload
 
-Required: `hot_side` (`front|left|right|back`), `kids`, `chew`, `wildlife`, `guilds` (booleans), `care` (`Low|Weekend|Hobby`), `extras.wall|gate|pots|gravel` (booleans). `project_scale` and `exclude` are optional. Anything else required-and-missing → `{ "error": "invalid_brief", "field" }`.
+Required: `hot_side`, `kids`, `chew`, `wildlife`, `guilds`, `care`, `extras.wall|gate|pots|gravel`.
 
-`hot_side` is stored as `place_label` and **assigns climate** to house sides:
+Optional:
 
-- tapped side → sun climate (strip `wall`)
-- opposite side → shade climate (strip `shade`)
-- the other two sides → shoulder climate (`front` / `back` when those sides are shoulders)
+- `extras.shade|front|back|left|right`
+- `block_wall: { front, left, right, back }` booleans
+- `cover: { front, left, right, back }` = `none|tree|eave|structure`
+- `pots_side`, `gravel_side`, `gate_side` = a house side
+- `project_scale`, `exclude`
 
-Opposite map: front↔back, left↔right.
+`hot_side` assigns a **role** to each side: tapped = sun, opposite = shade, other two = shoulder.
 
-Strip order: wall, shade, front, back, gate, pots, gravel. Skip a front/back strip when that side already is the sun or shade strip.
+`cover` then **shifts** that role before any filter:
 
+| Role before cover | tree | eave or structure |
+|---|---|---|
+| sun | shade | shoulder |
+| shoulder | shade | shade |
+| shade | shade | shade |
 
-Strip order: wall if `extras.wall`, then gate if on, then pots if on, then gravel if on. If every extra is false → `invalid_brief` field `extras`. A pots-only project returns only pots.
+`block_wall[side]` adds a second strip against that wall. Bed and block wall can both be on.
 
-`exclude[room]` is a list of `card_id`s already shown on that strip. Stage 4 drops those ids for that strip only.
+Strip order: wall, shade, front, back, left, right, then `*-block` strips, then gate, pots, gravel.
+
+If front is the tapped side, `front` merges into `wall`. If left is opposite, `left` merges into `shade`.
 
 `toxic_veto = kids || chew`.
 
-
 ## Stage 1 — global gates
 
-Drop the card for the whole run if:
+Drop if:
 
-- `native_class == invasive_risk` (Purple Fountain Grass). Do not also drop `invasive_elsewhere`. Do not drop a card because its name contains “fountain.”
-- `toxic_class` in `deadly|ingest` AND `toxic_veto` AND not the milkweed exception.
-- Milkweed keep: botanical contains `Asclepias linaria` or `Asclepias subulata`, only when `wildlife` is true. `Asclepias currasavica` (Blood Flower, catalog spelling) is not an exception.
-- A kept milkweed still gets caution copy and a −12 score penalty.
-- `maintenance_level == high` AND care is not Hobby. Moderate is allowed at every care level.
+- `native_class == invasive_risk`
+- `toxic_class` in `deadly|ingest` AND toxic_veto AND not `Asclepias linaria` / `Asclepias subulata` with wildlife
+- `maintenance_level == high` AND care is not Hobby
 - `water_class == M`
-- `size_class == landmark` OR `plant_group` in Desert-Adapted Trees, Ornamental Trees, Palms, Fruit and Nut Trees
+- `size_class == landmark` OR tree / palm groups
 
 ## Stage 2 — room filter
 
-Water, after Stage 1:
+Water: beds, block walls, and gravel are VL. Pots allow L. Gate allows L on Weekend/Hobby.
 
-| care | wall | gate | pots | gravel |
-|---|---|---|---|---|
-| Low | VL | VL | VL and L | VL |
-| Weekend | VL | VL and L | VL and L | VL |
-| Hobby | VL | VL and L | VL and L | VL |
+**Sun climate:** sun full or full_plus_reflected, heat excellent, not afternoon_shade_pref.
 
-**Sun (`wall`, or front/back when that side is the tapped side):** sun in `full`, `full_plus_reflected`; `heat_class == excellent`; not `afternoon_shade_pref`. Water VL.
+**Shade climate:** afternoon_shade_pref OR sun full_to_part / part_to_full / part.
 
-**Shade (`shade`, or front/back when that side is opposite the tap):** `afternoon_shade_pref` OR sun in `full_to_part`, `part_to_full`, `part`. Water VL. Do not require excellent heat. Do not ban shade-pref plants.
+**Shoulder climate:** sun full, full_plus_reflected, full_to_part, or part_to_full.
 
-**Shoulder (front or back when that side is neither sun nor shade):** sun in `full`, `full_plus_reflected`, `full_to_part`, `part_to_full`. Water VL.
+**Block wall (after climate):**
 
-**Wall (legacy name):** the sun strip. Same filter as Sun above.
+| Climate after cover | Gate |
+|---|---|
+| sun | `reflected_heat_ok` required. No shade-pref. |
+| shade | `phoenix_winter_fit == reliable_including_cold_pockets` |
+| shoulder | `reflected_heat_ok` OR (full_to_part and not shade-pref) |
 
+**Gate:** no jumping, puncture, spine_hazard, pedestrian_avoid, large. If `gate_side` set, also the side climate.
 
-**Gate:** drop if `spine_hazard`, `pedestrian_avoid`, `spine_class` in `jumping|puncture`, or size `large|landmark`.
+**Pots:** container rules. If `pots_side` set, side climate. If that side has a block wall, block-wall gates too.
 
-**Pots:** `container_ok` or size `container_scale|small`; `width_max_ft <= 5` when present; not `large|landmark`.
+**Gravel:** unsided = full / full_plus_reflected / full_to_part. If `gravel_side` set, that climate.
 
-**Gravel:** sun in `full`, `full_plus_reflected`, `full_to_part`; not landmark.
-
-Heat fields disagree in the catalog (`heat_class`, chip `west-heat`, `reflected_heat_ok`). Gates use `heat_class` only. `reflected_heat_ok` is a wall rank bonus, not a drop. Never read `chip_pack` or `short_why` for a decision.
+Never read `chip_pack` or `short_why`.
 
 ## Stage 3 — score
 
-Integer points. Never a veto. Never returned to the UI.
+Native, water, care, winter (bonus only here), wildlife, irritant, milkweed penalty — same integers as before.
 
-| Signal | Points |
-|---|---|
-| `native_class` `sw_us` or `sw_us_mexico` | +12 |
-| `mexico`, `baja`, or `nw_mexico` | +6 |
-| water VL | +10 |
-| water L (only if this room allowed it) | +4 |
-| wall and `reflected_heat_ok` (sun climate only) | +10 |
-| shade and `afternoon_shade_pref` | +12 |
-| shade and sun `full_to_part` / `part` | +8 |
-| shade and full sun with no shade pref | −6 |
-| shoulder and `full_to_part` | +4 |
-
-| care Low and maintenance low | +8 |
-| care Weekend, low / moderate | +4 / +2 |
-| care Hobby, low or moderate | +2 |
-| winter `reliable_including_cold_pockets` / `reliable_typical_yard` | +3 / +2 |
-| wildlife on: each of hummingbirds, butterflies, birds, bees | +2, cap +6 |
-| irritant and `toxic_veto` | −8 |
-| irritant and no veto | −2 |
-| kept only by the milkweed exception | −12 |
-
-Size fit:
-
-| room | small | medium | container_scale | large |
-|---|---|---|---|---|
-| wall | +6 | +4 | +2 | 0 |
-| gate | +8 | +2 | +6 | dropped |
-| pots | +4 | 0 | +8 | dropped |
-| gravel | +6 | +4 | +2 | 0 |
-
-Seat fit, added only for that seat:
-
-| Seat | Points |
-|---|---|
-| Floor and `height_max_ft <= 2` | +6 |
-| Gravel Bone and height 5 through 8 | +8 |
-| Wall Bone and height 2 through 4 | +4 |
-
-Repeat, against earlier strips only:
-
-| Case | Points |
-|---|---|
-| Same `card_id`, new seat is Bone | 0 |
-| Same `card_id`, new seat is Bloom or Floor | −6 |
-| Same genus, different card | −8 |
-
-Tie-break: higher score, then a `card_id` already used on an earlier strip, then `card_id` ascending.
-
-Genus is the first token of `botanical_name`.
+Open sun bed + reflected_heat_ok +10. Shade-pref +12 in shade climate. Cover does not add its own points; it already shifted the climate.
 
 ## Stage 4 — slots
 
-Fill A, then B, then C. After each pick, lock that genus for the rest of the strip. If C can be a `plant_group` that A and B did not use, it must.
+Beds and block walls use the wall / shade seat groups. Genus lock. Floor changes plant_group when it can. Gravel Bloom still prefers Cloud.
 
-Candidates are the seat’s groups below. If that list is empty, drop the group constraint. Never drop a gate to fill a seat.
+## Stage 5 — copy
 
-| Room | Bone | Bloom | Floor |
-|---|---|---|---|
-| wall | Yucca and Allies, Agave, Foliage Shrubs | Flowering Shrubs, Perennials and Groundcover, Vines and Climbers | Cacti, Perennials and Groundcover, Other Succulents, Aloe |
-| gate | Yucca and Allies, Foliage Shrubs, Other Succulents | Perennials and Groundcover, Flowering Shrubs, Ornamental Grasses | Other Succulents, Perennials and Groundcover, Ornamental Grasses, Foliage Shrubs, Aloe |
-| pots | Other Succulents, Yucca and Allies, Agave, Aloe, Foliage Shrubs | Perennials and Groundcover, Flowering Shrubs, Aloe | Cacti, Other Succulents, Perennials and Groundcover, Aloe |
-| gravel | Yucca and Allies, Agave, and prefer `height_max_ft <= 8` when any remain | Ornamental Grasses, Perennials and Groundcover | Cacti, Other Succulents, Perennials and Groundcover, Aloe |
+`docs/COPY_MAP.md`. Block-wall chips: Against a block wall. Cover chips: Existing shade.
 
-Gravel Bloom: if any remaining candidate has `texture_body == Cloud`, choose only from those.
+## Existing cover
 
-Gravel Bone: if any grouped candidate is 8 ft or under, ignore the taller ones (ocotillo stays out of a one-bed gravel bone).
+- `tree` — canopy already on that side
+- `eave` — house overhang
+- `structure` — ramada, patio cover, pergola
+- `none` — open
 
-Job words: A Bone, B Bloom, C Floor.
-
-## Stage 5 — why-line and chips
-
-Compose from `docs/COPY_MAP.md`. Do not copy `short_why`. Max 140 characters. No “perfect for Phoenix.”
-
-## Kept off
-
-On the gate strip only, when any `spine_class == jumping` card passed Stage 1:
-
-`Kept off the gate: Jumping cholla. Joints that jump.`
-
-One line. Do not list every reject. Teddy bear cholla is covered by that sentence.
-
-When `toxic_veto`, `session_notes` is `["Oleander and sago stay off the whole list."]`. Do not repeat that on every strip.
-
-## Substitutes
-
-Up to four `substitute_ids` that pass Stage 1 and this room. Drop the rest. The sheet must not recommend oleander under a chew brief.
-
-## Guilds
-
-Ignored in v1, including when `guilds` is true. Do not invent bloom months: 212 cards have an empty `bloom_seasons`.
+Cover does not create a strip. It only shifts climate.
 
 ## Locked winners
 
-`tests/fixtures/default.json` is the golden card-id list for the default brief. Pets-on keeps the same twelve ids. Change a weight only if you meant to, and update the fixture in the same commit.
+`tests/fixtures/default.json` stays the golden list when block_wall and cover are off. Pets-on keeps those twelve ids.

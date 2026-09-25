@@ -23,7 +23,10 @@
 - `hot_side`: `front` | `left` | `right` | `back`. Label only.
 - `project_scale` (optional): `pots` | `bed` | `path` | `yard` | `unsure`. UI uses it to seed extras. Engine does not infer rooms from it.
 - `care`: `Low` | `Weekend` | `Hobby`
-- `extras.shade`, `extras.front`, `extras.back` optional, default false.
+Optional: `block_wall`, `cover` (`none|tree|eave|structure` per side), `pots_side`, `gravel_side`, `gate_side`.
+
+Block-wall strips use ids `wall-block`, `shade-block`, `front-block`, `back-block`, `left-block`, `right-block`.
+
 - Response may include `opposite_label` (the afternoon-shade side name).
 - Strip order: wall, shade, front, back, gate, pots, gravel (skip collisions).
 

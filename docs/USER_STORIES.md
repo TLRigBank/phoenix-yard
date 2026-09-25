@@ -29,7 +29,12 @@ AC: House shows Front/Left/Right/Back. Tapped side labeled Afternoon sun. Payloa
 
 **US-22** Shade strip plants must be shade-pref or `full_to_part` / part sun. They must not be the sun trio retitled.
 
-**US-23** If the tapped side is Front, turning Front on quotes the sun strip once, not twice. The back becomes the shade strip.
+**US-24** For each on side, the user marks block wall yes/no and cover open / tree / eave / patio cover. Cover shifts climate before the quote. A tree on the sun side must not return the open-sun trio.
+
+**US-25** Block wall on a side adds a separate strip. Sun-side block wall requires `reflected_heat_ok`. Shade-side block wall requires cold-pocket winter fit.
+
+**US-26** Left and right can be quoted when they are shoulder sides.
+
 
 
 **US-21** If every room is off, do not call match. Keep the person on the rooms screen with “Turn on at least one piece.”

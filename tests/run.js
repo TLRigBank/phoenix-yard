@@ -380,6 +380,59 @@ assert(potsOnlyToy.strips.map((strip) => strip.id).join() === "pots", "toy pots-
 const potIds = potsOnlyToy.strips.flatMap((strip) => strip.picks.map((pick) => pick.card_id));
 assert(potIds.includes("LWATER") || potIds.includes("POT"), "pots strip should seat a pot-scale plant");
 
+const sunBlock = match(
+  {
+    ...defaultBrief,
+    extras: { wall: true, gate: false, pots: false, gravel: false },
+    block_wall: { right: true, front: false, left: false, back: false },
+  },
+  catalog
+);
+assert(sunBlock.strips.map((s) => s.id).join() === "wall,wall-block", "sun block rooms " + sunBlock.strips.map((s) => s.id).join());
+for (const pick of sunBlock.strips.find((s) => s.id === "wall-block").picks) {
+  const card = byId.get(pick.card_id);
+  assert(card.reflected_heat_ok, "sun block missing reflected_heat_ok " + pick.display_name);
+  assert(!card.afternoon_shade_pref, "sun block seated shade-pref " + pick.display_name);
+}
+
+const shadeBlock = match(
+  {
+    ...defaultBrief,
+    extras: { wall: false, shade: true, gate: false, pots: false, gravel: false },
+    block_wall: { left: true, right: false, front: false, back: false },
+  },
+  catalog
+);
+assert(shadeBlock.strips.some((s) => s.id === "shade-block"), "missing shade-block");
+for (const pick of shadeBlock.strips.find((s) => s.id === "shade-block").picks) {
+  const card = byId.get(pick.card_id);
+  assert(card.phoenix_winter_fit === "reliable_including_cold_pockets", "shade block winter " + pick.display_name);
+}
+
+const openSun = match({ ...defaultBrief, extras: { wall: true, gate: false, pots: false, gravel: false } }, catalog);
+const treeSun = match(
+  {
+    ...defaultBrief,
+    extras: { wall: true, gate: false, pots: false, gravel: false },
+    cover: { right: "tree", front: "none", left: "none", back: "none" },
+  },
+  catalog
+);
+assert(
+  JSON.stringify(openSun.strips[0].picks.map((p) => p.card_id)) !==
+    JSON.stringify(treeSun.strips[0].picks.map((p) => p.card_id)),
+  "tree cover on the sun side must change the quote"
+);
+for (const pick of treeSun.strips[0].picks) {
+  const card = byId.get(pick.card_id);
+  const ok =
+    card.afternoon_shade_pref ||
+    card.sun_class === "full_to_part" ||
+    card.sun_class === "part_to_full" ||
+    card.sun_class === "part";
+  assert(ok, "tree cover still quoted a roaster " + pick.display_name);
+}
+
 if (failed) {
   console.error(failed + " failed");
   process.exit(1);

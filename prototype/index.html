@@ -221,6 +221,8 @@ const QUESTIONS = [
 const state = {
   screen: "home", q: 0, hot: "right", scale: null,
   extras: { wall: true, shade: true, front: true, back: true, gate: true, pots: true, gravel: true },
+  cover: { front: "none", left: "none", right: "none", back: "none" },
+  block_wall: { front: false, left: false, right: false, back: false },
   kids: null, chew: null, wildlife: true, care: null,
   strip: 0, lastChange: "", usedAlt: {}
 };
@@ -229,6 +231,8 @@ try {
   const saved = JSON.parse(localStorage.getItem("phoenix-yard-v2") || "null");
   if (saved && saved.hot && saved.extras) {
     Object.assign(state, saved, { lastChange: "" });
+    state.cover = Object.assign({ front: "none", left: "none", right: "none", back: "none" }, state.cover || {});
+    state.block_wall = Object.assign({ front: false, left: false, right: false, back: false }, state.block_wall || {});
   }
 } catch (err) { /* private mode */ }
 
@@ -341,7 +345,7 @@ function screenPieces() {
     </main>
     <footer>
       <button class="ghost" data-act="back-pieces">Back</button>
-      <button class="pri" data-act="go" data-to="results">See the plants</button>
+      <button class="pri" data-act="go" data-to="micro">Next — shade and walls</button>
     </footer>`;
 }
 
@@ -359,6 +363,40 @@ function cardEl(c) {
     <p class="why">${esc(c.why)}</p>
     ${c.same ? `<p class="same">${esc(c.same)}</p>` : ""}
   </article>`;
+}
+
+function screenMicro() {
+  const sides = [
+    ["right", "Right"],
+    ["left", "Left"],
+    ["front", "Front"],
+    ["back", "Back"]
+  ];
+  const covers = [["none", "Open"], ["tree", "Tree"], ["eave", "Eave"], ["structure", "Patio cover"]];
+  const rows = sides.map(([id, label]) => {
+    const hot = state.hot === id ? " · afternoon sun" : "";
+    const shade = ({ front: "back", back: "front", left: "right", right: "left" }[state.hot] === id) ? " · afternoon shade" : "";
+    const coverBtns = covers.map(([cid, clabel]) =>
+      `<button class="extra ${state.cover[id] === cid ? "on" : ""}" data-act="cover" data-side="${id}" data-id="${cid}">${clabel}</button>`
+    ).join("");
+    return `<section class="sum">
+      <h2>${label}${hot}${shade}</h2>
+      <p class="meta">What already shades this side?</p>
+      <div class="extra-row">${coverBtns}</div>
+      <button class="extra ${state.block_wall[id] ? "on" : ""}" data-act="block" data-id="${id}" style="width:100%;margin-top:8px">Block wall against the plants</button>
+    </section>`;
+  }).join("");
+  return `
+    <header><span class="brand">Phoenix Yard</span></header>
+    <main>
+      <h1 class="sm">What is already on each side?</h1>
+      <p class="lead">A tree or patio cover changes the quote. A block wall is its own strip.</p>
+      ${rows}
+    </main>
+    <footer>
+      <button class="ghost" data-act="go" data-to="pieces">Back</button>
+      <button class="pri" data-act="go" data-to="results">See the plants</button>
+    </footer>`;
 }
 
 function screenResults() {
@@ -418,7 +456,7 @@ function screenYard() {
 }
 
 function render() {
-  const map = { home: screenHome, project: screenProject, ask: screenAsk, pieces: screenPieces, results: screenResults, yard: screenYard };
+  const map = { home: screenHome, project: screenProject, ask: screenAsk, pieces: screenPieces, micro: screenMicro, results: screenResults, yard: screenYard };
   const screen = map[state.screen] || screenHome;
   document.getElementById("app").innerHTML = screen();
   try {
@@ -437,7 +475,8 @@ document.getElementById("app").addEventListener("click", (e) => {
   const b = e.target.closest("[data-act]");
   if (!b) return;
   const act = b.dataset.act;
-  if (act === "scale") applyScale(b.dataset.id);
+  if (act === "cover") state.cover[b.dataset.side] = b.dataset.id;
+  if (act === "block") state.block_wall[b.dataset.id] = !state.block_wall[b.dataset.id];
   if (act === "go") {
     if (b.dataset.to === "ask") {
       if (!state.scale) applyScale("unsure");
@@ -496,7 +535,8 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.hot = "right";
     state.extras = { wall: true, gate: true, pots: true, gravel: true };
     state.scale = null;
-    state.usedAlt = {};
+    state.cover = { front: "none", left: "none", right: "none", back: "none" };
+    state.block_wall = { front: false, left: false, right: false, back: false };
     state.kids = null;
     state.chew = null;
     state.wildlife = true;
