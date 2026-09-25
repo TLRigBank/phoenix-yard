@@ -34,7 +34,11 @@ Undo reroll: `Back to this strip’s first set.`
 
 | id | title | caption | next button | same-as stamp |
 |---|---|---|---|---|
-| wall | Afternoon wall | Blades, then a flower, then something low. Almost no extra water. | Next — the afternoon wall | Same as the afternoon wall |
+| wall | Afternoon sun | The side that cooks. | Next — afternoon sun | Same as the afternoon sun wall |
+| shade | Afternoon shade | Morning sun, afternoon shade. | Next — afternoon shade | Same as the afternoon shade wall |
+| front | Front | The front bed. | Next — the front | Same as the front |
+| back | Back | The back bed. | Next — the back | Same as the back |
+
 | gate | The gate | Safe to brush past. | Next — the gate | Same as the gate |
 | pots | The pots | Small enough for a patio. | Next — the pots | Same as the pots |
 | gravel | Open gravel | Blades, a grass that moves, then something low. | Next — open gravel | Same as open gravel |
@@ -73,6 +77,7 @@ At most four. Warnings first. Skip the rest.
 | water VL | Almost no extra water |
 | water L | A little extra water |
 | wall and `reflected_heat_ok` | Takes afternoon heat |
+| shade climate | Afternoon shade |
 | `sw_us` or `sw_us_mexico` | Grows here already |
 | `n_fixer` | Feeds the soil |
 | `needs_support == trellis` | Needs a trellis |

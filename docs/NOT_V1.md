@@ -15,7 +15,7 @@ Do not implement these unless the user changes `GROK.md`.
 - Browse or search the 543-card catalog
 - Chatbot
 - Tucson or other cities
-- Rooms R2 (north fence), R5 (frost pocket), R7 (trellis) — still later; they are not required to stop the wall-as-project bug
+- Rooms as old codes R5 frost and R7 trellis. Afternoon shade is in v1 as the **opposite wall**, not a separate north-fence product.
 
 - Whole-yard trees / landmark scale
 - XP, coins, leaderboards, daily streak guilt

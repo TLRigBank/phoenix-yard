@@ -24,6 +24,21 @@ const SEATS = {
     B: ["Flowering Shrubs", "Perennials and Groundcover", "Vines and Climbers"],
     C: ["Cacti", "Perennials and Groundcover", "Other Succulents", "Aloe"],
   },
+  shade: {
+    A: ["Yucca and Allies", "Agave", "Foliage Shrubs", "Aloe"],
+    B: ["Flowering Shrubs", "Perennials and Groundcover", "Vines and Climbers"],
+    C: ["Cacti", "Perennials and Groundcover", "Other Succulents", "Aloe"],
+  },
+  front: {
+    A: ["Yucca and Allies", "Agave", "Foliage Shrubs"],
+    B: ["Flowering Shrubs", "Perennials and Groundcover", "Vines and Climbers"],
+    C: ["Cacti", "Perennials and Groundcover", "Other Succulents", "Aloe"],
+  },
+  back: {
+    A: ["Yucca and Allies", "Agave", "Foliage Shrubs"],
+    B: ["Flowering Shrubs", "Perennials and Groundcover", "Vines and Climbers"],
+    C: ["Cacti", "Perennials and Groundcover", "Other Succulents", "Aloe"],
+  },
   gate: {
     A: ["Yucca and Allies", "Foliage Shrubs", "Other Succulents"],
     B: ["Perennials and Groundcover", "Flowering Shrubs", "Ornamental Grasses"],
@@ -43,6 +58,9 @@ const SEATS = {
 
 const SIZE_POINTS = {
   wall: { small: 6, medium: 4, container_scale: 2, large: 0 },
+  shade: { small: 6, medium: 4, container_scale: 2, large: 0 },
+  front: { small: 6, medium: 4, container_scale: 2, large: 0 },
+  back: { small: 6, medium: 4, container_scale: 2, large: 0 },
   gate: { small: 8, container_scale: 6, medium: 2 },
   pots: { container_scale: 8, small: 4 },
   gravel: { small: 6, medium: 4, container_scale: 2, large: 0 },
@@ -50,11 +68,32 @@ const SIZE_POINTS = {
 
 const STRIP_META = {
   wall: {
-    title: "Afternoon wall",
-    caption: "Blades, then a flower, then something low. Almost no extra water.",
+    title: "Afternoon sun",
+    caption: "The side that cooks. Blades, then a flower, then something low.",
     room_code: "R1",
-    why: "afternoon wall",
-    same: "Same as the afternoon wall",
+    why: "afternoon sun wall",
+    same: "Same as the afternoon sun wall",
+  },
+  shade: {
+    title: "Afternoon shade",
+    caption: "The opposite wall. Plants that take morning sun and afternoon shade.",
+    room_code: "R2",
+    why: "afternoon shade wall",
+    same: "Same as the afternoon shade wall",
+  },
+  front: {
+    title: "Front",
+    caption: "The front bed. Not the roasting wall unless the front is the afternoon sun.",
+    room_code: "R-front",
+    why: "front bed",
+    same: "Same as the front",
+  },
+  back: {
+    title: "Back",
+    caption: "The back bed. Not the roasting wall unless the back is the afternoon sun.",
+    room_code: "R-back",
+    why: "back bed",
+    same: "Same as the back",
   },
   gate: {
     title: "The gate",
@@ -78,6 +117,26 @@ const STRIP_META = {
     same: "Same as open gravel",
   },
 };
+
+const OPPOSITE = { front: "back", back: "front", left: "right", right: "left" };
+
+function oppositeSide(hot) {
+  return OPPOSITE[hot];
+}
+
+function sideRole(hot, side) {
+  if (side === hot) return "sun";
+  if (side === oppositeSide(hot)) return "shade";
+  return "shoulder";
+}
+
+function climateOf(room, brief) {
+  if (room === "wall") return "sun";
+  if (room === "shade") return "shade";
+  if (room === "front") return sideRole(brief.hot_side, "front");
+  if (room === "back") return sideRole(brief.hot_side, "back");
+  return room;
+}
 
 const JOB = { A: "Bone", B: "Bloom", C: "Floor" };
 const PLACE = {
@@ -114,7 +173,7 @@ function waterAllowed(card, room, care) {
   if (water === "M") return false;
   if (water === "VL") return true;
   if (water !== "L") return false;
-  if (room === "wall" || room === "gravel") return false;
+  if (["wall", "shade", "front", "back", "gravel"].includes(room)) return false;
   if (room === "pots") return true;
   if (room === "gate") return care === "Weekend" || care === "Hobby";
   return false;
@@ -134,14 +193,38 @@ function passesGlobal(card, brief) {
   return true;
 }
 
+function passesSun(card) {
+  return (
+    (card.sun_class === "full" || card.sun_class === "full_plus_reflected") &&
+    card.heat_class === "excellent" &&
+    !card.afternoon_shade_pref
+  );
+}
+
+function passesShade(card) {
+  if (card.size_class === "landmark") return false;
+  const sun = card.sun_class;
+  if (card.afternoon_shade_pref) return true;
+  return sun === "full_to_part" || sun === "part_to_full" || sun === "part";
+}
+
+function passesShoulder(card) {
+  if (card.size_class === "landmark") return false;
+  const sun = card.sun_class;
+  return sun === "full" || sun === "full_plus_reflected" || sun === "full_to_part" || sun === "part_to_full";
+}
+
+function passesClimate(card, climate) {
+  if (climate === "sun") return passesSun(card);
+  if (climate === "shade") return passesShade(card);
+  if (climate === "shoulder") return passesShoulder(card);
+  return false;
+}
+
 function passesRoom(card, room, brief) {
   if (!waterAllowed(card, room, brief.care)) return false;
-  if (room === "wall") {
-    return (
-      (card.sun_class === "full" || card.sun_class === "full_plus_reflected") &&
-      card.heat_class === "excellent" &&
-      !card.afternoon_shade_pref
-    );
+  if (room === "wall" || room === "shade" || room === "front" || room === "back") {
+    return passesClimate(card, climateOf(room, brief));
   }
   if (room === "gate") {
     return !(
@@ -176,7 +259,17 @@ function baseScore(card, room, brief) {
     score += 6;
   }
   score += card.water_class === "VL" ? 10 : 4;
-  if (room === "wall" && card.reflected_heat_ok) score += 10;
+  const climate = climateOf(room, brief);
+  if (climate === "sun" && card.reflected_heat_ok) score += 10;
+  if (climate === "shade") {
+    if (card.afternoon_shade_pref) score += 12;
+    if (card.sun_class === "full_to_part" || card.sun_class === "part_to_full" || card.sun_class === "part") score += 8;
+    if (card.sun_class === "full" || card.sun_class === "full_plus_reflected") score -= 6;
+  }
+  if (climate === "shoulder") {
+    if (card.sun_class === "full_to_part") score += 4;
+    if (card.afternoon_shade_pref) score += 2;
+  }
   score += (SIZE_POINTS[room] && SIZE_POINTS[room][card.size_class]) || 0;
   const care = brief.care;
   const maintenance = card.maintenance_level;
@@ -202,6 +295,7 @@ function seatBonus(card, room, seat) {
   if (seat === "C" && height <= 2) score += 6;
   if (room === "gravel" && seat === "A" && height >= 5 && height <= 8) score += 8;
   if (room === "wall" && seat === "A" && height >= 2 && height <= 4) score += 4;
+  if ((room === "shade" || room === "front" || room === "back") && seat === "A" && height >= 2 && height <= 4) score += 4;
   return score;
 }
 
@@ -224,19 +318,21 @@ function validate(brief) {
   }
   if (brief.care !== "Low" && brief.care !== "Weekend" && brief.care !== "Hobby") return "care";
   if (!brief.extras || typeof brief.extras !== "object") return "extras";
+  for (const key of ["wall", "gate", "pots", "gravel", "shade", "front", "back"]) {
+    if (brief.extras[key] != null && typeof brief.extras[key] !== "boolean") return "extras." + key;
+  }
   for (const key of ["wall", "gate", "pots", "gravel"]) {
     if (typeof brief.extras[key] !== "boolean") return "extras." + key;
   }
-  if (!brief.extras.wall && !brief.extras.gate && !brief.extras.pots && !brief.extras.gravel) {
-    return "extras";
-  }
+  const anyRoom = ["wall", "shade", "front", "back", "gate", "pots", "gravel"].some((key) => brief.extras[key]);
+  if (!anyRoom) return "extras";
   if (brief.project_scale != null) {
     const scales = ["pots", "bed", "path", "yard", "unsure"];
     if (!scales.includes(brief.project_scale)) return "project_scale";
   }
   if (brief.exclude != null) {
     if (typeof brief.exclude !== "object") return "exclude";
-    for (const key of ["wall", "gate", "pots", "gravel"]) {
+    for (const key of ["wall", "gate", "pots", "gravel", "shade", "front", "back"]) {
       if (brief.exclude[key] != null && !Array.isArray(brief.exclude[key])) return "exclude." + key;
     }
   }
@@ -276,7 +372,8 @@ function chipsFor(card, room, brief) {
   if (room === "pots") chips.push("Fits a pot");
   if (card.water_class === "VL") chips.push("Almost no extra water");
   else if (card.water_class === "L") chips.push("A little extra water");
-  if (room === "wall" && card.reflected_heat_ok) chips.push("Takes afternoon heat");
+  if (climateOf(room, brief) === "sun" && card.reflected_heat_ok) chips.push("Takes afternoon heat");
+  if (climateOf(room, brief) === "shade") chips.push("Afternoon shade");
   if (card.native_class === "sw_us" || card.native_class === "sw_us_mexico") chips.push("Grows here already");
   if (card.n_fixer) chips.push("Feeds the soil");
   if (card.needs_support === "trellis") chips.push("Needs a trellis");
@@ -439,8 +536,16 @@ function match(brief, catalog) {
   if (problem) return { error: "invalid_brief", field: problem };
   if (!Array.isArray(catalog)) return { error: "match_failed" };
   substitutesFor.byId = new Map(catalog.map((card) => [card.card_id, card]));
+  const hot = brief.hot_side;
   const rooms = [];
-  if (brief.extras.wall) rooms.push("wall");
+  const wantWall = !!(brief.extras.wall || (brief.extras.front && sideRole(hot, "front") === "sun") || (brief.extras.back && sideRole(hot, "back") === "sun"));
+  const wantShade = !!(brief.extras.shade || (brief.extras.front && sideRole(hot, "front") === "shade") || (brief.extras.back && sideRole(hot, "back") === "shade"));
+  const wantFront = !!(brief.extras.front && sideRole(hot, "front") === "shoulder");
+  const wantBack = !!(brief.extras.back && sideRole(hot, "back") === "shoulder");
+  if (wantWall) rooms.push("wall");
+  if (wantShade) rooms.push("shade");
+  if (wantFront) rooms.push("front");
+  if (wantBack) rooms.push("back");
   if (brief.extras.gate) rooms.push("gate");
   if (brief.extras.pots) rooms.push("pots");
   if (brief.extras.gravel) rooms.push("gravel");
@@ -455,7 +560,10 @@ function match(brief, catalog) {
       wildlife: brief.wildlife,
       care: brief.care,
       extras: {
-        wall: brief.extras.wall,
+        wall: !!brief.extras.wall,
+        shade: !!brief.extras.shade,
+        front: !!brief.extras.front,
+        back: !!brief.extras.back,
         gate: brief.extras.gate,
         pots: brief.extras.pots,
         gravel: brief.extras.gravel,
@@ -464,6 +572,7 @@ function match(brief, catalog) {
       guilds: brief.guilds,
     },
     place_label: PLACE[brief.hot_side],
+    opposite_label: PLACE[oppositeSide(brief.hot_side)],
     session_notes: toxicVeto(brief) ? [SESSION_TOXIC] : [],
     strips,
   };

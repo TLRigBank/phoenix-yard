@@ -19,8 +19,8 @@ A phone-wide web app:
 1. **Orient.** House with four sides. Tap the wall that cooks in the afternoon. Copy: that side is how we name afternoon sun. It is not the plant list yet.
 2. **Project.** One screen: what is this project? Pots / One bed / Gate and path / Whole yard / Not sure. That writes `project_scale` and **default rooms**. The wall is on only when the scale needs it (one bed, whole yard, not sure).
 3. **Household.** Four questions, one screen each: kids, chew, wildlife, care. One tap answers and advances.
-4. **Rooms.** Same house. Toggle Wall, Gate, Pots, Gravel. Any mix. At least one on. Wall can be off.
-5. **Results.** Three cards for **one chosen strip**, labeled with the side they tapped (`Right side · afternoon sun`) so they still know orientation. Button `Next — {strip}`. Last strip: `That's the yard`.
+4. **Rooms.** Same house. Toggle Afternoon sun, Afternoon shade, Front, Back, Gate, Pots, Gravel. Climate is **not** the same on every side. The tap only says which side is afternoon sun; the opposite side is afternoon shade; the other two are shoulders (morning or late sun, not the roasting wall).
+5. **Results.** Three cards for one **on** strip. Sun, shade, front, and back use different room filters. A shade quote must not be the sun trio with a new title.
 6. **Three others.** Every strip has `Three others for this strip`. The engine returns a new Bone / Bloom / Floor that still passes that room and does not reuse the three just shown. `Back to this strip’s first set` clears the exclude list for that strip only.
 7. Chew toggle reruns the whole brief and names what left.
 
@@ -32,7 +32,7 @@ Live names come from `engine/match.js`. Do not filter 543 cards in the UI.
 UI  →  match(brief)  →  strips that extras turned on
 ```
 
-`hot_side` is a **label**, not a compass and not a room filter. Do not treat right as west. Do not require a wall strip.
+`hot_side` names which side cooks. It **does** change climate for the four house sides: that side = sun filter, the opposite side = shade filter, the remaining two = shoulder filter. It is still not a compass and not “west.”
 
 ## Brief
 
@@ -44,21 +44,38 @@ UI  →  match(brief)  →  strips that extras turned on
   "chew": false,
   "wildlife": true,
   "care": "Low",
-  "extras": { "wall": false, "gate": false, "pots": true, "gravel": false },
-  "exclude": { "wall": [], "gate": [], "pots": [], "gravel": [] },
+  "extras": {
+    "wall": false,
+    "shade": false,
+    "front": true,
+    "back": true,
+    "gate": false,
+    "pots": true,
+    "gravel": false
+  },
+  "exclude": {},
   "guilds": false
 }
 ```
 
-`project_scale` defaults rooms. The room toggles are source of truth at match time.
+| extra | Meaning | Climate |
+|---|---|---|
+| wall | Afternoon sun side (the tapped side) | sun: full + excellent heat, no afternoon-shade-pref |
+| shade | Opposite side | shade: `afternoon_shade_pref` or sun `full_to_part` / `part` |
+| front | Front bed | sun, shade, or shoulder depending on `hot_side` |
+| back | Back bed | same |
+| gate / pots / gravel | Site pieces | unchanged |
+
+If front *is* the tapped side, `front` and `wall` are the same strip (do not quote it twice). If back is the opposite side, `back` and `shade` merge.
 
 | project_scale | Default extras |
 |---|---|
-| pots | wall off, gate off, pots on, gravel off |
-| bed | wall on, gate off, pots off, gravel on |
-| path | wall off, gate on, pots off, gravel off |
-| yard | all on |
-| unsure | all on |
+| pots | pots only |
+| bed | wall + gravel |
+| path | gate |
+| yard | wall, shade, front, back, gate, pots, gravel |
+| unsure | same as yard |
+
 
 `exclude[strip]` is card_ids the user already saw on that strip this session. Reroll fills the strip from the remaining legal pool. Other strips unchanged. If fewer than three legal plants remain, return what is left plus empty-job sentences and `reroll_available: false`.
 
@@ -66,7 +83,10 @@ Missing required fields → `invalid_brief`. Required: `hot_side`, `kids`, `chew
 
 `toxic_veto = kids || chew`.
 
-Water and care: `docs/DECISION_TREE.md`. Wall and gravel stay VL. Water L only in pots (any care) and at the gate on Weekend or Hobby.
+Water and care: `docs/DECISION_TREE.md`. Sun, shade, front, back, and gravel stay VL. Water L only in pots (any care) and at the gate on Weekend or Hobby.
+
+Required extras booleans: `wall`, `gate`, `pots`, `gravel`. `shade`, `front`, `back` may be omitted (false). At least one room on.
+
 
 ## Hard gates
 

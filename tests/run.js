@@ -143,7 +143,7 @@ for (const [label, result] of [
       }
     }
   }
-  assert(result.strips[1].picks[0].same_as === "Same as the afternoon wall", "gate bone same_as");
+  assert(result.strips[1].picks[0].same_as === "Same as the afternoon sun wall", "gate bone same_as");
   assert(result.strips[2].picks[0].same_as === "Same as the gate", "pots bone same_as");
 }
 
@@ -172,6 +172,33 @@ const potsOnly = match(
 );
 assert(potsOnly.strips.map((strip) => strip.id).join() === "pots", "pots-only must not invent a wall strip");
 assert(potsOnly.place_label === "Right side", "orientation still echoed when wall is off");
+
+const shadeBrief = {
+  ...defaultBrief,
+  extras: { wall: true, shade: true, front: true, back: true, gate: false, pots: false, gravel: false },
+};
+const sides = match(shadeBrief, catalog);
+assert(!sides.error, "four-side match failed");
+assert(sides.strips.map((strip) => strip.id).join() === "wall,shade,front,back", "side order " + sides.strips.map((s) => s.id).join());
+assert(sides.opposite_label === "Left side", "opposite of right");
+const sunIds = sides.strips.find((strip) => strip.id === "wall").picks.map((pick) => pick.card_id);
+const shadeIds = sides.strips.find((strip) => strip.id === "shade").picks.map((pick) => pick.card_id);
+assert(JSON.stringify(sunIds) !== JSON.stringify(shadeIds), "shade trio must not copy the sun trio");
+for (const pick of sides.strips.find((strip) => strip.id === "shade").picks) {
+  const card = byId.get(pick.card_id);
+  const ok =
+    card.afternoon_shade_pref ||
+    card.sun_class === "full_to_part" ||
+    card.sun_class === "part_to_full" ||
+    card.sun_class === "part";
+  assert(ok, "shade pick is a full-sun roaster " + pick.display_name);
+}
+
+const hotFront = match(
+  { ...defaultBrief, hot_side: "front", extras: { wall: false, shade: false, front: true, back: true, gate: false, pots: false, gravel: false } },
+  catalog
+);
+assert(hotFront.strips.map((strip) => strip.id).join() === "wall,shade", "front+back when front is sun should collapse to sun+shade");
 
 const emptyRooms = match(
   { ...defaultBrief, extras: { wall: false, gate: false, pots: false, gravel: false } },

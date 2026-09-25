@@ -8,7 +8,16 @@ This is the only climate table. `engine/match.js` implements it. The workbook is
 
 Required: `hot_side` (`front|left|right|back`), `kids`, `chew`, `wildlife`, `guilds` (booleans), `care` (`Low|Weekend|Hobby`), `extras.wall|gate|pots|gravel` (booleans). `project_scale` and `exclude` are optional. Anything else required-and-missing → `{ "error": "invalid_brief", "field" }`.
 
-`hot_side` is stored and echoed as `place_label`. It is not a filter and it does not create a wall strip.
+`hot_side` is stored as `place_label` and **assigns climate** to house sides:
+
+- tapped side → sun climate (strip `wall`)
+- opposite side → shade climate (strip `shade`)
+- the other two sides → shoulder climate (`front` / `back` when those sides are shoulders)
+
+Opposite map: front↔back, left↔right.
+
+Strip order: wall, shade, front, back, gate, pots, gravel. Skip a front/back strip when that side already is the sun or shade strip.
+
 
 Strip order: wall if `extras.wall`, then gate if on, then pots if on, then gravel if on. If every extra is false → `invalid_brief` field `extras`. A pots-only project returns only pots.
 
@@ -39,7 +48,14 @@ Water, after Stage 1:
 | Weekend | VL | VL and L | VL and L | VL |
 | Hobby | VL | VL and L | VL and L | VL |
 
-**Wall:** sun in `full`, `full_plus_reflected`; `heat_class == excellent`; not `afternoon_shade_pref`.
+**Sun (`wall`, or front/back when that side is the tapped side):** sun in `full`, `full_plus_reflected`; `heat_class == excellent`; not `afternoon_shade_pref`. Water VL.
+
+**Shade (`shade`, or front/back when that side is opposite the tap):** `afternoon_shade_pref` OR sun in `full_to_part`, `part_to_full`, `part`. Water VL. Do not require excellent heat. Do not ban shade-pref plants.
+
+**Shoulder (front or back when that side is neither sun nor shade):** sun in `full`, `full_plus_reflected`, `full_to_part`, `part_to_full`. Water VL.
+
+**Wall (legacy name):** the sun strip. Same filter as Sun above.
+
 
 **Gate:** drop if `spine_hazard`, `pedestrian_avoid`, `spine_class` in `jumping|puncture`, or size `large|landmark`.
 
@@ -59,7 +75,12 @@ Integer points. Never a veto. Never returned to the UI.
 | `mexico`, `baja`, or `nw_mexico` | +6 |
 | water VL | +10 |
 | water L (only if this room allowed it) | +4 |
-| wall and `reflected_heat_ok` | +10 |
+| wall and `reflected_heat_ok` (sun climate only) | +10 |
+| shade and `afternoon_shade_pref` | +12 |
+| shade and sun `full_to_part` / `part` | +8 |
+| shade and full sun with no shade pref | −6 |
+| shoulder and `full_to_part` | +4 |
+
 | care Low and maintenance low | +8 |
 | care Weekend, low / moderate | +4 / +2 |
 | care Hobby, low or moderate | +2 |

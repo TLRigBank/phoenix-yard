@@ -110,7 +110,10 @@
 <script>
 /* Walk only. The twelve plants are tests/fixtures/default.json from engine/match.js. This file does not score. */
 const STRIPS = [
-  { id: "wall", title: "Afternoon wall", caption: "Blades, then a flower, then something low. Almost no extra water." },
+  { id: "wall", title: "Afternoon sun", caption: "The side that cooks." },
+  { id: "shade", title: "Afternoon shade", caption: "The opposite wall. Morning sun, afternoon shade." },
+  { id: "front", title: "Front", caption: "The front bed." },
+  { id: "back", title: "Back", caption: "The back bed." },
   { id: "gate", title: "The gate", caption: "Safe to brush past." },
   { id: "pots", title: "The pots", caption: "Small enough for a patio." },
   { id: "gravel", title: "Open gravel", caption: "Blades, a grass that moves, then something low." }
@@ -186,6 +189,20 @@ const ALT = {
   ]
 };
 
+CARDS.shade = [
+  { name: "Foxtail Agave", botanical: "Agave attenuata", job: "Bone", texture: "Blades", height: "4–5 ft", colors: ["#8AA0B4"],
+    chips: ["Afternoon shade", "Almost no extra water"],
+    why: "Bone for the afternoon shade wall. Almost no extra water." },
+  { name: "Parry’s Penstemon", botanical: "Penstemon parryi", job: "Bloom", texture: "Mound", height: "2–4 ft", colors: ["#C46B8A"],
+    chips: ["Afternoon shade", "Almost no extra water", "Grows here already"],
+    why: "Bloom for the afternoon shade wall. Almost no extra water." },
+  { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", texture: "Mound", height: "0.5–1 ft", colors: ["#6B4F8A"],
+    chips: ["Afternoon shade", "Almost no extra water", "Feeds the soil"],
+    why: "Floor for the afternoon shade wall. Almost no extra water. Feeds the soil." }
+];
+CARDS.front = CARDS.wall.map((c) => Object.assign({}, c, { why: "Bone for the front bed.".replace("Bone", c.job) + " Not the roasting wall." }));
+CARDS.back = CARDS.front;
+
 const QUESTIONS = [
   { key: "kids", title: "Do kids play in the plants?",
     hint: "If yes, we hide plants that can make a child very sick.",
@@ -203,7 +220,7 @@ const QUESTIONS = [
 
 const state = {
   screen: "home", q: 0, hot: "right", scale: null,
-  extras: { wall: true, gate: true, pots: true, gravel: true },
+  extras: { wall: true, shade: true, front: true, back: true, gate: true, pots: true, gravel: true },
   kids: null, chew: null, wildlife: true, care: null,
   strip: 0, lastChange: "", usedAlt: {}
 };
@@ -236,7 +253,10 @@ function house(showExtras) {
     return `<button class="side ${hot ? "hot" : ""}" data-act="hot" data-id="${id}">${hot ? "Afternoon sun" : sideLabel[id]}</button>`;
   }).join("");
   const extras = showExtras ? `<div class="extra-row">
-      <button class="extra ${state.extras.wall ? "on" : ""}" data-act="extra" data-id="wall">Wall</button>
+      <button class="extra ${state.extras.wall ? "on" : ""}" data-act="extra" data-id="wall">Sun</button>
+      <button class="extra ${state.extras.shade ? "on" : ""}" data-act="extra" data-id="shade">Shade</button>
+      <button class="extra ${state.extras.front ? "on" : ""}" data-act="extra" data-id="front">Front</button>
+      <button class="extra ${state.extras.back ? "on" : ""}" data-act="extra" data-id="back">Back</button>
       <button class="extra ${state.extras.gate ? "on" : ""}" data-act="extra" data-id="gate">Gate</button>
       <button class="extra ${state.extras.pots ? "on" : ""}" data-act="extra" data-id="pots">Pots</button>
       <button class="extra ${state.extras.gravel ? "on" : ""}" data-act="extra" data-id="gravel">Gravel</button>
@@ -258,11 +278,11 @@ function screenHome() {
 function applyScale(scale) {
   state.scale = scale;
   const map = {
-    pots: { wall: false, gate: false, pots: true, gravel: false },
-    bed: { wall: true, gate: false, pots: false, gravel: true },
-    path: { wall: false, gate: true, pots: false, gravel: false },
-    yard: { wall: true, gate: true, pots: true, gravel: true },
-    unsure: { wall: true, gate: true, pots: true, gravel: true }
+    pots: { wall: false, shade: false, front: false, back: false, gate: false, pots: true, gravel: false },
+    bed: { wall: true, shade: false, front: false, back: false, gate: false, pots: false, gravel: true },
+    path: { wall: false, shade: false, front: false, back: false, gate: true, pots: false, gravel: false },
+    yard: { wall: true, shade: true, front: true, back: true, gate: true, pots: true, gravel: true },
+    unsure: { wall: true, shade: true, front: true, back: true, gate: true, pots: true, gravel: true }
   };
   state.extras = Object.assign({}, map[scale]);
 }

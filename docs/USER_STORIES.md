@@ -25,7 +25,12 @@ AC: House shows Front/Left/Right/Back. Tapped side labeled Afternoon sun. Payloa
 
 **US-15** An answer tap selects and advances.
 
-**US-20** Rooms on the same house: Wall, Gate, Pots, Gravel. Defaults come from scale. Any mix. At least one on. Wall can be off. Primary: See the plants.
+**US-20** Rooms on the same house: Afternoon sun, Afternoon shade, Front, Back, Gate, Pots, Gravel. Yard scale turns the four sides on. Sun and shade must use different plant filters.
+
+**US-22** Shade strip plants must be shade-pref or `full_to_part` / part sun. They must not be the sun trio retitled.
+
+**US-23** If the tapped side is Front, turning Front on quotes the sun strip once, not twice. The back becomes the shade strip.
+
 
 **US-21** If every room is off, do not call match. Keep the person on the rooms screen with “Turn on at least one piece.”
 

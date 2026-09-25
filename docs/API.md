@@ -14,7 +14,7 @@
   "chew": false,
   "wildlife": true,
   "care": "Low",
-  "extras": { "wall": true, "gate": true, "pots": true, "gravel": true },
+  "extras": { "wall": true, "shade": true, "front": true, "back": true, "gate": true, "pots": true, "gravel": true },
   "exclude": { "wall": [], "gate": [], "pots": [], "gravel": [] },
   "guilds": false
 }
@@ -23,7 +23,10 @@
 - `hot_side`: `front` | `left` | `right` | `back`. Label only.
 - `project_scale` (optional): `pots` | `bed` | `path` | `yard` | `unsure`. UI uses it to seed extras. Engine does not infer rooms from it.
 - `care`: `Low` | `Weekend` | `Hobby`
-- `extras.wall` is required and may be false.
+- `extras.shade`, `extras.front`, `extras.back` optional, default false.
+- Response may include `opposite_label` (the afternoon-shade side name).
+- Strip order: wall, shade, front, back, gate, pots, gravel (skip collisions).
+
 - `exclude` optional. Card ids already shown on that strip. Reroll skips them.
 
 ### Response

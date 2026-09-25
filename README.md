@@ -1,6 +1,6 @@
 # Phoenix Yard
 
-Phoenix homeowners define a planting project. Afternoon-wall tap is **orientation only**.
+A person orients the house (which side cooks), chooses a project, then quotes **each house side with its own climate**: afternoon sun, afternoon shade, front, and back.
 
 **Grok Build: start here → [`GROK.md`](GROK.md)**
 
