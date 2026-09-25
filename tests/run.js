@@ -406,7 +406,21 @@ const shadeBlock = match(
 assert(shadeBlock.strips.some((s) => s.id === "shade-block"), "missing shade-block");
 for (const pick of shadeBlock.strips.find((s) => s.id === "shade-block").picks) {
   const card = byId.get(pick.card_id);
-  assert(card.phoenix_winter_fit === "reliable_including_cold_pockets", "shade block winter " + pick.display_name);
+  assert(card.phoenix_winter_fit !== "container_or_courtyard_only", "east block courtyard-only " + pick.display_name);
+}
+
+const northBlock = match(
+  {
+    ...defaultBrief,
+    extras: { wall: false, front: true, gate: false, pots: false, gravel: false },
+    block_wall: { front: true, left: false, right: false, back: false },
+  },
+  catalog
+);
+assert(northBlock.strips.some((s) => s.id === "front-block"), "missing north block");
+for (const pick of northBlock.strips.find((s) => s.id === "front-block").picks) {
+  const card = byId.get(pick.card_id);
+  assert(card.phoenix_winter_fit === "reliable_including_cold_pockets", "north block winter " + pick.display_name);
 }
 
 const openSun = match({ ...defaultBrief, extras: { wall: true, gate: false, pots: false, gravel: false } }, catalog);
@@ -432,6 +446,33 @@ for (const pick of treeSun.strips[0].picks) {
     card.sun_class === "part";
   assert(ok, "tree cover still quoted a roaster " + pick.display_name);
 }
+
+assert(def.bearings.right === "W" && def.bearings.left === "E" && def.bearings.front === "N" && def.bearings.back === "S", "right tap is west");
+assert(def.strips[0].bearing === "W", "wall bearing");
+assert(String(def.strips[0].title).indexOf("West") === 0, "wall title starts with West");
+
+const ns = match(
+  { ...defaultBrief, extras: { wall: false, shade: false, front: true, back: true, gate: false, pots: false, gravel: false } },
+  catalog
+);
+assert(ns.strips.map((s) => s.id).join() === "front,back", "N/S rooms " + ns.strips.map((s) => s.id).join());
+assert(ns.strips[0].bearing === "N" && ns.strips[1].bearing === "S", "front is north, back is south when right is west");
+assert(
+  JSON.stringify(ns.strips[0].picks.map((p) => p.card_id)) !== JSON.stringify(ns.strips[1].picks.map((p) => p.card_id)),
+  "north quote copied the south quote"
+);
+
+const bedFront = match(
+  {
+    ...defaultBrief,
+    project_scale: "bed",
+    project_side: "front",
+    extras: { wall: true, gate: false, pots: false, gravel: true },
+  },
+  catalog
+);
+assert(bedFront.strips.some((s) => s.id === "front"), "one bed on the north side should quote front");
+assert(!bedFront.strips.some((s) => s.id === "wall"), "one bed on the north side should not quote the west wall");
 
 if (failed) {
   console.error(failed + " failed");

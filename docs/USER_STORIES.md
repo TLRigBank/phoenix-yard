@@ -33,7 +33,12 @@ AC: House shows Front/Left/Right/Back. Tapped side labeled Afternoon sun. Payloa
 
 **US-25** Block wall on a side adds a separate strip. Sun-side block wall requires `reflected_heat_ok`. Shade-side block wall requires cold-pocket winter fit.
 
-**US-26** Left and right can be quoted when they are shoulder sides.
+**US-27** After the afternoon-sun tap, the four house buttons read North, South, East, West. The tapped side reads West.
+
+**US-28** Pots, one bed, and gate ask which compass side the project is on before plants. One bed on North does not return the West trio.
+
+**US-29** North and South quotes are different plants. East is morning sun / afternoon house-shade. West is the roast.
+
 
 
 

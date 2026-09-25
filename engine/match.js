@@ -188,6 +188,15 @@ const STRIP_META = {
 
 const OPPOSITE = { front: "back", back: "front", left: "right", right: "left" };
 
+const BEARINGS = {
+  right: { right: "W", left: "E", front: "N", back: "S" },
+  left: { left: "W", right: "E", front: "S", back: "N" },
+  front: { front: "W", back: "E", left: "S", right: "N" },
+  back: { back: "W", front: "E", left: "N", right: "S" },
+};
+
+const BEARING_NAME = { N: "North", S: "South", E: "East", W: "West" };
+
 function oppositeSide(hot) {
   return OPPOSITE[hot];
 }
@@ -229,33 +238,38 @@ function blockOf(brief, side) {
   return !!(side && brief.block_wall && brief.block_wall[side]);
 }
 
-function shiftClimate(role, cover) {
-  if (cover === "none") return role;
-  if (role === "sun") return cover === "tree" ? "shade" : "shoulder";
-  if (role === "shoulder") return "shade";
-  return "shade";
+function bearingsFor(hot) {
+  return BEARINGS[hot] || null;
 }
 
 function sideRole(hot, side) {
-  if (side === hot) return "sun";
-  if (side === oppositeSide(hot)) return "shade";
+  const bearing = (BEARINGS[hot] || {})[side];
+  if (bearing === "W") return "sun";
+  if (bearing === "E") return "shade";
   return "shoulder";
+}
+
+function bearingOf(brief, side) {
+  const map = bearingsFor(brief.hot_side);
+  return map && side ? map[side] : null;
+}
+
+function shiftBearing(bearing, cover) {
+  if (!bearing || cover === "none") return bearing;
+  if (cover === "tree") {
+    if (bearing === "W") return "E";
+    if (bearing === "S") return "E";
+    return "N";
+  }
+  if (bearing === "W") return "S";
+  if (bearing === "S") return "E";
+  return "N";
 }
 
 function climateOf(room, brief) {
   const side = sideForRoom(room, brief);
-  if (!side) return room === "shade" ? "shade" : room === "wall" ? "sun" : null;
-  return shiftClimate(sideRole(brief.hot_side, side), coverOf(brief, side));
-}
-
-function passesBlock(card, climate) {
-  if (climate === "sun") return !!card.reflected_heat_ok && !card.afternoon_shade_pref;
-  if (climate === "shade") return card.phoenix_winter_fit === "reliable_including_cold_pockets";
-  if (climate === "shoulder") {
-    if (card.reflected_heat_ok) return true;
-    return card.sun_class === "full_to_part" && !card.afternoon_shade_pref;
-  }
-  return false;
+  if (!side) return null;
+  return shiftBearing(bearingOf(brief, side), coverOf(brief, side));
 }
 
 const JOB = { A: "Bone", B: "Bloom", C: "Floor" };
@@ -314,7 +328,7 @@ function passesGlobal(card, brief) {
   return true;
 }
 
-function passesSun(card) {
+function passesWest(card) {
   return (
     (card.sun_class === "full" || card.sun_class === "full_plus_reflected") &&
     card.heat_class === "excellent" &&
@@ -322,23 +336,45 @@ function passesSun(card) {
   );
 }
 
-function passesShade(card) {
+function passesEast(card) {
   if (card.size_class === "landmark") return false;
-  const sun = card.sun_class;
   if (card.afternoon_shade_pref) return true;
+  const sun = card.sun_class;
   return sun === "full_to_part" || sun === "part_to_full" || sun === "part";
 }
 
-function passesShoulder(card) {
+function passesSouth(card) {
   if (card.size_class === "landmark") return false;
+  if (card.afternoon_shade_pref) return false;
   const sun = card.sun_class;
-  return sun === "full" || sun === "full_plus_reflected" || sun === "full_to_part" || sun === "part_to_full";
+  return sun === "full" || sun === "full_plus_reflected" || sun === "full_to_part";
+}
+
+function passesNorth(card) {
+  if (card.size_class === "landmark") return false;
+  if (card.afternoon_shade_pref) return true;
+  const sun = card.sun_class;
+  if (sun === "part" || sun === "part_to_full") return true;
+  return sun === "full_to_part" && card.phoenix_winter_fit === "reliable_including_cold_pockets";
 }
 
 function passesClimate(card, climate) {
-  if (climate === "sun") return passesSun(card);
-  if (climate === "shade") return passesShade(card);
-  if (climate === "shoulder") return passesShoulder(card);
+  if (climate === "W" || climate === "sun") return passesWest(card);
+  if (climate === "E" || climate === "shade") return passesEast(card);
+  if (climate === "S" || climate === "shoulder") return passesSouth(card);
+  if (climate === "N") return passesNorth(card);
+  return false;
+}
+
+function passesBlock(card, climate) {
+  if (climate === "W" || climate === "sun") return !!card.reflected_heat_ok && !card.afternoon_shade_pref;
+  if (climate === "N") return card.phoenix_winter_fit === "reliable_including_cold_pockets";
+  if (climate === "E" || climate === "shade") {
+    return card.phoenix_winter_fit !== "container_or_courtyard_only";
+  }
+  if (climate === "S" || climate === "shoulder") {
+    return !!card.reflected_heat_ok || (card.sun_class === "full_to_part" && !card.afternoon_shade_pref);
+  }
   return false;
 }
 
@@ -392,15 +428,19 @@ function baseScore(card, room, brief) {
   }
   score += card.water_class === "VL" ? 10 : 4;
   const climate = climateOf(room, brief);
-  if (climate === "sun" && card.reflected_heat_ok) score += 10;
-  if (climate === "shade") {
+  if ((climate === "W" || climate === "sun") && card.reflected_heat_ok) score += 10;
+  if (climate === "E" || climate === "shade") {
     if (card.afternoon_shade_pref) score += 12;
     if (card.sun_class === "full_to_part" || card.sun_class === "part_to_full" || card.sun_class === "part") score += 8;
     if (card.sun_class === "full" || card.sun_class === "full_plus_reflected") score -= 6;
   }
-  if (climate === "shoulder") {
-    if (card.sun_class === "full_to_part") score += 4;
-    if (card.afternoon_shade_pref) score += 2;
+  if (climate === "N") {
+    if (card.afternoon_shade_pref) score += 12;
+    if (card.phoenix_winter_fit === "reliable_including_cold_pockets") score += 10;
+  }
+  if (climate === "S" || climate === "shoulder") {
+    if (card.sun_class === "full" || card.sun_class === "full_plus_reflected") score += 6;
+    if (card.afternoon_shade_pref) score -= 8;
   }
   score += (sizesFor(room) && sizesFor(room)[card.size_class]) || 0;
   const care = brief.care;
@@ -474,6 +514,7 @@ function validate(brief) {
       if (brief.block_wall[side] != null && typeof brief.block_wall[side] !== "boolean") return "block_wall." + side;
     }
   }
+  if (brief.project_side != null && !PLACE[brief.project_side]) return "project_side";
   for (const key of ["pots_side", "gravel_side", "gate_side"]) {
     if (brief[key] != null && !PLACE[brief[key]]) return key;
   }
@@ -513,6 +554,7 @@ function texturePlain(card) {
 
 function chipsFor(card, room, brief) {
   const chips = [];
+  const climate = climateOf(room, brief);
   const veto = toxicVeto(brief);
   const keptMilk = veto && brief.wildlife && isMilkweed(card) && (card.toxic_class === "ingest" || card.toxic_class === "deadly");
   if (keptMilk) chips.push(MILKWEED_CAUTION);
@@ -524,8 +566,13 @@ function chipsFor(card, room, brief) {
   if (card.water_class === "VL") chips.push("Almost no extra water");
   else if (card.water_class === "L") chips.push("A little extra water");
   if (isBlockRoom(room)) chips.push("Against a block wall");
-  if (climateOf(room, brief) === "sun" && card.reflected_heat_ok) chips.push("Takes afternoon heat");
-  if (climateOf(room, brief) === "shade") chips.push("Afternoon shade");
+  if (climate === "W" || climate === "sun") {
+    if (card.reflected_heat_ok) chips.push("Takes afternoon heat");
+    chips.push("West wall");
+  }
+  if (climate === "E" || climate === "shade") chips.push("East · morning sun");
+  if (climate === "S") chips.push("South wall");
+  if (climate === "N") chips.push("North · winter shade");
   if (["tree", "eave", "structure"].includes(coverOf(brief, sideForRoom(room, brief)))) chips.push("Existing shade");
   if (card.native_class === "sw_us" || card.native_class === "sw_us_mexico") chips.push("Grows here already");
   if (card.n_fixer) chips.push("Feeds the soil");
@@ -649,11 +696,13 @@ function fillStrip(catalog, brief, room, prior) {
     usedGroups.push(best.plant_group);
   }
   const meta = STRIP_META[room];
+  const climate = climateOf(room, brief);
   const shown = picks.map((pick) => pick.card_id);
   return {
     id: room,
-    title: meta.title,
+    title: BEARING_NAME[climate] ? BEARING_NAME[climate] + " · " + meta.title : meta.title,
     caption: meta.caption,
+    bearing: climate || null,
     room_code: meta.room_code,
     picks,
     empty_jobs: emptyJobs,
@@ -684,10 +733,47 @@ function canReroll(catalog, brief, room, shown) {
   return seats === 3;
 }
 
+function applyProject(brief) {
+  const side = brief.project_side;
+  const scale = brief.project_scale;
+  if (!side || !PLACE[side]) return brief;
+  if (scale !== "pots" && scale !== "bed" && scale !== "path") return brief;
+  const extras = {
+    wall: false,
+    shade: false,
+    front: false,
+    back: false,
+    left: false,
+    right: false,
+    gate: false,
+    pots: false,
+    gravel: false,
+  };
+  const next = { ...brief, extras: { ...brief.extras, ...extras } };
+  if (scale === "pots") {
+    next.extras.pots = true;
+    next.pots_side = side;
+    return next;
+  }
+  if (scale === "path") {
+    next.extras.gate = true;
+    next.gate_side = side;
+    return next;
+  }
+  next.extras.gravel = true;
+  next.gravel_side = side;
+  const role = sideRole(brief.hot_side, side);
+  if (role === "sun") next.extras.wall = true;
+  else if (role === "shade") next.extras.shade = true;
+  else next.extras[side] = true;
+  return next;
+}
+
 function match(brief, catalog) {
   const problem = validate(brief);
   if (problem) return { error: "invalid_brief", field: problem };
   if (!Array.isArray(catalog)) return { error: "match_failed" };
+  brief = applyProject(brief);
   substitutesFor.byId = new Map(catalog.map((card) => [card.card_id, card]));
   const hot = brief.hot_side;
   const rooms = [];
@@ -727,7 +813,8 @@ function match(brief, catalog) {
   return {
     brief_echo: {
       hot_side: brief.hot_side,
-      project_scale: brief.project_scale || null,
+      project_side: brief.project_side || null,
+      bearings: bearingsFor(brief.hot_side),
       kids: brief.kids,
       chew: brief.chew,
       wildlife: brief.wildlife,
@@ -752,6 +839,8 @@ function match(brief, catalog) {
       guilds: brief.guilds,
     },
     place_label: PLACE[brief.hot_side],
+    west_label: PLACE[brief.hot_side],
+    bearings: bearingsFor(brief.hot_side),
     opposite_label: PLACE[oppositeSide(brief.hot_side)],
     session_notes: toxicVeto(brief) ? [SESSION_TOXIC] : [],
     strips,

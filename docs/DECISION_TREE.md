@@ -2,97 +2,62 @@
 
 This is the only climate table. `engine/match.js` implements it.
 
-A quote is **side + surface + cover + household**, not a single extras flag.
+A quote is **project + side + bearing + cover + block wall + household**.
 
-## Stage 0 — payload
+## Orientation
 
-Required: `hot_side`, `kids`, `chew`, `wildlife`, `guilds`, `care`, `extras.wall|gate|pots|gravel`.
+The first tap is **West**. Afternoon sun in Phoenix is west. The other three sides are then named:
 
-Optional:
+| Tapped drawing side | Front | Left | Right | Back |
+|---|---|---|---|---|
+| right | N | E | W | S |
+| left | S | W | E | N |
+| front | W | S | N | E |
+| back | E | N | S | W |
 
-- `extras.shade|front|back|left|right`
-- `block_wall: { front, left, right, back }` booleans
-- `cover: { front, left, right, back }` = `none|tree|eave|structure`
-- `pots_side`, `gravel_side`, `gate_side` = a house side
-- `project_scale`, `exclude`
+The UI must relabel the house to North / South / East / West after the tap. Do not keep saying “right side” on results.
 
-`hot_side` assigns a **role** to each side: tapped = sun, opposite = shade, other two = shoulder.
+## Four Phoenix climates
 
-`cover` then **shifts** that role before any filter:
+| Bearing | Summer | Winter | Open-bed gate | Block-wall gate |
+|---|---|---|---|---|
+| **West** | Afternoon roast, reflected masonry | Mild | full + excellent heat, no shade-pref | `reflected_heat_ok` required |
+| **East** | Morning sun, house shade after noon | Mild | shade-pref or `full_to_part` / part | not courtyard-only |
+| **South** | Long sun, high angle | Warm wall | full or `full_to_part`, no shade-pref | reflected heat or part-sun |
+| **North** | Least wall sun | Frost at the base | shade-pref, part sun, or `full_to_part` with cold-pocket winter | cold-pocket winter required |
 
-| Role before cover | tree | eave or structure |
-|---|---|---|
-| sun | shade | shoulder |
-| shoulder | shade | shade |
-| shade | shade | shade |
+North is not East. South is not West.
 
-`block_wall[side]` adds a second strip against that wall. Bed and block wall can both be on.
+## Project → side
 
-Strip order: wall, shade, front, back, left, right, then `*-block` strips, then gate, pots, gravel.
+`project_scale` + `project_side` bind the job to one wall:
 
-If front is the tapped side, `front` merges into `wall`. If left is opposite, `left` merges into `shade`.
-
-`toxic_veto = kids || chew`.
-
-## Stage 1 — global gates
-
-Drop if:
-
-- `native_class == invasive_risk`
-- `toxic_class` in `deadly|ingest` AND toxic_veto AND not `Asclepias linaria` / `Asclepias subulata` with wildlife
-- `maintenance_level == high` AND care is not Hobby
-- `water_class == M`
-- `size_class == landmark` OR tree / palm groups
-
-## Stage 2 — room filter
-
-Water: beds, block walls, and gravel are VL. Pots allow L. Gate allows L on Weekend/Hobby.
-
-**Sun climate:** sun full or full_plus_reflected, heat excellent, not afternoon_shade_pref.
-
-**Shade climate:** afternoon_shade_pref OR sun full_to_part / part_to_full / part.
-
-**Shoulder climate:** sun full, full_plus_reflected, full_to_part, or part_to_full.
-
-**Block wall (after climate):**
-
-| Climate after cover | Gate |
+| Scale | What turns on |
 |---|---|
-| sun | `reflected_heat_ok` required. No shade-pref. |
-| shade | `phoenix_winter_fit == reliable_including_cold_pockets` |
-| shoulder | `reflected_heat_ok` OR (full_to_part and not shade-pref) |
+| pots | pots only, `pots_side = project_side` |
+| path | gate only, `gate_side = project_side` |
+| bed | that side’s bed + gravel on that side |
+| yard / unsure | extras as toggled; all four bearings available |
 
-**Gate:** no jumping, puncture, spine_hazard, pedestrian_avoid, large. If `gate_side` set, also the side climate.
+One bed on the north wall must not quote the west strip.
 
-**Pots:** container rules. If `pots_side` set, side climate. If that side has a block wall, block-wall gates too.
+## Cover shift (after bearing)
 
-**Gravel:** unsided = full / full_plus_reflected / full_to_part. If `gravel_side` set, that climate.
+| Bearing | tree | eave / patio cover |
+|---|---|---|
+| W | E | S |
+| S | E | E |
+| E | N | N |
+| N | N | N |
 
-Never read `chip_pack` or `short_why`.
+## Payload extras
 
-## Stage 3 — score
+Required extras booleans: wall, gate, pots, gravel. Optional: shade, front, back, left, right, `block_wall`, `cover`, `project_side`, `pots_side`, `gravel_side`, `gate_side`.
 
-Native, water, care, winter (bonus only here), wildlife, irritant, milkweed penalty — same integers as before.
+Strip titles start with the bearing: `West · Afternoon sun`.
 
-Open sun bed + reflected_heat_ok +10. Shade-pref +12 in shade climate. Cover does not add its own points; it already shifted the climate.
+## Global gates, slots, copy
 
-## Stage 4 — slots
+Unchanged from prior lock. Default fixture (no project_side, no cover) keeps the same twelve ids.
 
-Beds and block walls use the wall / shade seat groups. Genus lock. Floor changes plant_group when it can. Gravel Bloom still prefers Cloud.
-
-## Stage 5 — copy
-
-`docs/COPY_MAP.md`. Block-wall chips: Against a block wall. Cover chips: Existing shade.
-
-## Existing cover
-
-- `tree` — canopy already on that side
-- `eave` — house overhang
-- `structure` — ramada, patio cover, pergola
-- `none` — open
-
-Cover does not create a strip. It only shifts climate.
-
-## Locked winners
-
-`tests/fixtures/default.json` stays the golden list when block_wall and cover are off. Pets-on keeps those twelve ids.
+`tests/fixtures/default.json` is still the golden list.

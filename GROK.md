@@ -16,7 +16,12 @@ If you ship a walk whose first results are always “Afternoon wall,” you miss
 
 A phone-wide web app:
 
-1. **Orient.** House with four sides. Tap the wall that cooks in the afternoon. Copy: that side is how we name afternoon sun. It is not the plant list yet.
+1. **Orient.** Tap the wall that cooks in the afternoon. That side **is West**. Relabel the house North / South / East / West. Stop saying “right side.”
+2. **Project.** Pots / One bed / Gate and path / Whole yard / Not sure.
+3. **Which side** (pots, one bed, gate only). Same house, now compass-labeled. That writes `project_side` and binds the job to that bearing.
+4. **Household.** Kids, chew, wildlife, care.
+5. **Rooms / micro.** Whole-yard can still toggle sides. Cover and block wall per side.
+6. **Results.** Titles like `West · Afternoon sun`, `North · Front`. One strip at a time.
 2. **Project.** One screen: what is this project? Pots / One bed / Gate and path / Whole yard / Not sure. That writes `project_scale` and **default rooms**. The wall is on only when the scale needs it (one bed, whole yard, not sure).
 3. **Household.** Four questions, one screen each: kids, chew, wildlife, care. One tap answers and advances.
 4. **Rooms.** Toggle the four sides (sun, shade, front, back, plus left/right when they are shoulders), Gate, Pots, Gravel.
@@ -33,7 +38,8 @@ Live names come from `engine/match.js`. Do not filter 543 cards in the UI.
 UI  →  match(brief)  →  strips that extras turned on
 ```
 
-`hot_side` names which side cooks. It **does** change climate for the four house sides: that side = sun filter, the opposite side = shade filter, the remaining two = shoulder filter. It is still not a compass and not “west.”
+`hot_side` names which drawing side is **West**. The engine returns `bearings` so the UI can label North / South / East / West. West, East, South, and North are four different filters. Do not treat front/back as one “shoulder.”
+
 
 ## Brief
 

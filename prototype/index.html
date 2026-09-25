@@ -125,6 +125,12 @@ const NEXT = {
   gravel: "Next — open gravel"
 };
 const PLACE = { front: "Front side", back: "Back side", left: "Left side", right: "Right side" };
+const BEARINGS = {
+  right: { right: "West", left: "East", front: "North", back: "South" },
+  left: { left: "West", right: "East", front: "South", back: "North" },
+  front: { front: "West", back: "East", left: "South", right: "North" },
+  back: { back: "West", front: "East", left: "North", right: "South" }
+};
 const KEPT = "Kept off the gate: Jumping cholla. Joints that jump.";
 const SESSION = "Oleander and sago stay off the whole list.";
 
@@ -221,6 +227,7 @@ const QUESTIONS = [
 const state = {
   screen: "home", q: 0, hot: "right", scale: null,
   extras: { wall: true, shade: true, front: true, back: true, gate: true, pots: true, gravel: true },
+  project_side: null,
   cover: { front: "none", left: "none", right: "none", back: "none" },
   block_wall: { front: false, left: false, right: false, back: false },
   kids: null, chew: null, wildlife: true, care: null,
@@ -239,7 +246,12 @@ try {
 function esc(s) {
   return String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&", "<": "<", ">": ">", '"': """ }[c]));
 }
-function placeLine() { return PLACE[state.hot] + " · afternoon sun"; }
+function placeLine() {
+  return BEARINGS[state.hot][state.hot] + " · afternoon sun";
+}
+function sideLabel(id) {
+  return BEARINGS[state.hot][id];
+}
 function visibleStrips() {
   return STRIPS.filter((strip) => state.extras[strip.id]);
 }
@@ -251,10 +263,10 @@ function advanceQ() {
 }
 
 function house(showExtras) {
-  const sideLabel = { front: "Front", back: "Back", left: "Left", right: "Right" };
   const sides = ["front", "left", "right", "back"].map((id) => {
     const hot = state.hot === id;
-    return `<button class="side ${hot ? "hot" : ""}" data-act="hot" data-id="${id}">${hot ? "Afternoon sun" : sideLabel[id]}</button>`;
+    const label = sideLabel(id);
+    return `<button class="side ${hot ? "hot" : ""}" data-act="hot" data-id="${id}">${hot ? "West" : label}</button>`;
   }).join("");
   const extras = showExtras ? `<div class="extra-row">
       <button class="extra ${state.extras.wall ? "on" : ""}" data-act="extra" data-id="wall">Sun</button>
@@ -312,6 +324,25 @@ function screenProject() {
     </main>
     <footer>
       <button class="ghost" data-act="go" data-to="home">Back</button>
+      <button class="pri" data-act="after-project">Next</button>
+    </footer>`;
+}
+
+function screenProjectSide() {
+  const sides = ["front", "left", "right", "back"].map((id) =>
+    `<button class="ans ${state.project_side === id ? "on" : ""}" data-act="project-side" data-id="${id}">${sideLabel(id)}${id === state.hot ? " · this project is on the west wall" : ""}</button>`
+  ).join("");
+  return `
+    <header><span class="brand">Phoenix Yard</span></header>
+    <main>
+      <p class="place">${esc(placeLine())}</p>
+      <h1 class="sm">Which side is this project on?</h1>
+      <p class="lead">Pots, a bed, and a gate live on one wall. Whole yard skips this.</p>
+      ${house(false)}
+      ${sides}
+    </main>
+    <footer>
+      <button class="ghost" data-act="go" data-to="project">Back</button>
       <button class="pri" data-act="go" data-to="ask">Next</button>
     </footer>`;
 }
@@ -367,10 +398,10 @@ function cardEl(c) {
 
 function screenMicro() {
   const sides = [
-    ["right", "Right"],
-    ["left", "Left"],
-    ["front", "Front"],
-    ["back", "Back"]
+    ["right", sideLabel("right")],
+    ["left", sideLabel("left")],
+    ["front", sideLabel("front")],
+    ["back", sideLabel("back")]
   ];
   const covers = [["none", "Open"], ["tree", "Tree"], ["eave", "Eave"], ["structure", "Patio cover"]];
   const rows = sides.map(([id, label]) => {
@@ -456,7 +487,7 @@ function screenYard() {
 }
 
 function render() {
-  const map = { home: screenHome, project: screenProject, ask: screenAsk, pieces: screenPieces, micro: screenMicro, results: screenResults, yard: screenYard };
+  const map = { home: screenHome, project: screenProject, projectside: screenProjectSide, ask: screenAsk, pieces: screenPieces, micro: screenMicro, results: screenResults, yard: screenYard };
   const screen = map[state.screen] || screenHome;
   document.getElementById("app").innerHTML = screen();
   try {
@@ -490,6 +521,12 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.lastChange = "";
   }
   if (act === "hot") state.hot = b.dataset.id;
+  if (act === "scale") applyScale(b.dataset.id);
+  if (act === "after-project") {
+    state.screen = (state.scale === "pots" || state.scale === "bed" || state.scale === "path") ? "projectside" : "ask";
+    if (!state.scale) applyScale("unsure");
+  }
+  if (act === "project-side") state.project_side = b.dataset.id;
   if (act === "extra") state.extras[b.dataset.id] = !state.extras[b.dataset.id];
   if (act === "answer") {
     state[b.dataset.key] = parseVal(b.dataset.val);
