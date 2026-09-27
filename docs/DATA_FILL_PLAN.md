@@ -1,0 +1,80 @@
+# Accurate catalog fill
+
+Accuracy first. An empty field is better than a guessed one. Do not fill from model memory.
+
+## What we are filling
+
+| Field | Empty now | Notes |
+|---|---|---|
+| `bloom_seasons` | 212 / 543 | Agave 82/83 empty — often correct (foliage plant, rare bloom) |
+| `bloom_colors` | 91 / 543 | Do not invent flower color for foliage-only plants |
+| Foliage color (new) | missing | Needed for trio beauty; desert identity is leaf, not only flower |
+| Flower form (new) | missing | Spike / daisy / bell / inconspicuous |
+| `fruit_colors` | 528 / 543 | Fill only when fruit is a real garden feature |
+| Texture review | 266 Swords | Recode only with a photo + description, not by genus guess |
+| `sun_class` | 417 full | Touch only when a source says afternoon shade or part sun |
+
+Do not retune climate gates in the same pass.
+
+## Source ladder (use in this order)
+
+1. University of Arizona / Maricopa and Pima extension, ASU Desert Botanical Garden / arboretum notes, Tucson Cactus and Succulent Society, Arizona Municipal Water Users / AMWUA plant list, Water Use It Wisely.
+2. USDA PLANTS + SEINet / Swbiodiversity for nativity and accepted name.
+3. Missouri Botanical Garden, Royal Horticultural Society, San Marcos Growers, Mountain States / Civano plant notes for form, color, bloom window.
+4. ASPCA only for toxicity (already gated).
+5. Nursery tags last, and only to confirm a color already named by 1–3.
+
+If two rung-1 sources disagree, leave the field empty and tag `needs_review`. Never average them.
+
+## Rules that keep us honest
+
+- Species first. Variety second. Genus-level fill only when the genus is uniform in that trait (e.g. most *Hesperaloe* coral/yellow spikes in spring–summer). If the genus varies, stop.
+- Agave, many yuccas, foliage shrubs, palms: prefer `bloom_class = foliage_primary` or `rare_spike` instead of fake seasons.
+- Phoenix window: write seasons as they behave in the low desert, not St. Louis. A plant that blooms “June” in Missouri may bloom Feb–Apr here.
+- `match_confidence` is currently `high` on all 543 cards. That tag is meaningless. New fills use `field_confidence`: `sourced` | `genus_uniform` | `needs_review`.
+- Every changed cell logs `source_url` + date in a fill log, not on the customer card.
+
+## New fields (only these)
+
+```
+foliage_color: green | gray_green | silver | blue | gold | burgundy | variegated
+bloom_class: seasonal | rare_spike | inconspicuous | foliage_primary
+flower_form: spike | cluster | daisy | bell | tubular | pad_bloom | none
+```
+
+Do not add bloom months until seasons are solid. Do not add photos in this pass.
+
+## Waves
+
+**Wave A — do not invent (1 sitting).**  
+Mark Agave, Palms, Foliage Shrubs, and monocarpic yuccas as `bloom_class = foliage_primary` or `rare_spike`. Leave `bloom_seasons` empty. Fill `foliage_color` from extension photos + written leaf descriptions only.
+
+**Wave B — flowering groups with good sources.**  
+Flowering Shrubs (0 empty seasons already), Perennials, Grasses, Vines. Fill missing colors and any bad seasons against UA / DBG / AMWUA.
+
+**Wave C — cacti and aloe.**  
+Bloom color is usually documented. Seasons in Phoenix: many cacti late winter–spring. Source per species. Do not copy one hedgehog onto all *Echinocereus*.
+
+**Wave D — other succulents and trees.**  
+Highest error risk. One species, one source row. Skip the rest.
+
+**Wave E — texture audit (sample, not mass recode).**  
+Pull 40 “Swords” cards that are visually mounds or pads (some cacti, some succulents). Recode only those 40 with a photo + written habit. Do not flip the other 226.
+
+**Wave F — sun_class only where a source says part shade / afternoon shade in Phoenix.**  
+Cap this wave. Most of the 417 `full` values are right.
+
+## Workflow
+
+1. Spreadsheet of empties by wave (card_id, botanical, field).
+2. Two sources when the trait drives a trio (color, foliage_color, bloom_class).
+3. Patch JSON in a named wave file, same as climate patches.
+4. Accuracy check: 15 random cards per wave against the source links. Fail the wave if more than one miss.
+5. Engine uses a new field only when `field_confidence != needs_review` and the field is non-empty.
+
+## What “done” means
+
+- Every empty bloom field is either filled with a source or explicitly `bloom_class = foliage_primary | rare_spike | inconspicuous`.
+- Foliage color sourced on plants the matcher can actually seat (not the tree groups already gated out).
+- No climate enum changed in these waves.
+- Trio code may then use foliage + flower form + bloom_class. It still must not invent a season.
