@@ -14782,7 +14782,9 @@
     ],
     "short_why": "Desert Rose · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-002",
@@ -14848,7 +14850,9 @@
     ],
     "short_why": "African Ocotillo · wild stem · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-003",
@@ -14914,7 +14918,9 @@
     ],
     "short_why": "Pink Jade Plant · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-004",
@@ -14981,7 +14987,9 @@
     ],
     "short_why": "Dyckia 'Burgundy Ice' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-005",
@@ -15047,7 +15055,9 @@
     ],
     "short_why": "Dyckia 'Grand Marnier' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-006",
@@ -15115,7 +15125,9 @@
     ],
     "short_why": "Dyckia 'Grape Jelly' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-007",
@@ -15183,7 +15195,9 @@
     ],
     "short_why": "Dyckia 'Silver Nickle' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-008",
@@ -15247,7 +15261,10 @@
     ],
     "short_why": "Desert Candle · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-009",
@@ -15311,7 +15328,10 @@
     ],
     "short_why": "African Candelabra · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-010",
@@ -15375,7 +15395,10 @@
     ],
     "short_why": "Tanzanian Zipper Plant · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-011",
@@ -15439,7 +15462,10 @@
     ],
     "short_why": "Candellia · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-012",
@@ -15507,7 +15533,10 @@
     ],
     "short_why": "Medusa’s Head · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-013",
@@ -15573,7 +15602,10 @@
     ],
     "short_why": "Big Horn · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-014",
@@ -15637,7 +15669,10 @@
     ],
     "short_why": "Pickle Plant · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-015",
@@ -15701,7 +15736,10 @@
     ],
     "short_why": "Euphorbia ingens 'Chocolate Drops' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-016",
@@ -15765,7 +15803,10 @@
     ],
     "short_why": "Euphorbia ingens 'Crested' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-017",
@@ -15828,7 +15869,10 @@
     ],
     "short_why": "Lucky Cactus · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-018",
@@ -15901,7 +15945,9 @@
     ],
     "short_why": "Euphorbia millii 'Cherokee' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-019",
@@ -15976,7 +16022,9 @@
     ],
     "short_why": "Euphorbia millii 'Jerry’s Choice' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-020",
@@ -16047,7 +16095,10 @@
     ],
     "short_why": "Euphorbia millii 'Tropical Fiesta' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-021",
@@ -16111,7 +16162,10 @@
     ],
     "short_why": "Moroccan Mound · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-022",
@@ -16181,7 +16235,9 @@
     ],
     "short_why": "Gopher Plant · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-023",
@@ -16245,7 +16301,10 @@
     ],
     "short_why": "Euphorbia royleana · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-024",
@@ -16290,13 +16349,8 @@
     "color_moods": [
       "Ember"
     ],
-    "bloom_colors": [
-      "red",
-      "orange"
-    ],
-    "bloom_seasons": [
-      "winter"
-    ],
+    "bloom_colors": [],
+    "bloom_seasons": [],
     "wildlife": [],
     "chip_pack": [
       "VL",
@@ -16314,7 +16368,12 @@
     ],
     "short_why": "Euphorbia tirucalli 'Firestick' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "foliage_color": "gold",
+    "foliage_color_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-025",
@@ -16378,7 +16437,12 @@
     ],
     "short_why": "Pencil Euphorbia · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "foliage_color": "green",
+    "foliage_color_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-026",
@@ -16442,7 +16506,10 @@
     ],
     "short_why": "Euphorbia trigona 'Green' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-027",
@@ -16508,7 +16575,10 @@
     ],
     "short_why": "Euphorbia trigona 'Ruby Red' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-028",
@@ -16572,7 +16642,10 @@
     ],
     "short_why": "Variegated · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-029",
@@ -16634,7 +16707,10 @@
     ],
     "short_why": "Furcraea macdougalii · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-030",
@@ -16676,10 +16752,7 @@
       "Dusk",
       "Silver"
     ],
-    "bloom_colors": [
-      "blue",
-      "silver"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [],
     "wildlife": [
       "bees"
@@ -16700,7 +16773,12 @@
     ],
     "short_why": "Kalanchoe beharensis 'Blue Slick' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "genus_uniform",
+    "foliage_color": "silver",
+    "foliage_color_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-031",
@@ -16762,7 +16840,12 @@
     ],
     "short_why": "Elephant’s Ear · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "genus_uniform",
+    "foliage_color": "green",
+    "foliage_color_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-032",
@@ -16803,8 +16886,13 @@
     "color_moods": [
       "Quiet green"
     ],
-    "bloom_colors": [],
-    "bloom_seasons": [],
+    "bloom_colors": [
+      "yellow"
+    ],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -16824,7 +16912,10 @@
     ],
     "short_why": "Kalanchoe thyrsiflora 'Variegated' · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-033",
@@ -16868,7 +16959,10 @@
     "bloom_colors": [
       "yellow"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -16888,7 +16982,10 @@
     ],
     "short_why": "Flapjacks · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-034",
@@ -16957,7 +17054,9 @@
     ],
     "short_why": "Texas Tuberose · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-035",
@@ -17000,9 +17099,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "purple",
-      "blue",
-      "silver"
+      "purple"
     ],
     "bloom_seasons": [],
     "wildlife": [
@@ -17024,7 +17121,10 @@
     ],
     "short_why": "Mangave 'Aztec King' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-036",
@@ -17088,7 +17188,10 @@
     ],
     "short_why": "Mangave 'Bad Hair Day' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-037",
@@ -17152,7 +17255,10 @@
     ],
     "short_why": "Mangave 'Bloodspot' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-038",
@@ -17195,9 +17301,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "purple",
-      "blue",
-      "silver"
+      "purple"
     ],
     "bloom_seasons": [],
     "wildlife": [
@@ -17219,7 +17323,10 @@
     ],
     "short_why": "Mangave 'Desert Dragon' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-039",
@@ -17261,13 +17368,8 @@
       "Dusk",
       "Silver"
     ],
-    "bloom_colors": [
-      "blue",
-      "silver"
-    ],
-    "bloom_seasons": [
-      "fall"
-    ],
+    "bloom_colors": [],
+    "bloom_seasons": [],
     "wildlife": [
       "bees"
     ],
@@ -17287,7 +17389,10 @@
     ],
     "short_why": "Mangave 'Falling Waters' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-040",
@@ -17349,7 +17454,10 @@
     ],
     "short_why": "Mangave 'Freckles & Speckles' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-041",
@@ -17411,7 +17519,10 @@
     ],
     "short_why": "Mangave 'Inkblot' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-042",
@@ -17473,7 +17584,10 @@
     ],
     "short_why": "Mangave 'Jaguar' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-043",
@@ -17535,7 +17649,10 @@
     ],
     "short_why": "Mangave 'Macho Mocha' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-044",
@@ -17599,7 +17716,10 @@
     ],
     "short_why": "Mangave 'Mission to Mars' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-045",
@@ -17640,9 +17760,7 @@
     "color_moods": [
       "Silver"
     ],
-    "bloom_colors": [
-      "silver"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [],
     "wildlife": [
       "bees"
@@ -17663,7 +17781,10 @@
     ],
     "short_why": "Mangave 'Moonglow' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-046",
@@ -17727,7 +17848,10 @@
     ],
     "short_why": "Mangave 'Pineapple Express' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-047",
@@ -17791,7 +17915,10 @@
     ],
     "short_why": "Mangave 'Purple People Eater' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-048",
@@ -17832,9 +17959,7 @@
     "color_moods": [
       "Silver"
     ],
-    "bloom_colors": [
-      "silver"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [],
     "wildlife": [
       "bees"
@@ -17855,7 +17980,10 @@
     ],
     "short_why": "Mangave 'Silver Fox' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-049",
@@ -17896,9 +18024,7 @@
     "color_moods": [
       "Silver"
     ],
-    "bloom_colors": [
-      "silver"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [],
     "wildlife": [
       "bees"
@@ -17919,7 +18045,10 @@
     ],
     "short_why": "Mangave 'Snow Leopard' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-050",
@@ -17981,7 +18110,10 @@
     ],
     "short_why": "Mangave 'Spotty Dotty' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-051",
@@ -18043,7 +18175,10 @@
     ],
     "short_why": "Mangave 'Tooth Fairy' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-052",
@@ -18085,10 +18220,7 @@
       "Dusk",
       "Silver"
     ],
-    "bloom_colors": [
-      "blue",
-      "silver"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [],
     "wildlife": [
       "bees"
@@ -18109,7 +18241,10 @@
     ],
     "short_why": "Mangave 'Whale Tale' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-053",
@@ -18171,7 +18306,12 @@
     ],
     "short_why": "Nocardia neocardensis · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "genus_uniform",
+    "foliage_color_confidence": "needs_review",
+    "wave_d": true,
+    "wave_d_note": "Name Nocardia neocardensis is not a usable botanical; skipped"
   },
   {
     "card_id": "CCF-OSUC-054",
@@ -18239,6 +18379,8 @@
     ],
     "short_why": "Madagascar Palm · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   }
 ]

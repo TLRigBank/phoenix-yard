@@ -65,7 +65,9 @@
     ],
     "short_why": "Madagascar Palm · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-056",
@@ -135,7 +137,9 @@
     ],
     "short_why": "Tall Slipper Plant · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-OSUC-057",
@@ -183,7 +187,10 @@
     "bloom_colors": [
       "red"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -203,7 +210,10 @@
     ],
     "short_why": "Lady Slipper · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-058",
@@ -263,7 +273,11 @@
     ],
     "short_why": "African Spear · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "genus_uniform",
+    "foliage_color": "green",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-059",
@@ -304,9 +318,7 @@
     "color_moods": [
       "Sun"
     ],
-    "bloom_colors": [
-      "yellow"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [],
     "wildlife": [],
     "chip_pack": [
@@ -325,7 +337,11 @@
     ],
     "short_why": "Mother-in-Law’s Tongue Var. · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "genus_uniform",
+    "foliage_color": "variegated",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-060",
@@ -385,7 +401,11 @@
     ],
     "short_why": "Mother-in-Law’s Tongue · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "genus_uniform",
+    "foliage_color": "green",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-061",
@@ -428,7 +448,6 @@
       "Moon"
     ],
     "bloom_colors": [
-      "blue",
       "white"
     ],
     "bloom_seasons": [
@@ -453,7 +472,11 @@
     ],
     "short_why": "Blue Fingers · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "genus_uniform",
+    "foliage_color": "blue",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OSUC-062",
@@ -497,9 +520,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "blue",
-      "white",
-      "silver"
+      "white"
     ],
     "bloom_seasons": [],
     "wildlife": [
@@ -521,7 +542,11 @@
     ],
     "short_why": "Blue Chalksticks · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "genus_uniform",
+    "foliage_color": "blue",
+    "wave_d": true
   },
   {
     "card_id": "CCF-YUCC-001",
@@ -13277,7 +13302,8 @@
     ],
     "short_why": "Mulga Acacia · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-002",
@@ -13344,7 +13370,8 @@
     ],
     "short_why": "Leather Leaf Acacia · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-003",
@@ -13410,7 +13437,8 @@
     ],
     "short_why": "Willow Acacia · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-004",
@@ -13479,7 +13507,8 @@
     ],
     "short_why": "Sweet Acacia · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-005",
@@ -13545,7 +13574,8 @@
     ],
     "short_why": "Shoestring Acacia · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-006",
@@ -13589,7 +13619,9 @@
     "bloom_colors": [
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -13609,7 +13641,9 @@
     ],
     "short_why": "Palo Blanco · cloud · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "wave_d": true
   },
   {
     "card_id": "CCF-DTRE-007",
@@ -13677,7 +13711,8 @@
     ],
     "short_why": "Cascalote · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-008",
@@ -13745,7 +13780,8 @@
     ],
     "short_why": "Smoothie Cascalote · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-009",
@@ -13818,7 +13854,8 @@
     ],
     "short_why": "Blue Palo Verde · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-010",
@@ -13887,7 +13924,8 @@
     ],
     "short_why": "Cercidium hybrid 'Desert Museum' · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-011",
@@ -13955,7 +13993,8 @@
     ],
     "short_why": "Cercidium hybrid 'Sonoran Emerald' · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-012",
@@ -14024,7 +14063,8 @@
     ],
     "short_why": "Foothill Palo Verde · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-013",
@@ -14092,7 +14132,8 @@
     ],
     "short_why": "Foothills Palo Brea CCF · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-014",
@@ -14160,7 +14201,8 @@
     ],
     "short_why": "Palo Brea · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-015",
@@ -14229,7 +14271,8 @@
     ],
     "short_why": "Chilopsis linearis 'Bubbalicious' · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-016",
@@ -14298,7 +14341,8 @@
     ],
     "short_why": "Chilopsis linearis 'Sweet Bubba' · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-017",
@@ -14369,7 +14413,8 @@
     ],
     "short_why": "Desert Willow · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-018",
@@ -14438,7 +14483,8 @@
     ],
     "short_why": "Fern of the Desert · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-019",
@@ -14507,7 +14553,8 @@
     ],
     "short_why": "Ironwood · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-020",
@@ -14576,7 +14623,8 @@
     ],
     "short_why": "Texas Ebony · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-021",
@@ -14643,7 +14691,8 @@
     ],
     "short_why": "Cooperi Mesquite · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-022",
@@ -14710,7 +14759,8 @@
     ],
     "short_why": "Argentine King Mesquite CCF · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-023",
@@ -14777,7 +14827,8 @@
     ],
     "short_why": "Chilean Fuente Mesquite CCF · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-024",
@@ -14844,7 +14895,8 @@
     ],
     "short_why": "Chilean Mesquite · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-025",
@@ -14912,7 +14964,8 @@
     ],
     "short_why": "Texas Honey Mesquite · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-026",
@@ -14979,7 +15032,8 @@
     ],
     "short_why": "Prosopis hybrid 'Leslie Roy' · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-027",
@@ -15047,7 +15101,8 @@
     ],
     "short_why": "Native Mesquite · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-001",
@@ -15114,7 +15169,8 @@
     ],
     "short_why": "Mimosa · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-002",
@@ -15185,7 +15241,8 @@
     ],
     "short_why": "Hong Kong Orchid · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-003",
@@ -15255,7 +15312,8 @@
     ],
     "short_why": "Anacacho Orchid Tree · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-004",
@@ -15322,7 +15380,8 @@
     ],
     "short_why": "Purple Orchid Tree · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-005",
@@ -15391,7 +15450,8 @@
     ],
     "short_why": "Lemon Bottle Brush Tree · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-006",
@@ -15459,7 +15519,8 @@
     ],
     "short_why": "Chitalpa · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-007",
@@ -15501,10 +15562,7 @@
       "Dusk",
       "Silver"
     ],
-    "bloom_colors": [
-      "blue",
-      "silver"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [],
     "wildlife": [
       "birds",
@@ -15527,7 +15585,10 @@
     ],
     "short_why": "Arizona Cypress · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-008",
@@ -15589,7 +15650,10 @@
     ],
     "short_why": "Italian Cypress · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-009",
@@ -15655,7 +15719,8 @@
     ],
     "short_why": "Indian Rosewood · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-010",
@@ -15698,10 +15763,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "white",
-      "silver"
+      "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "birds",
       "bees"
@@ -15722,7 +15788,9 @@
     ],
     "short_why": "Ghost Gum · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-011",
@@ -15785,7 +15853,10 @@
     ],
     "short_why": "Indian Laurel Ficus Tree · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-012",
@@ -15848,7 +15919,10 @@
     ],
     "short_why": "Little Leaf Ash · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-013",
@@ -15910,7 +15984,10 @@
     ],
     "short_why": "Shamel Ash · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-014",
@@ -15973,7 +16050,10 @@
     ],
     "short_why": "Bonita Ash · SW native · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-015",
@@ -16036,7 +16116,10 @@
     ],
     "short_why": "Fan-Tex Ash · SW native · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-016",
@@ -16077,9 +16160,7 @@
     "color_moods": [
       "Dusk"
     ],
-    "bloom_colors": [
-      "purple"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [
       "fall"
     ],
@@ -16102,7 +16183,10 @@
     ],
     "short_why": "Raywood Ash · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-017",
@@ -16165,7 +16249,10 @@
     ],
     "short_why": "Arizona Ash · SW native · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-018",
@@ -16232,7 +16319,8 @@
     ],
     "short_why": "Jacaranda · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-019",
@@ -16300,7 +16388,8 @@
     ],
     "short_why": "Pink, Dynamite Red Crape Myrtle · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-020",
@@ -16366,7 +16455,8 @@
     ],
     "short_why": "Purple Crape Myrtle · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-021",
@@ -16432,7 +16522,8 @@
     ],
     "short_why": "White Crape Myrtle · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-022",
@@ -16506,7 +16597,8 @@
     ],
     "short_why": "Pink, Red, White Oleander Tree · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-023",
@@ -16548,9 +16640,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "silver"
+      "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "birds"
     ],
@@ -16570,7 +16664,10 @@
     ],
     "short_why": "Fruitless Olive · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "foliage_color": "gray_green",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-024",
@@ -16633,7 +16730,10 @@
     ],
     "short_why": "Mondell Pine · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-025",
@@ -16699,7 +16799,8 @@
     ],
     "short_why": "Pistacia chinensis 'Red Push' · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-026",
@@ -16766,7 +16867,8 @@
     ],
     "short_why": "Chinese Pistache · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-027",
@@ -16828,7 +16930,10 @@
     ],
     "short_why": "Mastic Tree · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-028",
@@ -16898,7 +17003,8 @@
     ],
     "short_why": "Purple Leaf Plum · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-029",
@@ -16966,7 +17072,8 @@
     ],
     "short_why": "Bradford Pear · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-030",
@@ -17028,7 +17135,10 @@
     ],
     "short_why": "Quercus virginiana 'Joan Lionetti' · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-031",
@@ -17090,7 +17200,10 @@
     ],
     "short_why": "Live Oak · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-032",
@@ -17152,7 +17265,10 @@
     ],
     "short_why": "African Sumac · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-033",
@@ -17194,9 +17310,11 @@
       "Ember"
     ],
     "bloom_colors": [
-      "red"
+      "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "birds"
     ],
@@ -17216,7 +17334,9 @@
     ],
     "short_why": "Brazilian Pepper · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-034",
@@ -17283,7 +17403,8 @@
     ],
     "short_why": "Texas Mountain Laurel · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-035",
@@ -17353,7 +17474,8 @@
     ],
     "short_why": "Yellow Oleander Tree · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-036",
@@ -17419,7 +17541,8 @@
     ],
     "short_why": "Tipu Tree · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-OTRE-037",
@@ -17481,7 +17604,10 @@
     ],
     "short_why": "Evergreen Elm · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "wave_d": true
   },
   {
     "card_id": "CCF-OTRE-038",
@@ -17548,7 +17674,8 @@
     ],
     "short_why": "Chaste Tree · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-PALM-001",
@@ -18058,7 +18185,9 @@
     "color_moods": [
       "Quiet green"
     ],
-    "bloom_colors": [],
+    "bloom_colors": [
+      "white"
+    ],
     "bloom_seasons": [
       "spring"
     ],
@@ -18078,7 +18207,9 @@
     "substitute_ids": [],
     "short_why": "Cocktail Citrus · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "wave_d": true
   },
   {
     "card_id": "CCF-FRUT-002",
@@ -18143,7 +18274,8 @@
     "substitute_ids": [],
     "short_why": "Sour Orange · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-FRUT-003",
@@ -18206,7 +18338,8 @@
     "substitute_ids": [],
     "short_why": "Call for Varieties · gloss · L",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-FRUT-004",
@@ -18273,7 +18406,8 @@
     ],
     "short_why": "Texas Olive · SW native · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-FRUT-005",
@@ -18339,7 +18473,8 @@
     ],
     "short_why": "Wonderful Pomegranate · gloss · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-VINE-001",

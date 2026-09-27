@@ -55,8 +55,8 @@ Do not add bloom months until seasons are solid. Do not add photos in this pass.
 **Wave C — done 2026-09-27.** See `docs/WAVE_C_LOG.md`. Aloe winter-spring in the Valley. Totem poles stay seasonless. Most leftover cactus “summer” nights not mass-edited.
 
 
-**Wave D — other succulents and trees.**  
-Highest error risk. One species, one source row. Skip the rest.
+**Wave D — done 2026-09-27.** See `docs/WAVE_D_LOG.md`. Euphorbia columns and sansevieria are foliage-first. Mangave is rare-spike. Thin names skipped.
+
 
 **Wave E — texture audit (sample, not mass recode).**  
 Pull 40 “Swords” cards that are visually mounds or pads (some cacti, some succulents). Recode only those 40 with a photo + written habit. Do not flip the other 226.
