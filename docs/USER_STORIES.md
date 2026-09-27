@@ -29,4 +29,5 @@ Happy path: aim the front door → stamp pieces on the house map → four househ
 
 **US-25** Block wall is its own strip with the block-wall gates.
 
-**US-30** Pots, beds, and gates can exist on any combination of sides.
+**US-47** User can stamp **Tree** on any side to plant a shade tree. That writes `surfaces[side] += shade_tree` and opens a tree strip of three tree cards. Existing shade (`cover: tree`) does not open that strip.
+

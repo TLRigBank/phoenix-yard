@@ -17,7 +17,8 @@ Do not implement these unless the user changes `GROK.md`.
 - Tucson or other cities
 - Rooms as old codes R5 frost and R7 trellis. Afternoon shade is in v1 as the **opposite wall**, not a separate north-fence product.
 
-- Whole-yard trees / landmark scale
+- Whole-yard tree forests or a separate landmark-scale product. Planting a shade tree on a chosen side is in v1 (`surfaces[side]` includes `shade_tree`).
+
 - XP, coins, leaderboards, daily streak guilt
 - Client-side filtering of the catalog, or a second score table in the UI
 - Printing `short_why`, `chip_pack`, scores, or room codes

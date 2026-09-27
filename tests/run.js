@@ -505,6 +505,39 @@ assert(
   "north pots copied south pots"
 );
 
+const plantTree = match(
+  {
+    ...defaultBrief,
+    extras: { wall: false, gate: false, pots: false, gravel: false },
+    surfaces: { right: ["shade_tree"], front: [], left: [], back: [] },
+  },
+  catalog
+);
+assert(!plantTree.error, "shade tree brief " + (plantTree.error || plantTree.field || ""));
+assert(plantTree.strips.some((s) => s.id === "shade_tree-right"), "missing shade_tree-right " + plantTree.strips.map((s) => s.id).join());
+assert(plantTree.strips.length === 1, "shade tree should not open the west bed " + plantTree.strips.map((s) => s.id).join());
+const treeStrip = plantTree.strips.find((s) => s.id === "shade_tree-right");
+assert(treeStrip.picks.length === 3, "shade tree trio " + treeStrip.picks.length);
+for (const pick of treeStrip.picks) {
+  const card = byId.get(pick.card_id);
+  assert(
+    ["Desert-Adapted Trees", "Ornamental Trees", "Fruit and Nut Trees", "Palms"].includes(card.plant_group),
+    "shade tree quoted a shrub " + pick.display_name + " " + card.plant_group
+  );
+  assert(card.plant_group !== "Yucca and Allies", "yucca on tree strip");
+}
+assert(treeStrip.bearing === "W", "west shade tree climate " + treeStrip.bearing);
+
+const existingOnly = match(
+  {
+    ...defaultBrief,
+    extras: { wall: true, gate: false, pots: false, gravel: false },
+    cover: { right: "tree", front: "none", left: "none", back: "none" },
+  },
+  catalog
+);
+assert(!existingOnly.strips.some((s) => String(s.id).startsWith("shade_tree")), "existing tree cover is not a shade-tree plant job");
+
 if (failed) {
   console.error(failed + " failed");
   process.exit(1);

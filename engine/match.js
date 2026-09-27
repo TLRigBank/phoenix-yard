@@ -64,6 +64,11 @@ const SEATS = {
     B: ["Ornamental Grasses", "Perennials and Groundcover"],
     C: ["Cacti", "Other Succulents", "Perennials and Groundcover", "Aloe"],
   },
+  shade_tree: {
+    A: ["Desert-Adapted Trees"],
+    B: ["Desert-Adapted Trees", "Ornamental Trees"],
+    C: ["Desert-Adapted Trees", "Fruit and Nut Trees", "Palms"],
+  },
 };
 
 const SIZE_POINTS = {
@@ -76,6 +81,7 @@ const SIZE_POINTS = {
   gate: { small: 8, container_scale: 6, medium: 2 },
   pots: { container_scale: 8, small: 4 },
   gravel: { small: 6, medium: 4, container_scale: 2, large: 0 },
+  shade_tree: { large: 8, landmark: 6, medium: 4 },
 };
 
 const STRIP_META = {
@@ -184,6 +190,13 @@ const STRIP_META = {
     why: "gravel",
     same: "Same as open gravel",
   },
+  shade_tree: {
+    title: "Shade tree",
+    caption: "A tree for this side. Needs room from the house.",
+    room_code: "R-tree",
+    why: "shade tree",
+    same: "Same as the shade tree",
+  },
 };
 
 const OPPOSITE = { front: "back", back: "front", left: "right", right: "left" };
@@ -218,12 +231,13 @@ function pieceKind(room) {
   if (name.startsWith("pots")) return "pots";
   if (name.startsWith("gate")) return "gate";
   if (name.startsWith("gravel")) return "gravel";
+  if (name.startsWith("shade_tree")) return "shade_tree";
   return isBlockRoom(room) ? "block" : baseRoom(room);
 }
 
 function baseRoom(room) {
   const name = String(room);
-  const piece = name.match(/^(pots|gate|gravel)-/);
+  const piece = name.match(/^(pots|gate|gravel|shade_tree)-/);
   if (piece) return piece[1];
   return isBlockRoom(room) ? name.slice(0, -6) : name;
 }
@@ -237,7 +251,7 @@ function sizesFor(room) {
 }
 
 function sideForRoom(room, brief) {
-  const named = String(room).match(/^(pots|gate|gravel)-(.+)$/);
+  const named = String(room).match(/^(pots|gate|gravel|shade_tree)-(.+)$/);
   if (named) return named[2];
   const base = baseRoom(room);
   if (base === "wall") return brief.hot_side;
@@ -322,7 +336,9 @@ function shiftBearing(bearing, cover) {
 function climateOf(room, brief) {
   const side = sideForRoom(room, brief);
   if (!side) return null;
-  return shiftBearing(bearingOf(brief, side), coverOf(brief, side));
+  const bearing = bearingOf(brief, side);
+  if (pieceKind(room) === "shade_tree") return bearing;
+  return shiftBearing(bearing, coverOf(brief, side));
 }
 
 const JOB = { A: "Bone", B: "Bloom", C: "Floor" };
@@ -364,19 +380,50 @@ function waterAllowed(card, room, care) {
   if (bed.includes(baseRoom(room))) return false;
   if (pieceKind(room) === "pots") return true;
   if (pieceKind(room) === "gate") return care === "Weekend" || care === "Hobby";
+  if (pieceKind(room) === "shade_tree") return care === "Weekend" || care === "Hobby";
   return false;
 }
 
-function passesGlobal(card, brief) {
+function passesGlobal(card, brief, room) {
   if (card.native_class === "invasive_risk") return false;
   if (card.maintenance_level === "high" && brief.care !== "Hobby") return false;
-  if (card.size_class === "landmark" || TREE_GROUPS.has(card.plant_group)) return false;
+  const treeJob = room && pieceKind(room) === "shade_tree";
+  if (treeJob) {
+    if (!TREE_GROUPS.has(card.plant_group)) return false;
+  } else if (card.size_class === "landmark" || TREE_GROUPS.has(card.plant_group)) {
+    return false;
+  }
   if (
     (card.toxic_class === "deadly" || card.toxic_class === "ingest") &&
     toxicVeto(brief) &&
     !(brief.wildlife && isMilkweed(card))
   ) {
     return false;
+  }
+  return true;
+}
+
+function isScreenTree(card) {
+  const bot = String(card.botanical_name || "");
+  return /Cupressus|Pinus eldarica|Ficus nitida/.test(bot);
+}
+
+function passesShadeTree(card, climate, brief) {
+  if (!TREE_GROUPS.has(card.plant_group)) return false;
+  if (isScreenTree(card)) return false;
+  if (card.size_class === "small" || card.size_class === "container_scale") return false;
+  if (climate === "W") {
+    return card.heat_class === "excellent" && (card.sun_class === "full" || card.sun_class === "full_plus_reflected");
+  }
+  if (climate === "S") {
+    return card.sun_class === "full" || card.sun_class === "full_plus_reflected" || card.sun_class === "full_to_part";
+  }
+  if (climate === "E") return card.sun_class !== "part";
+  if (climate === "N") {
+    return (
+      card.phoenix_winter_fit === "reliable_including_cold_pockets" ||
+      card.phoenix_winter_fit === "reliable_typical_yard"
+    );
   }
   return true;
 }
@@ -471,6 +518,9 @@ function passesRoom(card, room, brief) {
       card.size_class !== "landmark"
     );
   }
+  if (pieceKind(room) === "shade_tree") {
+    return passesShadeTree(card, climate, brief);
+  }
   return false;
 }
 
@@ -508,7 +558,11 @@ function baseScore(card, room, brief) {
     const tags = new Set((card.wildlife || []).filter((tag) => WILDLIFE_TAGS.has(tag)));
     score += Math.min(6, tags.size * 2);
   }
-  if (card.toxic_class === "irritant") score += toxicVeto(brief) ? -8 : -2;
+  if (pieceKind(room) === "shade_tree") {
+    if (card.plant_group === "Desert-Adapted Trees") score += 10;
+    if (card.root_class === "polite") score += 6;
+    else if (card.root_class === "aggressive") score -= 8;
+  }
   if (toxicVeto(brief) && brief.wildlife && isMilkweed(card) && (card.toxic_class === "deadly" || card.toxic_class === "ingest")) {
     score += -12;
   }
@@ -522,6 +576,7 @@ function seatBonus(card, room, seat) {
   if (pieceKind(room) === "gravel" && seat === "A" && height >= 5 && height <= 8) score += 8;
   if (room === "wall" && seat === "A" && height >= 2 && height <= 4) score += 4;
   if ((room === "shade" || room === "front" || room === "back" || room === "left" || room === "right" || isBlockRoom(room)) && seat === "A" && height >= 2 && height <= 4) score += 4;
+  if (pieceKind(room) === "shade_tree" && seat === "A" && height >= 15) score += 6;
   return score;
 }
 
@@ -561,7 +616,7 @@ function validate(brief) {
   if (!anyRoom) return "extras";
   if (brief.surfaces != null) {
     if (typeof brief.surfaces !== "object") return "surfaces";
-    const allowed = ["bed", "pots", "gate", "gravel", "block_wall"];
+    const allowed = ["bed", "pots", "gate", "gravel", "block_wall", "shade_tree"];
     for (const side of ["front", "left", "right", "back"]) {
       if (brief.surfaces[side] == null) continue;
       if (!Array.isArray(brief.surfaces[side])) return "surfaces." + side;
@@ -647,7 +702,7 @@ function chipsFor(card, room, brief) {
   if (climate === "E" || climate === "shade") chips.push("East · morning sun");
   if (climate === "S") chips.push("South wall");
   if (climate === "N") chips.push("North · winter shade");
-  if (["tree", "eave", "structure"].includes(coverOf(brief, sideForRoom(room, brief)))) chips.push("Existing shade");
+  if (pieceKind(room) !== "shade_tree" && ["tree", "eave", "structure"].includes(coverOf(brief, sideForRoom(room, brief)))) chips.push("Existing shade");
   if (card.native_class === "sw_us" || card.native_class === "sw_us_mexico") chips.push("Grows here already");
   if (card.n_fixer) chips.push("Feeds the soil");
   if (card.needs_support === "trellis") chips.push("Needs a trellis");
@@ -705,14 +760,14 @@ function substitutesFor(card, room, brief, catalog) {
     if (out.length === 4) break;
     const other = byId.get(id);
     if (!other || other.card_id === card.card_id) continue;
-    if (!passesGlobal(other, brief) || !passesRoom(other, room, brief)) continue;
+    if (!passesGlobal(other, brief, room) || !passesRoom(other, room, brief)) continue;
     out.push(id);
   }
   return out;
 }
 
 function keptOffGate(catalog, brief) {
-  const jumping = catalog.filter((card) => card.spine_class === "jumping" && passesGlobal(card, brief));
+  const jumping = catalog.filter((card) => card.spine_class === "jumping" && passesGlobal(card, brief, "gate"));
   if (!jumping.length) return [];
   return [{ display_name: "Jumping cholla", line: KEPT_OFF_LINE }];
 }
@@ -725,7 +780,7 @@ function excludedIds(brief, room) {
 function fillStrip(catalog, brief, room, prior) {
   const blocked = excludedIds(brief, room);
   const pool = catalog.filter(
-    (card) => passesGlobal(card, brief) && passesRoom(card, room, brief) && !blocked.has(card.card_id)
+    (card) => passesGlobal(card, brief, room) && passesRoom(card, room, brief) && !blocked.has(card.card_id)
   );
   const usedGenus = new Set();
   const usedGroups = [];
@@ -792,7 +847,7 @@ function canReroll(catalog, brief, room, shown) {
   const probe = { ...brief, exclude: { ...(brief.exclude || {}), [room]: nextExclude } };
   const blocked = excludedIds(probe, room);
   const pool = catalog.filter(
-    (card) => passesGlobal(card, brief) && passesRoom(card, room, brief) && !blocked.has(card.card_id)
+    (card) => passesGlobal(card, brief, room) && passesRoom(card, room, brief) && !blocked.has(card.card_id)
   );
   const genera = new Set();
   let seats = 0;
@@ -848,6 +903,7 @@ function listRooms(brief) {
       if (kinds.includes("pots")) push("pots-" + side);
       if (kinds.includes("gate")) push("gate-" + side);
       if (kinds.includes("gravel")) push("gravel-" + side);
+      if (kinds.includes("shade_tree")) push("shade_tree-" + side);
     }
     return rooms;
   }
@@ -916,6 +972,7 @@ function match(brief, catalog) {
       pots_sides: sidesForPiece(brief, "pots"),
       gate_sides: sidesForPiece(brief, "gate"),
       gravel_sides: sidesForPiece(brief, "gravel"),
+      shade_tree_sides: sidesForPiece(brief, "shade_tree"),
       exclude: brief.exclude || {},
       guilds: brief.guilds,
     },

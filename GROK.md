@@ -15,7 +15,8 @@ Gates, scores, and slots live only in `docs/DECISION_TREE.md`. Words on screen l
 A phone-wide web app named **Phoenix Yard**. Line: **Plants that match the wall.** One persistent **plan** of the lot: street at the top, door notch on the front of a flat house rectangle, four fat beds against the building. No cartoon roof. West is the only warm wall.
 
 1. **Aim.** Compact North / South / East / West under the plan. Writes `front_bearing`. West bed warms.
-2. **Stamp.** Household icons stay under the street. Tap a bed, stamp Bed / Pots / Gate / Gravel / Block / Shade as marks on that band.
+2. **Stamp.** Household icons stay under the street. Tap a bed, stamp Bed / Pots / Gate / Gravel / Block / Tree as marks on that band. **Tree** plants a shade tree (`surfaces.shade_tree`). **Open / Tree / Eave / Cover** is existing shade (`cover`) and does not quote a tree.
+
 3. **Quote.** Plan stays up. Segment the selected wall by piece. Three cards under the plan. `Three others for this wall.`
 
 
