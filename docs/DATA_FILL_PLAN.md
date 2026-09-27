@@ -52,8 +52,8 @@ Do not add bloom months until seasons are solid. Do not add photos in this pass.
 **Wave B — done 2026-09-27.** See `docs/WAVE_B_LOG.md`. 21 sourced patches. Unnamed canna / crape myrtle / plumeria colors still empty.
 
 
-**Wave C — cacti and aloe.**  
-Bloom color is usually documented. Seasons in Phoenix: many cacti late winter–spring. Source per species. Do not copy one hedgehog onto all *Echinocereus*.
+**Wave C — done 2026-09-27.** See `docs/WAVE_C_LOG.md`. Aloe winter-spring in the Valley. Totem poles stay seasonless. Most leftover cactus “summer” nights not mass-edited.
+
 
 **Wave D — other succulents and trees.**  
 Highest error risk. One species, one source row. Skip the rest.

@@ -41,7 +41,10 @@
     "bloom_colors": [
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -61,7 +64,11 @@
     ],
     "short_why": "Fairy Castle Cactus · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Night-blooming Acanthocereus; white flowers late spring-summer"
   },
   {
     "card_id": "CCF-CACT-002",
@@ -127,7 +134,9 @@
     ],
     "short_why": "Goats Horn · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-003",
@@ -171,7 +180,9 @@
     "bloom_colors": [
       "yellow"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -191,7 +202,11 @@
     ],
     "short_why": "Bishops Cap · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Astrophytum myriostigma typically spring yellow"
   },
   {
     "card_id": "CCF-CACT-004",
@@ -234,10 +249,11 @@
       "Moon"
     ],
     "bloom_colors": [
-      "yellow",
-      "white"
+      "yellow"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -257,7 +273,11 @@
     ],
     "short_why": "Monk’s Hood · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Astrophytum ornatum spring yellow"
   },
   {
     "card_id": "CCF-CACT-005",
@@ -329,7 +349,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-006",
@@ -372,8 +394,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "white",
-      "silver"
+      "white"
     ],
     "bloom_seasons": [
       "summer"
@@ -397,7 +418,10 @@
     ],
     "short_why": "Woolly Torch · plush · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-007",
@@ -463,7 +487,9 @@
     ],
     "short_why": "Old Man of Mexico · plush · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-008",
@@ -506,10 +532,12 @@
       "Moon"
     ],
     "bloom_colors": [
-      "pink",
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -529,7 +557,11 @@
     ],
     "short_why": "Ming Thing · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Cereus forbesii group; night-blooming white, pink blush incidental"
   },
   {
     "card_id": "CCF-CACT-009",
@@ -573,7 +605,10 @@
     "bloom_colors": [
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -593,7 +628,11 @@
     ],
     "short_why": "Spiral Cereus · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Cereus night-blooming white"
   },
   {
     "card_id": "CCF-CACT-010",
@@ -637,11 +676,12 @@
       "Silver"
     ],
     "bloom_colors": [
-      "blue",
-      "white",
-      "silver"
+      "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -661,7 +701,11 @@
     ],
     "short_why": "Blue Monstrosus Cereus · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Cereus; blue/silver were stem not flower"
   },
   {
     "card_id": "CCF-CACT-011",
@@ -731,7 +775,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-012",
@@ -775,7 +821,10 @@
     "bloom_colors": [
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -795,7 +844,11 @@
     ],
     "short_why": "Twisted Cereus · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Cereus night-blooming white"
   },
   {
     "card_id": "CCF-CACT-013",
@@ -840,8 +893,7 @@
     ],
     "bloom_colors": [
       "red",
-      "white",
-      "silver"
+      "white"
     ],
     "bloom_seasons": [
       "summer"
@@ -865,7 +917,10 @@
     ],
     "short_why": "Silver Torch · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-014",
@@ -936,7 +991,9 @@
     ],
     "short_why": "Buckhorn Cholla · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-015",
@@ -1004,7 +1061,9 @@
     ],
     "short_why": "Teddy Bear Cholla · SW native · plush · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-016",
@@ -1073,7 +1132,9 @@
     ],
     "short_why": "Jumping Cholla · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-017",
@@ -1143,7 +1204,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-018",
@@ -1184,7 +1247,11 @@
     "color_moods": [
       "Quiet green"
     ],
-    "bloom_colors": [],
+    "bloom_colors": [
+      "yellow",
+      "orange",
+      "red"
+    ],
     "bloom_seasons": [
       "spring"
     ],
@@ -1209,7 +1276,11 @@
     ],
     "short_why": "Staghorn Cholla · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "FNA: flowering spring Apr-Jun; tepals yellow-green to gold, bronze, red, rose"
   },
   {
     "card_id": "CCF-CACT-019",
@@ -1254,6 +1325,7 @@
       "yellow"
     ],
     "bloom_seasons": [
+      "spring",
       "summer"
     ],
     "wildlife": [
@@ -1275,7 +1347,11 @@
     ],
     "short_why": "Golden Barrel · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer"
   },
   {
     "card_id": "CCF-CACT-020",
@@ -1345,7 +1421,9 @@
     ],
     "short_why": "Native Hedgehog · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-021",
@@ -1415,7 +1493,9 @@
     ],
     "short_why": "Strawberry Hedgehog · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-022",
@@ -1484,7 +1564,9 @@
     ],
     "short_why": "Claret Cup · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-023",
@@ -1551,7 +1633,9 @@
     ],
     "short_why": "Easter Lily Cactus · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-024",
@@ -1595,7 +1679,10 @@
     "bloom_colors": [
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -1615,7 +1702,11 @@
     ],
     "short_why": "Peruvian Old Man · plush · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Espostoa white flowers when mature"
   },
   {
     "card_id": "CCF-CACT-025",
@@ -1659,7 +1750,10 @@
     "bloom_colors": [
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -1679,7 +1773,11 @@
     ],
     "short_why": "Peruvian Old Woman · plush · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Espostoa white flowers when mature"
   },
   {
     "card_id": "CCF-CACT-026",
@@ -1748,7 +1846,9 @@
     ],
     "short_why": "Native Fire Barrel · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-027",
@@ -1792,9 +1892,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "yellow",
-      "blue",
-      "silver"
+      "yellow"
     ],
     "bloom_seasons": [
       "summer"
@@ -1818,7 +1916,10 @@
     ],
     "short_why": "Blue Barrel · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-028",
@@ -1861,10 +1962,12 @@
       "Blush"
     ],
     "bloom_colors": [
-      "yellow",
       "pink"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "fall",
+      "winter"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -1884,7 +1987,11 @@
     ],
     "short_why": "Devil’s Tongue · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "F. latispinus often late-season magenta/pink; yellow dropped as unconfirmed for this clone"
   },
   {
     "card_id": "CCF-CACT-029",
@@ -1950,7 +2057,9 @@
     ],
     "short_why": "Ferocactus macrodiscus · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-030",
@@ -2018,7 +2127,9 @@
     ],
     "short_why": "Mexican Fire Barrel · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-031",
@@ -2063,6 +2174,7 @@
       "yellow"
     ],
     "bloom_seasons": [
+      "spring",
       "summer"
     ],
     "wildlife": [
@@ -2085,7 +2197,11 @@
     ],
     "short_why": "Fishhook Barrel · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer"
   },
   {
     "card_id": "CCF-CACT-032",
@@ -2153,7 +2269,9 @@
     ],
     "short_why": "Gymnocalycium multiflorum · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-033",
@@ -2219,7 +2337,9 @@
     ],
     "short_why": "Gymnocalycium saglionis · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-034",
@@ -2282,7 +2402,11 @@
     ],
     "short_why": "Totem Pole Major · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Totem pole monstrose form rarely flowers; sterile when it does"
   },
   {
     "card_id": "CCF-CACT-035",
@@ -2345,7 +2469,11 @@
     ],
     "short_why": "Totem Pole Minor · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Totem pole monstrose form rarely flowers"
   },
   {
     "card_id": "CCF-CACT-036",
@@ -2408,7 +2536,11 @@
     ],
     "short_why": "Spiral Totem Pole · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Totem pole monstrose form rarely flowers"
   },
   {
     "card_id": "CCF-CACT-037",
@@ -2475,7 +2607,9 @@
     ],
     "short_why": "Senita · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-038",
@@ -2520,7 +2654,7 @@
       "pink"
     ],
     "bloom_seasons": [
-      "summer"
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -2541,7 +2675,11 @@
     ],
     "short_why": "Mother of Hundreds · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-039",
@@ -2588,7 +2726,7 @@
       "white"
     ],
     "bloom_seasons": [
-      "summer"
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -2609,7 +2747,11 @@
     ],
     "short_why": "Mammillaria dolicocentra · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-040",
@@ -2654,7 +2796,7 @@
       "white"
     ],
     "bloom_seasons": [
-      "summer"
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -2675,7 +2817,11 @@
     ],
     "short_why": "White Clumping · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-041",
@@ -2720,7 +2866,7 @@
       "pink"
     ],
     "bloom_seasons": [
-      "summer"
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -2741,7 +2887,11 @@
     ],
     "short_why": "Mammillaria melanocentra · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-042",
@@ -2786,7 +2936,7 @@
       "pink"
     ],
     "bloom_seasons": [
-      "summer"
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -2807,7 +2957,11 @@
     ],
     "short_why": "Green · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-043",
@@ -2852,7 +3006,7 @@
       "white"
     ],
     "bloom_seasons": [
-      "summer"
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -2873,7 +3027,11 @@
     ],
     "short_why": "White Owl’s Eyes · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-044",
@@ -2918,7 +3076,7 @@
       "yellow"
     ],
     "bloom_seasons": [
-      "summer"
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -2939,7 +3097,11 @@
     ],
     "short_why": "Gold · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-045",
@@ -3005,7 +3167,9 @@
     ],
     "short_why": "Turks Cap · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-046",
@@ -3049,11 +3213,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "blue",
-      "white",
-      "silver"
+      "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -3073,7 +3237,11 @@
     ],
     "short_why": "Myrtillocactus geometrizans 'Crested' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Myrtillocactus cream-white flowers; blue was stem"
   },
   {
     "card_id": "CCF-CACT-047",
@@ -3117,11 +3285,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "blue",
-      "white",
-      "silver"
+      "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "birds",
       "bees",
@@ -3143,7 +3311,11 @@
     ],
     "short_why": "Fat Blue Myrtle · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Myrtillocactus cream-white flowers; blue was stem"
   },
   {
     "card_id": "CCF-CACT-048",
@@ -3187,7 +3359,9 @@
     "bloom_colors": [
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -3207,7 +3381,11 @@
     ],
     "short_why": "Myrtillocactus geometrizans 'Micro Crested' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "Myrtillocactus cream-white flowers"
   },
   {
     "card_id": "CCF-CACT-049",
@@ -3251,9 +3429,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "blue",
-      "white",
-      "silver"
+      "white"
     ],
     "bloom_seasons": [
       "summer"
@@ -3279,7 +3455,10 @@
     ],
     "short_why": "Blue Myrtle Cactus · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-050",
@@ -3347,7 +3526,9 @@
     ],
     "short_why": "Golden Saguaro · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-051",
@@ -3413,7 +3594,9 @@
     ],
     "short_why": "Notocactus claviceps · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-052",
@@ -3479,7 +3662,9 @@
     ],
     "short_why": "Golden Ball · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-053",
@@ -3545,7 +3730,9 @@
     ],
     "short_why": "Gold Wide Rib · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-054",
@@ -3616,7 +3803,9 @@
     ],
     "short_why": "Chenille Prickly Pear · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-055",
@@ -3685,7 +3874,9 @@
     ],
     "short_why": "Beavertail Prickly Pear · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-056",
@@ -3756,7 +3947,9 @@
     ],
     "short_why": "Beaverita Prickly Pear · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-057",
@@ -3825,7 +4018,9 @@
     ],
     "short_why": "Spineless Prickly Pear · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-058",
@@ -3894,7 +4089,9 @@
     ],
     "short_why": "Engleman’s Prickly Pear · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-059",
@@ -3963,7 +4160,9 @@
     ],
     "short_why": "Opuntia erinacea 'Hot Pink Porcupine' · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-060",
@@ -4034,7 +4233,9 @@
     ],
     "short_why": "Opuntia erinacea ursine ‘Snow’ · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-061",
@@ -4102,7 +4303,9 @@
     ],
     "short_why": "Indian Fig Prickly Pear · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-062",
@@ -4170,7 +4373,9 @@
     ],
     "short_why": "Old Mexico Prickly Pear · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-063",
@@ -4240,7 +4445,9 @@
     ],
     "short_why": "Cinnamon Dot Prickly Pear · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-064",
@@ -4310,7 +4517,9 @@
     ],
     "short_why": "White Dot Prickly Pear · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-065",
@@ -4378,7 +4587,9 @@
     ],
     "short_why": "Yellow Dot Prickly Pear · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-066",
@@ -4444,7 +4655,9 @@
     ],
     "short_why": "Crested Microdasys · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-067",
@@ -4515,7 +4728,9 @@
     ],
     "short_why": "Opuntia rhodantha ‘Snowball’ · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-068",
@@ -4583,7 +4798,9 @@
     ],
     "short_why": "Giant Prickly Pear · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-069",
@@ -4654,7 +4871,9 @@
     ],
     "short_why": "Blind Prickly Pear · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-070",
@@ -4725,7 +4944,9 @@
     ],
     "short_why": "Baby Rita · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-071",
@@ -4796,7 +5017,9 @@
     ],
     "short_why": "Purple Prickly Pear · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-072",
@@ -4865,7 +5088,9 @@
     ],
     "short_why": "Opuntia ‘Goldie Rita’ · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-073",
@@ -4934,7 +5159,9 @@
     ],
     "short_why": "Opuntia ‘Kelly’s Choice’ · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-074",
@@ -5003,7 +5230,9 @@
     ],
     "short_why": "Opuntia ‘Orange Chiffon’ · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-075",
@@ -5072,7 +5301,9 @@
     ],
     "short_why": "Opuntia ‘Pina Colada’ · SW native · stone · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-076",
@@ -5140,7 +5371,9 @@
     ],
     "short_why": "Old Man of the Andes · plush · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-077",
@@ -5208,7 +5441,9 @@
     ],
     "short_why": "Old Man of the Mountain · plush · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-078",
@@ -5278,7 +5513,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-079",
@@ -5348,7 +5585,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-080",
@@ -5418,7 +5657,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-081",
@@ -5484,7 +5725,9 @@
     ],
     "short_why": "Wooly Torch · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-082",
@@ -5528,9 +5771,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "blue",
-      "white",
-      "silver"
+      "white"
     ],
     "bloom_seasons": [
       "summer"
@@ -5554,7 +5795,10 @@
     ],
     "short_why": "Blue Ghost · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-CACT-083",
@@ -5620,7 +5864,9 @@
     ],
     "short_why": "Polaskia chichipe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-084",
@@ -5690,7 +5936,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-085",
@@ -5760,7 +6008,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-086",
@@ -5830,7 +6080,9 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-087",
@@ -5875,6 +6127,7 @@
       "white"
     ],
     "bloom_seasons": [
+      "spring",
       "summer"
     ],
     "wildlife": [
@@ -5901,7 +6154,11 @@
     "fruit_colors": [
       "red"
     ],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true,
+    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer"
   },
   {
     "card_id": "CCF-CACT-088",
@@ -5967,7 +6224,9 @@
     ],
     "short_why": "Toothpick Cactus · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-089",
@@ -6033,7 +6292,9 @@
     ],
     "short_why": "Argentine Giant · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-090",
@@ -6099,7 +6360,9 @@
     ],
     "short_why": "Hybrid Argentine · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-091",
@@ -6165,7 +6428,9 @@
     ],
     "short_why": "Crested San Pedro · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-092",
@@ -6231,7 +6496,9 @@
     ],
     "short_why": "San Pedro · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-093",
@@ -6299,7 +6566,9 @@
     ],
     "short_why": "Golden Torch · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-CACT-094",
@@ -6367,7 +6636,9 @@
     ],
     "short_why": "Golden Saguaro · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-AGAV-001",
@@ -11656,7 +11927,10 @@
     "bloom_colors": [
       "red"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -11671,7 +11945,11 @@
     "substitute_ids": [],
     "short_why": "Aloe 'Christmas Carol' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-002",
@@ -11718,7 +11996,10 @@
     "bloom_colors": [
       "orange"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -11733,7 +12014,11 @@
     "substitute_ids": [],
     "short_why": "Aloe 'Doran Black' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-003",
@@ -11781,7 +12066,8 @@
       "red"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -11799,7 +12085,11 @@
     "substitute_ids": [],
     "short_why": "Aloe 'Erik the Red' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-004",
@@ -11846,7 +12136,10 @@
     "bloom_colors": [
       "orange"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -11861,7 +12154,11 @@
     "substitute_ids": [],
     "short_why": "Candy Corn Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-005",
@@ -11909,7 +12206,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -11927,7 +12225,11 @@
     "substitute_ids": [],
     "short_why": "Goliath Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-006",
@@ -11975,7 +12277,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -11993,7 +12296,11 @@
     "substitute_ids": [],
     "short_why": "Hercules Tree Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-007",
@@ -12042,7 +12349,10 @@
       "orange",
       "pink"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -12057,7 +12367,11 @@
     "substitute_ids": [],
     "short_why": "Aloe 'Pink Blush' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-008",
@@ -12104,7 +12418,10 @@
     "bloom_colors": [
       "orange"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -12119,7 +12436,11 @@
     "substitute_ids": [],
     "short_why": "Little Gem Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-009",
@@ -12166,7 +12487,10 @@
     "bloom_colors": [
       "pink"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "hummingbirds",
       "birds",
@@ -12183,7 +12507,11 @@
     "substitute_ids": [],
     "short_why": "Aloe 'Safari Rose' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-010",
@@ -12232,7 +12560,10 @@
       "orange",
       "pink"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "hummingbirds",
       "birds",
@@ -12249,7 +12580,11 @@
     "substitute_ids": [],
     "short_why": "Aloe 'Safari Sunrise' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-011",
@@ -12296,7 +12631,10 @@
     "bloom_colors": [
       "yellow"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "hummingbirds",
       "birds",
@@ -12313,7 +12651,11 @@
     "substitute_ids": [],
     "short_why": "Aloe 'Safari Yellow' · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-012",
@@ -12361,7 +12703,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -12379,7 +12722,11 @@
     "substitute_ids": [],
     "short_why": "Lace Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-013",
@@ -12448,7 +12795,9 @@
     "substitute_ids": [],
     "short_why": "Medicinal Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-ALOE-014",
@@ -12495,12 +12844,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "orange",
-      "blue",
-      "silver"
+      "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -12518,7 +12866,11 @@
     "substitute_ids": [],
     "short_why": "Short Leaf Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-015",
@@ -12564,8 +12916,7 @@
       "Dusk"
     ],
     "bloom_colors": [
-      "orange",
-      "blue"
+      "orange"
     ],
     "bloom_seasons": [
       "spring",
@@ -12587,7 +12938,10 @@
     "substitute_ids": [],
     "short_why": "Aloe brevifolia var. Blue Elf · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-016",
@@ -12635,7 +12989,8 @@
       "red"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -12653,7 +13008,11 @@
     "substitute_ids": [],
     "short_why": "Starfish Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-017",
@@ -12701,7 +13060,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -12719,7 +13079,11 @@
     "substitute_ids": [],
     "short_why": "Popcorn Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-018",
@@ -12767,7 +13131,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -12785,7 +13150,11 @@
     "substitute_ids": [],
     "short_why": "Dawe’s Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-019",
@@ -12832,12 +13201,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "orange",
-      "blue",
-      "silver"
+      "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -12855,7 +13223,11 @@
     "substitute_ids": [],
     "short_why": "Aloe deltoideodonta · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-020",
@@ -12921,7 +13293,9 @@
     "substitute_ids": [],
     "short_why": "Quiver Tree · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-ALOE-021",
@@ -12988,7 +13362,9 @@
     "substitute_ids": [],
     "short_why": "Cape Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-ALOE-022",
@@ -13035,12 +13411,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "orange",
-      "blue",
-      "silver"
+      "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -13058,7 +13433,11 @@
     "substitute_ids": [],
     "short_why": "Aloe glauca · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-023",
@@ -13105,12 +13484,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "orange",
-      "blue",
-      "silver"
+      "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -13128,7 +13506,11 @@
     "substitute_ids": [],
     "short_why": "Sand Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-024",
@@ -13176,7 +13558,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -13192,7 +13575,11 @@
     "substitute_ids": [],
     "short_why": "Aloe humilis · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-025",
@@ -13239,7 +13626,10 @@
     "bloom_colors": [
       "orange"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -13254,7 +13644,11 @@
     "substitute_ids": [],
     "short_why": "Crosby’s Prolific · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-026",
@@ -13301,7 +13695,10 @@
     "bloom_colors": [
       "orange"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -13316,7 +13713,11 @@
     "substitute_ids": [],
     "short_why": "variegata x saponaria · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-027",
@@ -13363,12 +13764,11 @@
       "Silver"
     ],
     "bloom_colors": [
-      "orange",
-      "blue",
-      "silver"
+      "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -13386,7 +13786,11 @@
     "substitute_ids": [],
     "short_why": "Aloe karasbergensis · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-028",
@@ -13453,7 +13857,9 @@
     "substitute_ids": [],
     "short_why": "Mountain Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-ALOE-029",
@@ -13501,7 +13907,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -13519,7 +13926,11 @@
     "substitute_ids": [],
     "short_why": "Aloe munchii · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-030",
@@ -13569,7 +13980,8 @@
       "yellow"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -13587,7 +13999,11 @@
     "substitute_ids": [],
     "short_why": "Gold Tooth Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-031",
@@ -13636,7 +14052,10 @@
       "orange",
       "yellow"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "hummingbirds",
       "birds",
@@ -13653,7 +14072,11 @@
     "substitute_ids": [],
     "short_why": "Variegated Gold Tooth · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-032",
@@ -13701,7 +14124,8 @@
       "red"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "bees"
@@ -13717,7 +14141,11 @@
     "substitute_ids": [],
     "short_why": "Aloe peglerae · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-033",
@@ -13783,7 +14211,9 @@
     "substitute_ids": [],
     "short_why": "Maiden’s Quiver Tree · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-ALOE-034",
@@ -13850,7 +14280,9 @@
     "substitute_ids": [],
     "short_why": "Arabian Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-ALOE-035",
@@ -13898,7 +14330,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -13916,7 +14349,11 @@
     "substitute_ids": [],
     "short_why": "Bottlebrush Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-036",
@@ -13963,9 +14400,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "red",
-      "blue",
-      "silver"
+      "red"
     ],
     "bloom_seasons": [
       "spring",
@@ -13987,7 +14422,10 @@
     "substitute_ids": [],
     "short_why": "Tilt Head Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-037",
@@ -14034,9 +14472,7 @@
       "Silver"
     ],
     "bloom_colors": [
-      "orange",
-      "blue",
-      "silver"
+      "orange"
     ],
     "bloom_seasons": [
       "spring",
@@ -14058,7 +14494,10 @@
     "substitute_ids": [],
     "short_why": "Coral Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-038",
@@ -14105,11 +14544,12 @@
       "Silver"
     ],
     "bloom_colors": [
-      "orange",
-      "blue",
-      "silver"
+      "orange"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
     "wildlife": [
       "hummingbirds",
       "birds",
@@ -14126,7 +14566,11 @@
     "substitute_ids": [],
     "short_why": "Ghost Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-ALOE-039",
@@ -14193,7 +14637,9 @@
     "substitute_ids": [],
     "short_why": "Malagasy Tree Aloe · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform"
   },
   {
     "card_id": "CCF-ALOE-040",
@@ -14241,7 +14687,8 @@
       "orange"
     ],
     "bloom_seasons": [
-      "summer"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "hummingbirds",
@@ -14259,7 +14706,11 @@
     "substitute_ids": [],
     "short_why": "Aloe wickensii · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "genus_uniform",
+    "bloom_seasons_confidence": "genus_uniform",
+    "wave_c": true
   },
   {
     "card_id": "CCF-OSUC-001",
