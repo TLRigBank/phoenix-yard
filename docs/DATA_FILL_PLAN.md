@@ -46,8 +46,8 @@ Do not add bloom months until seasons are solid. Do not add photos in this pass.
 
 ## Waves
 
-**Wave A — do not invent (1 sitting).**  
-Mark Agave, Palms, Foliage Shrubs, and monocarpic yuccas as `bloom_class = foliage_primary` or `rare_spike`. Leave `bloom_seasons` empty. Fill `foliage_color` from extension photos + written leaf descriptions only.
+**Wave A — done 2026-09-27.** See `docs/WAVE_A_LOG.md`. 114 cards tagged. 95 foliage colors sourced. 19 agaves still empty on purpose.
+
 
 **Wave B — flowering groups with good sources.**  
 Flowering Shrubs (0 empty seasons already), Perennials, Grasses, Vines. Fill missing colors and any bad seasons against UA / DBG / AMWUA.
