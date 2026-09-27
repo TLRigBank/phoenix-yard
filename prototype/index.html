@@ -52,7 +52,20 @@
   button.icon.on { border-color: var(--pine); color: var(--pine); background: #E7F0EA; }
 
   .yard { position: relative; height: 264px; margin: 0 0 10px; background: #E3D6BE; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
-  .street { position: absolute; left: 0; right: 0; top: 0; height: 28px; background: #6A6660; color: #fff; font-size: 10px; font-weight: 750; letter-spacing: .16em; display: flex; align-items: center; justify-content: center; text-transform: uppercase; z-index: 5; }
+  .street { position: absolute; left: 0; right: 0; top: 0; height: 28px; background: #6A6660; color: #fff; font-size: 10px; font-weight: 750; letter-spacing: .16em; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; text-transform: uppercase; z-index: 5; }
+  .street span { letter-spacing: .16em; }
+  .street .hh { display: flex; gap: 4px; text-transform: none; letter-spacing: 0; }
+  .street .hh button {
+    min-height: 22px; padding: 0 6px; border: 0; border-radius: 6px; background: transparent;
+    color: #E8E0D4; font-size: 10px; font-weight: 650; cursor: pointer;
+  }
+  .street .hh button.on { background: #E8E0D4; color: #3A3630; }
+  .pool { margin: 8px 0 0; color: var(--muted); font-size: 13px; font-weight: 500; text-align: center; }
+  button.swap {
+    width: 100%; margin-top: 8px; min-height: 40px; border-radius: 10px;
+    background: transparent; border: 1px solid var(--line); color: var(--pine);
+    font-size: 15px; font-weight: 650; cursor: pointer;
+  }
   .walk { position: absolute; left: 50%; top: 28px; width: 16px; height: 28px; margin-left: -8px; background: #C9BDA8; z-index: 4; }
   .house {
     position: absolute; left: 50%; top: 54%; width: 96px; height: 78px; margin: -39px 0 0 -48px;
@@ -226,21 +239,23 @@ function yard() {
   const trees = ["front", "left", "right", "back"].filter((s) => state.cover[s] === "tree").map((s) => `<div class="canopy ${s}"></div>`).join("");
   const blocks = ["front", "left", "right", "back"].filter((s) => list(s).includes("block_wall")).map((s) => `<div class="blk ${s}"></div>`).join("");
   return `<div class="yard">
-    <div class="street">Street</div>
+    <div class="street"><span>Street</span>${state.mode === "aim" ? "" : householdBar()}</div>
     <div class="walk"></div>
     ${blocks}${beds}${trees}
     <div class="house"><span class="notch" title="Front door"></span></div>
   </div>`;
 }
 
-function household() {
-  return `<div class="icons">
-    <button class="icon ${state.kids ? "on" : ""}" data-act="tog" data-id="kids">Kids</button>
-    <button class="icon ${state.chew ? "on" : ""}" data-act="tog" data-id="chew">Chew</button>
-    <button class="icon ${state.wildlife ? "on" : ""}" data-act="tog" data-id="wildlife">Wildlife</button>
-    <button class="icon ${state.care !== "Low" ? "on" : ""}" data-act="care">${state.care === "Low" ? "Time: low" : state.care === "Weekend" ? "Weekends" : "Hobby"}</button>
+function householdBar() {
+  return `<div class="hh">
+    <button type="button" class="${state.kids ? "on" : ""}" data-act="tog" data-id="kids">Kids</button>
+    <button type="button" class="${state.chew ? "on" : ""}" data-act="tog" data-id="chew">Chew</button>
+    <button type="button" class="${state.wildlife ? "on" : ""}" data-act="tog" data-id="wildlife">Wild</button>
+    <button type="button" class="${state.care !== "Low" ? "on" : ""}" data-act="care">${state.care === "Low" ? "Low" : state.care === "Weekend" ? "Wknd" : "Hobby"}</button>
   </div>`;
 }
+
+function household() { return ""; }
 
 function tray() {
   const side = state.selected;
@@ -279,15 +294,15 @@ function quoteKey() {
 function cards() {
   const rows = pack();
   const more = state.alt ? 6 : 12;
-  return `<p class="lead">${more} more for this wall</p>
-    <div class="trio">${rows.map((c) => `<article class="card">
+  return `<div class="trio">${rows.map((c) => `<article class="card">
     <div class="swatch" style="background:${c.color}"></div>
     <div class="top"><span class="name">${c.name}</span><span class="job">${c.job}</span></div>
     <p class="botanical">${c.botanical}</p>
     <p class="why">${c.why}</p>
     <span class="mini ${c.warn ? "warn" : ""}">${c.chip}</span>
-    ${c.can_swap ? `<button class="ghost" data-act="swap" data-id="${c.seat}" style="width:100%;margin-top:8px;min-height:40px">Swap ${c.job}</button>` : ""}
-  </article>`).join("")}</div>`;
+    ${c.can_swap ? `<button class="swap" data-act="swap" data-id="${c.seat}">Swap ${c.job}</button>` : ""}
+  </article>`).join("")}</div>
+  <p class="pool">${more} more for this wall</p>`;
 }
 
 function screenAim() {
@@ -311,7 +326,6 @@ function screenYard() {
     <main>
       <p class="place">${placeLine()}</p>
       ${yard()}
-      ${household()}
       ${tray()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
     </main>
@@ -323,18 +337,18 @@ function screenYard() {
 
 function screenQuote() {
   const piece = list(state.selected).includes(state.piece) ? state.piece : (list(state.selected)[0] || "bed");
+  const label = piece === "block_wall" ? "block wall" : piece === "shade_tree" ? "tree" : piece;
   return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
     <main>
-      <p class="place">${NAME[bearing(state.selected)]} · ${piece === "block_wall" ? "block wall" : piece}</p>
+      <p class="place">${NAME[bearing(state.selected)]} · ${label}</p>
       ${yard()}
       ${segs()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
-      ${cards()}
-      <button class="ghost" data-act="reroll" style="width:100%;margin-top:4px">Three others for this wall</button>
+      ${list(state.selected).length ? cards() : `<p class="lead">Put something on a wall.</p>`}
     </main>
     <footer>
       <button class="ghost" data-act="mode" data-id="yard">Map</button>
-      <button class="pri" data-act="tog" data-id="chew">${state.chew ? "Chew on" : "Chew off"}</button>
+      <button class="pri" data-act="reroll">Three others for this wall</button>
     </footer>`;
 }
 
@@ -352,6 +366,13 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.selected = b.dataset.id;
     const on = list(state.selected);
     if (on.length && !on.includes(state.piece)) state.piece = on[0];
+    state.last = state.mode === "quote" && !on.length ? "Put something on a wall." : "";
+  }
+  if (act === "mode") {
+    const from = state.mode;
+    state.mode = b.dataset.id;
+    state.last = "";
+    if (from === "aim" && b.dataset.id === "yard") state.selected = westSide() || state.selected;
   }
   if (act === "stamp") {
     const side = state.selected;
@@ -367,7 +388,6 @@ document.getElementById("app").addEventListener("click", (e) => {
   if (act === "piece") state.piece = b.dataset.id;
   if (act === "tog") state[b.dataset.id] = !state[b.dataset.id];
   if (act === "care") state.care = state.care === "Low" ? "Weekend" : state.care === "Weekend" ? "Hobby" : "Low";
-  if (act === "mode") { state.mode = b.dataset.id; state.last = ""; }
   if (act === "quote") {
     if (!hasAny()) state.last = "Put something on a wall.";
     else { state.mode = "quote"; state.last = ""; }

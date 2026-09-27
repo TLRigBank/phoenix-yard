@@ -29,6 +29,7 @@ Happy path: aim the front door → stamp pieces on the house map → four househ
 
 **US-25** Block wall is its own strip with the block-wall gates.
 
-**US-48** On a quote the user sees how many more legal plants fit this wall. They can Swap Bone, Bloom, or Floor one at a time. Three others still replaces the whole set.
+**US-49** After aim, the west bed is selected so stamps have a target. Household stays on the street bar. Quote footer is Map + Three others. Tapping another stamped bed updates the trio in place.
+
 
 
