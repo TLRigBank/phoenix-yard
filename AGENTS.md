@@ -2,7 +2,8 @@
 
 Read `GROK.md` first.
 
-Orientation question is “which way does the front face?” Street and front door stay at the top of the plan. Front facing North puts West on the left wall. The old right-wall-is-west-and-front-is-north map was backwards.
+The UI is the house map. Street top, door on front, `front_bearing` first. Pieces stamp onto walls. Quotes sit under the same plan. Do not ship a stack of forms that hide the house.
+
 
 
 

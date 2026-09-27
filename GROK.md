@@ -6,41 +6,30 @@ Gates, scores, and slots live only in `docs/DECISION_TREE.md`. Words on screen l
 
 ## The mistake this file exists to prevent
 
-**The hot wall is orientation, not the project.**
+**The house map is the product.** Orientation is “which way does the front face,” not “tap the west wall.” The plan stays on screen from aim through plants. If the first results are a plant list with no house, you missed the spec.
 
-Tap the afternoon wall so the house knows which side cooks. That writes `hot_side` and `place_label` only. It does **not** turn the wall strip on. It does **not** mean “this job is a west-heat bed.” A person can be planting pots on the patio, a gate, open gravel, or the hot wall. They say that next.
-
-If you ship a walk whose first results are always “Afternoon wall,” you missed the spec.
+**The front door is not the project.** Aiming the house does not turn on a west bed.
 
 ## What you are building
 
-A phone-wide web app:
+A phone-wide web app. One persistent yard plan: street at the top, door on the front.
 
-1. **Orient.** Street at the top. Door on the front. Ask: **Which way does the front of your house face?** North / South / East / West. That writes `front_bearing`. West is derived. Do not ask them to tap an unlabeled wall.
+1. **Aim.** “Which way does the front of your house face?” North / South / East / West. Writes `front_bearing`. West wall warms itself. Walls label N/S/E/W.
+2. **Stamp.** Tap a wall, then stamp Bed / Pots / Gate / Gravel / Block / Shade onto it. Marks draw on the building. `project_scale` may seed the first stamp; it does not lock other walls.
+3. **Household.** Kids, chew, wildlife, time — four short answers. Prefer a bar under the map. Full screens allowed if the house stays visible.
+4. **Quote.** Map stays on the top half. Tapped wall is selected. Three cards for that wall’s active piece sit under the plan. Title like `West · pots`. Tap another wall to change the quote. `Three others` rerolls that strip only.
 
-2. **Project.** Pots / One bed / Gate and path / Whole yard / Not sure.
-3. **Pieces on sides.** After orientation, the house stays on screen. Each compass side can take any mix of **bed, pots, gate, gravel, block wall**. A west patio and a north patio are two pot strips. A gate can exist on more than one side. `project_scale` only seeds the first piece; it does not lock the job to one wall.
-
-4. **Household.** Kids, chew, wildlife, care.
-5. **Rooms / micro.** Whole-yard can still toggle sides. Cover and block wall per side.
-6. **Results.** Titles like `West · Afternoon sun`, `North · Front`. One strip at a time.
-2. **Project.** One screen: what is this project? Pots / One bed / Gate and path / Whole yard / Not sure. That writes `project_scale` and **default rooms**. The wall is on only when the scale needs it (one bed, whole yard, not sure).
-3. **Household.** Four questions, one screen each: kids, chew, wildlife, care. One tap answers and advances.
-4. **Rooms.** Toggle the four sides (sun, shade, front, back, plus left/right when they are shoulders), Gate, Pots, Gravel.
-5. **Microclimate per side.** For each side that is on: Is there a block wall? Is there already shade — open / tree / eave / patio cover? That writes `block_wall` and `cover`. A tree on the afternoon-sun side is **not** quoted as a roasting wall.
-6. **Results.** One strip at a time. Block wall is its own strip (`Afternoon sun · block wall`). Three others still works.
-6. **Three others.** Every strip has `Three others for this strip`. The engine returns a new Bone / Bloom / Floor that still passes that room and does not reuse the three just shown. `Back to this strip’s first set` clears the exclude list for that strip only.
-7. Chew toggle reruns the whole brief and names what left.
+Do not replace the map with a room checklist. Do not send people to a full-screen card list that hides the house.
 
 Live names come from `engine/match.js`. Do not filter 543 cards in the UI.
 
 ## Architecture
 
 ```
-UI  →  match(brief)  →  strips that extras turned on
+UI map  →  match(brief)  →  strips pinned to walls
 ```
 
-`front_bearing` is how the house is aimed. The engine returns `bearings` for Front / Left / Right / Back. West / East / South / North stay four different filters.
+The map is the customizer. The cards are the quote. `front_bearing` aims the house. `surfaces[side]` lists pieces on that wall. West / East / South / North stay four filters.
 
 
 

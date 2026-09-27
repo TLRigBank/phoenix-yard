@@ -1,17 +1,28 @@
 # Copy map — engine → yard words
 
-Single place for face language. Climate code stays on enums. Never render `chip_pack`, `short_why`, scores, or room codes.
-
 ## Place
 
-| hot_side | place_label | results line |
-|---|---|---|
-| front | Front side | Front side · afternoon sun |
-| left | Left side | Left side · afternoon sun |
-| right | Right side | Right side · afternoon sun |
-| back | Back side | Back side · afternoon sun |
+Front-facing is the orientation copy.
 
-The side stays on every strip and on the summary. It does not change the plants. It does not mean the project is the wall.
+| front_bearing | Line under the map |
+|---|---|
+| N | Front faces north · west is the left wall |
+| S | Front faces south · west is the right wall |
+| E | Front faces east · west is the back wall |
+| W | Front faces west · the front wall cooks |
+
+Wall labels on the map: North, South, East, West. The west wall does not need “afternoon sun” if it is the warm wall.
+
+Home primary: `That’s the front.`  
+Stamp primary: `See the plants.`  
+Stamp empty: `Put something on a wall.`  
+Reroll: `Three others for this wall.`  
+Undo reroll: `Back to this wall’s first set.`
+
+## Strip titles
+
+Engine may send `West · The pots`. The map already shows west, so the card header can be the piece only: `Pots`. Keep the bearing in the strip title from the engine for accessibility.
+
 
 ## Project scale
 
