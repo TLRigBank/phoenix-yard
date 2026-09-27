@@ -2,7 +2,10 @@
 
 Read `GROK.md` first.
 
-The UI is the house map. Street top, door on front, `front_bearing` first. Pieces stamp onto walls. Quotes sit under the same plan. Do not ship a stack of forms that hide the house.
+Phoenix Yard. Plants that match the wall.
+
+UI is a plan: street top, door on the front edge, fat beds, west is the only hot color. No triangle roof. Copy lives in `docs/COPY_MAP.md` and `docs/BRAND.md`.
+
 
 
 

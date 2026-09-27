@@ -6,7 +6,8 @@ Happy path: aim the front door → stamp pieces on the house map → four househ
 
 ## Map
 
-**US-40** The yard plan is on every screen after launch. Street at the top. Door on the front wall. House tagged Front.
+**US-40** The yard is a plan on every screen: street at the top, door notch on the front of a flat house, four fat beds. No cartoon roof. Header is the plan glyph + Phoenix Yard.
+
 
 **US-41** First question: “Which way does the front of your house face?” North / South / East / West. Writes `front_bearing`. West wall uses the warm style. Walls read North / South / East / West. No tap-a-blank-wall orientation.
 

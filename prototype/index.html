@@ -8,258 +8,310 @@
   :root {
     --ink: #1c1916;
     --pine: #1B3A2F;
-    --sand: #F4EDE1;
+    --sand: #E7DCC8;
     --paper: #FFFBF4;
-    --line: #D9D0C0;
-    --muted: #4E493F;
+    --line: #D4CBB8;
+    --muted: #5A5348;
     --ember: #C45A28;
-    --west: #f3d0b8;
-    --east: #e4eee8;
-    --south: #efe3c4;
-    --north: #d7e0e8;
+    --west: #E8B08A;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--sand); color: var(--ink); font: 17px/1.4 "Avenir Next", "Segoe UI", sans-serif; }
+  html, body {
+    margin: 0; background: var(--sand); color: var(--ink);
+    font: 500 16px/1.4 "Avenir Next", "Segoe UI", sans-serif;
+  }
   button:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
   #app { max-width: 430px; margin: 0 auto; min-height: 100dvh; background: var(--paper); display: flex; flex-direction: column; }
-  header { padding: 14px 18px 0; display: flex; justify-content: space-between; align-items: center; }
-  .brand { font-weight: 800; color: var(--pine); }
+  header { padding: 14px 18px 0; display: flex; align-items: baseline; gap: 10px; }
+  .glyph { width: 22px; height: 22px; flex: none; }
+  .brand { font-weight: 750; color: var(--pine); font-size: 17px; }
+  .line { margin: 0; color: var(--muted); font-size: 14px; font-weight: 500; }
   main { flex: 1; padding: 8px 18px 12px; }
-  h1 { font-size: 26px; line-height: 1.15; color: var(--pine); margin: 8px 0 8px; }
-  h1.sm { font-size: 20px; }
-  .lead, .place { color: var(--muted); margin: 0 0 10px; }
-  .place { color: var(--pine); font-weight: 700; }
+  h1 { font-size: 24px; font-weight: 650; line-height: 1.2; color: var(--pine); margin: 6px 0 8px; }
+  .place { margin: 0 0 8px; color: var(--pine); font-weight: 650; font-size: 15px; }
+  .lead { margin: 0 0 10px; color: var(--muted); font-weight: 500; }
   footer { padding: 8px 18px 26px; display: flex; gap: 8px; }
-  button.pri, button.ghost, button.ans, button.chip {
-    border-radius: 14px; min-height: 46px; padding: 10px 14px; font-size: 16px; font-weight: 700; cursor: pointer;
+  button.pri, button.ghost, button.ans, button.chip, button.seg {
+    border-radius: 12px; min-height: 44px; padding: 10px 12px; font-size: 16px; font-weight: 650; cursor: pointer;
   }
   button.pri { flex: 1; background: var(--pine); color: #fff; border: 0; }
   button.ghost { flex: 1; background: transparent; border: 1px solid var(--line); color: var(--pine); }
-  button.ans { width: 100%; background: #fff; border: 1px solid var(--line); text-align: left; margin: 0 0 8px; }
+  button.ans { flex: 1; background: #fff; border: 1px solid var(--line); color: var(--ink); }
   button.ans.on { background: var(--pine); color: #fff; border-color: var(--pine); }
-  .row { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 8px; }
-  button.chip { flex: 1; min-width: 64px; background: #fff; border: 1px solid var(--line); color: var(--muted); }
+  .compass { display: flex; gap: 6px; margin: 0 0 8px; }
+  .row { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 8px; }
+  button.chip { flex: 1; min-width: 56px; background: #fff; border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
   button.chip.on { background: var(--pine); color: #fff; border-color: var(--pine); }
-  button.chip.weston { background: var(--west); color: #7a3210; border-color: var(--ember); }
-
-  .yard { position: relative; height: 278px; margin: 0 0 10px; background: #e8dcc6; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); }
-  .street { position: absolute; left: 0; right: 0; top: 0; height: 30px; background: #5f5c58; color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .14em; display: flex; align-items: center; justify-content: center; text-transform: uppercase; z-index: 5; }
-  .walk { position: absolute; left: 50%; top: 30px; width: 20px; height: 36px; margin-left: -10px; background: #cfc4b0; z-index: 3; }
-  .house { position: absolute; left: 50%; top: 54%; width: 112px; height: 88px; margin-left: -56px; margin-top: -44px; background: var(--pine); border-radius: 6px; z-index: 4; box-shadow: 0 8px 16px rgba(20,48,40,.2); }
-  .roof { position: absolute; top: -18px; left: 8px; right: 8px; height: 22px; background: #143028; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
-  .door { position: absolute; top: 0; left: 50%; width: 20px; height: 26px; margin-left: -10px; background: #c4a574; border-radius: 3px 3px 0 0; }
-  .htag { position: absolute; left: 0; right: 0; bottom: 8px; text-align: center; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
-  .wall {
-    position: absolute; border: 2px dashed #b7ab95; background: rgba(255,255,255,.55);
-    color: var(--ink); font-size: 12px; font-weight: 800; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; text-align: center; gap: 3px; z-index: 3; cursor: pointer;
+  button.seg { flex: 1; background: #fff; border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  button.seg.on { background: var(--pine); color: #fff; border-color: var(--pine); }
+  .icons { display: flex; gap: 6px; margin: 0 0 8px; }
+  button.icon {
+    flex: 1; min-height: 40px; border-radius: 10px; border: 1px solid var(--line); background: #fff;
+    color: var(--muted); font-size: 12px; font-weight: 650; cursor: pointer;
   }
-  .wall[data-side="front"] { left: 22%; right: 22%; top: 34px; height: 42px; border-radius: 10px; }
-  .wall[data-side="back"] { left: 22%; right: 22%; bottom: 8px; height: 42px; border-radius: 10px; }
-  .wall[data-side="left"] { left: 6px; top: 84px; width: 68px; height: 108px; border-radius: 10px; }
-  .wall[data-side="right"] { right: 6px; top: 84px; width: 68px; height: 108px; border-radius: 10px; }
-  .wall.W { background: var(--west); border-color: var(--ember); border-style: solid; color: #7a3210; }
-  .wall.E { background: var(--east); }
-  .wall.S { background: var(--south); }
-  .wall.N { background: var(--north); }
-  .wall.sel { box-shadow: inset 0 0 0 3px var(--pine); transform: scale(1.04); }
-  .marks { font-size: 11px; font-weight: 700; color: var(--muted); }
-  .wall.W .marks { color: #7a3210; }
-  .canopy { position: absolute; width: 34px; height: 22px; border-radius: 16px; background: rgba(27,58,47,.35); z-index: 6; pointer-events: none; }
-  .canopy.front { left: 50%; top: 36px; margin-left: -17px; }
-  .canopy.back { left: 50%; bottom: 10px; margin-left: -17px; }
-  .canopy.left { left: 18px; top: 118px; }
-  .canopy.right { right: 18px; top: 118px; }
-  .blockline { position: absolute; background: #8b8173; z-index: 2; pointer-events: none; }
-  .blockline.front { left: 24%; right: 24%; top: 32px; height: 6px; }
-  .blockline.back { left: 24%; right: 24%; bottom: 6px; height: 6px; }
-  .blockline.left { left: 4px; top: 88px; width: 6px; height: 100px; }
-  .blockline.right { right: 4px; top: 88px; width: 6px; height: 100px; }
+  button.icon.on { border-color: var(--pine); color: var(--pine); background: #E7F0EA; }
 
-  .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 12px; margin: 0 0 8px; }
-  .swatch { height: 44px; border-radius: 10px; margin: 0 0 8px; }
-  .top { display: flex; justify-content: space-between; gap: 8px; }
-  .name { font-weight: 800; }
-  .job { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
-  .botanical { margin: 0; font-size: 14px; color: var(--muted); font-style: italic; }
-  .why { margin: 6px 0 0; }
-  .mini { font-size: 13px; border-radius: 999px; padding: 3px 8px; background: #e8f0e8; color: var(--pine); margin-right: 4px; }
+  .yard { position: relative; height: 264px; margin: 0 0 10px; background: #E3D6BE; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  .street { position: absolute; left: 0; right: 0; top: 0; height: 28px; background: #6A6660; color: #fff; font-size: 10px; font-weight: 750; letter-spacing: .16em; display: flex; align-items: center; justify-content: center; text-transform: uppercase; z-index: 5; }
+  .walk { position: absolute; left: 50%; top: 28px; width: 16px; height: 28px; margin-left: -8px; background: #C9BDA8; z-index: 4; }
+  .house {
+    position: absolute; left: 50%; top: 54%; width: 96px; height: 78px; margin: -39px 0 0 -48px;
+    background: var(--pine); border-radius: 3px; z-index: 4;
+  }
+  .notch {
+    position: absolute; left: 50%; top: -7px; width: 18px; height: 10px; margin-left: -9px;
+    background: #C4A574; border-radius: 2px 2px 0 0; z-index: 5;
+  }
+  .bed {
+    position: absolute; border: 2px dashed #B7AD9A; background: rgba(255,251,244,.45);
+    color: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 4px; z-index: 3; cursor: pointer; padding: 4px;
+  }
+  .bed[data-side="front"] { left: 18%; right: 18%; top: 28px; height: 52px; border-radius: 8px; }
+  .bed[data-side="back"] { left: 18%; right: 18%; bottom: 8px; height: 52px; border-radius: 8px; }
+  .bed[data-side="left"] { left: 6px; top: 78px; width: 72px; height: 112px; border-radius: 8px; }
+  .bed[data-side="right"] { right: 6px; top: 78px; width: 72px; height: 112px; border-radius: 8px; }
+  .bed.filled { border-style: solid; background: rgba(255,251,244,.82); }
+  .bed.W { background: var(--west); border-color: var(--ember); border-style: solid; color: #6E2E10; }
+  .bed.sel { box-shadow: 0 0 0 3px var(--pine); }
+  .blabel { font-size: 12px; font-weight: 650; }
+  .imarks { display: flex; gap: 4px; align-items: center; }
+  .imarks svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .more { font-size: 11px; font-weight: 650; }
+  .canopy { position: absolute; width: 36px; height: 20px; border-radius: 12px; background: rgba(27,58,47,.38); z-index: 6; pointer-events: none; }
+  .canopy.front { left: 50%; top: 34px; margin-left: -18px; }
+  .canopy.back { left: 50%; bottom: 12px; margin-left: -18px; }
+  .canopy.left { left: 16px; top: 112px; }
+  .canopy.right { right: 16px; top: 112px; }
+  .blk { position: absolute; background: #7A7266; z-index: 2; pointer-events: none; }
+  .blk.front { left: 18%; right: 18%; top: 26px; height: 5px; }
+  .blk.back { left: 18%; right: 18%; bottom: 6px; height: 5px; }
+  .blk.left { left: 4px; top: 80px; width: 5px; height: 108px; }
+  .blk.right { right: 4px; top: 80px; width: 5px; height: 108px; }
+
+  .trio { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 0 6px; }
+  .card { flex: 0 0 78%; scroll-snap-align: start; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px; }
+  .swatch { height: 40px; border-radius: 8px; margin: 0 0 8px; }
+  .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .name { font-weight: 750; font-size: 17px; }
+  .job { font-size: 12px; font-weight: 650; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+  .botanical { margin: 0; font-size: 13px; color: var(--muted); font-style: italic; font-weight: 500; }
+  .why { margin: 6px 0 0; font-weight: 500; }
+  .mini { display: inline-block; font-size: 12px; font-weight: 650; border-radius: 999px; padding: 3px 8px; background: #E7F0EA; color: var(--pine); margin: 6px 4px 0 0; }
+  .mini.warn { background: #F3D0B8; color: #6E2E10; }
 </style>
 </head>
 <body>
 <div id="app"></div>
 <script>
-const FRONT_FACES = {
+const FACES = {
   N: { front: "N", back: "S", left: "W", right: "E" },
   S: { front: "S", back: "N", left: "E", right: "W" },
   E: { front: "E", back: "W", left: "N", right: "S" },
   W: { front: "W", back: "E", left: "S", right: "N" }
 };
 const NAME = { N: "North", S: "South", E: "East", W: "West" };
-const PIECES = ["bed", "pots", "gate", "gravel", "block_wall"];
-const COVERS = [["none", "Open"], ["tree", "Tree"], ["eave", "Eave"], ["structure", "Cover"]];
-const ASK = [
-  { key: "kids", title: "Kids in this yard?", answers: [["No", false], ["Yes", true]] },
-  { key: "chew", title: "A pet that chews plants?", answers: [["No", false], ["Yes", true]] },
-  { key: "wildlife", title: "Feed birds or butterflies?", answers: [["Not a goal", false], ["Yes", true]] },
-  { key: "care", title: "How much time?", answers: [["Almost none", "Low"], ["Weekends", "Weekend"], ["Hobby", "Hobby"]] }
+const PIECES = [
+  ["bed", "Bed"],
+  ["pots", "Pots"],
+  ["gate", "Gate"],
+  ["gravel", "Gravel"],
+  ["block_wall", "Block"]
 ];
-const DEMO = {
-  W: [
-    { name: "Red Yucca", botanical: "Hesperaloe parviflora", job: "Bone", color: "#9E2B2B", why: "Holds the west wall. Almost no extra water." },
-    { name: "Parry’s Penstemon", botanical: "Penstemon parryi", job: "Bloom", color: "#C46B8A", why: "Flower on the west wall. Almost no extra water." },
-    { name: "Native Hedgehog", botanical: "Echinocereus engelmannii", job: "Floor", color: "#C46B8A", why: "Low on the west wall. Keep it off the path." }
-  ],
-  E: [
-    { name: "Desert Honeysuckle", botanical: "Anisacanthus thurberi", job: "Bone", color: "#D4652F", why: "Morning sun, house shade after noon." },
-    { name: "Damianita", botanical: "Chrysactinia mexicana", job: "Bloom", color: "#C8960A", why: "Low flower for the east wall." },
-    { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Floor", color: "#C46B8A", why: "Fits the east edge." }
-  ],
-  S: [
-    { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", color: "#8AA0B4", why: "Long south sun. Almost no extra water." },
-    { name: "Flame Honeysuckle", botanical: "Anisacanthus quadrifidus", job: "Bloom", color: "#D4652F", why: "Flower for the south wall." },
-    { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Low on the south gravel." }
-  ],
-  N: [
-    { name: "Beargrass", botanical: "Nolina microcarpa", job: "Bone", color: "#8AA0B4", why: "Takes the north frost pocket." },
-    { name: "Autumn Sage", botanical: "Salvia greggii", job: "Bloom", color: "#9E2B2B", why: "Flower in north shade." },
-    { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", color: "#6B4F8A", why: "Low cover on the north side." }
-  ]
+const ICONS = {
+  bed: '<svg viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="6" rx="1"/></svg>',
+  pots: '<svg viewBox="0 0 16 16"><circle cx="5" cy="9" r="2.2"/><circle cx="11" cy="9" r="2.2"/></svg>',
+  gate: '<svg viewBox="0 0 16 16"><path d="M3 3v10M13 3v10M3 8h10"/></svg>',
+  gravel: '<svg viewBox="0 0 16 16"><path d="M3 11h10M5 8h6M6 5h4"/></svg>',
+  block_wall: '<svg viewBox="0 0 16 16"><rect x="2" y="4" width="12" height="8"/></svg>',
+  tree: '<svg viewBox="0 0 16 16"><circle cx="8" cy="7" r="4"/></svg>'
 };
-const ALT = {
-  W: [
-    { name: "Desert Spoon", botanical: "Dasylirion wheeleri", job: "Bone", color: "#8AA0B4", why: "Another west bone." },
-    { name: "Desert Marigold", botanical: "Baileya multiradiata", job: "Bloom", color: "#C8960A", why: "Another west bloom." },
-    { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Another west floor." }
-  ]
+const DEMO = {
+  W: {
+    bed: [
+      { name: "Red Yucca", botanical: "Hesperaloe parviflora", job: "Bone", color: "#9E2B2B", why: "Holds the west wall.", chip: "Almost no extra water" },
+      { name: "Parry’s Penstemon", botanical: "Penstemon parryi", job: "Bloom", color: "#C46B8A", why: "Flower on the west wall.", chip: "Almost no extra water" },
+      { name: "Native Hedgehog", botanical: "Echinocereus engelmannii", job: "Floor", color: "#C46B8A", why: "Low on the west wall.", chip: "Spines", warn: true }
+    ],
+    pots: [
+      { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Bone", color: "#C46B8A", why: "Fits a pot on the west patio.", chip: "Fits a pot" },
+      { name: "Desert Marigold", botanical: "Baileya multiradiata", job: "Bloom", color: "#C8960A", why: "Flower in a west pot.", chip: "Fits a pot" },
+      { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Low pot. Keep it off the path.", chip: "Spines", warn: true }
+    ]
+  },
+  N: {
+    bed: [
+      { name: "Beargrass", botanical: "Nolina microcarpa", job: "Bone", color: "#8AA0B4", why: "Takes the north frost pocket.", chip: "North shade" },
+      { name: "Autumn Sage", botanical: "Salvia greggii", job: "Bloom", color: "#9E2B2B", why: "Flower in north shade.", chip: "North shade" },
+      { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", color: "#6B4F8A", why: "Low cover on the north side.", chip: "Feeds the soil" }
+    ]
+  },
+  E: {
+    bed: [
+      { name: "Desert Honeysuckle", botanical: "Anisacanthus thurberi", job: "Bone", color: "#D4652F", why: "Morning sun, house shade after noon.", chip: "East wall" },
+      { name: "Damianita", botanical: "Chrysactinia mexicana", job: "Bloom", color: "#C8960A", why: "Low flower for the east wall.", chip: "East wall" },
+      { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Floor", color: "#C46B8A", why: "Fits the east edge.", chip: "Almost no extra water" }
+    ]
+  },
+  S: {
+    bed: [
+      { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", color: "#8AA0B4", why: "Long south sun.", chip: "South wall" },
+      { name: "Flame Honeysuckle", botanical: "Anisacanthus quadrifidus", job: "Bloom", color: "#D4652F", why: "Flower for the south wall.", chip: "Almost no extra water" },
+      { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Low on the south gravel.", chip: "Spines", warn: true }
+    ]
+  }
 };
 
 const state = {
   mode: "aim",
   front: "N",
   selected: "front",
+  piece: "bed",
   surfaces: { front: [], left: [], right: [], back: [] },
   cover: { front: "none", left: "none", right: "none", back: "none" },
   kids: false, chew: false, wildlife: true, care: "Low",
-  ask: 0, asked: false,
-  alt: {},
+  alt: false,
   last: ""
 };
 
-function mapOf() { return FRONT_FACES[state.front]; }
-function bearing(side) { return mapOf()[side]; }
-function westSide() { return Object.keys(mapOf()).find((s) => mapOf()[s] === "W"); }
-function hasAny() {
-  return ["front", "left", "right", "back"].some((s) => (state.surfaces[s] || []).length);
+function faces() { return FACES[state.front]; }
+function bearing(side) { return faces()[side]; }
+function westSide() { return Object.keys(faces()).find((s) => faces()[s] === "W"); }
+function list(side) { return state.surfaces[side] || []; }
+function hasAny() { return ["front", "left", "right", "back"].some((s) => list(s).length); }
+function placeLine() {
+  const w = westSide();
+  if (state.front === "W") return "Front faces west · the front wall cooks";
+  return "Front faces " + NAME[state.front].toLowerCase() + " · west is the " + w + " wall";
 }
-function marks(side) {
-  const list = state.surfaces[side] || [];
-  const bits = [];
-  if (list.includes("bed")) bits.push("bed");
-  if (list.includes("pots")) bits.push("pots");
-  if (list.includes("gate")) bits.push("gate");
-  if (list.includes("gravel")) bits.push("gravel");
-  if (list.includes("block_wall")) bits.push("wall");
-  if (state.cover[side] && state.cover[side] !== "none") bits.push(state.cover[side]);
-  return bits.slice(0, 3).join(" · ");
+
+function glyph() {
+  return `<svg class="glyph" viewBox="0 0 22 22" aria-hidden="true">
+    <rect x="1" y="1" width="20" height="20" rx="3" fill="#E7DCC8" stroke="#1B3A2F" stroke-width="1.4"/>
+    <rect x="7" y="7" width="8" height="8" fill="#1B3A2F"/>
+    <rect x="7" y="3" width="8" height="3" fill="#C45A28"/>
+  </svg>`;
 }
-function activePiece(side) {
-  const list = state.surfaces[side] || [];
-  return list[0] || (state.cover[side] !== "none" ? "bed" : null);
-}
-function stripKey(side) {
-  return bearing(side) + "-" + (activePiece(side) || "bed");
+
+function markSvgs(side) {
+  const items = list(side).slice();
+  if (state.cover[side] === "tree") items.push("tree");
+  const show = items.slice(0, 2);
+  const extra = items.length - show.length;
+  return `<span class="imarks">${show.map((k) => ICONS[k] || "").join("")}${extra > 0 ? `<span class="more">+${extra}</span>` : ""}</span>`;
 }
 
 function yard() {
-  const sides = ["front", "left", "right", "back"].map((side) => {
+  const beds = ["front", "left", "right", "back"].map((side) => {
     const b = bearing(side);
+    const filled = list(side).length > 0;
     const label = side === "front" ? "Front · " + NAME[b] : NAME[b];
-    return `<button class="wall ${b} ${state.selected === side ? "sel" : ""}" data-act="pick" data-id="${side}">
-      <span>${label}</span><span class="marks">${marks(side)}</span>
+    return `<button class="bed ${b} ${filled ? "filled" : ""} ${state.selected === side ? "sel" : ""}" data-act="pick" data-id="${side}">
+      <span class="blabel">${label}</span>${markSvgs(side)}
     </button>`;
   }).join("");
   const trees = ["front", "left", "right", "back"].filter((s) => state.cover[s] === "tree").map((s) => `<div class="canopy ${s}"></div>`).join("");
-  const blocks = ["front", "left", "right", "back"].filter((s) => (state.surfaces[s] || []).includes("block_wall")).map((s) => `<div class="blockline ${s}"></div>`).join("");
+  const blocks = ["front", "left", "right", "back"].filter((s) => list(s).includes("block_wall")).map((s) => `<div class="blk ${s}"></div>`).join("");
   return `<div class="yard">
     <div class="street">Street</div>
     <div class="walk"></div>
-    ${blocks}${sides}${trees}
-    <div class="house"><span class="roof"></span><span class="door"></span><span class="htag">Front</span></div>
+    ${blocks}${beds}${trees}
+    <div class="house"><span class="notch" title="Front door"></span></div>
+  </div>`;
+}
+
+function household() {
+  return `<div class="icons">
+    <button class="icon ${state.kids ? "on" : ""}" data-act="tog" data-id="kids">Kids</button>
+    <button class="icon ${state.chew ? "on" : ""}" data-act="tog" data-id="chew">Chew</button>
+    <button class="icon ${state.wildlife ? "on" : ""}" data-act="tog" data-id="wildlife">Wildlife</button>
+    <button class="icon ${state.care !== "Low" ? "on" : ""}" data-act="care">${state.care === "Low" ? "Time: low" : state.care === "Weekend" ? "Weekends" : "Hobby"}</button>
   </div>`;
 }
 
 function tray() {
   const side = state.selected;
-  const list = state.surfaces[side] || [];
-  const pcs = PIECES.map((p) => {
-    const on = list.includes(p);
-    return `<button class="chip ${on ? "on" : ""}" data-act="stamp" data-id="${p}">${p === "block_wall" ? "Block" : p}</button>`;
-  }).join("");
-  const cvs = COVERS.map(([id, label]) =>
+  const on = list(side);
+  const pcs = PIECES.map(([id, label]) =>
+    `<button class="chip ${on.includes(id) ? "on" : ""}" data-act="stamp" data-id="${id}">${label}</button>`
+  ).join("");
+  const cvs = [["none", "Open"], ["tree", "Tree"], ["eave", "Eave"], ["structure", "Cover"]].map(([id, label]) =>
     `<button class="chip ${state.cover[side] === id ? "on" : ""}" data-act="cover" data-id="${id}">${label}</button>`
   ).join("");
-  return `<p class="place">${NAME[bearing(side)]} wall</p>
-    <div class="row">${pcs}</div>
-    <div class="row">${cvs}</div>`;
+  return `<div class="row">${pcs}</div><div class="row">${cvs}</div>`;
+}
+
+function segs() {
+  const on = list(state.selected);
+  if (on.length <= 1) return "";
+  return `<div class="row">${on.map((id) =>
+    `<button class="seg ${state.piece === id ? "on" : ""}" data-act="piece" data-id="${id}">${id === "block_wall" ? "Block" : id}</button>`
+  ).join("")}</div>`;
+}
+
+function pack() {
+  const b = bearing(state.selected);
+  const piece = list(state.selected).includes(state.piece) ? state.piece : (list(state.selected)[0] || "bed");
+  const byB = DEMO[b] || DEMO.W;
+  const rows = byB[piece] || byB.bed || DEMO.W.bed;
+  return rows;
 }
 
 function cards() {
-  const b = bearing(state.selected);
-  const pack = (state.alt[stripKey(state.selected)] && ALT[b]) ? ALT[b] : (DEMO[b] || DEMO.W);
-  return pack.map((c) => `<article class="card">
+  return `<div class="trio">${pack().map((c) => `<article class="card">
     <div class="swatch" style="background:${c.color}"></div>
     <div class="top"><span class="name">${c.name}</span><span class="job">${c.job}</span></div>
     <p class="botanical">${c.botanical}</p>
     <p class="why">${c.why}</p>
-  </article>`).join("");
+    <span class="mini ${c.warn ? "warn" : ""}">${c.chip}</span>
+  </article>`).join("")}</div>`;
 }
 
 function screenAim() {
-  const btns = ["N", "S", "E", "W"].map((id) =>
-    `<button class="ans ${state.front === id ? "on" : ""}" data-act="front" data-id="${id}">Front faces ${NAME[id]}</button>`
-  ).join("");
-  return `<header><span class="brand">Phoenix Yard</span></header>
+  return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
     <main>
+      <p class="line">Plants that match the wall.</p>
       <h1>Which way does the front face?</h1>
-      <p class="lead">Street is the top. Door is the front. West will light itself — that wall cooks in the afternoon.</p>
+      <p class="lead">Street is the top. The notch is the front door. West warms itself.</p>
       ${yard()}
-      ${btns}
+      <div class="compass">
+        ${["N", "S", "E", "W"].map((id) =>
+          `<button class="ans ${state.front === id ? "on" : ""}" data-act="front" data-id="${id}">${NAME[id]}</button>`
+        ).join("")}
+      </div>
     </main>
     <footer><button class="pri" data-act="mode" data-id="yard">That’s the front</button></footer>`;
 }
 
 function screenYard() {
-  const q = ASK[state.ask];
-  const household = state.asked ? "" : `<h1 class="sm">${q.title}</h1>
-    ${q.answers.map(([label, val]) =>
-      `<button class="ans ${String(state[q.key]) === String(val) ? "on" : ""}" data-act="answer" data-key="${q.key}" data-val="${val}">${label}</button>`
-    ).join("")}`;
-  return `<header><span class="brand">Phoenix Yard</span></header>
+  return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
     <main>
-      <p class="place">Front faces ${NAME[state.front]} · west is the ${westSide()} wall</p>
+      <p class="place">${placeLine()}</p>
       ${yard()}
-      ${household || tray()}
+      ${household()}
+      ${tray()}
+      ${state.last ? `<p class="lead">${state.last}</p>` : ""}
     </main>
     <footer>
-      <button class="ghost" data-act="mode" data-id="${state.asked ? "aim" : "yard"}">${state.asked ? "Aim" : "Stay"}</button>
-      <button class="pri" data-act="${state.asked ? "quote" : "nextq"}">${state.asked ? "See the plants" : "Next"}</button>
+      <button class="ghost" data-act="mode" data-id="aim">Aim</button>
+      <button class="pri" data-act="quote">See the plants</button>
     </footer>`;
 }
 
 function screenQuote() {
-  const piece = activePiece(state.selected) || "bed";
-  return `<header><span class="brand">Phoenix Yard</span></header>
+  const piece = list(state.selected).includes(state.piece) ? state.piece : (list(state.selected)[0] || "bed");
+  return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
     <main>
-      <p class="place">${NAME[bearing(state.selected)]} · ${piece}</p>
+      <p class="place">${NAME[bearing(state.selected)]} · ${piece === "block_wall" ? "block wall" : piece}</p>
       ${yard()}
+      ${segs()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
       ${cards()}
-      <button class="ghost" data-act="reroll" style="width:100%">Three others for this wall</button>
+      <button class="ghost" data-act="reroll" style="width:100%;margin-top:4px">Three others for this wall</button>
     </main>
     <footer>
       <button class="ghost" data-act="mode" data-id="yard">Map</button>
-      <button class="pri" data-act="flipchew">${state.chew ? "Chew on" : "Chew off"}</button>
+      <button class="pri" data-act="tog" data-id="chew">${state.chew ? "Chew on" : "Chew off"}</button>
     </footer>`;
 }
 
@@ -273,42 +325,33 @@ document.getElementById("app").addEventListener("click", (e) => {
   if (!b) return;
   const act = b.dataset.act;
   if (act === "front") state.front = b.dataset.id;
-  if (act === "pick") state.selected = b.dataset.id;
+  if (act === "pick") {
+    state.selected = b.dataset.id;
+    const on = list(state.selected);
+    if (on.length && !on.includes(state.piece)) state.piece = on[0];
+  }
   if (act === "stamp") {
     const side = state.selected;
-    const list = (state.surfaces[side] || []).slice();
-    const i = list.indexOf(b.dataset.id);
-    if (i >= 0) list.splice(i, 1);
-    else list.push(b.dataset.id);
-    state.surfaces[side] = list;
+    const next = list(side).slice();
+    const i = next.indexOf(b.dataset.id);
+    if (i >= 0) next.splice(i, 1);
+    else next.push(b.dataset.id);
+    state.surfaces[side] = next;
+    state.piece = b.dataset.id;
+    state.last = "";
   }
   if (act === "cover") state.cover[state.selected] = b.dataset.id;
-  if (act === "mode") {
-    state.mode = b.dataset.id;
-    if (state.mode === "yard" && !state.asked) state.ask = state.ask || 0;
-  }
-  if (act === "answer") {
-    const v = b.dataset.val;
-    state[b.dataset.key] = v === "true" ? true : v === "false" ? false : v;
-    if (state.ask < ASK.length - 1) state.ask += 1;
-    else state.asked = true;
-  }
-  if (act === "nextq") {
-    if (state.ask < ASK.length - 1) state.ask += 1;
-    else state.asked = true;
-  }
+  if (act === "piece") state.piece = b.dataset.id;
+  if (act === "tog") state[b.dataset.id] = !state[b.dataset.id];
+  if (act === "care") state.care = state.care === "Low" ? "Weekend" : state.care === "Weekend" ? "Hobby" : "Low";
+  if (act === "mode") { state.mode = b.dataset.id; state.last = ""; }
   if (act === "quote") {
-    if (!hasAny()) { state.last = "Put something on a wall."; }
+    if (!hasAny()) state.last = "Put something on a wall.";
     else { state.mode = "quote"; state.last = ""; }
   }
   if (act === "reroll") {
-    const key = stripKey(state.selected);
-    state.alt[key] = !state.alt[key];
-    state.last = state.alt[key] ? "Another legal set for this wall." : "First set for this wall.";
-  }
-  if (act === "flipchew") {
-    state.chew = !state.chew;
-    state.last = state.chew ? "Oleander and sago stay off the whole list." : "Chew is off.";
+    state.alt = !state.alt;
+    state.last = state.alt ? "Another legal set for this wall." : "Back to this wall’s first set.";
   }
   render();
 });

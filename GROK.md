@@ -12,7 +12,12 @@ Gates, scores, and slots live only in `docs/DECISION_TREE.md`. Words on screen l
 
 ## What you are building
 
-A phone-wide web app. One persistent yard plan: street at the top, door on the front.
+A phone-wide web app named **Phoenix Yard**. Line: **Plants that match the wall.** One persistent **plan** of the lot: street at the top, door notch on the front of a flat house rectangle, four fat beds against the building. No cartoon roof. West is the only warm wall.
+
+1. **Aim.** Compact North / South / East / West under the plan. Writes `front_bearing`. West bed warms.
+2. **Stamp.** Household icons stay under the street. Tap a bed, stamp Bed / Pots / Gate / Gravel / Block / Shade as marks on that band.
+3. **Quote.** Plan stays up. Segment the selected wall by piece. Three cards under the plan. `Three others for this wall.`
+
 
 1. **Aim.** “Which way does the front of your house face?” North / South / East / West. Writes `front_bearing`. West wall warms itself. Walls label N/S/E/W.
 2. **Stamp.** Tap a wall, then stamp Bed / Pots / Gate / Gravel / Block / Shade onto it. Marks draw on the building. `project_scale` may seed the first stamp; it does not lock other walls.
