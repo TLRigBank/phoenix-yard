@@ -58,8 +58,8 @@ Do not add bloom months until seasons are solid. Do not add photos in this pass.
 **Wave D — done 2026-09-27.** See `docs/WAVE_D_LOG.md`. Euphorbia columns and sansevieria are foliage-first. Mangave is rare-spike. Thin names skipped.
 
 
-**Wave E — texture audit (sample, not mass recode).**  
-Pull 40 “Swords” cards that are visually mounds or pads (some cacti, some succulents). Recode only those 40 with a photo + written habit. Do not flip the other 226.
+**Wave E — done 2026-09-27.** See `docs/WAVE_E_LOG.md`. 40 false Swords recoded. 226 blade plants unchanged.
+
 
 **Wave F — sun_class only where a source says part shade / afternoon shade in Phoenix.**  
 Cap this wave. Most of the 417 `full` values are right.
