@@ -412,12 +412,14 @@ for (const pick of shadeBlock.strips.find((s) => s.id === "shade-block").picks) 
 const northBlock = match(
   {
     ...defaultBrief,
+    front_bearing: "N",
     extras: { wall: false, front: true, gate: false, pots: false, gravel: false },
     block_wall: { front: true, left: false, right: false, back: false },
   },
   catalog
 );
 assert(northBlock.strips.some((s) => s.id === "front-block"), "missing north block");
+assert(northBlock.bearings.front === "N" && northBlock.bearings.left === "W", "front faces north");
 for (const pick of northBlock.strips.find((s) => s.id === "front-block").picks) {
   const card = byId.get(pick.card_id);
   assert(card.phoenix_winter_fit === "reliable_including_cold_pockets", "north block winter " + pick.display_name);
@@ -447,7 +449,8 @@ for (const pick of treeSun.strips[0].picks) {
   assert(ok, "tree cover still quoted a roaster " + pick.display_name);
 }
 
-assert(def.bearings.right === "W" && def.bearings.left === "E" && def.bearings.front === "N" && def.bearings.back === "S", "right tap is west");
+assert(def.bearings.right === "W" && def.bearings.left === "E" && def.bearings.front === "S" && def.bearings.back === "N", "right wall west means front faces south");
+assert(def.brief_echo.front_bearing === "S", "derived front bearing");
 assert(def.strips[0].bearing === "W", "wall bearing");
 assert(String(def.strips[0].title).indexOf("West") === 0, "wall title starts with West");
 
@@ -456,7 +459,7 @@ const ns = match(
   catalog
 );
 assert(ns.strips.map((s) => s.id).join() === "front,back", "N/S rooms " + ns.strips.map((s) => s.id).join());
-assert(ns.strips[0].bearing === "N" && ns.strips[1].bearing === "S", "front is north, back is south when right is west");
+assert(ns.strips[0].bearing === "S" && ns.strips[1].bearing === "N", "front is south, back is north when right is west");
 assert(
   JSON.stringify(ns.strips[0].picks.map((p) => p.card_id)) !== JSON.stringify(ns.strips[1].picks.map((p) => p.card_id)),
   "north quote copied the south quote"
@@ -471,8 +474,8 @@ const bedFront = match(
   },
   catalog
 );
-assert(bedFront.strips.some((s) => s.id === "front"), "one bed on the north side should quote front");
-assert(!bedFront.strips.some((s) => s.id === "wall"), "one bed on the north side should not quote the west wall");
+assert(bedFront.strips.some((s) => s.id === "front"), "one bed on the front should quote front");
+assert(!bedFront.strips.some((s) => s.id === "wall"), "one bed on the front should not quote the west wall");
 
 const multi = match(
   {
@@ -496,7 +499,7 @@ assert(multi.strips.filter((s) => s.id.startsWith("pots-")).length === 2, "pots 
 assert(multi.strips.filter((s) => s.id.startsWith("gate-")).length === 2, "gate on two sides");
 const potFront = multi.strips.find((s) => s.id === "pots-front");
 const potBack = multi.strips.find((s) => s.id === "pots-back");
-assert(potFront.bearing === "N" && potBack.bearing === "S", "pots inherit north and south");
+assert(potFront.bearing === "S" && potBack.bearing === "N", "pots inherit south and north");
 assert(
   JSON.stringify(potFront.picks.map((p) => p.card_id)) !== JSON.stringify(potBack.picks.map((p) => p.card_id)),
   "north pots copied south pots"

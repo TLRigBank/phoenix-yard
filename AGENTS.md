@@ -2,7 +2,8 @@
 
 Read `GROK.md` first.
 
-Pieces are per side. `surfaces.front = [pots, gate]` and `surfaces.back = [pots]` is valid. Do not keep a single pots_side that blocks other walls.
+Orientation question is “which way does the front face?” Street and front door stay at the top of the plan. Front facing North puts West on the left wall. The old right-wall-is-west-and-front-is-north map was backwards.
+
 
 
 Climate = side role from `hot_side`, then shifted by `cover`, then gated by `block_wall`. Do not quote a tree-shaded sun side as a roasting wall. Do not seat a tender plant at the base of a shade-side block wall.

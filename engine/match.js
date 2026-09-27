@@ -189,10 +189,18 @@ const STRIP_META = {
 const OPPOSITE = { front: "back", back: "front", left: "right", right: "left" };
 
 const BEARINGS = {
-  right: { right: "W", left: "E", front: "N", back: "S" },
-  left: { left: "W", right: "E", front: "S", back: "N" },
+  // Derived from "which drawing side is west." Front stays at the top of the plan.
+  right: { right: "W", left: "E", front: "S", back: "N" },
+  left: { left: "W", right: "E", front: "N", back: "S" },
   front: { front: "W", back: "E", left: "S", right: "N" },
   back: { back: "W", front: "E", left: "N", right: "S" },
+};
+
+const FRONT_FACES = {
+  N: { front: "N", back: "S", left: "W", right: "E" },
+  S: { front: "S", back: "N", left: "E", right: "W" },
+  E: { front: "E", back: "W", left: "N", right: "S" },
+  W: { front: "W", back: "E", left: "S", right: "N" },
 };
 
 const BEARING_NAME = { N: "North", S: "South", E: "East", W: "West" };
@@ -261,19 +269,41 @@ function blockOf(brief, side) {
   return !!(side && brief.block_wall && brief.block_wall[side]);
 }
 
-function bearingsFor(hot) {
-  return BEARINGS[hot] || null;
+function bearingsFor(briefOrHot) {
+  if (briefOrHot && typeof briefOrHot === "object") {
+    if (briefOrHot.front_bearing && FRONT_FACES[briefOrHot.front_bearing]) {
+      return FRONT_FACES[briefOrHot.front_bearing];
+    }
+    return BEARINGS[briefOrHot.hot_side] || null;
+  }
+  return BEARINGS[briefOrHot] || FRONT_FACES[briefOrHot] || null;
 }
 
-function sideRole(hot, side) {
-  const bearing = (BEARINGS[hot] || {})[side];
+function westSideOf(map) {
+  if (!map) return null;
+  return Object.keys(map).find((side) => map[side] === "W") || null;
+}
+
+function normalizeOrient(brief) {
+  if (!brief || typeof brief !== "object") return brief;
+  if (brief.front_bearing && FRONT_FACES[brief.front_bearing]) {
+    const hot = westSideOf(FRONT_FACES[brief.front_bearing]);
+    return { ...brief, hot_side: brief.hot_side && BEARINGS[brief.hot_side] ? brief.hot_side : hot, front_bearing: brief.front_bearing };
+  }
+  const map = BEARINGS[brief.hot_side];
+  return { ...brief, front_bearing: map ? map.front : brief.front_bearing || null };
+}
+
+function sideRole(briefOrHot, side) {
+  const map = bearingsFor(briefOrHot);
+  const bearing = (map || {})[side];
   if (bearing === "W") return "sun";
   if (bearing === "E") return "shade";
   return "shoulder";
 }
 
 function bearingOf(brief, side) {
-  const map = bearingsFor(brief.hot_side);
+  const map = bearingsFor(brief);
   return map && side ? map[side] : null;
 }
 
@@ -508,7 +538,8 @@ function totalScore(card, room, seat, brief, prior) {
 
 function validate(brief) {
   if (!brief || typeof brief !== "object") return "brief";
-  if (!PLACE[brief.hot_side]) return "hot_side";
+  if (!PLACE[brief.hot_side] && !FRONT_FACES[brief.front_bearing]) return "hot_side";
+  if (brief.front_bearing != null && !FRONT_FACES[brief.front_bearing]) return "front_bearing";
   for (const key of ["kids", "chew", "wildlife", "guilds"]) {
     if (typeof brief[key] !== "boolean") return key;
   }
@@ -853,7 +884,7 @@ function match(brief, catalog) {
   const problem = validate(brief);
   if (problem) return { error: "invalid_brief", field: problem };
   if (!Array.isArray(catalog)) return { error: "match_failed" };
-  brief = applyProject(brief);
+  brief = applyProject(normalizeOrient(brief));
   substitutesFor.byId = new Map(catalog.map((card) => [card.card_id, card]));
   const rooms = listRooms(brief);
   const prior = [];
@@ -862,7 +893,8 @@ function match(brief, catalog) {
     brief_echo: {
       hot_side: brief.hot_side,
       project_side: brief.project_side || null,
-      bearings: bearingsFor(brief.hot_side),
+      front_bearing: brief.front_bearing || null,
+      bearings: bearingsFor(brief),
       kids: brief.kids,
       chew: brief.chew,
       wildlife: brief.wildlife,
@@ -889,7 +921,7 @@ function match(brief, catalog) {
     },
     place_label: PLACE[brief.hot_side],
     west_label: PLACE[brief.hot_side],
-    bearings: bearingsFor(brief.hot_side),
+    bearings: bearingsFor(brief),
     opposite_label: PLACE[oppositeSide(brief.hot_side)],
     session_notes: toxicVeto(brief) ? [SESSION_TOXIC] : [],
     strips,

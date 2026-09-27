@@ -49,31 +49,49 @@
   }
   button.ans.on { background: var(--pine); color: #fff; border-color: var(--pine); }
   .yard {
-    position: relative; height: 280px; margin: 8px 0 12px;
+    position: relative; height: 300px; margin: 8px 0 12px;
     background: #EFE6D4; border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
   }
-  .gravel-bed { position: absolute; inset: 0; background:
-    repeating-linear-gradient(45deg, #e8dcc6 0 8px, #efe6d4 8px 16px); opacity: .55; }
-  .house {
-    position: absolute; left: 50%; top: 46%; width: 118px; height: 88px;
-    transform: translate(-50%, -50%); background: var(--pine); color: #fff;
-    border-radius: 8px; display: flex; align-items: center; justify-content: center;
-    font-size: 16px; font-weight: 650; z-index: 2;
+  .street {
+    position: absolute; left: 0; right: 0; top: 0; height: 34px; z-index: 4;
+    background: #6d6a66; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .12em;
+    display: flex; align-items: center; justify-content: center; text-transform: uppercase;
   }
-  .house:after {
-    content: ""; position: absolute; top: -22px; left: 12px; right: 12px; height: 28px;
+  .walk {
+    position: absolute; left: 50%; top: 34px; width: 22px; height: 44px; margin-left: -11px;
+    background: #cfc4b0; z-index: 3;
+  }
+  .house {
+    position: absolute; left: 50%; top: 52%; width: 124px; height: 96px;
+    transform: translate(-50%, -50%); background: var(--pine); color: #fff;
+    border-radius: 6px; z-index: 2; box-shadow: 0 8px 18px rgba(20,48,40,.18);
+  }
+  .house .roof {
+    position: absolute; top: -20px; left: 8px; right: 8px; height: 26px;
     background: #143028; clip-path: polygon(50% 0, 100% 100%, 0 100%);
   }
-  .side {
-    position: absolute; border: 2px dashed #b7ab95; background: rgba(255,255,255,.55);
-    color: var(--ink); font-size: 14px; font-weight: 650; display: flex; align-items: center;
-    justify-content: center; text-align: center; padding: 4px; cursor: pointer; z-index: 3;
+  .house .door {
+    position: absolute; top: -2px; left: 50%; width: 22px; height: 28px; margin-left: -11px;
+    background: #c4a574; border-radius: 3px 3px 0 0; z-index: 3;
   }
-  .side.hot { background: #f3d0b8; border-color: var(--ember); color: #7a3210; border-style: solid; }
-  .side[data-id="front"] { left: 22%; right: 22%; top: 14px; height: 52px; border-radius: 10px; }
-  .side[data-id="back"] { left: 22%; right: 22%; bottom: 14px; height: 52px; border-radius: 10px; }
-  .side[data-id="left"] { left: 10px; top: 78px; width: 64px; height: 96px; border-radius: 10px; }
-  .side[data-id="right"] { right: 10px; top: 78px; width: 64px; height: 96px; border-radius: 10px; }
+  .house .door:after {
+    content: ""; position: absolute; right: 4px; top: 12px; width: 5px; height: 5px;
+    background: #6b4f2e; border-radius: 50%;
+  }
+  .house .tag {
+    position: absolute; left: 0; right: 0; bottom: 10px; text-align: center;
+    font-size: 13px; font-weight: 800; letter-spacing: .08em;
+  }
+  .side {
+    position: absolute; border: 2px dashed #b7ab95; background: rgba(255,255,255,.7);
+    color: var(--ink); font-size: 13px; font-weight: 750; display: flex; align-items: center;
+    justify-content: center; text-align: center; padding: 4px; z-index: 3; line-height: 1.15;
+  }
+  .side.west { background: #f3d0b8; border-color: var(--ember); color: #7a3210; border-style: solid; }
+  .side[data-id="front"] { left: 22%; right: 22%; top: 38px; height: 44px; border-radius: 10px; }
+  .side[data-id="back"] { left: 22%; right: 22%; bottom: 10px; height: 44px; border-radius: 10px; }
+  .side[data-id="left"] { left: 8px; top: 88px; width: 70px; height: 110px; border-radius: 10px; }
+  .side[data-id="right"] { right: 8px; top: 88px; width: 70px; height: 110px; border-radius: 10px; }
   .extra-row { display: flex; gap: 8px; margin: 0 0 8px; }
   button.extra {
     flex: 1; background: #fff; border: 1px solid var(--line); color: var(--muted); font-weight: 650;
@@ -125,12 +143,13 @@ const NEXT = {
   gravel: "Next — open gravel"
 };
 const PLACE = { front: "Front side", back: "Back side", left: "Left side", right: "Right side" };
-const BEARINGS = {
-  right: { right: "West", left: "East", front: "North", back: "South" },
-  left: { left: "West", right: "East", front: "South", back: "North" },
-  front: { front: "West", back: "East", left: "South", right: "North" },
-  back: { back: "West", front: "East", left: "North", right: "South" }
+const FRONT_FACES = {
+  N: { front: "N", back: "S", left: "W", right: "E" },
+  S: { front: "S", back: "N", left: "E", right: "W" },
+  E: { front: "E", back: "W", left: "N", right: "S" },
+  W: { front: "W", back: "E", left: "S", right: "N" }
 };
+const BEARING_NAME = { N: "North", S: "South", E: "East", W: "West" };
 const KEPT = "Kept off the gate: Jumping cholla. Joints that jump.";
 const SESSION = "Oleander and sago stay off the whole list.";
 
@@ -225,7 +244,7 @@ const QUESTIONS = [
 ];
 
 const state = {
-  screen: "home", q: 0, hot: "right", scale: null,
+  screen: "home", q: 0, hot: "left", front: "N", scale: null,
   extras: { wall: true, shade: true, front: true, back: true, gate: true, pots: true, gravel: true },
   surfaces: { front: [], left: [], right: [], back: [] },
   cover: { front: "none", left: "none", right: "none", back: "none" },
@@ -246,11 +265,22 @@ try {
 function esc(s) {
   return String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&", "<": "<", ">": ">", '"': """ }[c]));
 }
+function compassMap() {
+  return FRONT_FACES[state.front] || FRONT_FACES.N;
+}
+function westSide() {
+  const map = compassMap();
+  return Object.keys(map).find((side) => map[side] === "W");
+}
 function placeLine() {
-  return BEARINGS[state.hot][state.hot] + " · afternoon sun";
+  return "Front faces " + BEARING_NAME[state.front] + " · west is " + westSide();
 }
 function sideLabel(id) {
-  return BEARINGS[state.hot][id];
+  const bearing = compassMap()[id];
+  const name = BEARING_NAME[bearing];
+  if (id === "front") return "Front · " + name;
+  if (bearing === "W") return name + " · afternoon sun";
+  return name;
 }
 function visibleStrips() {
   return STRIPS.filter((strip) => state.extras[strip.id]);
@@ -263,10 +293,9 @@ function advanceQ() {
 }
 
 function house(showExtras) {
+  const west = westSide();
   const sides = ["front", "left", "right", "back"].map((id) => {
-    const hot = state.hot === id;
-    const label = sideLabel(id);
-    return `<button class="side ${hot ? "hot" : ""}" data-act="hot" data-id="${id}">${hot ? "West" : label}</button>`;
+    return `<div class="side ${id === west ? "west" : ""}" data-id="${id}">${sideLabel(id)}</div>`;
   }).join("");
   const extras = showExtras ? `<div class="extra-row">
       <button class="extra ${state.extras.wall ? "on" : ""}" data-act="extra" data-id="wall">Sun</button>
@@ -277,18 +306,33 @@ function house(showExtras) {
       <button class="extra ${state.extras.pots ? "on" : ""}" data-act="extra" data-id="pots">Pots</button>
       <button class="extra ${state.extras.gravel ? "on" : ""}" data-act="extra" data-id="gravel">Gravel</button>
     </div>` : "";
-  return `<div class="yard"><div class="gravel-bed"></div>${sides}<div class="house">House</div></div>${extras}`;
+  return `<div class="yard">
+    <div class="street">Street</div>
+    <div class="walk"></div>
+    ${sides}
+    <div class="house"><span class="roof"></span><span class="door" title="Front door"></span><span class="tag">Front</span></div>
+  </div>${extras}`;
 }
 
 function screenHome() {
+  const opts = [
+    ["N", "North"],
+    ["S", "South"],
+    ["E", "East"],
+    ["W", "West"]
+  ];
+  const btns = opts.map(([id, label]) =>
+    `<button class="ans ${state.front === id ? "on" : ""}" data-act="front" data-id="${id}">Front faces ${label}</button>`
+  ).join("");
   return `
     <header><span class="brand">Phoenix Yard</span></header>
     <main>
-      <h1>Tap the wall that cooks in the afternoon.</h1>
-      <p class="lead">That is only which side gets the sun. Next you say what you are planting.</p>
+      <h1>Which way does the front of your house face?</h1>
+      <p class="lead">Stand at the front door and look out. The street is the top of this drawing. West is the wall that cooks in the afternoon.</p>
       ${house(false)}
+      ${btns}
     </main>
-    <footer><button class="pri" data-act="go" data-to="project">That’s the afternoon side</button></footer>`;
+    <footer><button class="pri" data-act="go" data-to="project">That’s the front</button></footer>`;
 }
 
 function applyScale(scale) {
@@ -319,7 +363,7 @@ function screenProject() {
     <main>
       <p class="place">${esc(placeLine())}</p>
       <h1 class="sm">What are you planting?</h1>
-      <p class="lead">The afternoon side is already marked. This chooses which pieces start on.</p>
+      <p class="lead">Front already faces ${BEARING_NAME[state.front]}. This only chooses which pieces start on.</p>
       ${btns}
     </main>
     <footer>
@@ -527,6 +571,11 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.screen = b.dataset.to;
     state.lastChange = "";
   }
+  if (act === "front") {
+    state.front = b.dataset.id;
+    const map = FRONT_FACES[state.front];
+    state.hot = Object.keys(map).find((side) => map[side] === "W");
+  }
   if (act === "hot") state.hot = b.dataset.id;
   if (act === "scale") applyScale(b.dataset.id);
   if (act === "after-project") {
@@ -584,7 +633,8 @@ document.getElementById("app").addEventListener("click", (e) => {
     try { localStorage.removeItem("phoenix-yard-v2"); } catch (err) { /* ignore */ }
     state.screen = "home";
     state.q = 0;
-    state.hot = "right";
+    state.hot = "left";
+    state.front = "N";
     state.extras = { wall: true, gate: true, pots: true, gravel: true };
     state.scale = null;
     state.cover = { front: "none", left: "none", right: "none", back: "none" };

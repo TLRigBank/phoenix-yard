@@ -16,7 +16,8 @@ If you ship a walk whose first results are always “Afternoon wall,” you miss
 
 A phone-wide web app:
 
-1. **Orient.** Tap the wall that cooks in the afternoon. That side **is West**. Relabel the house North / South / East / West. Stop saying “right side.”
+1. **Orient.** Street at the top. Door on the front. Ask: **Which way does the front of your house face?** North / South / East / West. That writes `front_bearing`. West is derived. Do not ask them to tap an unlabeled wall.
+
 2. **Project.** Pots / One bed / Gate and path / Whole yard / Not sure.
 3. **Pieces on sides.** After orientation, the house stays on screen. Each compass side can take any mix of **bed, pots, gate, gravel, block wall**. A west patio and a north patio are two pot strips. A gate can exist on more than one side. `project_scale` only seeds the first piece; it does not lock the job to one wall.
 
@@ -39,7 +40,8 @@ Live names come from `engine/match.js`. Do not filter 543 cards in the UI.
 UI  →  match(brief)  →  strips that extras turned on
 ```
 
-`hot_side` names which drawing side is **West**. The engine returns `bearings` so the UI can label North / South / East / West. West, East, South, and North are four different filters. Do not treat front/back as one “shoulder.”
+`front_bearing` is how the house is aimed. The engine returns `bearings` for Front / Left / Right / Back. West / East / South / North stay four different filters.
+
 
 
 ## Brief

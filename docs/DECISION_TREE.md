@@ -6,16 +6,18 @@ A quote is **project + side + bearing + cover + block wall + household**.
 
 ## Orientation
 
-The first tap is **West**. Afternoon sun in Phoenix is west. The other three sides are then named:
+Ask **which way the front door faces.** Do not ask people to tap the west wall on a blank plan.
 
-| Tapped drawing side | Front | Left | Right | Back |
-|---|---|---|---|---|
-| right | N | E | W | S |
-| left | S | W | E | N |
-| front | W | S | N | E |
-| back | E | N | S | W |
+The drawing is always: street and front door at the **top**. Left on the drawing is the house’s left when you look at it from the street.
 
-The UI must relabel the house to North / South / East / West after the tap. Do not keep saying “right side” on results.
+| Front faces | Front | Left | Right | Back | West wall |
+|---|---|---|---|---|---|
+| North | N | W | E | S | left |
+| South | S | E | W | N | right |
+| East | E | N | S | W | back |
+| West | W | S | N | E | front |
+
+`front_bearing` is the source of truth. `hot_side` is the drawing side that is West. If only `hot_side` is sent, derive `front_bearing` from that table. The old map that set front=North when the right wall was West was mirrored and is retired.
 
 ## Four Phoenix climates
 

@@ -33,7 +33,8 @@ AC: House shows Front/Left/Right/Back. Tapped side labeled Afternoon sun. Payloa
 
 **US-25** Block wall on a side adds a separate strip. Sun-side block wall requires `reflected_heat_ok`. Shade-side block wall requires cold-pocket winter fit.
 
-**US-27** After the afternoon-sun tap, the four house buttons read North, South, East, West. The tapped side reads West.
+**US-27** First screen: street at the top, door on the front of the house, question “Which way does the front face?” Four answers: North, South, East, West. The west wall highlights itself. User does not tap a blank wall for orientation.
+
 
 **US-30** User can put pots, a bed, a gate, gravel, and a block wall on any combination of the four sides. Two pot strips on North and South are different quotes.
 
