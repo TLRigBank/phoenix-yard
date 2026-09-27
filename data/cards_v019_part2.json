@@ -3508,7 +3508,7 @@
     "plant_group": "Perennials and Groundcover",
     "water_class": "M",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "medium",
     "habit": "perennial",
     "maintenance_level": "high",
@@ -3516,7 +3516,7 @@
     "phoenix_winter_fit": "typical_ok_skip_frost_pockets",
     "frost_pocket_ok": false,
     "frost_protect_needed": true,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": false,
     "container_ok": true,
     "width_max_ft": 3.0,
@@ -3562,7 +3562,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "Canna blooms warm season; flower color varies by unnamed mix so color stays empty"
+    "wave_b_note": "Canna blooms warm season; flower color varies by unnamed mix so color stays empty",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Canna in the low desert wants afternoon shade."
   },
   {
     "card_id": "CCF-PERN-009",
@@ -3573,7 +3576,7 @@
     "plant_group": "Perennials and Groundcover",
     "water_class": "M",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "medium",
     "habit": "perennial",
     "maintenance_level": "high",
@@ -3581,7 +3584,7 @@
     "phoenix_winter_fit": "typical_ok_skip_frost_pockets",
     "frost_pocket_ok": false,
     "frost_protect_needed": true,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": false,
     "container_ok": true,
     "width_max_ft": 3.0,
@@ -3631,7 +3634,10 @@
     "foliage_color": "burgundy",
     "foliage_color_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "Tropicanna: orange flowers summer-fall; foliage striped burgundy/orange"
+    "wave_b_note": "Tropicanna: orange flowers summer-fall; foliage striped burgundy/orange",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Canna in the low desert wants afternoon shade."
   },
   {
     "card_id": "CCF-PERN-010",
@@ -4639,7 +4645,7 @@
     "plant_group": "Perennials and Groundcover",
     "water_class": "L",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "small",
     "habit": "groundcover",
     "maintenance_level": "moderate",
@@ -4647,7 +4653,7 @@
     "phoenix_winter_fit": "container_or_courtyard_only",
     "frost_pocket_ok": false,
     "frost_protect_needed": true,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": false,
     "container_ok": true,
     "width_max_ft": 5.0,
@@ -4696,7 +4702,10 @@
     "foliage_color": "gold",
     "foliage_color_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "ornamental sweet potato grown for chartreuse foliage; rarely flowers in AZ yards"
+    "wave_b_note": "ornamental sweet potato grown for chartreuse foliage; rarely flowers in AZ yards",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Ornamental sweet potato leaves burn on a Phoenix west wall."
   },
   {
     "card_id": "CCF-PERN-025",
@@ -4707,7 +4716,7 @@
     "plant_group": "Perennials and Groundcover",
     "water_class": "L",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "small",
     "habit": "groundcover",
     "maintenance_level": "moderate",
@@ -4715,7 +4724,7 @@
     "phoenix_winter_fit": "container_or_courtyard_only",
     "frost_pocket_ok": false,
     "frost_protect_needed": true,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": false,
     "container_ok": false,
     "width_max_ft": 5.0,
@@ -4766,7 +4775,10 @@
     "foliage_color": "burgundy",
     "foliage_color_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "ornamental sweet potato grown for purple foliage; rarely flowers in AZ yards"
+    "wave_b_note": "ornamental sweet potato grown for purple foliage; rarely flowers in AZ yards",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Ornamental sweet potato leaves burn on a Phoenix west wall."
   },
   {
     "card_id": "CCF-PERN-026",
@@ -6125,7 +6137,7 @@
     "plant_group": "Perennials and Groundcover",
     "water_class": "VL",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "small",
     "habit": "groundcover",
     "maintenance_level": "low",
@@ -6133,7 +6145,7 @@
     "phoenix_winter_fit": "reliable_including_cold_pockets",
     "frost_pocket_ok": true,
     "frost_protect_needed": false,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": true,
     "container_ok": false,
     "width_max_ft": 6.0,
@@ -6187,7 +6199,10 @@
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "ASU Martin + UA bee-bloom list: rosemary flowers winter-spring in the Valley"
+    "wave_b_note": "ASU Martin + UA bee-bloom list: rosemary flowers winter-spring in the Valley",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "ASU Martin: rosemary in Phoenix better with some western shade."
   },
   {
     "card_id": "CCF-PERN-046",
@@ -6198,7 +6213,7 @@
     "plant_group": "Perennials and Groundcover",
     "water_class": "VL",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "medium",
     "habit": "shrub",
     "maintenance_level": "low",
@@ -6206,7 +6221,7 @@
     "phoenix_winter_fit": "reliable_including_cold_pockets",
     "frost_pocket_ok": false,
     "frost_protect_needed": false,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": false,
     "container_ok": false,
     "width_max_ft": 4.0,
@@ -6260,7 +6275,10 @@
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "ASU Martin: Tuscan Blue light blue Jan-Mar in Phoenix; occasional fall flush not used as a second season"
+    "wave_b_note": "ASU Martin: Tuscan Blue light blue Jan-Mar in Phoenix; occasional fall flush not used as a second season",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "ASU Martin: rosemary in Phoenix better with some western shade."
   },
   {
     "card_id": "CCF-PERN-047",
@@ -10022,7 +10040,7 @@
     "plant_group": "Flowering Shrubs",
     "water_class": "L",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "large",
     "habit": "shrub",
     "maintenance_level": "moderate",
@@ -10030,7 +10048,7 @@
     "phoenix_winter_fit": "container_or_courtyard_only",
     "frost_pocket_ok": false,
     "frost_protect_needed": true,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": false,
     "container_ok": true,
     "width_max_ft": 10.0,
@@ -10079,7 +10097,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "plumeria summer bloom; color varies by unnamed plant so color stays empty"
+    "wave_b_note": "plumeria summer bloom; color varies by unnamed plant so color stays empty",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Phoenix plumeria: afternoon sun scorches; morning sun + afternoon shade."
   },
   {
     "card_id": "CCF-FSHB-032",
@@ -18170,7 +18191,7 @@
     "plant_group": "Fruit and Nut Trees",
     "water_class": "L",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "large",
     "habit": "tree",
     "maintenance_level": "high",
@@ -18178,7 +18199,7 @@
     "phoenix_winter_fit": "typical_ok_skip_frost_pockets",
     "frost_pocket_ok": false,
     "frost_protect_needed": true,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": false,
     "container_ok": true,
     "width_max_ft": 10.0,
@@ -18224,7 +18245,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "wave_d": true
+    "wave_d": true,
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Citrus in the low desert: avoid west afternoon burn (Valley citrus guides)."
   },
   {
     "card_id": "CCF-FRUT-002",
@@ -18235,7 +18259,7 @@
     "plant_group": "Fruit and Nut Trees",
     "water_class": "L",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "landmark",
     "habit": "tree",
     "maintenance_level": "high",
@@ -18290,7 +18314,10 @@
     "short_why": "Sour Orange · gloss · L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Citrus: avoid western exposures; afternoon sun burns fruit and bark."
   },
   {
     "card_id": "CCF-FRUT-003",
@@ -18301,7 +18328,7 @@
     "plant_group": "Fruit and Nut Trees",
     "water_class": "L",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "large",
     "habit": "tree",
     "maintenance_level": "high",
@@ -18354,7 +18381,10 @@
     "short_why": "Call for Varieties · gloss · L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Citrus: avoid western exposures in Arizona."
   },
   {
     "card_id": "CCF-FRUT-004",
@@ -18782,7 +18812,7 @@
     "plant_group": "Vines and Climbers",
     "water_class": "VL",
     "heat_class": "excellent",
-    "sun_class": "full",
+    "sun_class": "full_to_part",
     "size_class": "large",
     "habit": "vine",
     "maintenance_level": "low",
@@ -18790,7 +18820,7 @@
     "phoenix_winter_fit": "typical_ok_skip_frost_pockets",
     "frost_pocket_ok": false,
     "frost_protect_needed": true,
-    "afternoon_shade_pref": false,
+    "afternoon_shade_pref": true,
     "reflected_heat_ok": false,
     "container_ok": false,
     "width_max_ft": 10.0,
@@ -18842,7 +18872,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "sun_class_confidence": "sourced",
+    "wave_f": true,
+    "wave_f_note": "Pink trumpet in the Valley: morning sun, afternoon shade."
   },
   {
     "card_id": "CCF-VINE-006",

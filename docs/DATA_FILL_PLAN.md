@@ -61,8 +61,8 @@ Do not add bloom months until seasons are solid. Do not add photos in this pass.
 **Wave E — done 2026-09-27.** See `docs/WAVE_E_LOG.md`. 40 false Swords recoded. 226 blade plants unchanged.
 
 
-**Wave F — sun_class only where a source says part shade / afternoon shade in Phoenix.**  
-Cap this wave. Most of the 417 `full` values are right.
+**Wave F — done 2026-09-27.** See `docs/WAVE_F_LOG.md`. Eleven Phoenix afternoon-shade corrections. Desert full-sun plants unchanged.
+
 
 ## Workflow
 
