@@ -31,12 +31,16 @@ Block-wall strips use ids `wall-block`, `shade-block`, `front-block`, `back-bloc
 - Strip order: wall, shade, front, back, gate, pots, gravel (skip collisions).
 
 - `exclude` optional. Card ids already shown on that strip. Reroll skips them.
+- `keep[room]` optional. `{ "A": "CCF-…", "C": "CCF-…" }` locks those seats. Fill only the missing seat. Put the outgoing card in `exclude[room]`.
 
 ### Response
 
 Same shape as before, plus on every strip:
 
-- `reroll_available`: true when another full Bone/Bloom/Floor exists in that room after excluding current picks and `exclude[strip]`.
+- `pool_size`: legal plants for this wall/piece/household
+- `more_count` / `pool_line`: face copy (`12 more for this wall`)
+- `reroll_available`: true when another full trio exists
+- each pick: `can_swap`, `alt_count`
 
 `place_label` is always the tapped side, even when the wall strip is off.
 
@@ -51,9 +55,12 @@ Same shape as before, plus on every strip:
 wall if `extras.wall`, then gate if on, then pots if on, then gravel if on.  
 Pots-only → `[pots]`. Path-only → `[gate]`.
 
-### Reroll
+### Reroll and swap
 
-UI keeps the first-set ids per strip. Each Three others appends the visible trio to `exclude[strip]` and calls match again. Other strips use the same brief and their own exclude lists.
+Full reroll: append the visible trio to `exclude[strip]`.
+
+Seat swap: send `keep[strip]` with the two seats that stay. Put the outgoing id in `exclude[strip]`. Do not open a catalog browser.
+
 
 ### Default winners
 

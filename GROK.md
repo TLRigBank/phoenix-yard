@@ -17,7 +17,8 @@ A phone-wide web app named **Phoenix Yard**. Line: **Plants that match the wall.
 1. **Aim.** Compact North / South / East / West under the plan. Writes `front_bearing`. West bed warms.
 2. **Stamp.** Household icons stay under the street. Tap a bed, stamp Bed / Pots / Gate / Gravel / Block / Tree as marks on that band. **Tree** plants a shade tree (`surfaces.shade_tree`). **Open / Tree / Eave / Cover** is existing shade (`cover`) and does not quote a tree.
 
-3. **Quote.** Plan stays up. Segment the selected wall by piece. Three cards under the plan. `Three others for this wall.`
+3. **Quote.** Plan stays up. Segment the selected wall by piece. Three cards under the plan. Show `12 more for this wall`. `Swap Bone` keeps the other two. `Three others for this wall` replaces the set.
+
 
 
 1. **Aim.** “Which way does the front of your house face?” North / South / East / West. Writes `front_bearing`. West wall warms itself. Walls label N/S/E/W.

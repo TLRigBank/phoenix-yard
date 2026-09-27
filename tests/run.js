@@ -538,8 +538,33 @@ const existingOnly = match(
 );
 assert(!existingOnly.strips.some((s) => String(s.id).startsWith("shade_tree")), "existing tree cover is not a shade-tree plant job");
 
+const wall = def.strips.find((s) => s.id === "wall");
+assert(typeof wall.pool_size === "number" && wall.pool_size > 3, "wall pool_size " + wall.pool_size);
+assert(wall.pool_line.indexOf("more for this wall") >= 0, "pool line " + wall.pool_line);
+assert(wall.picks.every((p) => typeof p.can_swap === "boolean"), "can_swap missing");
+
+const keepA = wall.picks[0].card_id;
+const keepC = wall.picks[2].card_id;
+const dropB = wall.picks[1].card_id;
+const swapped = match(
+  {
+    ...defaultBrief,
+    exclude: { wall: [dropB] },
+    keep: { wall: { A: keepA, C: keepC } },
+  },
+  catalog
+);
+const sw = swapped.strips.find((s) => s.id === "wall");
+assert(sw.picks[0].card_id === keepA, "swap moved Bone");
+assert(sw.picks[2].card_id === keepC, "swap moved Floor");
+assert(sw.picks[1].card_id !== dropB, "swap left Bloom in place");
+assert(sw.picks[1].job === "Bloom", "swap Bloom job");
+const genera = new Set(sw.picks.map((p) => p.botanical_name.split(/\s+/)[0]));
+assert(genera.size === sw.picks.length, "swap repeated a genus");
+
 if (failed) {
   console.error(failed + " failed");
   process.exit(1);
 }
 console.log("ok " + catalog.length + " cards, default strips locked, gates hold");
+

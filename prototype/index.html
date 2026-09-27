@@ -169,6 +169,11 @@ const DEMO = {
   }
 };
 
+const SWAP = {
+  A: { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", color: "#8AA0B4", why: "Another blade for this wall.", chip: "Almost no extra water", seat: "A", can_swap: true },
+  B: { name: "Autumn Sage", botanical: "Salvia greggii", job: "Bloom", color: "#9E2B2B", why: "Another flower for this wall.", chip: "Almost no extra water", seat: "B", can_swap: true },
+  C: { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", color: "#6B4F8A", why: "Another low plant for this wall.", chip: "Feeds the soil", seat: "C", can_swap: true }
+};
 const state = {
   mode: "aim",
   front: "N",
@@ -178,6 +183,7 @@ const state = {
   cover: { front: "none", left: "none", right: "none", back: "none" },
   kids: false, chew: false, wildlife: true, care: "Low",
   alt: false,
+  swaps: {},
   last: ""
 };
 
@@ -260,17 +266,27 @@ function pack() {
   const b = bearing(state.selected);
   const piece = list(state.selected).includes(state.piece) ? state.piece : (list(state.selected)[0] || "bed");
   const byB = DEMO[b] || DEMO.W;
-  const rows = byB[piece] || byB.bed || DEMO.W.bed;
-  return rows;
+  let rows = (byB[piece] || byB.bed || DEMO.W.bed).map((c, i) => ({ ...c, seat: ["A", "B", "C"][i], can_swap: true }));
+  const swaps = state.swaps[quoteKey()] || {};
+  return rows.map((c) => (swaps[c.seat] ? { ...c, ...swaps[c.seat], swapped: true } : c));
+}
+
+function quoteKey() {
+  const piece = list(state.selected).includes(state.piece) ? state.piece : (list(state.selected)[0] || "bed");
+  return state.selected + ":" + piece + (state.alt ? ":alt" : "");
 }
 
 function cards() {
-  return `<div class="trio">${pack().map((c) => `<article class="card">
+  const rows = pack();
+  const more = state.alt ? 6 : 12;
+  return `<p class="lead">${more} more for this wall</p>
+    <div class="trio">${rows.map((c) => `<article class="card">
     <div class="swatch" style="background:${c.color}"></div>
     <div class="top"><span class="name">${c.name}</span><span class="job">${c.job}</span></div>
     <p class="botanical">${c.botanical}</p>
     <p class="why">${c.why}</p>
     <span class="mini ${c.warn ? "warn" : ""}">${c.chip}</span>
+    ${c.can_swap ? `<button class="ghost" data-act="swap" data-id="${c.seat}" style="width:100%;margin-top:8px;min-height:40px">Swap ${c.job}</button>` : ""}
   </article>`).join("")}</div>`;
 }
 
@@ -358,7 +374,16 @@ document.getElementById("app").addEventListener("click", (e) => {
   }
   if (act === "reroll") {
     state.alt = !state.alt;
+    state.swaps[quoteKey()] = {};
     state.last = state.alt ? "Another legal set for this wall." : "Back to this wall’s first set.";
+  }
+  if (act === "swap") {
+    const key = quoteKey();
+    const cur = Object.assign({}, state.swaps[key] || {});
+    if (cur[b.dataset.id]) delete cur[b.dataset.id];
+    else cur[b.dataset.id] = SWAP[b.dataset.id];
+    state.swaps[key] = cur;
+    state.last = "Swapped one plant. The other two stayed.";
   }
   render();
 });

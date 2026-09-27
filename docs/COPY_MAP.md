@@ -27,6 +27,11 @@ Wall labels: North, South, East, West. Only the west wall uses the heat color.
 | Reroll | Three others for this wall |
 | Undo reroll | Back to this wall’s first set |
 | Quote back | Map |
+| Pool | 12 more for this wall |
+| Pool empty | No others for this wall |
+| Seat swap | Swap Bone / Swap Bloom / Swap Floor |
+| After seat swap | Swapped one plant. The other two stayed. |
+
 
 ## Jobs
 

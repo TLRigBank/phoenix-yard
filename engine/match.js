@@ -653,8 +653,19 @@ function validate(brief) {
   }
   if (brief.exclude != null) {
     if (typeof brief.exclude !== "object") return "exclude";
-    for (const key of ["wall", "gate", "pots", "gravel", "shade", "front", "back", "left", "right"]) {
+    for (const key of Object.keys(brief.exclude)) {
       if (brief.exclude[key] != null && !Array.isArray(brief.exclude[key])) return "exclude." + key;
+    }
+  }
+  if (brief.keep != null) {
+    if (typeof brief.keep !== "object") return "keep";
+    for (const key of Object.keys(brief.keep)) {
+      const keep = brief.keep[key];
+      if (keep == null) continue;
+      if (typeof keep !== "object") return "keep." + key;
+      for (const seat of ["A", "B", "C"]) {
+        if (keep[seat] != null && typeof keep[seat] !== "string") return "keep." + key + "." + seat;
+      }
     }
   }
   return null;
@@ -777,44 +788,75 @@ function excludedIds(brief, room) {
   return new Set(list);
 }
 
-function fillStrip(catalog, brief, room, prior) {
-  const blocked = excludedIds(brief, room);
-  const pool = catalog.filter(
+function keepMap(brief, room) {
+  const keep = brief.keep && brief.keep[room];
+  return keep && typeof keep === "object" ? keep : {};
+}
+
+function legalPool(catalog, brief, room, blocked) {
+  return catalog.filter(
     (card) => passesGlobal(card, brief, room) && passesRoom(card, room, brief) && !blocked.has(card.card_id)
   );
+}
+
+function seatCandidates(pool, room, seat, usedGenus, usedGroups) {
+  let cands = pool.filter((card) => !usedGenus.has(genusOf(card)));
+  const grouped = cands.filter((card) => seatsFor(room)[seat].includes(card.plant_group));
+  if (grouped.length) cands = grouped;
+  if (seat === "C" && usedGroups.length) {
+    const different = cands.filter((card) => !usedGroups.includes(card.plant_group));
+    if (different.length) cands = different;
+  }
+  if (pieceKind(room) === "gravel" && seat === "A") {
+    const short = cands.filter((card) => (card.height_max_ft || 0) <= 8);
+    if (short.length) cands = short;
+  }
+  if (pieceKind(room) === "gravel" && seat === "B") {
+    const cloud = cands.filter((card) => card.texture_body === "Cloud");
+    if (cloud.length) cands = cloud;
+  }
+  return cands;
+}
+
+function sortCands(cands, room, seat, brief, prior) {
+  const priorIds = new Set(prior.map((pick) => pick.card_id));
+  return cands.slice().sort((a, b) => {
+    const delta = totalScore(b, room, seat, brief, prior) - totalScore(a, room, seat, brief, prior);
+    if (delta) return delta;
+    const reuse = (priorIds.has(a.card_id) ? 0 : 1) - (priorIds.has(b.card_id) ? 0 : 1);
+    if (reuse) return reuse;
+    return a.card_id < b.card_id ? -1 : a.card_id > b.card_id ? 1 : 0;
+  });
+}
+
+function fillStrip(catalog, brief, room, prior) {
+  const blocked = excludedIds(brief, room);
+  const pool = legalPool(catalog, brief, room, blocked);
+  const openPool = legalPool(catalog, brief, room, new Set());
+  const keep = keepMap(brief, room);
+  const byId = new Map(catalog.map((card) => [card.card_id, card]));
   const usedGenus = new Set();
   const usedGroups = [];
   const picks = [];
   const emptyJobs = [];
   for (const seat of ["A", "B", "C"]) {
-    let cands = pool.filter((card) => !usedGenus.has(genusOf(card)));
-    const grouped = cands.filter((card) => seatsFor(room)[seat].includes(card.plant_group));
-    if (grouped.length) cands = grouped;
-    if (seat === "C" && usedGroups.length) {
-      const different = cands.filter((card) => !usedGroups.includes(card.plant_group));
-      if (different.length) cands = different;
+    const keptId = keep[seat];
+    const kept = keptId ? byId.get(keptId) : null;
+    const keptOk =
+      kept &&
+      passesGlobal(kept, brief, room) &&
+      passesRoom(kept, room, brief) &&
+      !usedGenus.has(genusOf(kept));
+    let best = null;
+    if (keptOk) best = kept;
+    else {
+      const cands = sortCands(seatCandidates(pool, room, seat, usedGenus, usedGroups), room, seat, brief, prior);
+      best = cands[0] || null;
     }
-    if (pieceKind(room) === "gravel" && seat === "A") {
-      const short = cands.filter((card) => (card.height_max_ft || 0) <= 8);
-      if (short.length) cands = short;
-    }
-    if (pieceKind(room) === "gravel" && seat === "B") {
-      const cloud = cands.filter((card) => card.texture_body === "Cloud");
-      if (cloud.length) cands = cloud;
-    }
-    if (!cands.length) {
+    if (!best) {
       emptyJobs.push(JOB[seat]);
       continue;
     }
-    const priorIds = new Set(prior.map((pick) => pick.card_id));
-    cands.sort((a, b) => {
-      const delta = totalScore(b, room, seat, brief, prior) - totalScore(a, room, seat, brief, prior);
-      if (delta) return delta;
-      const reuse = (priorIds.has(a.card_id) ? 0 : 1) - (priorIds.has(b.card_id) ? 0 : 1);
-      if (reuse) return reuse;
-      return a.card_id < b.card_id ? -1 : a.card_id > b.card_id ? 1 : 0;
-    });
-    const best = cands[0];
     picks.push(toPick(best, room, seat, brief, prior));
     prior.push({
       card_id: best.card_id,
@@ -824,9 +866,24 @@ function fillStrip(catalog, brief, room, prior) {
     usedGenus.add(genusOf(best));
     usedGroups.push(best.plant_group);
   }
+  for (const pick of picks) {
+    const seat = pick.job === "Bone" ? "A" : pick.job === "Bloom" ? "B" : "C";
+    const genus = new Set();
+    const groups = [];
+    for (const other of picks) {
+      if (other.card_id === pick.card_id) continue;
+      genus.add(genusOf({ botanical_name: other.botanical_name }));
+      const card = byId.get(other.card_id);
+      if (card) groups.push(card.plant_group);
+    }
+    const alts = seatCandidates(openPool, room, seat, genus, groups).filter((card) => card.card_id !== pick.card_id);
+    pick.can_swap = alts.length > 0;
+    pick.alt_count = alts.length;
+  }
   const meta = STRIP_META[room] || STRIP_META[baseRoom(room)];
   const climate = climateOf(room, brief);
   const shown = picks.map((pick) => pick.card_id);
+  const more = Math.max(0, openPool.length - picks.length);
   return {
     id: room,
     title: BEARING_NAME[climate] ? BEARING_NAME[climate] + " · " + meta.title : meta.title,
@@ -837,6 +894,9 @@ function fillStrip(catalog, brief, room, prior) {
     empty_jobs: emptyJobs,
     kept_off: pieceKind(room) === "gate" ? keptOffGate(catalog, brief) : [],
     ghosts: [],
+    pool_size: openPool.length,
+    more_count: more,
+    pool_line: more === 0 ? "No others for this wall" : more + " more for this wall",
     reroll_available: canReroll(catalog, brief, room, shown),
   };
 }
@@ -974,6 +1034,7 @@ function match(brief, catalog) {
       gravel_sides: sidesForPiece(brief, "gravel"),
       shade_tree_sides: sidesForPiece(brief, "shade_tree"),
       exclude: brief.exclude || {},
+      keep: brief.keep || {},
       guilds: brief.guilds,
     },
     place_label: PLACE[brief.hot_side],
