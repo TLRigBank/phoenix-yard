@@ -49,8 +49,8 @@ Do not add bloom months until seasons are solid. Do not add photos in this pass.
 **Wave A — done 2026-09-27.** See `docs/WAVE_A_LOG.md`. 114 cards tagged. 95 foliage colors sourced. 19 agaves still empty on purpose.
 
 
-**Wave B — flowering groups with good sources.**  
-Flowering Shrubs (0 empty seasons already), Perennials, Grasses, Vines. Fill missing colors and any bad seasons against UA / DBG / AMWUA.
+**Wave B — done 2026-09-27.** See `docs/WAVE_B_LOG.md`. 21 sourced patches. Unnamed canna / crape myrtle / plumeria colors still empty.
+
 
 **Wave C — cacti and aloe.**  
 Bloom color is usually documented. Seasons in Phoenix: many cacti late winter–spring. Source per species. Do not copy one hedgehog onto all *Echinocereus*.
