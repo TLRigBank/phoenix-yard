@@ -108,7 +108,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Ember"
     ],
@@ -139,7 +139,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "slipper plant stems"
   },
   {
     "card_id": "CCF-OSUC-057",
@@ -180,7 +183,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Ember"
     ],
@@ -213,7 +216,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "slipper plant stems"
   },
   {
     "card_id": "CCF-OSUC-058",
@@ -442,7 +448,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Plush",
     "color_moods": [
       "Dusk",
       "Moon"
@@ -476,7 +482,10 @@
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Senecio finger succulent"
   },
   {
     "card_id": "CCF-OSUC-062",
@@ -513,7 +522,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Plush",
     "color_moods": [
       "Dusk",
       "Moon",
@@ -546,7 +555,10 @@
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Senecio finger succulent"
   },
   {
     "card_id": "CCF-YUCC-001",
@@ -3656,7 +3668,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Plush",
     "color_moods": [
       "Ember"
     ],
@@ -3692,7 +3704,10 @@
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "SANBI + Chicago Botanic: blood-red flowers winter-spring"
+    "wave_b_note": "SANBI + Chicago Botanic: blood-red flowers winter-spring",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "ice plant fleshy triangular leaves, not blades"
   },
   {
     "card_id": "CCF-PERN-011",

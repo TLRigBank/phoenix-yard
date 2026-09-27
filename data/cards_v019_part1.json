@@ -34,7 +34,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Moon"
     ],
@@ -68,7 +68,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Night-blooming Acanthocereus; white flowers late spring-summer"
+    "wave_c_note": "Night-blooming Acanthocereus; white flowers late spring-summer",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "miniature clustered columns"
   },
   {
     "card_id": "CCF-CACT-002",
@@ -243,7 +246,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Sun",
       "Moon"
@@ -277,7 +280,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Astrophytum ornatum spring yellow"
+    "wave_c_note": "Astrophytum ornatum spring yellow",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Astrophytum ribbed body"
   },
   {
     "card_id": "CCF-CACT-005",
@@ -885,7 +891,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Ember",
       "Moon",
@@ -920,7 +926,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Cleistocactus silver torch stems"
   },
   {
     "card_id": "CCF-CACT-014",
@@ -957,7 +966,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Ember",
       "Sun"
@@ -993,7 +1002,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Cylindropuntia joints, not leaf blades"
   },
   {
     "card_id": "CCF-CACT-015",
@@ -1100,7 +1112,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Blush"
     ],
@@ -1134,7 +1146,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Cylindropuntia joints"
   },
   {
     "card_id": "CCF-CACT-017",
@@ -1171,7 +1186,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Sun"
     ],
@@ -1206,7 +1221,10 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Cylindropuntia joints"
   },
   {
     "card_id": "CCF-CACT-018",
@@ -1243,7 +1261,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Quiet green"
     ],
@@ -1280,7 +1298,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "FNA: flowering spring Apr-Jun; tepals yellow-green to gold, bronze, red, rose"
+    "wave_c_note": "FNA: flowering spring Apr-Jun; tepals yellow-green to gold, bronze, red, rose",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Cylindropuntia joints"
   },
   {
     "card_id": "CCF-CACT-019",
@@ -1388,7 +1409,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Ember",
       "Blush"
@@ -1423,7 +1444,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Echinocereus clustered cylinders"
   },
   {
     "card_id": "CCF-CACT-021",
@@ -1460,7 +1484,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Ember",
       "Blush"
@@ -1495,7 +1519,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Echinocereus clustered cylinders"
   },
   {
     "card_id": "CCF-CACT-022",
@@ -1532,7 +1559,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Ember"
     ],
@@ -1566,7 +1593,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Echinocereus clustered cylinders"
   },
   {
     "card_id": "CCF-CACT-023",
@@ -2577,7 +2607,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Blush"
     ],
@@ -2609,7 +2639,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Senita columnar stems"
   },
   {
     "card_id": "CCF-CACT-038",
@@ -2646,7 +2679,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Blush"
     ],
@@ -2679,7 +2712,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Mammillaria tuberculate mound"
   },
   {
     "card_id": "CCF-CACT-039",
@@ -2716,7 +2752,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Blush",
       "Moon"
@@ -2751,7 +2787,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Mammillaria tuberculate mound"
   },
   {
     "card_id": "CCF-CACT-040",
@@ -2788,7 +2827,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Moon"
     ],
@@ -2821,7 +2860,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Mammillaria tuberculate mound"
   },
   {
     "card_id": "CCF-CACT-041",
@@ -2858,7 +2900,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Blush"
     ],
@@ -2891,7 +2933,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Mammillaria tuberculate mound"
   },
   {
     "card_id": "CCF-CACT-042",
@@ -2928,7 +2973,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Blush"
     ],
@@ -2961,7 +3006,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Mammillaria tuberculate mound"
   },
   {
     "card_id": "CCF-CACT-043",
@@ -2998,7 +3046,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Moon"
     ],
@@ -3031,7 +3079,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Mammillaria tuberculate mound"
   },
   {
     "card_id": "CCF-CACT-044",
@@ -3068,7 +3119,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Sun"
     ],
@@ -3101,7 +3152,10 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Mammillaria tuberculate mound"
   },
   {
     "card_id": "CCF-CACT-045",
@@ -3422,7 +3476,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Dusk",
       "Moon",
@@ -3458,7 +3512,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Myrtillocactus blue columns"
   },
   {
     "card_id": "CCF-CACT-050",
@@ -3633,7 +3690,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "understory",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Sun"
     ],
@@ -3664,7 +3721,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Parodia/Notocactus golden ball"
   },
   {
     "card_id": "CCF-CACT-053",
@@ -14751,7 +14811,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Gloss",
     "color_moods": [
       "Ember",
       "Blush"
@@ -14784,7 +14844,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Adenium caudex and leaves, not blades"
   },
   {
     "card_id": "CCF-OSUC-002",
@@ -14889,7 +14952,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Gloss",
     "color_moods": [
       "Blush"
     ],
@@ -14920,7 +14983,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "jade leaves"
   },
   {
     "card_id": "CCF-OSUC-004",
@@ -15238,7 +15304,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Quiet green"
     ],
@@ -15264,7 +15330,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Desert Candle stems"
   },
   {
     "card_id": "CCF-OSUC-009",
@@ -15305,7 +15374,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Quiet green"
     ],
@@ -15331,7 +15400,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "African candelabra stems"
   },
   {
     "card_id": "CCF-OSUC-010",
@@ -15506,7 +15578,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Stone",
     "color_moods": [
       "Sun"
     ],
@@ -15536,7 +15608,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Medusa head radiating stems, not a blade rosette"
   },
   {
     "card_id": "CCF-OSUC-013",
@@ -15577,7 +15652,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Sun"
     ],
@@ -15605,7 +15680,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "cowhorn euphorbia stems"
   },
   {
     "card_id": "CCF-OSUC-014",
@@ -15713,7 +15791,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Quiet green"
     ],
@@ -15739,7 +15817,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "E. ingens candelabra"
   },
   {
     "card_id": "CCF-OSUC-016",
@@ -15780,7 +15861,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Quiet green"
     ],
@@ -15806,7 +15887,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "E. ingens crested stems"
   },
   {
     "card_id": "CCF-OSUC-017",
@@ -15847,7 +15931,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Quiet green"
     ],
@@ -15872,7 +15956,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "E. ingens candelabra"
   },
   {
     "card_id": "CCF-OSUC-018",
@@ -16345,7 +16432,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Ember"
     ],
@@ -16373,7 +16460,10 @@
     "bloom_class_confidence": "sourced",
     "foliage_color": "gold",
     "foliage_color_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "firestick stems"
   },
   {
     "card_id": "CCF-OSUC-025",
@@ -16414,7 +16504,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Quiet green"
     ],
@@ -16442,7 +16532,10 @@
     "bloom_class_confidence": "sourced",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "pencil euphorbia stems"
   },
   {
     "card_id": "CCF-OSUC-026",
@@ -16483,7 +16576,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Quiet green"
     ],
@@ -16509,7 +16602,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "E. trigona stems"
   },
   {
     "card_id": "CCF-OSUC-027",
@@ -16550,7 +16646,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Wild stem",
     "color_moods": [
       "Ember"
     ],
@@ -16578,7 +16674,10 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "E. trigona stems"
   },
   {
     "card_id": "CCF-OSUC-028",
@@ -16747,7 +16846,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Gloss",
     "color_moods": [
       "Dusk",
       "Silver"
@@ -16778,7 +16877,10 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "silver",
     "foliage_color_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Kalanchoe beharensis felted leaves"
   },
   {
     "card_id": "CCF-OSUC-031",
@@ -16815,7 +16917,7 @@
     "needs_support": "none",
     "n_fixer": false,
     "nurse_role": "none",
-    "texture_body": "Swords",
+    "texture_body": "Gloss",
     "color_moods": [
       "Quiet green"
     ],
@@ -16845,7 +16947,10 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "texture_confidence": "sourced",
+    "wave_e": true,
+    "wave_e_note": "Kalanchoe beharensis felted leaves"
   },
   {
     "card_id": "CCF-OSUC-032",
