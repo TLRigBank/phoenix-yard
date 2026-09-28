@@ -61,7 +61,8 @@ Do not add bloom months until seasons are solid. Do not add photos in this pass.
 **Wave E — done 2026-09-27.** See `docs/WAVE_E_LOG.md`. 40 false Swords recoded. 226 blade plants unchanged.
 
 
-**Wave F — done 2026-09-27.** See `docs/WAVE_F_LOG.md`. Eleven Phoenix afternoon-shade corrections. Desert full-sun plants unchanged.
+**Wave P0 — done 2026-09-28.** See `docs/WAVE_P0_LOG.md`. 40 quoted faces have sourced iNaturalist photos.
+
 
 
 ## Workflow

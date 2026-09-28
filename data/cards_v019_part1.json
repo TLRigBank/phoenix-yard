@@ -1372,7 +1372,16 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer"
+    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer",
+    "photo": {
+      "id": "CCF-CACT-019",
+      "path": "photos/CCF-CACT-019.webp",
+      "credit": "iNaturalist / kevinfaccenda",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/252125815",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-CACT-020",
@@ -1447,7 +1456,16 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Echinocereus clustered cylinders"
+    "wave_e_note": "Echinocereus clustered cylinders",
+    "photo": {
+      "id": "CCF-CACT-020",
+      "path": "photos/CCF-CACT-020.webp",
+      "credit": "iNaturalist / danharville",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/109552875",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-CACT-021",
@@ -1522,7 +1540,16 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Echinocereus clustered cylinders"
+    "wave_e_note": "Echinocereus clustered cylinders",
+    "photo": {
+      "id": "CCF-CACT-021",
+      "path": "photos/CCF-CACT-021.webp",
+      "credit": "iNaturalist / belgomex",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/73052874",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-CACT-022",
@@ -1596,7 +1623,16 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Echinocereus clustered cylinders"
+    "wave_e_note": "Echinocereus clustered cylinders",
+    "photo": {
+      "id": "CCF-CACT-022",
+      "path": "photos/CCF-CACT-022.webp",
+      "credit": "iNaturalist / mcloudhughes",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/19147021",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-CACT-023",
@@ -3936,7 +3972,16 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "photo": {
+      "id": "CCF-CACT-055",
+      "path": "photos/CCF-CACT-055.webp",
+      "credit": "iNaturalist / paulexcoff",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/44943905",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-CACT-056",
@@ -7783,7 +7828,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-017",
+      "path": "photos/CCF-AGAV-017.webp",
+      "credit": "iNaturalist / yoshito_fm",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/35619624",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-018",
@@ -8157,7 +8211,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-023",
+      "path": "photos/CCF-AGAV-023.webp",
+      "credit": "iNaturalist / stekkelpak",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/27481004",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-024",
@@ -9916,7 +9979,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-051",
+      "path": "photos/CCF-AGAV-051.webp",
+      "credit": "iNaturalist / ck2az",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/12299671",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-052",
@@ -10106,7 +10178,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-054",
+      "path": "photos/CCF-AGAV-054.webp",
+      "credit": "iNaturalist / aurelro",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/251776089",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-055",
@@ -14557,7 +14638,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "photo": {
+      "id": "CCF-ALOE-037",
+      "path": "photos/CCF-ALOE-037.webp",
+      "credit": "iNaturalist / andrew_hankey",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/11212203",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-ALOE-038",
@@ -14847,7 +14937,16 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Adenium caudex and leaves, not blades"
+    "wave_e_note": "Adenium caudex and leaves, not blades",
+    "photo": {
+      "id": "CCF-OSUC-001",
+      "path": "photos/CCF-OSUC-001.webp",
+      "credit": "iNaturalist / morten",
+      "license": "cc-by",
+      "source_url": "http://www.inaturalist.org/observations/1501426",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-OSUC-002",
@@ -17161,7 +17260,16 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "photo": {
+      "id": "CCF-OSUC-034",
+      "path": "photos/CCF-OSUC-034.webp",
+      "credit": "iNaturalist / acjci",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/386766798",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-OSUC-035",

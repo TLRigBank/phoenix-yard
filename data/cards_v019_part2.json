@@ -625,7 +625,16 @@
     "bloom_class_confidence": "sourced",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-YUCC-001",
+      "path": "photos/CCF-YUCC-001.webp",
+      "credit": "iNaturalist / benavidesmz",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/282558741",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-YUCC-002",
@@ -1240,7 +1249,16 @@
     ],
     "short_why": "Red Yucca · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "photo": {
+      "id": "CCF-YUCC-010",
+      "path": "photos/CCF-YUCC-010.webp",
+      "credit": "iNaturalist / codystricker",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/139105911",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-YUCC-011",
@@ -1309,7 +1327,16 @@
     ],
     "short_why": "Yellow Yucca · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "photo": {
+      "id": "CCF-YUCC-011",
+      "path": "photos/CCF-YUCC-010.webp",
+      "credit": "iNaturalist / codystricker",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/139105911",
+      "inherits_from": "CCF-YUCC-010",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-YUCC-012",
@@ -1521,7 +1548,16 @@
     ],
     "short_why": "Banana Yucca · SW native · swords · VL",
     "fruit_colors": [],
-    "schema_version": "0.1.9-phoenix-p1-enums"
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "photo": {
+      "id": "CCF-YUCC-014",
+      "path": "photos/CCF-YUCC-014.webp",
+      "credit": "iNaturalist / grant_cactus",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/59017918",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-YUCC-015",
@@ -3497,7 +3533,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-PERN-007",
+      "path": "photos/CCF-PERN-007.webp",
+      "credit": "iNaturalist / matsonburger",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/99497825",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-PERN-008",
@@ -4138,7 +4183,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-PERN-016",
+      "path": "photos/CCF-PERN-016.webp",
+      "credit": "iNaturalist / biolily",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/159271486",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-PERN-017",
@@ -5635,7 +5689,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-PERN-037",
+      "path": "photos/CCF-PERN-037.webp",
+      "credit": "iNaturalist / sambiology",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/12284731",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-PERN-038",
@@ -5707,7 +5770,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-PERN-038",
+      "path": "photos/CCF-PERN-038.webp",
+      "credit": "iNaturalist / grant_cactus",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/75357284",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-PERN-039",
@@ -5779,7 +5851,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-PERN-039",
+      "path": "photos/CCF-PERN-039.webp",
+      "credit": "iNaturalist / biodiversian",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/263710538",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-PERN-040",
@@ -6496,7 +6577,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-PERN-049",
+      "path": "photos/CCF-PERN-049.webp",
+      "credit": "iNaturalist / abrahamsanchez",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/337612161",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-PERN-050",
@@ -6858,7 +6948,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-PERN-054",
+      "path": "photos/CCF-PERN-054.webp",
+      "credit": "iNaturalist / entrelasramas",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/256386066",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-PERN-055",
@@ -7078,7 +7177,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-PERN-057",
+      "path": "photos/CCF-PERN-057.webp",
+      "credit": "iNaturalist / tmessick",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/371847127",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-PERN-058",
@@ -8007,7 +8115,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-FSHB-002",
+      "path": "photos/CCF-FSHB-002.webp",
+      "credit": "iNaturalist / belgomex",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/92903711",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-FSHB-003",
@@ -8080,7 +8197,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-FSHB-003",
+      "path": "photos/CCF-FSHB-003.webp",
+      "credit": "iNaturalist / fluffberger",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/349063927",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-FSHB-004",
@@ -8583,7 +8709,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-FSHB-010",
+      "path": "photos/CCF-FSHB-010.webp",
+      "credit": "iNaturalist / paulasman",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/98659543",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-FSHB-011",
@@ -12354,7 +12489,16 @@
     "bloom_class_confidence": "sourced",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-LSHB-021",
+      "path": "photos/CCF-LSHB-021.webp",
+      "credit": "iNaturalist / velodrome",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/190415666",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-LSHB-022",
@@ -12493,7 +12637,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true
+    "wave_b": true,
+    "photo": {
+      "id": "CCF-GRAS-001",
+      "path": "photos/CCF-GRAS-001.webp",
+      "credit": "iNaturalist / craigmartin",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/283789644",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-GRAS-002",
@@ -12845,7 +12998,16 @@
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
     "wave_b": true,
-    "wave_b_note": "Green Things Nursery Tucson: tan rods like deer grass, late summer-fall"
+    "wave_b_note": "Green Things Nursery Tucson: tan rods like deer grass, late summer-fall",
+    "photo": {
+      "id": "CCF-GRAS-006",
+      "path": "photos/CCF-GRAS-006.webp",
+      "credit": "iNaturalist / alexmor",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/158384357",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-GRAS-007",
@@ -13339,7 +13501,16 @@
     "short_why": "Mulga Acacia · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-DTRE-001",
+      "path": "photos/CCF-DTRE-001.webp",
+      "credit": "iNaturalist / gregtasney",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/395113506",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-DTRE-002",
@@ -13891,7 +14062,16 @@
     "short_why": "Blue Palo Verde · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-DTRE-009",
+      "path": "photos/CCF-DTRE-009.webp",
+      "credit": "iNaturalist / thebeachcomber",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/346958958",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-DTRE-010",
@@ -13961,7 +14141,16 @@
     "short_why": "Cercidium hybrid 'Desert Museum' · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-DTRE-010",
+      "path": "photos/CCF-DTRE-010.webp",
+      "credit": "iNaturalist / starrystar",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/104066648",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-DTRE-011",
@@ -14100,7 +14289,16 @@
     "short_why": "Foothill Palo Verde · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-DTRE-012",
+      "path": "photos/CCF-DTRE-012.webp",
+      "credit": "iNaturalist / swbirder",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/144457024",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-DTRE-013",
@@ -14238,7 +14436,16 @@
     "short_why": "Palo Brea · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-DTRE-014",
+      "path": "photos/CCF-DTRE-014.webp",
+      "credit": "iNaturalist / nicoolejnik",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/317651990",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-DTRE-015",
@@ -14450,7 +14657,16 @@
     "short_why": "Desert Willow · SW native · gloss · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-DTRE-017",
+      "path": "photos/CCF-DTRE-017.webp",
+      "credit": "iNaturalist / thunefeld",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/7950415",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-DTRE-018",
@@ -14590,7 +14806,16 @@
     "short_why": "Ironwood · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-DTRE-019",
+      "path": "photos/CCF-DTRE-019.webp",
+      "credit": "iNaturalist / rociojgo",
+      "license": "cc-by",
+      "source_url": "http://conabio.inaturalist.org/observations/7137831",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-DTRE-020",
@@ -15138,7 +15363,16 @@
     "short_why": "Native Mesquite · SW native · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-DTRE-027",
+      "path": "photos/CCF-DTRE-027.webp",
+      "credit": "iNaturalist / jacobfriend",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/146003314",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-OTRE-001",
@@ -18180,7 +18414,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-PALM-007",
+      "path": "photos/CCF-PALM-007.webp",
+      "credit": "iNaturalist / blevine",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/102895494",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-FRUT-001",
@@ -18519,7 +18762,16 @@
     "short_why": "Wonderful Pomegranate · gloss · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal"
+    "bloom_class": "seasonal",
+    "photo": {
+      "id": "CCF-FRUT-005",
+      "path": "photos/CCF-FRUT-005.webp",
+      "credit": "iNaturalist / proteros",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/143838780",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-VINE-001",
