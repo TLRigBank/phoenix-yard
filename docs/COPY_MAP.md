@@ -23,7 +23,12 @@ Wall labels: North, South, East, West. Only the west wall uses the heat color.
 |---|---|
 | Aim primary | That’s the front |
 | Stamp primary | See the plants |
-| Stamp empty | Put something on a wall |
+| Cover row | Open · Canopy · Eave · Structure |
+| Cover heading | Already shaded |
+| Piece tree | Tree |
+| Stamp empty primary | See the plants (disabled) |
+| Start over | Start over |
+
 | Reroll | Three others for this wall |
 | Undo reroll | Back to this wall’s first set |
 | Quote back | Map |

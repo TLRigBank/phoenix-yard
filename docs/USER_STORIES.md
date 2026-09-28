@@ -29,7 +29,8 @@ Happy path: aim the front door → stamp pieces on the house map → four househ
 
 **US-25** Block wall is its own strip with the block-wall gates.
 
-**US-49** After aim, the west bed is selected so stamps have a target. Household stays on the street bar. Quote footer is Map + Three others. Tapping another stamped bed updates the trio in place.
+**US-50** Default look is dusk. West is a dim wash, selected is a pine ring, stamped beds show stamp icons. Cover uses Canopy, not Tree. See the plants is off until a piece is stamped.
+
 
 
 

@@ -6,18 +6,26 @@
 <title>Phoenix Yard</title>
 <style>
   :root {
-    --ink: #1c1916;
-    --pine: #1B3A2F;
-    --sand: #E7DCC8;
-    --paper: #FFFBF4;
-    --line: #D4CBB8;
-    --muted: #5A5348;
-    --ember: #C45A28;
-    --west: #E8B08A;
+    --paper: #121A17;
+    --sand: #1C2621;
+    --ink: #E8E0D4;
+    --pine: #9FBFB0;
+    --pine-fill: #2A4A3C;
+    --house: #0F3A2C;
+    --muted: #A39888;
+    --line: #3A4640;
+    --ember: #E07A45;
+    --west: #5A3220;
+    --warn-bg: #5A3220;
+    --warn-ink: #F3D0B8;
+    --chip-bg: #1B3A2F;
+    --chip-ink: #C5D9CF;
+    --street: #0E1411;
+    --notch: #C4A574;
   }
   * { box-sizing: border-box; }
   html, body {
-    margin: 0; background: var(--sand); color: var(--ink);
+    margin: 0; background: #0E1411; color: var(--ink);
     font: 500 16px/1.4 "Avenir Next", "Segoe UI", sans-serif;
   }
   button:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
@@ -34,49 +42,44 @@
   button.pri, button.ghost, button.ans, button.chip, button.seg {
     border-radius: 12px; min-height: 44px; padding: 10px 12px; font-size: 16px; font-weight: 650; cursor: pointer;
   }
-  button.pri { flex: 1; background: var(--pine); color: #fff; border: 0; }
+  button.pri { flex: 1; background: var(--pine-fill); color: var(--ink); border: 0; }
+  button.pri[disabled] { opacity: .4; cursor: not-allowed; }
   button.ghost { flex: 1; background: transparent; border: 1px solid var(--line); color: var(--pine); }
-  button.ans { flex: 1; background: #fff; border: 1px solid var(--line); color: var(--ink); }
-  button.ans.on { background: var(--pine); color: #fff; border-color: var(--pine); }
+  button.quiet { background: none; border: 0; color: var(--muted); font-size: 13px; font-weight: 650; min-height: 36px; padding: 0; cursor: pointer; }
+  button.ans { flex: 1; background: var(--sand); border: 1px solid var(--line); color: var(--ink); }
+  button.ans.on { background: var(--pine-fill); color: var(--ink); border-color: var(--pine-fill); }
   .compass { display: flex; gap: 6px; margin: 0 0 8px; }
   .row { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 8px; }
-  button.chip { flex: 1; min-width: 56px; background: #fff; border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-  button.chip.on { background: var(--pine); color: #fff; border-color: var(--pine); }
-  button.seg { flex: 1; background: #fff; border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-  button.seg.on { background: var(--pine); color: #fff; border-color: var(--pine); }
-  .icons { display: flex; gap: 6px; margin: 0 0 8px; }
+  button.chip { flex: 1; min-width: 56px; background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  button.chip.on { background: var(--pine-fill); color: var(--ink); border-color: var(--pine-fill); }
+  button.seg { flex: 1; background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  button.seg.on { background: var(--pine-fill); color: var(--ink); border-color: var(--pine-fill); }
+  .icons { display: flex; gap: 6px; margin: 0 0 10px; }
   button.icon {
-    flex: 1; min-height: 40px; border-radius: 10px; border: 1px solid var(--line); background: #fff;
-    color: var(--muted); font-size: 12px; font-weight: 650; cursor: pointer;
+    flex: 1; min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: transparent;
+    color: var(--muted); font-size: 13px; font-weight: 650; cursor: pointer;
   }
-  button.icon.on { border-color: var(--pine); color: var(--pine); background: #E7F0EA; }
+  button.icon.on { background: #E8E0D4; color: #1B3A2F; border-color: #E8E0D4; }
 
-  .yard { position: relative; height: 264px; margin: 0 0 10px; background: #E3D6BE; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
-  .street { position: absolute; left: 0; right: 0; top: 0; height: 28px; background: #6A6660; color: #fff; font-size: 10px; font-weight: 750; letter-spacing: .16em; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; text-transform: uppercase; z-index: 5; }
-  .street span { letter-spacing: .16em; }
-  .street .hh { display: flex; gap: 4px; text-transform: none; letter-spacing: 0; }
-  .street .hh button {
-    min-height: 22px; padding: 0 6px; border: 0; border-radius: 6px; background: transparent;
-    color: #E8E0D4; font-size: 10px; font-weight: 650; cursor: pointer;
-  }
-  .street .hh button.on { background: #E8E0D4; color: #3A3630; }
+  .yard { position: relative; height: 264px; margin: 0 0 10px; background: #161E1B; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  .street { position: absolute; left: 0; right: 0; top: 0; height: 28px; background: var(--street); color: #C5D9CF; font-size: 10px; font-weight: 750; letter-spacing: .16em; display: flex; align-items: center; justify-content: center; text-transform: uppercase; z-index: 5; }
   .pool { margin: 8px 0 0; color: var(--muted); font-size: 13px; font-weight: 500; text-align: center; }
   button.swap {
     width: 100%; margin-top: 8px; min-height: 40px; border-radius: 10px;
     background: transparent; border: 1px solid var(--line); color: var(--pine);
     font-size: 15px; font-weight: 650; cursor: pointer;
   }
-  .walk { position: absolute; left: 50%; top: 28px; width: 16px; height: 28px; margin-left: -8px; background: #C9BDA8; z-index: 4; }
+  .walk { position: absolute; left: 50%; top: 28px; width: 18px; height: 32px; margin-left: -9px; background: #3A4640; z-index: 4; }
   .house {
     position: absolute; left: 50%; top: 54%; width: 96px; height: 78px; margin: -39px 0 0 -48px;
-    background: var(--pine); border-radius: 3px; z-index: 4;
+    background: var(--house); border-radius: 3px; z-index: 4;
   }
   .notch {
-    position: absolute; left: 50%; top: -7px; width: 18px; height: 10px; margin-left: -9px;
-    background: #C4A574; border-radius: 2px 2px 0 0; z-index: 5;
+    position: absolute; left: 50%; top: -10px; width: 22px; height: 14px; margin-left: -11px;
+    background: var(--notch); border-radius: 3px 3px 0 0; z-index: 5;
   }
   .bed {
-    position: absolute; border: 2px dashed #B7AD9A; background: rgba(255,251,244,.45);
+    position: absolute; border: 2px dashed #3A4640; background: transparent;
     color: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center;
     gap: 4px; z-index: 3; cursor: pointer; padding: 4px;
   }
@@ -84,34 +87,35 @@
   .bed[data-side="back"] { left: 18%; right: 18%; bottom: 8px; height: 52px; border-radius: 8px; }
   .bed[data-side="left"] { left: 6px; top: 78px; width: 72px; height: 112px; border-radius: 8px; }
   .bed[data-side="right"] { right: 6px; top: 78px; width: 72px; height: 112px; border-radius: 8px; }
-  .bed.filled { border-style: solid; background: rgba(255,251,244,.82); }
-  .bed.W { background: var(--west); border-color: var(--ember); border-style: solid; color: #6E2E10; }
+  .bed.filled { border-style: solid; border-color: var(--line); }
+  .bed.W { background: var(--west); border-color: transparent; }
+  .bed.W.filled { border-color: var(--line); border-style: solid; }
   .bed.sel { box-shadow: 0 0 0 3px var(--pine); }
   .blabel { font-size: 12px; font-weight: 650; }
   .imarks { display: flex; gap: 4px; align-items: center; }
-  .imarks svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .imarks svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; }
   .more { font-size: 11px; font-weight: 650; }
-  .canopy { position: absolute; width: 36px; height: 20px; border-radius: 12px; background: rgba(27,58,47,.38); z-index: 6; pointer-events: none; }
+  .canopy { position: absolute; width: 36px; height: 20px; border-radius: 12px; background: rgba(159,191,176,.28); z-index: 6; pointer-events: none; }
   .canopy.front { left: 50%; top: 34px; margin-left: -18px; }
   .canopy.back { left: 50%; bottom: 12px; margin-left: -18px; }
   .canopy.left { left: 16px; top: 112px; }
   .canopy.right { right: 16px; top: 112px; }
-  .blk { position: absolute; background: #7A7266; z-index: 2; pointer-events: none; }
+  .blk { position: absolute; background: #5A5348; z-index: 2; pointer-events: none; }
   .blk.front { left: 18%; right: 18%; top: 26px; height: 5px; }
   .blk.back { left: 18%; right: 18%; bottom: 6px; height: 5px; }
   .blk.left { left: 4px; top: 80px; width: 5px; height: 108px; }
   .blk.right { right: 4px; top: 80px; width: 5px; height: 108px; }
 
   .trio { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 0 6px; }
-  .card { flex: 0 0 78%; scroll-snap-align: start; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px; }
-  .swatch { height: 40px; border-radius: 8px; margin: 0 0 8px; }
-  .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
-  .name { font-weight: 750; font-size: 17px; }
-  .job { font-size: 12px; font-weight: 650; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+  .card { flex: 0 0 78%; scroll-snap-align: start; background: var(--sand); border: 1px solid var(--line); border-radius: 14px; padding: 12px; box-shadow: 0 8px 18px #00000040; }
+  .card.peek { opacity: .85; box-shadow: none; }
+  .swatch { height: 8px; border-radius: 8px; margin: 0 0 8px; opacity: .85; }
+  .job { display: block; font-size: 11px; font-weight: 650; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin: 0 0 2px; }
+  .name { font-weight: 750; font-size: 17px; color: var(--ink); }
   .botanical { margin: 0; font-size: 13px; color: var(--muted); font-style: italic; font-weight: 500; }
   .why { margin: 6px 0 0; font-weight: 500; }
-  .mini { display: inline-block; font-size: 12px; font-weight: 650; border-radius: 999px; padding: 3px 8px; background: #E7F0EA; color: var(--pine); margin: 6px 4px 0 0; }
-  .mini.warn { background: #F3D0B8; color: #6E2E10; }
+  .mini { display: inline-block; font-size: 12px; font-weight: 650; border-radius: 999px; padding: 3px 8px; background: var(--chip-bg); color: var(--chip-ink); margin: 6px 4px 0 0; }
+  .mini.warn { background: var(--warn-bg); color: var(--warn-ink); }
 </style>
 </head>
 <body>
@@ -213,8 +217,8 @@ function placeLine() {
 
 function glyph() {
   return `<svg class="glyph" viewBox="0 0 22 22" aria-hidden="true">
-    <rect x="1" y="1" width="20" height="20" rx="3" fill="#E7DCC8" stroke="#1B3A2F" stroke-width="1.4"/>
-    <rect x="7" y="7" width="8" height="8" fill="#1B3A2F"/>
+    <rect x="1" y="1" width="20" height="20" rx="3" fill="#1C2621" stroke="#9FBFB0" stroke-width="1.4"/>
+    <rect x="7" y="7" width="8" height="8" fill="#0F3A2C"/>
     <rect x="7" y="3" width="8" height="3" fill="#C45A28"/>
   </svg>`;
 }
@@ -239,7 +243,7 @@ function yard() {
   const trees = ["front", "left", "right", "back"].filter((s) => state.cover[s] === "tree").map((s) => `<div class="canopy ${s}"></div>`).join("");
   const blocks = ["front", "left", "right", "back"].filter((s) => list(s).includes("block_wall")).map((s) => `<div class="blk ${s}"></div>`).join("");
   return `<div class="yard">
-    <div class="street"><span>Street</span>${state.mode === "aim" ? "" : householdBar()}</div>
+    <div class="street">Street</div>
     <div class="walk"></div>
     ${blocks}${beds}${trees}
     <div class="house"><span class="notch" title="Front door"></span></div>
@@ -247,15 +251,14 @@ function yard() {
 }
 
 function householdBar() {
-  return `<div class="hh">
-    <button type="button" class="${state.kids ? "on" : ""}" data-act="tog" data-id="kids">Kids</button>
-    <button type="button" class="${state.chew ? "on" : ""}" data-act="tog" data-id="chew">Chew</button>
-    <button type="button" class="${state.wildlife ? "on" : ""}" data-act="tog" data-id="wildlife">Wild</button>
-    <button type="button" class="${state.care !== "Low" ? "on" : ""}" data-act="care">${state.care === "Low" ? "Low" : state.care === "Weekend" ? "Wknd" : "Hobby"}</button>
+  if (state.mode === "aim") return "";
+  return `<div class="icons">
+    <button type="button" class="icon ${state.kids ? "on" : ""}" data-act="tog" data-id="kids">Kids</button>
+    <button type="button" class="icon ${state.chew ? "on" : ""}" data-act="tog" data-id="chew">Chew</button>
+    <button type="button" class="icon ${state.wildlife ? "on" : ""}" data-act="tog" data-id="wildlife">Wild</button>
+    <button type="button" class="icon ${state.care !== "Low" ? "on" : ""}" data-act="care">${state.care === "Low" ? "Time: low" : state.care === "Weekend" ? "Weekends" : "Hobby"}</button>
   </div>`;
 }
-
-function household() { return ""; }
 
 function tray() {
   const side = state.selected;
@@ -263,7 +266,7 @@ function tray() {
   const pcs = PIECES.map(([id, label]) =>
     `<button class="chip ${on.includes(id) ? "on" : ""}" data-act="stamp" data-id="${id}">${label}</button>`
   ).join("");
-  const cvs = [["none", "Open"], ["tree", "Tree"], ["eave", "Eave"], ["structure", "Cover"]].map(([id, label]) =>
+  const cvs = [["none", "Open"], ["tree", "Canopy"], ["eave", "Eave"], ["structure", "Structure"]].map(([id, label]) =>
     `<button class="chip ${state.cover[side] === id ? "on" : ""}" data-act="cover" data-id="${id}">${label}</button>`
   ).join("");
   return `<div class="row">${pcs}</div><div class="row">${cvs}</div>`;
@@ -273,7 +276,7 @@ function segs() {
   const on = list(state.selected);
   if (on.length <= 1) return "";
   return `<div class="row">${on.map((id) =>
-    `<button class="seg ${state.piece === id ? "on" : ""}" data-act="piece" data-id="${id}">${id === "block_wall" ? "Block" : id}</button>`
+    `<button class="seg ${state.piece === id ? "on" : ""}" data-act="piece" data-id="${id}">${id === "block_wall" ? "Block" : id === "shade_tree" ? "Tree" : id}</button>`
   ).join("")}</div>`;
 }
 
@@ -294,12 +297,13 @@ function quoteKey() {
 function cards() {
   const rows = pack();
   const more = state.alt ? 6 : 12;
-  return `<div class="trio">${rows.map((c) => `<article class="card">
+  return `<div class="trio">${rows.map((c, i) => `<article class="card${i ? " peek" : ""}">
     <div class="swatch" style="background:${c.color}"></div>
-    <div class="top"><span class="name">${c.name}</span><span class="job">${c.job}</span></div>
+    <span class="job">${c.job}</span>
+    <div class="name">${c.name}</div>
     <p class="botanical">${c.botanical}</p>
-    <p class="why">${c.why}</p>
     <span class="mini ${c.warn ? "warn" : ""}">${c.chip}</span>
+    <p class="why">${c.why}</p>
     ${c.can_swap ? `<button class="swap" data-act="swap" data-id="${c.seat}">Swap ${c.job}</button>` : ""}
   </article>`).join("")}</div>
   <p class="pool">${more} more for this wall</p>`;
@@ -326,13 +330,15 @@ function screenYard() {
     <main>
       <p class="place">${placeLine()}</p>
       ${yard()}
+      ${householdBar()}
       ${tray()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
     </main>
     <footer>
       <button class="ghost" data-act="mode" data-id="aim">Aim</button>
-      <button class="pri" data-act="quote">See the plants</button>
-    </footer>`;
+      <button class="pri" data-act="quote" ${hasAny() ? "" : "disabled"}>See the plants</button>
+    </footer>
+    <p style="text-align:center;margin:-8px 18px 20px"><button class="quiet" data-act="reset">Start over</button></p>`;
 }
 
 function screenQuote() {
@@ -342,6 +348,7 @@ function screenQuote() {
     <main>
       <p class="place">${NAME[bearing(state.selected)]} · ${label}</p>
       ${yard()}
+      ${householdBar()}
       ${segs()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
       ${list(state.selected).length ? cards() : `<p class="lead">Put something on a wall.</p>`}
@@ -404,6 +411,14 @@ document.getElementById("app").addEventListener("click", (e) => {
     else cur[b.dataset.id] = SWAP[b.dataset.id];
     state.swaps[key] = cur;
     state.last = "Swapped one plant. The other two stayed.";
+  }
+  if (act === "reset") {
+    state.surfaces = { front: [], left: [], right: [], back: [] };
+    state.cover = { front: "none", left: "none", right: "none", back: "none" };
+    state.mode = "aim";
+    state.last = "";
+    state.swaps = {};
+    state.alt = false;
   }
   render();
 });

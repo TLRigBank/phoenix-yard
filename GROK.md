@@ -2,7 +2,7 @@
 
 You are building the **Phoenix Yard** digital experience. This file is the contract. If a request conflicts with this file on scope, this file wins unless the user explicitly changes scope.
 
-Gates, scores, and slots live only in `docs/DECISION_TREE.md`. Words on screen live only in `docs/COPY_MAP.md`. Brand: `docs/BRAND.md`.
+Gates live in `docs/DECISION_TREE.md`. Words live in `docs/COPY_MAP.md`. Brand: `docs/BRAND.md`. Look: `docs/DUSK.md`.
 
 ## The mistake this file exists to prevent
 
@@ -10,18 +10,18 @@ Gates, scores, and slots live only in `docs/DECISION_TREE.md`. Words on screen l
 
 Aiming the house does not turn on a west bed. After aim, **select** the west bed so stamps have a target. That is focus, not a project.
 
-## Layout (three bands)
+Do not invert the old sand UI. Use dusk tokens. West wash, selected ring, and stamped icons are three different signals.
 
-1. **Place** — the plan.
-2. **Act** — controls for the selected bed only.
+## Layout
+
+1. **Place** — the plan. Street says Street only. Door notch is tan and readable.
+2. **Act** — household row under the lot, then stamps for the selected bed.
 3. **Judge** — three cards, or nothing.
-
-Household lives as four small marks on the street bar after aim. Ember is the west bed and warning chips only.
 
 ## Walk
 
-1. **Aim.** “Which way does the front face?” N / S / E / W. Writes `front_bearing`. West warms. Primary: `That’s the front.` Then select the west bed.
-2. **Stamp.** Two rows only: Bed / Pots / Gate / Gravel / Block / Tree, then Open / Tree / Eave / Cover. Tree stamp = plant a shade tree. Cover Tree = existing canopy.
-3. **Quote.** Title is `West · bed`. Tap another marked bed and the trio updates — no second “See the plants.” Swap lives on the card. Footer is `Map` and `Three others for this wall`. Pool line sits under the cards: `12 more for this wall`.
+1. **Aim.** “Which way does the front face?” N / S / E / W. Writes `front_bearing`. West warms with a dim wash. Primary: `That’s the front.` Then select the west bed.
+2. **Stamp.** Pieces: Bed / Pots / Gate / Gravel / Block / **Tree**. Cover: Open / **Canopy** / Eave / Structure. Tree plants a shade tree. Canopy is existing shade (`cover: tree`). See the plants stays disabled until a piece is on.
+3. **Quote.** Title `West · tree`. Tap another marked bed and the trio updates. Snap to Bone. Swap on the card. Footer: Map + Three others. Pool line under the cards.
 
-Do not add a catalog browser, a fourth card, chew as a footer primary, or a match-count badge.
+Do not put household on the street bar. Do not label cover “Tree.” Do not add a catalog browser or a fourth card.
