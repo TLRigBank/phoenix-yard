@@ -10766,16 +10766,7 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true,
-    "photo": {
-      "id": "CCF-FSHB-032",
-      "path": "photos/CCF-FSHB-032.webp",
-      "credit": "iNaturalist / moon_sun",
-      "license": "cc-by",
-      "source_url": "https://www.inaturalist.org/observations/404315379",
-      "inherits_from": null,
-      "confidence": "sourced"
-    }
+    "wave_b": true
   },
   {
     "card_id": "CCF-FSHB-033",
@@ -10845,16 +10836,7 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true,
-    "photo": {
-      "id": "CCF-FSHB-033",
-      "path": "photos/CCF-FSHB-032.webp",
-      "credit": "iNaturalist / moon_sun",
-      "license": "cc-by",
-      "source_url": "https://www.inaturalist.org/observations/404315379",
-      "inherits_from": "CCF-FSHB-032",
-      "confidence": "sourced"
-    }
+    "wave_b": true
   },
   {
     "card_id": "CCF-FSHB-034",
@@ -10926,16 +10908,7 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true,
-    "photo": {
-      "id": "CCF-FSHB-034",
-      "path": "photos/CCF-FSHB-032.webp",
-      "credit": "iNaturalist / moon_sun",
-      "license": "cc-by",
-      "source_url": "https://www.inaturalist.org/observations/404315379",
-      "inherits_from": "CCF-FSHB-032",
-      "confidence": "sourced"
-    }
+    "wave_b": true
   },
   {
     "card_id": "CCF-FSHB-035",
@@ -11005,16 +10978,7 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
-    "wave_b": true,
-    "photo": {
-      "id": "CCF-FSHB-035",
-      "path": "photos/CCF-FSHB-032.webp",
-      "credit": "iNaturalist / moon_sun",
-      "license": "cc-by",
-      "source_url": "https://www.inaturalist.org/observations/404315379",
-      "inherits_from": "CCF-FSHB-032",
-      "confidence": "sourced"
-    }
+    "wave_b": true
   },
   {
     "card_id": "CCF-FSHB-036",
@@ -15032,16 +14996,7 @@
     "short_why": "Cercidium hybrid 'Desert Museum' · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal",
-    "photo": {
-      "id": "CCF-DTRE-010",
-      "path": "photos/CCF-DTRE-010.webp",
-      "credit": "iNaturalist / starrystar",
-      "license": "cc-by",
-      "source_url": "https://www.inaturalist.org/observations/104066648",
-      "inherits_from": null,
-      "confidence": "sourced"
-    }
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-011",
@@ -15110,16 +15065,7 @@
     "short_why": "Cercidium hybrid 'Sonoran Emerald' · gloss · fixes N · VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "bloom_class": "seasonal",
-    "photo": {
-      "id": "CCF-DTRE-011",
-      "path": "photos/CCF-DTRE-010.webp",
-      "credit": "iNaturalist / starrystar",
-      "license": "cc-by",
-      "source_url": "https://www.inaturalist.org/observations/104066648",
-      "inherits_from": "CCF-DTRE-010",
-      "confidence": "sourced"
-    }
+    "bloom_class": "seasonal"
   },
   {
     "card_id": "CCF-DTRE-012",
@@ -15746,11 +15692,12 @@
     "photo": {
       "id": "CCF-DTRE-019",
       "path": "photos/CCF-DTRE-019.webp",
-      "credit": "iNaturalist / rociojgo",
-      "license": "cc-by",
-      "source_url": "http://conabio.inaturalist.org/observations/7137831",
+      "credit": "iNaturalist / aparrot1",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/262202847",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     }
   },
   {
@@ -16357,11 +16304,12 @@
     "photo": {
       "id": "CCF-DTRE-027",
       "path": "photos/CCF-DTRE-027.webp",
-      "credit": "iNaturalist / jacobfriend",
-      "license": "cc0",
-      "source_url": "https://www.inaturalist.org/observations/146003314",
+      "credit": "iNaturalist / mitchvandyke",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/65401707",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     }
   },
   {
@@ -19408,11 +19356,12 @@
     "photo": {
       "id": "CCF-PALM-007",
       "path": "photos/CCF-PALM-007.webp",
-      "credit": "iNaturalist / blevine",
+      "credit": "iNaturalist / suecar",
       "license": "cc-by",
-      "source_url": "https://www.inaturalist.org/observations/102895494",
+      "source_url": "https://www.inaturalist.org/observations/196056508",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     }
   },
   {

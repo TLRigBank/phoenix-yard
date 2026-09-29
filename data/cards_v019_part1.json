@@ -12326,16 +12326,7 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true,
-    "photo": {
-      "id": "CCF-AGAV-080",
-      "path": "photos/CCF-AGAV-080.webp",
-      "credit": "iNaturalist / alessandradalia",
-      "license": "cc-by-sa",
-      "source_url": "https://www.inaturalist.org/observations/16306041",
-      "inherits_from": null,
-      "confidence": "sourced"
-    }
+    "wave_a": true
   },
   {
     "card_id": "CCF-AGAV-081",
@@ -12399,16 +12390,7 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true,
-    "photo": {
-      "id": "CCF-AGAV-081",
-      "path": "photos/CCF-AGAV-080.webp",
-      "credit": "iNaturalist / alessandradalia",
-      "license": "cc-by-sa",
-      "source_url": "https://www.inaturalist.org/observations/16306041",
-      "inherits_from": "CCF-AGAV-080",
-      "confidence": "sourced"
-    }
+    "wave_a": true
   },
   {
     "card_id": "CCF-AGAV-082",
@@ -12472,16 +12454,7 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true,
-    "photo": {
-      "id": "CCF-AGAV-082",
-      "path": "photos/CCF-AGAV-080.webp",
-      "credit": "iNaturalist / alessandradalia",
-      "license": "cc-by-sa",
-      "source_url": "https://www.inaturalist.org/observations/16306041",
-      "inherits_from": "CCF-AGAV-080",
-      "confidence": "sourced"
-    }
+    "wave_a": true
   },
   {
     "card_id": "CCF-AGAV-083",
