@@ -24,5 +24,6 @@ Do not invert the old sand UI. Use dusk tokens. West wash, selected ring, and st
 2. **Stamp.** Pieces: Bed / Pots / Gate / Gravel / Block / **Tree**. Cover: Open / **Canopy** / Eave / Structure. Tree plants a shade tree. Canopy is existing shade (`cover: tree`). See the plants stays disabled until a piece is on.
 3. **Quote.** Title `West · tree`. Tap another marked bed and the trio updates. Snap to Bone. Swap on the card. Footer: Map + Three others. Pool line under the cards.
 
-Quote cards may use `photo.path` when present. Do not block a quote when photo is empty. Credit lives in `photos/CREDITS.md`, not on the card face.
+Live cards are Layer A + B only (`docs/LAYERS.md`). Layer C stays in JSON and never seats.
+
 
