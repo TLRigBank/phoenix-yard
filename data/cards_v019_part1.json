@@ -4054,7 +4054,16 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "photo": {
+      "id": "CCF-CACT-056",
+      "path": "photos/CCF-CACT-055.webp",
+      "credit": "iNaturalist / paulexcoff",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/44943905",
+      "inherits_from": "CCF-CACT-055",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-CACT-057",
@@ -7190,7 +7199,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-007",
+      "path": "photos/CCF-AGAV-007.webp",
+      "credit": "iNaturalist / danielcahen",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/403926337",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-008",
@@ -7254,7 +7272,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-008",
+      "path": "photos/CCF-AGAV-007.webp",
+      "credit": "iNaturalist / danielcahen",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/403926337",
+      "inherits_from": "CCF-AGAV-007",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-009",
@@ -7319,7 +7346,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-009",
+      "path": "photos/CCF-AGAV-007.webp",
+      "credit": "iNaturalist / danielcahen",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/403926337",
+      "inherits_from": "CCF-AGAV-007",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-010",
@@ -7384,7 +7420,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-010",
+      "path": "photos/CCF-AGAV-007.webp",
+      "credit": "iNaturalist / danielcahen",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/403926337",
+      "inherits_from": "CCF-AGAV-007",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-011",
@@ -7449,7 +7494,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-011",
+      "path": "photos/CCF-AGAV-007.webp",
+      "credit": "iNaturalist / danielcahen",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/403926337",
+      "inherits_from": "CCF-AGAV-007",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-012",
@@ -7516,7 +7570,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-012",
+      "path": "photos/CCF-AGAV-007.webp",
+      "credit": "iNaturalist / danielcahen",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/403926337",
+      "inherits_from": "CCF-AGAV-007",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-013",
@@ -7578,7 +7641,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-013",
+      "path": "photos/CCF-AGAV-013.webp",
+      "credit": "iNaturalist / jmrm2201",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/384746959",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-014",
@@ -7642,7 +7714,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-014",
+      "path": "photos/CCF-AGAV-014.webp",
+      "credit": "iNaturalist / ileanaherrera",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/390865333",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-015",
@@ -7704,7 +7785,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-015",
+      "path": "photos/CCF-AGAV-014.webp",
+      "credit": "iNaturalist / ileanaherrera",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/390865333",
+      "inherits_from": "CCF-AGAV-014",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-016",
@@ -7766,7 +7856,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-016",
+      "path": "photos/CCF-AGAV-016.webp",
+      "credit": "iNaturalist / mar_y_sierra_silvestre",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/304821829",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-017",
@@ -7899,7 +7998,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-018",
+      "path": "photos/CCF-AGAV-017.webp",
+      "credit": "iNaturalist / yoshito_fm",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/35619624",
+      "inherits_from": "CCF-AGAV-017",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-019",
@@ -7961,7 +8069,16 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-019",
+      "path": "photos/CCF-AGAV-019.webp",
+      "credit": "iNaturalist / biolily",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/347967026",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-020",
@@ -8024,7 +8141,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-020",
+      "path": "photos/CCF-AGAV-019.webp",
+      "credit": "iNaturalist / biolily",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/347967026",
+      "inherits_from": "CCF-AGAV-019",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-021",
@@ -8282,7 +8408,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-024",
+      "path": "photos/CCF-AGAV-024.webp",
+      "credit": "iNaturalist / alexmor",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/377779148",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-025",
@@ -8344,7 +8479,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-025",
+      "path": "photos/CCF-AGAV-024.webp",
+      "credit": "iNaturalist / alexmor",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/377779148",
+      "inherits_from": "CCF-AGAV-024",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-026",
@@ -8408,7 +8552,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-026",
+      "path": "photos/CCF-AGAV-024.webp",
+      "credit": "iNaturalist / alexmor",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/377779148",
+      "inherits_from": "CCF-AGAV-024",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-027",
@@ -8470,7 +8623,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-027",
+      "path": "photos/CCF-AGAV-024.webp",
+      "credit": "iNaturalist / alexmor",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/377779148",
+      "inherits_from": "CCF-AGAV-024",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-028",
@@ -8531,7 +8693,16 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-028",
+      "path": "photos/CCF-AGAV-028.webp",
+      "credit": "iNaturalist / blakesito",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/205545367",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-029",
@@ -8654,7 +8825,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-030",
+      "path": "photos/CCF-AGAV-030.webp",
+      "credit": "iNaturalist / mar_y_sierra_silvestre",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/165837015",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-031",
@@ -8780,7 +8960,16 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-032",
+      "path": "photos/CCF-AGAV-032.webp",
+      "credit": "iNaturalist / martorell",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/137932336",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-033",
@@ -8842,7 +9031,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-033",
+      "path": "photos/CCF-AGAV-033.webp",
+      "credit": "iNaturalist / christian-f",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/196698846",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-034",
@@ -8905,7 +9103,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-034",
+      "path": "photos/CCF-AGAV-034.webp",
+      "credit": "iNaturalist / leticia_jimenez",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/396506822",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-035",
@@ -8968,7 +9175,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-035",
+      "path": "photos/CCF-AGAV-034.webp",
+      "credit": "iNaturalist / leticia_jimenez",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/396506822",
+      "inherits_from": "CCF-AGAV-034",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-036",
@@ -9033,7 +9249,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-036",
+      "path": "photos/CCF-AGAV-036.webp",
+      "credit": "iNaturalist / idclaire",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/403526532",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-037",
@@ -9094,7 +9319,16 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-037",
+      "path": "photos/CCF-AGAV-037.webp",
+      "credit": "iNaturalist / jose_javier_bf",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/343669224",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-038",
@@ -9220,7 +9454,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-039",
+      "path": "photos/CCF-AGAV-039.webp",
+      "credit": "iNaturalist / entrelasramas",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/382702914",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-040",
@@ -9284,7 +9527,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-040",
+      "path": "photos/CCF-AGAV-039.webp",
+      "credit": "iNaturalist / entrelasramas",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/382702914",
+      "inherits_from": "CCF-AGAV-039",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-041",
@@ -9346,7 +9598,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-041",
+      "path": "photos/CCF-AGAV-039.webp",
+      "credit": "iNaturalist / entrelasramas",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/382702914",
+      "inherits_from": "CCF-AGAV-039",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-042",
@@ -9409,7 +9670,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-042",
+      "path": "photos/CCF-AGAV-042.webp",
+      "credit": "iNaturalist / ricardo_betancourt",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/333376930",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-043",
@@ -9534,7 +9804,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-044",
+      "path": "photos/CCF-AGAV-044.webp",
+      "credit": "iNaturalist / leticia_jimenez",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/296175564",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-045",
@@ -9598,7 +9877,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-045",
+      "path": "photos/CCF-AGAV-045.webp",
+      "credit": "iNaturalist / mike831",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/112524105",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-046",
@@ -9662,7 +9950,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-046",
+      "path": "photos/CCF-AGAV-045.webp",
+      "credit": "iNaturalist / mike831",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/112524105",
+      "inherits_from": "CCF-AGAV-045",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-047",
@@ -9726,7 +10023,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-047",
+      "path": "photos/CCF-AGAV-045.webp",
+      "credit": "iNaturalist / mike831",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/112524105",
+      "inherits_from": "CCF-AGAV-045",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-048",
@@ -9790,7 +10096,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-048",
+      "path": "photos/CCF-AGAV-048.webp",
+      "credit": "iNaturalist / ck2az",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/366935347",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-049",
@@ -9852,7 +10167,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-049",
+      "path": "photos/CCF-AGAV-049.webp",
+      "credit": "iNaturalist / suecar",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/168165288",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-050",
@@ -9915,7 +10239,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-050",
+      "path": "photos/CCF-AGAV-050.webp",
+      "credit": "iNaturalist / yoshito_fm",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/321761999",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-051",
@@ -10051,7 +10384,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-052",
+      "path": "photos/CCF-AGAV-054.webp",
+      "credit": "iNaturalist / aurelro",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/251776089",
+      "inherits_from": "CCF-AGAV-054",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-053",
@@ -10114,7 +10456,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-053",
+      "path": "photos/CCF-AGAV-054.webp",
+      "credit": "iNaturalist / aurelro",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/251776089",
+      "inherits_from": "CCF-AGAV-054",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-054",
@@ -10312,7 +10663,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-056",
+      "path": "photos/CCF-AGAV-056.webp",
+      "credit": "iNaturalist / ricardo_betancourt",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/332892380",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-057",
@@ -10375,7 +10735,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-057",
+      "path": "photos/CCF-AGAV-056.webp",
+      "credit": "iNaturalist / ricardo_betancourt",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/332892380",
+      "inherits_from": "CCF-AGAV-056",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-058",
@@ -10440,7 +10809,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-058",
+      "path": "photos/CCF-AGAV-056.webp",
+      "credit": "iNaturalist / ricardo_betancourt",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/332892380",
+      "inherits_from": "CCF-AGAV-056",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-059",
@@ -10506,7 +10884,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-059",
+      "path": "photos/CCF-AGAV-056.webp",
+      "credit": "iNaturalist / ricardo_betancourt",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/332892380",
+      "inherits_from": "CCF-AGAV-056",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-060",
@@ -10569,7 +10956,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-060",
+      "path": "photos/CCF-AGAV-056.webp",
+      "credit": "iNaturalist / ricardo_betancourt",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/332892380",
+      "inherits_from": "CCF-AGAV-056",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-061",
@@ -10757,7 +11153,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-063",
+      "path": "photos/CCF-AGAV-063.webp",
+      "credit": "iNaturalist / ananuno",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/400204413",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-064",
@@ -10820,7 +11225,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-064",
+      "path": "photos/CCF-AGAV-063.webp",
+      "credit": "iNaturalist / ananuno",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/400204413",
+      "inherits_from": "CCF-AGAV-063",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-065",
@@ -10883,7 +11297,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-065",
+      "path": "photos/CCF-AGAV-063.webp",
+      "credit": "iNaturalist / ananuno",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/400204413",
+      "inherits_from": "CCF-AGAV-063",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-066",
@@ -11009,7 +11432,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-067",
+      "path": "photos/CCF-AGAV-067.webp",
+      "credit": "iNaturalist / jmrm2201",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/354119916",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-068",
@@ -11073,7 +11505,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-068",
+      "path": "photos/CCF-AGAV-067.webp",
+      "credit": "iNaturalist / jmrm2201",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/354119916",
+      "inherits_from": "CCF-AGAV-067",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-069",
@@ -11137,7 +11578,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-069",
+      "path": "photos/CCF-AGAV-069.webp",
+      "credit": "iNaturalist / sheriff_woody_pct",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/401337544",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-070",
@@ -11199,7 +11649,16 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-070",
+      "path": "photos/CCF-AGAV-070.webp",
+      "credit": "iNaturalist / sulavanderplank",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/203349242",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-071",
@@ -11260,7 +11719,16 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-071",
+      "path": "photos/CCF-AGAV-071.webp",
+      "credit": "iNaturalist / celsobio",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/397381380",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-072",
@@ -11324,7 +11792,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-072",
+      "path": "photos/CCF-AGAV-072.webp",
+      "credit": "iNaturalist / stekkelpak",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/142403835",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-073",
@@ -11579,7 +12056,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-076",
+      "path": "photos/CCF-AGAV-076.webp",
+      "credit": "iNaturalist / andyvillarrealr",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/312344087",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-077",
@@ -11643,7 +12129,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-077",
+      "path": "photos/CCF-AGAV-076.webp",
+      "credit": "iNaturalist / andyvillarrealr",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/312344087",
+      "inherits_from": "CCF-AGAV-076",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-078",
@@ -11831,7 +12326,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-080",
+      "path": "photos/CCF-AGAV-080.webp",
+      "credit": "iNaturalist / alessandradalia",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/16306041",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-081",
@@ -11895,7 +12399,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-081",
+      "path": "photos/CCF-AGAV-080.webp",
+      "credit": "iNaturalist / alessandradalia",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/16306041",
+      "inherits_from": "CCF-AGAV-080",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-082",
@@ -11959,7 +12472,16 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-082",
+      "path": "photos/CCF-AGAV-080.webp",
+      "credit": "iNaturalist / alessandradalia",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/16306041",
+      "inherits_from": "CCF-AGAV-080",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-AGAV-083",
@@ -12021,7 +12543,16 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "photo": {
+      "id": "CCF-AGAV-083",
+      "path": "photos/CCF-AGAV-083.webp",
+      "credit": "iNaturalist / argonauta",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/228278210",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-ALOE-001",
@@ -12867,7 +13398,16 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "photo": {
+      "id": "CCF-ALOE-012",
+      "path": "photos/CCF-ALOE-012.webp",
+      "credit": "iNaturalist / justin_p",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/248594089",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-ALOE-013",
@@ -12938,7 +13478,16 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "photo": {
+      "id": "CCF-ALOE-013",
+      "path": "photos/CCF-ALOE-013.webp",
+      "credit": "iNaturalist / walter_de_lima",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/391429898",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-ALOE-014",
@@ -13011,7 +13560,16 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "photo": {
+      "id": "CCF-ALOE-014",
+      "path": "photos/CCF-ALOE-014.webp",
+      "credit": "iNaturalist / wielies",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/395172888",
+      "inherits_from": null,
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-ALOE-015",
@@ -13082,7 +13640,16 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "photo": {
+      "id": "CCF-ALOE-015",
+      "path": "photos/CCF-ALOE-014.webp",
+      "credit": "iNaturalist / wielies",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/395172888",
+      "inherits_from": "CCF-ALOE-014",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-ALOE-016",
@@ -14720,7 +15287,16 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "photo": {
+      "id": "CCF-ALOE-038",
+      "path": "photos/CCF-ALOE-037.webp",
+      "credit": "iNaturalist / andrew_hankey",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/11212203",
+      "inherits_from": "CCF-ALOE-037",
+      "confidence": "sourced"
+    }
   },
   {
     "card_id": "CCF-ALOE-039",

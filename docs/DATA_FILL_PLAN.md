@@ -61,7 +61,8 @@ Do not add bloom months until seasons are solid. Do not add photos in this pass.
 **Wave E — done 2026-09-27.** See `docs/WAVE_E_LOG.md`. 40 false Swords recoded. 226 blade plants unchanged.
 
 
-**Wave P0 — done 2026-09-28.** See `docs/WAVE_P0_LOG.md`. 40 quoted faces have sourced iNaturalist photos.
+**Wave P1 — done 2026-09-28.** See `docs/WAVE_P1_LOG.md`. 109 species photos + 65 inherits.
+
 
 
 
