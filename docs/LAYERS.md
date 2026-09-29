@@ -7,7 +7,9 @@ Source: Three Timbers Best Sellers + HOA frequency + contractor staples, mapped 
 
 ## Layer A — live deck (seat these)
 
-One form per plant people actually buy. ~70 cards now in CCF + 6 market gaps to add.
+56 cards. One form per plant people actually buy. Market gaps (hopseed, Texas sage, jojoba, creosote, Torch Glow, brittlebush) are in the JSON as A.
+
+Every Layer A card has a sourced photo with `qa: pass_habit` or `qa: pass_bloom`. See `docs/PHOTO_QA.md`.
 
 ### Shade trees
 | id | name |
@@ -74,11 +76,14 @@ One form per plant people actually buy. ~70 cards now in CCF + 6 market gaps to 
 | CCF-PERN-045 | Trailing rosemary |
 | CCF-OSUC-034 | Texas tuberose (pots) |
 | CCF-LSHB-001 | Low Boy acacia |
+| CCF-LSHB-023 | Green hopseed |
+| CCF-FSHB-042 | Texas sage |
+| CCF-LSHB-024 | Jojoba |
+| CCF-LSHB-025 | Creosote |
+| CCF-VINE-010 | Torch Glow bougainvillea |
+| CCF-PERN-069 | Brittlebush |
 
-### Add to A (sell in Phoenix, missing from CCF)
-Dodonaea viscosa (green hopseed) · Leucophyllum frutescens (Texas sage) · Simmondsia chinensis (jojoba) · Larrea tridentata (creosote) · Bougainvillea ‘Torch Glow’ · Encelia farinosa (brittlebush)
-
-Do not add hopseed as a cover-tree. It is a hedge piece.
+Hopseed is a hedge piece, not a cover-tree.
 
 ## Layer B — swap only
 

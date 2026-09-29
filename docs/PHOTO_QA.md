@@ -17,7 +17,7 @@ Empty is better than a wrong picture.
 - Whole plant or clear habit for trees and large succulents
 - Flower close-up only for plants sold as bloom (penstemon, sage)
 - License cc0, cc-by, or cc-by-sa
-- `qa: pass_habit` after a human look
+- `qa: pass_habit` or `qa: pass_bloom` after a look
 
 ## 2026-09-28 audit (quoted trees + tiny files)
 
@@ -26,11 +26,45 @@ Empty is better than a wrong picture.
 | CCF-DTRE-027 Native Mesquite | FAIL street pole | replaced with habit shot |
 | CCF-DTRE-019 Ironwood | FAIL seedling | replaced with habit shot |
 | CCF-PALM-007 Mexican Fan Palm | FAIL mountain specks | replaced with palm grove |
-| CCF-DTRE-010 Desert Museum | FAIL fence / flower macro | photo removed |
+| CCF-DTRE-010 Desert Museum | FAIL fence / flower macro | replaced 2026-09-28 with labeled Commons habit |
 | CCF-FSHB-032 Burgundy Iceberg | FAIL bird / duck | photo removed |
 | CCF-AGAV-080 Arizona Star | FAIL leaf-tip macro | photo removed |
-| CCF-DTRE-012 Foothill Palo Verde | WARN branch only | kept pending better habit |
+| CCF-DTRE-012 Foothill Palo Verde | WARN branch only | replaced 2026-09-28 with whole-tree habit |
 | CCF-OSUC-034 Texas Tuberose | WARN flower only | kept for bloom ID |
 | CCF-FSHB-007 Bird of Paradise | WARN flower only | kept for bloom ID |
 
-Do not take the first iNaturalist photo. Prefer habit. Rest of the 148 files still need this pass.
+## 2026-09-28 Layer A seal
+
+All 56 Layer A cards now have a file + `photo.qa`.
+
+Replaced or filled:
+
+| card | why | source |
+|---|---|---|
+| CCF-CACT-005 Saguaro | no file | iNat habit, single plant |
+| CCF-CACT-031 Fishhook barrel | no file | iNat habit |
+| CCF-AGAV-082 Weber / smooth-edge | no file | iNat whole rosette (not leaf-tip) |
+| CCF-DTRE-010 Desert Museum | fence / unlabeled | Commons `Cercidiumdesertmuseum.jpg` PD |
+| CCF-DTRE-012 Foothill palo verde | branch only | iNat whole tree |
+| CCF-DTRE-020 Texas ebony | leaf/flower only | iNat flowering tree |
+| CCF-OTRE-025 Red Push | no file | Commons Chinese pistache **tree habit** (cultivar-specific tree shot not available under cc-by; Red Push is the Phoenix trade form of this species) |
+| CCF-LSHB-023 Green hopseed | new A card | iNat hedge with seed capsules |
+| CCF-FSHB-042 Texas sage | new A card | iNat shrub in bloom |
+| CCF-LSHB-024 Jojoba | new A card | iNat shrub with fruit |
+| CCF-LSHB-025 Creosote | new A card | iNat shrub in bloom |
+| CCF-VINE-010 Torch Glow | climbing-vine cands rejected | Commons File:Bougainvillea_Red.JPG labeled Torch Glow, upright shrub |
+| CCF-PERN-069 Brittlebush | new A card | iNat silvery shrub in bloom |
+| CCF-PERN-004 Desert milkweed | no file | iNat rush-stem habit |
+| CCF-PERN-032 Purple trailing lantana | no file | iNat bloom (sold as bloom) |
+| CCF-PERN-035 Blackfoot daisy | no file | iNat clump habit |
+| CCF-PERN-045 Trailing rosemary | no file | iNat bloom / foliage |
+| CCF-PERN-062 Gooding’s verbena | tall vervain cands rejected | iNat `Glandularia gooddingii` low mound |
+
+Rejected on purpose:
+
+- Climbing wall bougainvillea for Torch Glow
+- Blue palo verde photos tagged onto Desert Museum
+- cc-by-nc Torch Glow iNat shots
+- Red Push flower-only Commons close-up (`kz02`)
+
+Layer B and C photos are not part of this seal.

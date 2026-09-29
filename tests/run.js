@@ -54,8 +54,8 @@ function ids(result) {
 }
 
 const catalog = loadCatalog(path.join(__dirname, "..", "data"));
-assert(catalog.length === 543, "catalog length " + catalog.length);
-assert(new Set(catalog.map((card) => card.card_id)).size === 543, "duplicate card ids");
+assert(catalog.length === 549, "catalog length " + catalog.length);
+assert(new Set(catalog.map((card) => card.card_id)).size === 549, "duplicate card ids");
 
 const bannedNames = [
   "1 head 5'-7'",
@@ -79,6 +79,26 @@ assert(new Set(names).size === names.length, "display_name values must be unique
 assert(catalog.every((card) => card.layer === "A" || card.layer === "B" || card.layer === "C"), "missing layer");
 assert(catalog.filter((card) => card.layer === "A").length >= 50, "layer A too small");
 assert(catalog.filter((card) => card.layer === "C").length > 400, "layer C should hold the archive");
+
+const fs = require("fs");
+const photoRoot = path.join(__dirname, "..");
+const layerA = catalog.filter((card) => card.layer === "A");
+assert(layerA.length === 56, "layer A count " + layerA.length);
+for (const id of ["CCF-LSHB-023", "CCF-FSHB-042", "CCF-LSHB-024", "CCF-LSHB-025", "CCF-VINE-010", "CCF-PERN-069"]) {
+  const card = byIdSoon(catalog, id);
+  assert(card && card.layer === "A", "market gap missing from A " + id);
+}
+function byIdSoon(list, id) {
+  return list.find((card) => card.card_id === id);
+}
+for (const card of layerA) {
+  const photo = card.photo || {};
+  assert(photo.qa === "pass_habit" || photo.qa === "pass_bloom", "layer A photo qa " + card.card_id);
+  const rel = photo.path || "";
+  const abs = path.join(photoRoot, rel);
+  const inherit = photo.inherits_from ? path.join(photoRoot, "photos", photo.inherits_from + ".webp") : null;
+  assert(fs.existsSync(abs) || (inherit && fs.existsSync(inherit)), "layer A photo file " + card.card_id + " " + rel);
+}
 
 const defaultBrief = {
   hot_side: "right",

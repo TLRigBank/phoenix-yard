@@ -362,7 +362,17 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "layer": "A"
+    "layer": "A",
+    "photo": {
+      "id": "CCF-CACT-005",
+      "path": "photos/CCF-CACT-005.webp",
+      "credit": "iNaturalist / elkins456",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/83784632",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-CACT-006",
@@ -1398,7 +1408,8 @@
       "license": "cc-by",
       "source_url": "https://www.inaturalist.org/observations/252125815",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
     "layer": "A"
   },
@@ -1483,7 +1494,8 @@
       "license": "cc-by-sa",
       "source_url": "https://www.inaturalist.org/observations/109552875",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
     "layer": "A"
   },
@@ -1652,7 +1664,8 @@
       "license": "cc-by-sa",
       "source_url": "https://www.inaturalist.org/observations/19147021",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
     "layer": "A"
   },
@@ -2298,7 +2311,17 @@
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
     "wave_c_note": "AZ barrels / organ pipe flower late spring into summer",
-    "layer": "A"
+    "layer": "A",
+    "photo": {
+      "id": "CCF-CACT-031",
+      "path": "photos/CCF-CACT-031.webp",
+      "credit": "iNaturalist / ck2az",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/15440926",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-CACT-032",
@@ -4034,7 +4057,8 @@
       "license": "cc-by-sa",
       "source_url": "https://www.inaturalist.org/observations/44943905",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
     "layer": "A"
   },
@@ -8461,7 +8485,8 @@
       "license": "cc0",
       "source_url": "https://www.inaturalist.org/observations/27481004",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
     "layer": "A"
   },
@@ -10390,7 +10415,8 @@
       "license": "cc-by-sa",
       "source_url": "https://www.inaturalist.org/observations/321761999",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
     "layer": "A"
   },
@@ -10684,7 +10710,8 @@
       "license": "cc-by",
       "source_url": "https://www.inaturalist.org/observations/251776089",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
     "layer": "A"
   },
@@ -12630,7 +12657,17 @@
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
     "wave_a": true,
-    "layer": "A"
+    "layer": "A",
+    "photo": {
+      "id": "CCF-AGAV-082",
+      "path": "photos/CCF-AGAV-082.webp",
+      "credit": "iNaturalist / alessandradalia",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/16306041",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-AGAV-083",
@@ -18067,7 +18104,8 @@
       "license": "cc-by-sa",
       "source_url": "https://www.inaturalist.org/observations/386766798",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_bloom"
     },
     "layer": "A"
   },

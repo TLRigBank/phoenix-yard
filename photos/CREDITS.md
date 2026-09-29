@@ -17,7 +17,7 @@ iNaturalist observations. Licenses cc0, cc-by, or cc-by-sa.
 | CCF-AGAV-017 | Agave bracteosa | cc-by-sa | yoshito_fm | https://www.inaturalist.org/observations/35619624 |
 | CCF-PERN-049 | Ruellia peninsularis | cc-by | abrahamsanchez | https://www.inaturalist.org/observations/337612161 |
 | CCF-ALOE-037 | Aloe striata | cc-by-sa | andrew_hankey | https://www.inaturalist.org/observations/11212203 |
-| CCF-DTRE-012 | Parkinsonia microphylla | cc-by | swbirder | https://www.inaturalist.org/observations/144457024 |
+| CCF-DTRE-012 | Parkinsonia microphylla | cc-by | restringham | https://www.inaturalist.org/observations/327959265 |
 | CCF-DTRE-017 | Chilopsis linearis | cc-by | thunefeld | https://www.inaturalist.org/observations/7950415 |
 | CCF-PALM-007 | Washingtonia robusta | cc-by | blevine | https://www.inaturalist.org/observations/102895494 |
 | CCF-AGAV-023 | Agave deserti | cc0 | stekkelpak | https://www.inaturalist.org/observations/27481004 |
@@ -28,7 +28,7 @@ iNaturalist observations. Licenses cc0, cc-by, or cc-by-sa.
 | CCF-PERN-057 | Sphaeralcea ambigua | cc-by | tmessick | https://www.inaturalist.org/observations/371847127 |
 | CCF-CACT-022 | Echinocereus triglochidiatus | cc-by-sa | mcloudhughes | https://www.inaturalist.org/observations/19147021 |
 | CCF-DTRE-009 | Parkinsonia florida | cc-by | thebeachcomber | https://www.inaturalist.org/observations/346958958 |
-| CCF-DTRE-010 | Parkinsonia 'Desert Museum' | cc-by | starrystar | https://www.inaturalist.org/observations/104066648 |
+| CCF-DTRE-010 | Parkinsonia 'Desert Museum' | cc0 | Stickpen / Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Cercidiumdesertmuseum.jpg |
 | CCF-DTRE-019 | Olneya tesota | cc-by | rociojgo | http://conabio.inaturalist.org/observations/7137831 |
 | CCF-DTRE-027 | Prosopis velutina | cc0 | jacobfriend | https://www.inaturalist.org/observations/146003314 |
 | CCF-FRUT-005 | Punica granatum | cc-by | proteros | https://www.inaturalist.org/observations/143838780 |
@@ -159,3 +159,25 @@ CCF-YUCC-011 inherits CCF-YUCC-010.
 | CCF-ALOE-012 | Aloe aristata | cc-by | justin_p | https://www.inaturalist.org/observations/248594089 |
 | CCF-ALOE-013 | Aloe vera | cc-by | walter_de_lima | https://www.inaturalist.org/observations/391429898 |
 | CCF-ALOE-014 | Aloe brevifolia | cc-by | wielies | https://www.inaturalist.org/observations/395172888 |
+
+## Layer A seal 2026-09-28
+
+| card_id | species | license | credit | observation |
+|---|---|---|---|---|
+| CCF-CACT-005 | Carnegiea gigantea | cc-by | elkins456 | https://www.inaturalist.org/observations/83784632 |
+| CCF-CACT-031 | Ferocactus wislizeni | cc-by | ck2az | https://www.inaturalist.org/observations/15440926 |
+| CCF-AGAV-082 | Agave weberi | cc-by-sa | alessandradalia | https://www.inaturalist.org/observations/16306041 |
+| CCF-LSHB-023 | Dodonaea viscosa | cc-by-sa | nicky | https://www.inaturalist.org/observations/19989625 |
+| CCF-FSHB-042 | Leucophyllum frutescens | cc-by | ck2az | https://www.inaturalist.org/observations/63740127 |
+| CCF-LSHB-024 | Simmondsia chinensis | cc0 | botanywoman | https://www.inaturalist.org/observations/148732165 |
+| CCF-LSHB-025 | Larrea tridentata | cc-by | jdmore | https://www.inaturalist.org/observations/29896764 |
+| CCF-VINE-010 | Bougainvillea 'Torch Glow' | cc-by | Sugeesh | https://commons.wikimedia.org/wiki/File:Bougainvillea_Red.JPG |
+| CCF-PERN-069 | Encelia farinosa | cc0 | grnleaf | https://www.inaturalist.org/observations/109890852 |
+| CCF-PERN-004 | Asclepias subulata | cc0 | dblanco | https://www.inaturalist.org/observations/195190895 |
+| CCF-PERN-032 | Lantana montevidensis | cc-by | peggydnew | https://www.inaturalist.org/observations/69362670 |
+| CCF-PERN-035 | Melampodium leucanthum | cc0 | aspidoscelis | https://www.inaturalist.org/observations/21786586 |
+| CCF-PERN-045 | Salvia rosmarinus | cc-by | zebedeugalinha | https://www.inaturalist.org/observations/360662906 |
+| CCF-PERN-062 | Glandularia gooddingii | cc-by | brucehartman | https://www.inaturalist.org/observations/79457284 |
+| CCF-DTRE-020 | Ebenopsis ebano | cc-by | bacchusrock | https://www.inaturalist.org/observations/260723142 |
+| CCF-OTRE-025 | Pistacia chinensis (Red Push form) | cc-by-sa | Cossey25 | https://commons.wikimedia.org/wiki/File:Tree_011_pistache_habit_005.jpg |
+
