@@ -76,6 +76,10 @@ for (const exact of ["Red", "Gold", "Rose"]) {
 const names = catalog.map((card) => card.display_name);
 assert(new Set(names).size === names.length, "display_name values must be unique");
 
+assert(catalog.every((card) => card.layer === "A" || card.layer === "B" || card.layer === "C"), "missing layer");
+assert(catalog.filter((card) => card.layer === "A").length >= 50, "layer A too small");
+assert(catalog.filter((card) => card.layer === "C").length > 400, "layer C should hold the archive");
+
 const defaultBrief = {
   hot_side: "right",
   kids: false,
@@ -125,6 +129,7 @@ for (const [label, result] of [
     for (const pick of strip.picks) {
       if (label === "default") {
         assert(byId.get(pick.card_id).water_class === "VL", "default pick not VL " + pick.display_name);
+        assert(byId.get(pick.card_id).layer !== "C", "default seated archive " + pick.card_id);
       }
       for (const sub of pick.substitute_ids) {
         const other = byId.get(sub);
@@ -249,6 +254,7 @@ function card(overrides) {
     bloom_colors: ["pink"],
     wildlife: ["bees"],
     substitute_ids: [],
+    layer: "A",
     ...overrides,
   };
 }
@@ -292,6 +298,7 @@ const toy = [
     botanical_name: "Nerium oleander",
     plant_group: "Flowering Shrubs",
     toxic_class: "deadly",
+    layer: "C",
     size_class: "medium",
     height_max_ft: 6,
   }),
@@ -301,6 +308,7 @@ const toy = [
     botanical_name: "Cylindropuntia fulgida",
     plant_group: "Cacti",
     spine_class: "jumping",
+    layer: "C",
     spine_hazard: true,
     pedestrian_avoid: true,
     size_class: "large",
@@ -321,6 +329,7 @@ const toy = [
     botanical_name: "Pennisetum setaceum",
     plant_group: "Ornamental Grasses",
     native_class: "invasive_risk",
+    layer: "C",
     texture_body: "Cloud",
   }),
   card({

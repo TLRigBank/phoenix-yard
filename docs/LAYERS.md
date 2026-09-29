@@ -1,6 +1,7 @@
 # Live layers — Phoenix Yard catalog
 
-543 cards stay in JSON. The matcher only seats **A + B**. C is dark.
+Every card has `layer: A | B | C`. `legalPool` drops C. Jumping cholla stays C so it can still feed the gate veto, not a seat.
+
 
 Source: Three Timbers Best Sellers + HOA frequency + contractor staples, mapped to CCF ids. Sales data is merchandising, not POS.
 

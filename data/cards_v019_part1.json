@@ -71,7 +71,8 @@
     "wave_c_note": "Night-blooming Acanthocereus; white flowers late spring-summer",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "miniature clustered columns"
+    "wave_e_note": "miniature clustered columns",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-002",
@@ -139,7 +140,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-003",
@@ -209,7 +211,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Astrophytum myriostigma typically spring yellow"
+    "wave_c_note": "Astrophytum myriostigma typically spring yellow",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-004",
@@ -283,7 +286,8 @@
     "wave_c_note": "Astrophytum ornatum spring yellow",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Astrophytum ribbed body"
+    "wave_e_note": "Astrophytum ribbed body",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-005",
@@ -357,7 +361,8 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "A"
   },
   {
     "card_id": "CCF-CACT-006",
@@ -427,7 +432,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-007",
@@ -495,7 +501,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-008",
@@ -567,7 +574,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Cereus forbesii group; night-blooming white, pink blush incidental"
+    "wave_c_note": "Cereus forbesii group; night-blooming white, pink blush incidental",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-009",
@@ -638,7 +646,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Cereus night-blooming white"
+    "wave_c_note": "Cereus night-blooming white",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-010",
@@ -711,7 +720,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Cereus; blue/silver were stem not flower"
+    "wave_c_note": "Cereus; blue/silver were stem not flower",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-011",
@@ -783,7 +793,8 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-012",
@@ -854,7 +865,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Cereus night-blooming white"
+    "wave_c_note": "Cereus night-blooming white",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-013",
@@ -929,7 +941,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Cleistocactus silver torch stems"
+    "wave_e_note": "Cleistocactus silver torch stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-014",
@@ -1005,7 +1018,8 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Cylindropuntia joints, not leaf blades"
+    "wave_e_note": "Cylindropuntia joints, not leaf blades",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-015",
@@ -1075,7 +1089,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-016",
@@ -1149,7 +1164,8 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Cylindropuntia joints"
+    "wave_e_note": "Cylindropuntia joints",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-017",
@@ -1224,7 +1240,8 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Cylindropuntia joints"
+    "wave_e_note": "Cylindropuntia joints",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-018",
@@ -1301,7 +1318,8 @@
     "wave_c_note": "FNA: flowering spring Apr-Jun; tepals yellow-green to gold, bronze, red, rose",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Cylindropuntia joints"
+    "wave_e_note": "Cylindropuntia joints",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-019",
@@ -1381,7 +1399,8 @@
       "source_url": "https://www.inaturalist.org/observations/252125815",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "A"
   },
   {
     "card_id": "CCF-CACT-020",
@@ -1465,7 +1484,8 @@
       "source_url": "https://www.inaturalist.org/observations/109552875",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "A"
   },
   {
     "card_id": "CCF-CACT-021",
@@ -1549,7 +1569,8 @@
       "source_url": "https://www.inaturalist.org/observations/73052874",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "B"
   },
   {
     "card_id": "CCF-CACT-022",
@@ -1632,7 +1653,8 @@
       "source_url": "https://www.inaturalist.org/observations/19147021",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "A"
   },
   {
     "card_id": "CCF-CACT-023",
@@ -1701,7 +1723,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-024",
@@ -1772,7 +1795,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Espostoa white flowers when mature"
+    "wave_c_note": "Espostoa white flowers when mature",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-025",
@@ -1843,7 +1867,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Espostoa white flowers when mature"
+    "wave_c_note": "Espostoa white flowers when mature",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-026",
@@ -1914,7 +1939,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-027",
@@ -1985,7 +2011,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-028",
@@ -2057,7 +2084,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "F. latispinus often late-season magenta/pink; yellow dropped as unconfirmed for this clone"
+    "wave_c_note": "F. latispinus often late-season magenta/pink; yellow dropped as unconfirmed for this clone",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-029",
@@ -2125,7 +2153,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-030",
@@ -2195,7 +2224,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-031",
@@ -2267,7 +2297,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer"
+    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer",
+    "layer": "A"
   },
   {
     "card_id": "CCF-CACT-032",
@@ -2337,7 +2368,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-033",
@@ -2405,7 +2437,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-034",
@@ -2472,7 +2505,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Totem pole monstrose form rarely flowers; sterile when it does"
+    "wave_c_note": "Totem pole monstrose form rarely flowers; sterile when it does",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-035",
@@ -2539,7 +2573,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Totem pole monstrose form rarely flowers"
+    "wave_c_note": "Totem pole monstrose form rarely flowers",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-036",
@@ -2606,7 +2641,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Totem pole monstrose form rarely flowers"
+    "wave_c_note": "Totem pole monstrose form rarely flowers",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-037",
@@ -2678,7 +2714,8 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Senita columnar stems"
+    "wave_e_note": "Senita columnar stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-038",
@@ -2751,7 +2788,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Mammillaria tuberculate mound"
+    "wave_e_note": "Mammillaria tuberculate mound",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-039",
@@ -2826,7 +2864,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Mammillaria tuberculate mound"
+    "wave_e_note": "Mammillaria tuberculate mound",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-040",
@@ -2899,7 +2938,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Mammillaria tuberculate mound"
+    "wave_e_note": "Mammillaria tuberculate mound",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-041",
@@ -2972,7 +3012,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Mammillaria tuberculate mound"
+    "wave_e_note": "Mammillaria tuberculate mound",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-042",
@@ -3045,7 +3086,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Mammillaria tuberculate mound"
+    "wave_e_note": "Mammillaria tuberculate mound",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-043",
@@ -3118,7 +3160,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Mammillaria tuberculate mound"
+    "wave_e_note": "Mammillaria tuberculate mound",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-044",
@@ -3191,7 +3234,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Mammillaria tuberculate mound"
+    "wave_e_note": "Mammillaria tuberculate mound",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-045",
@@ -3259,7 +3303,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-046",
@@ -3331,7 +3376,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Myrtillocactus cream-white flowers; blue was stem"
+    "wave_c_note": "Myrtillocactus cream-white flowers; blue was stem",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-047",
@@ -3405,7 +3451,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Myrtillocactus cream-white flowers; blue was stem"
+    "wave_c_note": "Myrtillocactus cream-white flowers; blue was stem",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-048",
@@ -3475,7 +3522,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "Myrtillocactus cream-white flowers"
+    "wave_c_note": "Myrtillocactus cream-white flowers",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-049",
@@ -3551,7 +3599,8 @@
     "wave_c": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Myrtillocactus blue columns"
+    "wave_e_note": "Myrtillocactus blue columns",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-050",
@@ -3621,7 +3670,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-051",
@@ -3689,7 +3739,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-052",
@@ -3760,7 +3811,8 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Parodia/Notocactus golden ball"
+    "wave_e_note": "Parodia/Notocactus golden ball",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-053",
@@ -3828,7 +3880,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-054",
@@ -3901,7 +3954,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-055",
@@ -3981,7 +4035,8 @@
       "source_url": "https://www.inaturalist.org/observations/44943905",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "A"
   },
   {
     "card_id": "CCF-CACT-056",
@@ -4063,7 +4118,8 @@
       "source_url": "https://www.inaturalist.org/observations/44943905",
       "inherits_from": "CCF-CACT-055",
       "confidence": "sourced"
-    }
+    },
+    "layer": "B"
   },
   {
     "card_id": "CCF-CACT-057",
@@ -4134,7 +4190,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-058",
@@ -4205,7 +4262,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-059",
@@ -4276,7 +4334,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-060",
@@ -4349,7 +4408,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-061",
@@ -4419,7 +4479,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-062",
@@ -4489,7 +4550,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-063",
@@ -4561,7 +4623,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-064",
@@ -4633,7 +4696,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-065",
@@ -4703,7 +4767,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-066",
@@ -4771,7 +4836,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-067",
@@ -4844,7 +4910,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-068",
@@ -4914,7 +4981,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-069",
@@ -4987,7 +5055,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-070",
@@ -5060,7 +5129,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-071",
@@ -5133,7 +5203,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-072",
@@ -5204,7 +5275,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-073",
@@ -5275,7 +5347,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-074",
@@ -5346,7 +5419,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-075",
@@ -5417,7 +5491,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-076",
@@ -5487,7 +5562,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-077",
@@ -5557,7 +5633,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-078",
@@ -5629,7 +5706,8 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-079",
@@ -5701,7 +5779,8 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-080",
@@ -5773,7 +5852,8 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-081",
@@ -5841,7 +5921,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-082",
@@ -5912,7 +5993,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-083",
@@ -5980,7 +6062,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-084",
@@ -6052,7 +6135,8 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-085",
@@ -6124,7 +6208,8 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-086",
@@ -6196,7 +6281,8 @@
     ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-087",
@@ -6272,7 +6358,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "wave_c": true,
-    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer"
+    "wave_c_note": "AZ barrels / organ pipe flower late spring into summer",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-088",
@@ -6340,7 +6427,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-089",
@@ -6408,7 +6496,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-090",
@@ -6476,7 +6565,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-091",
@@ -6544,7 +6634,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-092",
@@ -6612,7 +6703,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-093",
@@ -6682,7 +6774,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-094",
@@ -6752,7 +6845,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-001",
@@ -6814,7 +6908,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-002",
@@ -6877,7 +6972,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-003",
@@ -6943,7 +7039,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-004",
@@ -7009,7 +7106,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-005",
@@ -7071,7 +7169,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-006",
@@ -7133,7 +7232,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-007",
@@ -7208,7 +7308,8 @@
       "source_url": "https://www.inaturalist.org/observations/403926337",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-008",
@@ -7281,7 +7382,8 @@
       "source_url": "https://www.inaturalist.org/observations/403926337",
       "inherits_from": "CCF-AGAV-007",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-009",
@@ -7355,7 +7457,8 @@
       "source_url": "https://www.inaturalist.org/observations/403926337",
       "inherits_from": "CCF-AGAV-007",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-010",
@@ -7429,7 +7532,8 @@
       "source_url": "https://www.inaturalist.org/observations/403926337",
       "inherits_from": "CCF-AGAV-007",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-011",
@@ -7503,7 +7607,8 @@
       "source_url": "https://www.inaturalist.org/observations/403926337",
       "inherits_from": "CCF-AGAV-007",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-012",
@@ -7579,7 +7684,8 @@
       "source_url": "https://www.inaturalist.org/observations/403926337",
       "inherits_from": "CCF-AGAV-007",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-013",
@@ -7650,7 +7756,8 @@
       "source_url": "https://www.inaturalist.org/observations/384746959",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-014",
@@ -7723,7 +7830,8 @@
       "source_url": "https://www.inaturalist.org/observations/390865333",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-015",
@@ -7794,7 +7902,8 @@
       "source_url": "https://www.inaturalist.org/observations/390865333",
       "inherits_from": "CCF-AGAV-014",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-016",
@@ -7865,7 +7974,8 @@
       "source_url": "https://www.inaturalist.org/observations/304821829",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-017",
@@ -7936,7 +8046,8 @@
       "source_url": "https://www.inaturalist.org/observations/35619624",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-018",
@@ -8007,7 +8118,8 @@
       "source_url": "https://www.inaturalist.org/observations/35619624",
       "inherits_from": "CCF-AGAV-017",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-019",
@@ -8078,7 +8190,8 @@
       "source_url": "https://www.inaturalist.org/observations/347967026",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-020",
@@ -8150,7 +8263,8 @@
       "source_url": "https://www.inaturalist.org/observations/347967026",
       "inherits_from": "CCF-AGAV-019",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-021",
@@ -8212,7 +8326,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-022",
@@ -8273,7 +8388,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-023",
@@ -8346,7 +8462,8 @@
       "source_url": "https://www.inaturalist.org/observations/27481004",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "A"
   },
   {
     "card_id": "CCF-AGAV-024",
@@ -8417,7 +8534,8 @@
       "source_url": "https://www.inaturalist.org/observations/377779148",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-025",
@@ -8488,7 +8606,8 @@
       "source_url": "https://www.inaturalist.org/observations/377779148",
       "inherits_from": "CCF-AGAV-024",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-026",
@@ -8561,7 +8680,8 @@
       "source_url": "https://www.inaturalist.org/observations/377779148",
       "inherits_from": "CCF-AGAV-024",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-027",
@@ -8632,7 +8752,8 @@
       "source_url": "https://www.inaturalist.org/observations/377779148",
       "inherits_from": "CCF-AGAV-024",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-028",
@@ -8702,7 +8823,8 @@
       "source_url": "https://www.inaturalist.org/observations/205545367",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-029",
@@ -8763,7 +8885,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-030",
@@ -8834,7 +8957,8 @@
       "source_url": "https://www.inaturalist.org/observations/165837015",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-031",
@@ -8898,7 +9022,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "blue",
     "foliage_color_confidence": "genus_uniform",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-032",
@@ -8969,7 +9094,8 @@
       "source_url": "https://www.inaturalist.org/observations/137932336",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-033",
@@ -9040,7 +9166,8 @@
       "source_url": "https://www.inaturalist.org/observations/196698846",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-034",
@@ -9112,7 +9239,8 @@
       "source_url": "https://www.inaturalist.org/observations/396506822",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-035",
@@ -9184,7 +9312,8 @@
       "source_url": "https://www.inaturalist.org/observations/396506822",
       "inherits_from": "CCF-AGAV-034",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-036",
@@ -9258,7 +9387,8 @@
       "source_url": "https://www.inaturalist.org/observations/403526532",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-037",
@@ -9328,7 +9458,8 @@
       "source_url": "https://www.inaturalist.org/observations/343669224",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-038",
@@ -9390,7 +9521,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-039",
@@ -9463,7 +9595,8 @@
       "source_url": "https://www.inaturalist.org/observations/382702914",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-040",
@@ -9536,7 +9669,8 @@
       "source_url": "https://www.inaturalist.org/observations/382702914",
       "inherits_from": "CCF-AGAV-039",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-041",
@@ -9607,7 +9741,8 @@
       "source_url": "https://www.inaturalist.org/observations/382702914",
       "inherits_from": "CCF-AGAV-039",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-042",
@@ -9679,7 +9814,8 @@
       "source_url": "https://www.inaturalist.org/observations/333376930",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-043",
@@ -9741,7 +9877,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-044",
@@ -9813,7 +9950,8 @@
       "source_url": "https://www.inaturalist.org/observations/296175564",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-045",
@@ -9886,7 +10024,8 @@
       "source_url": "https://www.inaturalist.org/observations/112524105",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-046",
@@ -9959,7 +10098,8 @@
       "source_url": "https://www.inaturalist.org/observations/112524105",
       "inherits_from": "CCF-AGAV-045",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-047",
@@ -10032,7 +10172,8 @@
       "source_url": "https://www.inaturalist.org/observations/112524105",
       "inherits_from": "CCF-AGAV-045",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-048",
@@ -10105,7 +10246,8 @@
       "source_url": "https://www.inaturalist.org/observations/366935347",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-049",
@@ -10176,7 +10318,8 @@
       "source_url": "https://www.inaturalist.org/observations/168165288",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-050",
@@ -10248,7 +10391,8 @@
       "source_url": "https://www.inaturalist.org/observations/321761999",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "A"
   },
   {
     "card_id": "CCF-AGAV-051",
@@ -10321,7 +10465,8 @@
       "source_url": "https://www.inaturalist.org/observations/12299671",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-052",
@@ -10393,7 +10538,8 @@
       "source_url": "https://www.inaturalist.org/observations/251776089",
       "inherits_from": "CCF-AGAV-054",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-053",
@@ -10465,7 +10611,8 @@
       "source_url": "https://www.inaturalist.org/observations/251776089",
       "inherits_from": "CCF-AGAV-054",
       "confidence": "sourced"
-    }
+    },
+    "layer": "B"
   },
   {
     "card_id": "CCF-AGAV-054",
@@ -10538,7 +10685,8 @@
       "source_url": "https://www.inaturalist.org/observations/251776089",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "A"
   },
   {
     "card_id": "CCF-AGAV-055",
@@ -10601,7 +10749,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-056",
@@ -10672,7 +10821,8 @@
       "source_url": "https://www.inaturalist.org/observations/332892380",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-057",
@@ -10744,7 +10894,8 @@
       "source_url": "https://www.inaturalist.org/observations/332892380",
       "inherits_from": "CCF-AGAV-056",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-058",
@@ -10818,7 +10969,8 @@
       "source_url": "https://www.inaturalist.org/observations/332892380",
       "inherits_from": "CCF-AGAV-056",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-059",
@@ -10893,7 +11045,8 @@
       "source_url": "https://www.inaturalist.org/observations/332892380",
       "inherits_from": "CCF-AGAV-056",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-060",
@@ -10965,7 +11118,8 @@
       "source_url": "https://www.inaturalist.org/observations/332892380",
       "inherits_from": "CCF-AGAV-056",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-061",
@@ -11026,7 +11180,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-062",
@@ -11088,7 +11243,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-063",
@@ -11162,7 +11318,8 @@
       "source_url": "https://www.inaturalist.org/observations/400204413",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-064",
@@ -11234,7 +11391,8 @@
       "source_url": "https://www.inaturalist.org/observations/400204413",
       "inherits_from": "CCF-AGAV-063",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-065",
@@ -11306,7 +11464,8 @@
       "source_url": "https://www.inaturalist.org/observations/400204413",
       "inherits_from": "CCF-AGAV-063",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-066",
@@ -11368,7 +11527,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-067",
@@ -11441,7 +11601,8 @@
       "source_url": "https://www.inaturalist.org/observations/354119916",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-068",
@@ -11514,7 +11675,8 @@
       "source_url": "https://www.inaturalist.org/observations/354119916",
       "inherits_from": "CCF-AGAV-067",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-069",
@@ -11587,7 +11749,8 @@
       "source_url": "https://www.inaturalist.org/observations/401337544",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-070",
@@ -11658,7 +11821,8 @@
       "source_url": "https://www.inaturalist.org/observations/203349242",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-071",
@@ -11728,7 +11892,8 @@
       "source_url": "https://www.inaturalist.org/observations/397381380",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-072",
@@ -11801,7 +11966,8 @@
       "source_url": "https://www.inaturalist.org/observations/142403835",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-073",
@@ -11864,7 +12030,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "silver",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-074",
@@ -11929,7 +12096,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-075",
@@ -11992,7 +12160,8 @@
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-076",
@@ -12065,7 +12234,8 @@
       "source_url": "https://www.inaturalist.org/observations/312344087",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-077",
@@ -12138,7 +12308,8 @@
       "source_url": "https://www.inaturalist.org/observations/312344087",
       "inherits_from": "CCF-AGAV-076",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-078",
@@ -12200,7 +12371,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-079",
@@ -12262,7 +12434,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-080",
@@ -12326,7 +12499,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "B"
   },
   {
     "card_id": "CCF-AGAV-081",
@@ -12390,7 +12564,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-082",
@@ -12454,7 +12629,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
-    "wave_a": true
+    "wave_a": true,
+    "layer": "A"
   },
   {
     "card_id": "CCF-AGAV-083",
@@ -12525,7 +12701,8 @@
       "source_url": "https://www.inaturalist.org/observations/228278210",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-001",
@@ -12594,7 +12771,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-002",
@@ -12663,7 +12841,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-003",
@@ -12734,7 +12913,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-004",
@@ -12803,7 +12983,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-005",
@@ -12874,7 +13055,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-006",
@@ -12945,7 +13127,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-007",
@@ -13016,7 +13199,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-008",
@@ -13085,7 +13269,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-009",
@@ -13156,7 +13341,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-010",
@@ -13229,7 +13415,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-011",
@@ -13300,7 +13487,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-012",
@@ -13380,7 +13568,8 @@
       "source_url": "https://www.inaturalist.org/observations/248594089",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-013",
@@ -13460,7 +13649,8 @@
       "source_url": "https://www.inaturalist.org/observations/391429898",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-014",
@@ -13542,7 +13732,8 @@
       "source_url": "https://www.inaturalist.org/observations/395172888",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-015",
@@ -13622,7 +13813,8 @@
       "source_url": "https://www.inaturalist.org/observations/395172888",
       "inherits_from": "CCF-ALOE-014",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-016",
@@ -13693,7 +13885,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-017",
@@ -13764,7 +13957,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-018",
@@ -13835,7 +14029,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-019",
@@ -13908,7 +14103,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-020",
@@ -13976,7 +14172,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-021",
@@ -14045,7 +14242,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-022",
@@ -14118,7 +14316,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-023",
@@ -14191,7 +14390,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-024",
@@ -14260,7 +14460,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-025",
@@ -14329,7 +14530,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-026",
@@ -14398,7 +14600,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-027",
@@ -14471,7 +14674,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-028",
@@ -14540,7 +14744,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-029",
@@ -14611,7 +14816,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-030",
@@ -14684,7 +14890,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-031",
@@ -14757,7 +14964,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-032",
@@ -14826,7 +15034,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-033",
@@ -14894,7 +15103,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-034",
@@ -14963,7 +15173,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-035",
@@ -15034,7 +15245,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-036",
@@ -15106,7 +15318,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-037",
@@ -15187,7 +15400,8 @@
       "source_url": "https://www.inaturalist.org/observations/11212203",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-038",
@@ -15269,7 +15483,8 @@
       "source_url": "https://www.inaturalist.org/observations/11212203",
       "inherits_from": "CCF-ALOE-037",
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-039",
@@ -15338,7 +15553,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-ALOE-040",
@@ -15409,7 +15625,8 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
-    "wave_c": true
+    "wave_c": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-001",
@@ -15495,7 +15712,8 @@
       "source_url": "http://www.inaturalist.org/observations/1501426",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-002",
@@ -15563,7 +15781,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-003",
@@ -15634,7 +15853,8 @@
     "bloom_class_confidence": "genus_uniform",
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "jade leaves"
+    "wave_e_note": "jade leaves",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-004",
@@ -15703,7 +15923,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-005",
@@ -15771,7 +15992,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-006",
@@ -15841,7 +16063,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-007",
@@ -15911,7 +16134,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-008",
@@ -15981,7 +16205,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Desert Candle stems"
+    "wave_e_note": "Desert Candle stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-009",
@@ -16051,7 +16276,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "African candelabra stems"
+    "wave_e_note": "African candelabra stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-010",
@@ -16118,7 +16344,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-011",
@@ -16185,7 +16412,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-012",
@@ -16259,7 +16487,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Medusa head radiating stems, not a blade rosette"
+    "wave_e_note": "Medusa head radiating stems, not a blade rosette",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-013",
@@ -16331,7 +16560,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "cowhorn euphorbia stems"
+    "wave_e_note": "cowhorn euphorbia stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-014",
@@ -16398,7 +16628,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-015",
@@ -16468,7 +16699,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "E. ingens candelabra"
+    "wave_e_note": "E. ingens candelabra",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-016",
@@ -16538,7 +16770,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "E. ingens crested stems"
+    "wave_e_note": "E. ingens crested stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-017",
@@ -16607,7 +16840,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "E. ingens candelabra"
+    "wave_e_note": "E. ingens candelabra",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-018",
@@ -16682,7 +16916,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-019",
@@ -16759,7 +16994,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-020",
@@ -16833,7 +17069,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-021",
@@ -16900,7 +17137,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-022",
@@ -16972,7 +17210,8 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-023",
@@ -17039,7 +17278,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-024",
@@ -17111,7 +17351,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "firestick stems"
+    "wave_e_note": "firestick stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-025",
@@ -17183,7 +17424,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "pencil euphorbia stems"
+    "wave_e_note": "pencil euphorbia stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-026",
@@ -17253,7 +17495,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "E. trigona stems"
+    "wave_e_note": "E. trigona stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-027",
@@ -17325,7 +17568,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "E. trigona stems"
+    "wave_e_note": "E. trigona stems",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-028",
@@ -17392,7 +17636,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-029",
@@ -17457,7 +17702,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-030",
@@ -17528,7 +17774,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Kalanchoe beharensis felted leaves"
+    "wave_e_note": "Kalanchoe beharensis felted leaves",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-031",
@@ -17598,7 +17845,8 @@
     "wave_d": true,
     "texture_confidence": "sourced",
     "wave_e": true,
-    "wave_e_note": "Kalanchoe beharensis felted leaves"
+    "wave_e_note": "Kalanchoe beharensis felted leaves",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-032",
@@ -17668,7 +17916,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-033",
@@ -17738,7 +17987,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-034",
@@ -17818,7 +18068,8 @@
       "source_url": "https://www.inaturalist.org/observations/386766798",
       "inherits_from": null,
       "confidence": "sourced"
-    }
+    },
+    "layer": "A"
   },
   {
     "card_id": "CCF-OSUC-035",
@@ -17886,7 +18137,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-036",
@@ -17953,7 +18205,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-037",
@@ -18020,7 +18273,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-038",
@@ -18088,7 +18342,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-039",
@@ -18154,7 +18409,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-040",
@@ -18219,7 +18475,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-041",
@@ -18284,7 +18541,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-042",
@@ -18349,7 +18607,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-043",
@@ -18414,7 +18673,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-044",
@@ -18481,7 +18741,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-045",
@@ -18546,7 +18807,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-046",
@@ -18613,7 +18875,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-047",
@@ -18680,7 +18943,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-048",
@@ -18745,7 +19009,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-049",
@@ -18810,7 +19075,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-050",
@@ -18875,7 +19141,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-051",
@@ -18940,7 +19207,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-052",
@@ -19006,7 +19274,8 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
     "bloom_class_confidence": "genus_uniform",
-    "wave_d": true
+    "wave_d": true,
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-053",
@@ -19073,7 +19342,8 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
     "wave_d": true,
-    "wave_d_note": "Name Nocardia neocardensis is not a usable botanical; skipped"
+    "wave_d_note": "Name Nocardia neocardensis is not a usable botanical; skipped",
+    "layer": "C"
   },
   {
     "card_id": "CCF-OSUC-054",
@@ -19143,6 +19413,7 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "bloom_class_confidence": "genus_uniform"
+    "bloom_class_confidence": "genus_uniform",
+    "layer": "C"
   }
 ]

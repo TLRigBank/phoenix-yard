@@ -352,6 +352,10 @@ const KEPT_OFF_LINE = "Kept off the gate: Jumping cholla. Joints that jump.";
 const SESSION_TOXIC = "Oleander and sago stay off the whole list.";
 const MILKWEED_CAUTION = "Kept for butterflies. Still toxic if eaten.";
 
+function isLive(card) {
+  return card.layer === "A" || card.layer === "B";
+}
+
 function loadCatalog(root) {
   const dir = root || path.join(__dirname, "..", "data");
   const read = (name) => JSON.parse(fs.readFileSync(path.join(dir, name), "utf8"));
@@ -770,7 +774,7 @@ function substitutesFor(card, room, brief, catalog) {
   for (const id of ids) {
     if (out.length === 4) break;
     const other = byId.get(id);
-    if (!other || other.card_id === card.card_id) continue;
+    if (!other || other.card_id === card.card_id || !isLive(other)) continue;
     if (!passesGlobal(other, brief, room) || !passesRoom(other, room, brief)) continue;
     out.push(id);
   }
@@ -795,7 +799,11 @@ function keepMap(brief, room) {
 
 function legalPool(catalog, brief, room, blocked) {
   return catalog.filter(
-    (card) => passesGlobal(card, brief, room) && passesRoom(card, room, brief) && !blocked.has(card.card_id)
+    (card) =>
+      isLive(card) &&
+      passesGlobal(card, brief, room) &&
+      passesRoom(card, room, brief) &&
+      !blocked.has(card.card_id)
   );
 }
 
@@ -844,6 +852,7 @@ function fillStrip(catalog, brief, room, prior) {
     const kept = keptId ? byId.get(keptId) : null;
     const keptOk =
       kept &&
+      isLive(kept) &&
       passesGlobal(kept, brief, room) &&
       passesRoom(kept, room, brief) &&
       !usedGenus.has(genusOf(kept));
@@ -1049,6 +1058,7 @@ function match(brief, catalog) {
 module.exports = {
   match,
   loadCatalog,
+  isLive,
   passesGlobal,
   passesRoom,
   KEPT_OFF_LINE,
