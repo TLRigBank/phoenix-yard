@@ -29,7 +29,7 @@
     font: 500 16px/1.4 "Avenir Next", "Segoe UI", sans-serif;
   }
   button:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
-  #app { max-width: 430px; margin: 0 auto; min-height: 100dvh; background: var(--paper); display: flex; flex-direction: column; }
+  #app { max-width: 430px; margin: 0 auto; min-height: 100dvh; background: var(--paper); display: flex; flex-direction: column; position: relative; }
   header { padding: 14px 18px 0; display: flex; align-items: baseline; gap: 10px; }
   .glyph { width: 22px; height: 22px; flex: none; }
   .brand { font-weight: 750; color: var(--pine); font-size: 17px; }
@@ -38,42 +38,40 @@
   h1 { font-size: 24px; font-weight: 650; line-height: 1.2; color: var(--pine); margin: 6px 0 8px; }
   .place { margin: 0 0 8px; color: var(--pine); font-weight: 650; font-size: 15px; }
   .lead { margin: 0 0 10px; color: var(--muted); font-weight: 500; }
+  .hint { margin: 0 0 8px; color: var(--muted); font-size: 13px; font-weight: 500; }
+  .status { margin: 0 0 8px; color: var(--muted); font-size: 13px; font-weight: 650; }
   footer { padding: 8px 18px 26px; display: flex; gap: 8px; }
-  button.pri, button.ghost, button.ans, button.chip, button.seg {
+  button.pri, button.ghost, button.ans, button.chip, button.seg, button.icon, button.swap {
     border-radius: 12px; min-height: 44px; padding: 10px 12px; font-size: 16px; font-weight: 650; cursor: pointer;
+    background: var(--sand); color: var(--ink); border: 2px solid var(--line);
   }
-  button.pri { flex: 1; background: var(--pine-fill); color: var(--ink); border: 0; }
+  button.pri { flex: 1; background: var(--pine-fill); border-color: var(--pine); }
   button.pri[disabled] { opacity: .4; cursor: not-allowed; }
-  button.ghost { flex: 1; background: transparent; border: 1px solid var(--line); color: var(--pine); }
+  button.ghost { flex: 1; color: var(--pine); }
   button.quiet { background: none; border: 0; color: var(--muted); font-size: 13px; font-weight: 650; min-height: 36px; padding: 0; cursor: pointer; }
-  button.ans { flex: 1; background: var(--sand); border: 1px solid var(--line); color: var(--ink); }
-  button.ans.on { background: var(--pine-fill); color: var(--ink); border-color: var(--pine-fill); }
+  button.ans.on, button.chip.on, button.seg.on, button.icon.on {
+    background: var(--pine-fill); color: var(--ink); border-color: var(--pine);
+  }
   .compass { display: flex; gap: 6px; margin: 0 0 8px; }
   .row { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 8px; }
-  button.chip { flex: 1; min-width: 56px; background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-  button.chip.on { background: var(--pine-fill); color: var(--ink); border-color: var(--pine-fill); }
-  button.seg { flex: 1; background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-  button.seg.on { background: var(--pine-fill); color: var(--ink); border-color: var(--pine-fill); }
+  button.chip { flex: 1; min-width: 56px; font-size: 14px; }
+  button.seg { flex: 1; font-size: 14px; }
   .icons { display: flex; gap: 6px; margin: 0 0 10px; }
-  button.icon {
-    flex: 1; min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: transparent;
-    color: var(--muted); font-size: 13px; font-weight: 650; cursor: pointer;
-  }
-  button.icon.on { background: #E8E0D4; color: #1B3A2F; border-color: #E8E0D4; }
+  button.icon { flex: 1; font-size: 13px; border-radius: 10px; }
+  button[data-hold] { -webkit-touch-callout: none; user-select: none; touch-action: manipulation; }
 
   .yard { position: relative; height: 264px; margin: 0 0 10px; background: #161E1B; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  .yard.compact { height: 176px; }
   .street { position: absolute; left: 0; right: 0; top: 0; height: 28px; background: var(--street); color: #C5D9CF; font-size: 10px; font-weight: 750; letter-spacing: .16em; display: flex; align-items: center; justify-content: center; text-transform: uppercase; z-index: 5; }
-  .pool { margin: 8px 0 0; color: var(--muted); font-size: 13px; font-weight: 500; text-align: center; }
-  button.swap {
-    width: 100%; margin-top: 8px; min-height: 40px; border-radius: 10px;
-    background: transparent; border: 1px solid var(--line); color: var(--pine);
-    font-size: 15px; font-weight: 650; cursor: pointer;
-  }
+  .yard.compact .street { height: 22px; }
+  button.swap { width: 100%; margin-top: 10px; }
   .walk { position: absolute; left: 50%; top: 28px; width: 18px; height: 32px; margin-left: -9px; background: #3A4640; z-index: 4; }
+  .yard.compact .walk { top: 22px; height: 20px; }
   .house {
     position: absolute; left: 50%; top: 54%; width: 96px; height: 78px; margin: -39px 0 0 -48px;
     background: var(--house); border-radius: 3px; z-index: 4;
   }
+  .yard.compact .house { width: 72px; height: 54px; margin: -27px 0 0 -36px; }
   .notch {
     position: absolute; left: 50%; top: -10px; width: 22px; height: 14px; margin-left: -11px;
     background: var(--notch); border-radius: 3px 3px 0 0; z-index: 5;
@@ -87,6 +85,10 @@
   .bed[data-side="back"] { left: 18%; right: 18%; bottom: 8px; height: 52px; border-radius: 8px; }
   .bed[data-side="left"] { left: 6px; top: 78px; width: 72px; height: 112px; border-radius: 8px; }
   .bed[data-side="right"] { right: 6px; top: 78px; width: 72px; height: 112px; border-radius: 8px; }
+  .yard.compact .bed[data-side="front"] { top: 22px; height: 34px; }
+  .yard.compact .bed[data-side="back"] { bottom: 6px; height: 34px; }
+  .yard.compact .bed[data-side="left"] { top: 54px; width: 54px; height: 78px; }
+  .yard.compact .bed[data-side="right"] { top: 54px; width: 54px; height: 78px; }
   .bed.filled { border-style: solid; border-color: var(--line); }
   .bed.W { background: var(--west); border-color: transparent; }
   .bed.W.filled { border-color: var(--line); border-style: solid; }
@@ -100,26 +102,54 @@
   .canopy.back { left: 50%; bottom: 12px; margin-left: -18px; }
   .canopy.left { left: 16px; top: 112px; }
   .canopy.right { right: 16px; top: 112px; }
+  .yard.compact .canopy.front { top: 24px; }
+  .yard.compact .canopy.left { top: 72px; left: 10px; }
+  .yard.compact .canopy.right { top: 72px; right: 10px; }
   .blk { position: absolute; background: #5A5348; z-index: 2; pointer-events: none; }
   .blk.front { left: 18%; right: 18%; top: 26px; height: 5px; }
   .blk.back { left: 18%; right: 18%; bottom: 6px; height: 5px; }
   .blk.left { left: 4px; top: 80px; width: 5px; height: 108px; }
   .blk.right { right: 4px; top: 80px; width: 5px; height: 108px; }
 
-  .trio { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 0 6px; }
-  .card { flex: 0 0 78%; scroll-snap-align: start; background: var(--sand); border: 1px solid var(--line); border-radius: 14px; padding: 12px; box-shadow: 0 8px 18px #00000040; }
-  .card.peek { opacity: .85; box-shadow: none; }
-  .swatch { height: 8px; border-radius: 8px; margin: 0 0 8px; opacity: .85; }
-  .job { display: block; font-size: 11px; font-weight: 650; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin: 0 0 2px; }
-  .name { font-weight: 750; font-size: 17px; color: var(--ink); }
-  .botanical { margin: 0; font-size: 13px; color: var(--muted); font-style: italic; font-weight: 500; }
-  .why { margin: 6px 0 0; font-weight: 500; }
-  .mini { display: inline-block; font-size: 12px; font-weight: 650; border-radius: 999px; padding: 3px 8px; background: var(--chip-bg); color: var(--chip-ink); margin: 6px 4px 0 0; }
+  .strip { display: flex; gap: 8px; margin: 4px 0 0; }
+  .tile {
+    flex: 1; min-width: 0; padding: 0 0 8px; overflow: hidden; text-align: left;
+    background: var(--sand); border: 2px solid var(--line); border-radius: 12px; color: var(--ink);
+    cursor: pointer;
+  }
+  .tile.on { border-color: var(--pine); }
+  .tile img, .tile .ph {
+    display: block; width: 100%; height: 88px; object-fit: cover; background: #161E1B;
+  }
+  .tile .job, .sheet .job { display: block; font-size: 10px; font-weight: 650; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin: 6px 8px 0; }
+  .tile .name { font-weight: 750; font-size: 13px; line-height: 1.25; margin: 2px 8px 0; }
+  .tile .mark { display: inline-block; margin: 4px 8px 0; font-size: 11px; font-weight: 650; border-radius: 999px; padding: 2px 7px; background: var(--warn-bg); color: var(--warn-ink); }
+
+  .sheet {
+    position: fixed; left: 50%; bottom: 0; width: min(430px, 100%); margin-left: calc(min(430px, 100%) / -2);
+    background: var(--sand); border: 2px solid var(--pine); border-bottom: 0; border-radius: 16px 16px 0 0;
+    padding: 8px 16px 28px; z-index: 20; max-height: 62dvh; overflow: auto;
+  }
+  .grab { width: 36px; height: 4px; border-radius: 4px; background: var(--line); margin: 4px auto 10px; }
+  .sheet img, .sheet .ph { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; background: #161E1B; display: block; }
+  .sheet .name { font-weight: 750; font-size: 20px; margin: 2px 8px 0; }
+  .botanical { margin: 0 8px; font-size: 13px; color: var(--muted); font-style: italic; font-weight: 500; }
+  .meta { margin: 4px 8px 0; font-size: 13px; color: var(--muted); font-weight: 650; }
+  .why { margin: 8px 8px 0; font-weight: 500; }
+  .mini { display: inline-block; font-size: 12px; font-weight: 650; border-radius: 999px; padding: 3px 8px; background: var(--chip-bg); color: var(--chip-ink); margin: 8px 4px 0 8px; }
   .mini.warn { background: var(--warn-bg); color: var(--warn-ink); }
+
+  #hold-card {
+    position: fixed; z-index: 30; display: none; max-width: 240px;
+    background: var(--sand); color: var(--ink); border: 2px solid var(--pine);
+    border-radius: 10px; padding: 8px 10px; font-size: 13px; font-weight: 500; line-height: 1.3;
+    pointer-events: none;
+  }
 </style>
 </head>
 <body>
 <div id="app"></div>
+<div id="hold-card" hidden></div>
 <script>
 const FACES = {
   N: { front: "N", back: "S", left: "W", right: "E" },
@@ -136,6 +166,27 @@ const PIECES = [
   ["block_wall", "Block"],
   ["shade_tree", "Tree"]
 ];
+const HOLD = {
+  bed: "Plants in the ground on this wall.",
+  pots: "Plants that fit a container on this wall.",
+  gate: "The walk opening. Keep spines off the path.",
+  gravel: "Open ground. Low plants only.",
+  block_wall: "Masonry that throws heat.",
+  shade_tree: "Plant a shade tree on this wall.",
+  none: "No shade on this wall yet.",
+  tree: "Shade already there. Not a new tree.",
+  eave: "Roof shade on this wall.",
+  structure: "Shade from a patio or wall.",
+  chew: "Dogs or kids that mouth plants.",
+  kids: "Hands and mouths at plant height.",
+  wildlife: "Birds and pollinators on this yard.",
+  bone: "The structure plant on this wall.",
+  bloom: "The flower on this wall.",
+  floor: "The low plant on this wall.",
+  "swap-A": "Keep Bloom and Floor. Replace only the structure plant.",
+  "swap-B": "Keep Bone and Floor. Replace only the flower.",
+  "swap-C": "Keep Bone and Bloom. Replace only the low plant."
+};
 const ICONS = {
   bed: '<svg viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="6" rx="1"/></svg>',
   pots: '<svg viewBox="0 0 16 16"><circle cx="5" cy="9" r="2.2"/><circle cx="11" cy="9" r="2.2"/></svg>',
@@ -148,48 +199,48 @@ const ICONS = {
 const DEMO = {
   W: {
     bed: [
-      { name: "Red Yucca", botanical: "Hesperaloe parviflora", job: "Bone", color: "#9E2B2B", why: "Holds the west wall.", chip: "Almost no extra water" },
-      { name: "Parry’s Penstemon", botanical: "Penstemon parryi", job: "Bloom", color: "#C46B8A", why: "Flower on the west wall.", chip: "Almost no extra water" },
-      { name: "Native Hedgehog", botanical: "Echinocereus engelmannii", job: "Floor", color: "#C46B8A", why: "Low on the west wall.", chip: "Spines", warn: true }
+      { name: "Red Yucca", botanical: "Hesperaloe parviflora", job: "Bone", color: "#9E2B2B", why: "Holds the west wall.", chip: "Almost no extra water", photo: "../photos/CCF-YUCC-010.webp", meta: "Sword · 3–5 ft" },
+      { name: "Parry’s Penstemon", botanical: "Penstemon parryi", job: "Bloom", color: "#C46B8A", why: "Flower on the west wall.", chip: "Almost no extra water", photo: "../photos/CCF-PERN-039.webp", meta: "Spike · 2–3 ft" },
+      { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Low on the west wall.", chip: "Spines", warn: true, photo: "../photos/CCF-CACT-055.webp", meta: "Pad · 1 ft" }
     ],
     pots: [
-      { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Bone", color: "#C46B8A", why: "Fits a pot on the west patio.", chip: "Fits a pot" },
-      { name: "Desert Marigold", botanical: "Baileya multiradiata", job: "Bloom", color: "#C8960A", why: "Flower in a west pot.", chip: "Fits a pot" },
-      { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Low pot. Keep it off the path.", chip: "Spines", warn: true }
+      { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Bone", color: "#C46B8A", why: "Fits a pot on the west patio.", chip: "Fits a pot", photo: "../photos/CCF-OSUC-034.webp", meta: "Rosette · 1–2 ft" },
+      { name: "Desert Marigold", botanical: "Baileya multiradiata", job: "Bloom", color: "#C8960A", why: "Flower in a west pot.", chip: "Fits a pot", photo: "../photos/CCF-PERN-007.webp", meta: "Mound · 1 ft" },
+      { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Low pot. Keep it off the path.", chip: "Spines", warn: true, photo: "../photos/CCF-CACT-055.webp", meta: "Pad · 1 ft" }
     ],
     shade_tree: [
-      { name: "Desert Museum Palo Verde", botanical: "Cercidium 'Desert Museum'", job: "Bone", color: "#C8960A", why: "Canopy for the west side. Almost no extra water.", chip: "Needs room from the house" },
-      { name: "Desert Willow", botanical: "Chilopsis linearis", job: "Bloom", color: "#C46B8A", why: "Flowering tree for the west side.", chip: "Almost no extra water" },
-      { name: "Foothill Palo Verde", botanical: "Parkinsonia microphylla", job: "Floor", color: "#8AA0B4", why: "Smaller native tree. Grows here already.", chip: "Grows here already" }
+      { name: "Desert Museum Palo Verde", botanical: "Cercidium 'Desert Museum'", job: "Bone", color: "#C8960A", why: "Canopy for the west side. Almost no extra water.", chip: "Needs room from the house", photo: "../photos/CCF-DTRE-010.webp", meta: "Canopy · 20–25 ft" },
+      { name: "Desert Willow", botanical: "Chilopsis linearis", job: "Bloom", color: "#C46B8A", why: "Flowering tree for the west side.", chip: "Almost no extra water", photo: "../photos/CCF-DTRE-017.webp", meta: "Canopy · 15–25 ft" },
+      { name: "Foothill Palo Verde", botanical: "Parkinsonia microphylla", job: "Floor", color: "#8AA0B4", why: "Smaller native tree. Grows here already.", chip: "Grows here already", photo: "../photos/CCF-DTRE-012.webp", meta: "Canopy · 15–20 ft" }
     ]
   },
   N: {
     bed: [
-      { name: "Beargrass", botanical: "Nolina microcarpa", job: "Bone", color: "#8AA0B4", why: "Takes the north frost pocket.", chip: "North shade" },
-      { name: "Autumn Sage", botanical: "Salvia greggii", job: "Bloom", color: "#9E2B2B", why: "Flower in north shade.", chip: "North shade" },
-      { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", color: "#6B4F8A", why: "Low cover on the north side.", chip: "Feeds the soil" }
+      { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", color: "#8AA0B4", why: "Takes the north frost pocket.", chip: "North shade", photo: "../photos/CCF-YUCC-014.webp", meta: "Blade · 3–4 ft" },
+      { name: "Autumn Sage", botanical: "Salvia greggii", job: "Bloom", color: "#9E2B2B", why: "Flower in north shade.", chip: "North shade", photo: "../photos/CCF-PERN-054.webp", meta: "Shrub · 2–3 ft" },
+      { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", color: "#6B4F8A", why: "Low cover on the north side.", chip: "Feeds the soil", photo: "../photos/CCF-PERN-016.webp", meta: "Mat · 1 ft" }
     ]
   },
   E: {
     bed: [
-      { name: "Desert Honeysuckle", botanical: "Anisacanthus thurberi", job: "Bone", color: "#D4652F", why: "Morning sun, house shade after noon.", chip: "East wall" },
-      { name: "Damianita", botanical: "Chrysactinia mexicana", job: "Bloom", color: "#C8960A", why: "Low flower for the east wall.", chip: "East wall" },
-      { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Floor", color: "#C46B8A", why: "Fits the east edge.", chip: "Almost no extra water" }
+      { name: "Desert Honeysuckle", botanical: "Anisacanthus thurberi", job: "Bone", color: "#D4652F", why: "Morning sun, house shade after noon.", chip: "East wall", photo: "../photos/CCF-FSHB-003.webp", meta: "Cane · 3–5 ft" },
+      { name: "Damianita", botanical: "Chrysactinia mexicana", job: "Bloom", color: "#C8960A", why: "Low flower for the east wall.", chip: "East wall", photo: "../photos/CCF-PERN-011.webp", meta: "Mound · 1–2 ft" },
+      { name: "Texas Tuberose", botanical: "Manfreda maculosa", job: "Floor", color: "#C46B8A", why: "Fits the east edge.", chip: "Almost no extra water", photo: "../photos/CCF-OSUC-034.webp", meta: "Rosette · 1–2 ft" }
     ]
   },
   S: {
     bed: [
-      { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", color: "#8AA0B4", why: "Long south sun.", chip: "South wall" },
-      { name: "Flame Honeysuckle", botanical: "Anisacanthus quadrifidus", job: "Bloom", color: "#D4652F", why: "Flower for the south wall.", chip: "Almost no extra water" },
-      { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Low on the south gravel.", chip: "Spines", warn: true }
+      { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", color: "#8AA0B4", why: "Long south sun.", chip: "South wall", photo: "../photos/CCF-YUCC-014.webp", meta: "Blade · 3–4 ft" },
+      { name: "Flame Honeysuckle", botanical: "Anisacanthus quadrifidus", job: "Bloom", color: "#D4652F", why: "Flower for the south wall.", chip: "Almost no extra water", photo: "../photos/CCF-FSHB-002.webp", meta: "Cane · 3–5 ft" },
+      { name: "Beavertail", botanical: "Opuntia basilaris", job: "Floor", color: "#C46B8A", why: "Low on the south gravel.", chip: "Spines", warn: true, photo: "../photos/CCF-CACT-055.webp", meta: "Pad · 1 ft" }
     ]
   }
 };
 
 const SWAP = {
-  A: { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", color: "#8AA0B4", why: "Another blade for this wall.", chip: "Almost no extra water", seat: "A", can_swap: true },
-  B: { name: "Autumn Sage", botanical: "Salvia greggii", job: "Bloom", color: "#9E2B2B", why: "Another flower for this wall.", chip: "Almost no extra water", seat: "B", can_swap: true },
-  C: { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", color: "#6B4F8A", why: "Another low plant for this wall.", chip: "Feeds the soil", seat: "C", can_swap: true }
+  A: { name: "Banana Yucca", botanical: "Yucca baccata", job: "Bone", color: "#8AA0B4", why: "Another blade for this wall.", chip: "Almost no extra water", seat: "A", can_swap: true, photo: "../photos/CCF-YUCC-014.webp", meta: "Blade · 3–4 ft" },
+  B: { name: "Autumn Sage", botanical: "Salvia greggii", job: "Bloom", color: "#9E2B2B", why: "Another flower for this wall.", chip: "Almost no extra water", seat: "B", can_swap: true, photo: "../photos/CCF-PERN-054.webp", meta: "Shrub · 2–3 ft" },
+  C: { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", color: "#6B4F8A", why: "Another low plant for this wall.", chip: "Feeds the soil", seat: "C", can_swap: true, photo: "../photos/CCF-PERN-016.webp", meta: "Mat · 1 ft" }
 };
 const state = {
   mode: "aim",
@@ -201,7 +252,9 @@ const state = {
   kids: false, chew: false, wildlife: true, care: "Low",
   alt: false,
   swaps: {},
-  last: ""
+  last: "",
+  sheet: null,
+  sawHold: false
 };
 
 function faces() { return FACES[state.front]; }
@@ -232,6 +285,7 @@ function markSvgs(side) {
 }
 
 function yard() {
+  const compact = state.mode === "quote" ? " compact" : "";
   const beds = ["front", "left", "right", "back"].map((side) => {
     const b = bearing(side);
     const filled = list(side).length > 0;
@@ -242,7 +296,7 @@ function yard() {
   }).join("");
   const trees = ["front", "left", "right", "back"].filter((s) => state.cover[s] === "tree").map((s) => `<div class="canopy ${s}"></div>`).join("");
   const blocks = ["front", "left", "right", "back"].filter((s) => list(s).includes("block_wall")).map((s) => `<div class="blk ${s}"></div>`).join("");
-  return `<div class="yard">
+  return `<div class="yard${compact}">
     <div class="street">Street</div>
     <div class="walk"></div>
     ${blocks}${beds}${trees}
@@ -251,32 +305,43 @@ function yard() {
 }
 
 function householdBar() {
-  if (state.mode === "aim") return "";
+  if (state.mode !== "yard") return "";
   return `<div class="icons">
-    <button type="button" class="icon ${state.kids ? "on" : ""}" data-act="tog" data-id="kids">Kids</button>
-    <button type="button" class="icon ${state.chew ? "on" : ""}" data-act="tog" data-id="chew">Chew</button>
-    <button type="button" class="icon ${state.wildlife ? "on" : ""}" data-act="tog" data-id="wildlife">Wild</button>
+    <button type="button" class="icon ${state.kids ? "on" : ""}" data-act="tog" data-id="kids" data-hold="kids" aria-describedby="hold-card">${"Kids"}</button>
+    <button type="button" class="icon ${state.chew ? "on" : ""}" data-act="tog" data-id="chew" data-hold="chew" aria-describedby="hold-card">Chew</button>
+    <button type="button" class="icon ${state.wildlife ? "on" : ""}" data-act="tog" data-id="wildlife" data-hold="wildlife" aria-describedby="hold-card">Wild</button>
     <button type="button" class="icon ${state.care !== "Low" ? "on" : ""}" data-act="care">${state.care === "Low" ? "Time: low" : state.care === "Weekend" ? "Weekends" : "Hobby"}</button>
   </div>`;
+}
+
+function householdStatus() {
+  if (state.mode !== "quote") return "";
+  const bits = [];
+  if (state.kids) bits.push("Kids");
+  if (state.chew) bits.push("Chew");
+  if (state.care !== "Low") bits.push(state.care === "Weekend" ? "Weekends" : "Hobby");
+  if (!bits.length) return "";
+  return `<p class="status">${bits.join(" · ")}</p>`;
 }
 
 function tray() {
   const side = state.selected;
   const on = list(side);
   const pcs = PIECES.map(([id, label]) =>
-    `<button class="chip ${on.includes(id) ? "on" : ""}" data-act="stamp" data-id="${id}">${label}</button>`
+    `<button class="chip ${on.includes(id) ? "on" : ""}" data-act="stamp" data-id="${id}" data-hold="${id}" aria-describedby="hold-card">${label}</button>`
   ).join("");
   const cvs = [["none", "Open"], ["tree", "Canopy"], ["eave", "Eave"], ["structure", "Structure"]].map(([id, label]) =>
-    `<button class="chip ${state.cover[side] === id ? "on" : ""}" data-act="cover" data-id="${id}">${label}</button>`
+    `<button class="chip ${state.cover[side] === id ? "on" : ""}" data-act="cover" data-id="${id}" data-hold="${id}" aria-describedby="hold-card">${label}</button>`
   ).join("");
-  return `<div class="row">${pcs}</div><div class="row">${cvs}</div>`;
+  const coach = state.sawHold ? "" : `<p class="hint">Hold a word for a line.</p>`;
+  return `${coach}<div class="row">${pcs}</div><div class="row">${cvs}</div>`;
 }
 
 function segs() {
   const on = list(state.selected);
   if (on.length <= 1) return "";
   return `<div class="row">${on.map((id) =>
-    `<button class="seg ${state.piece === id ? "on" : ""}" data-act="piece" data-id="${id}">${id === "block_wall" ? "Block" : id === "shade_tree" ? "Tree" : id}</button>`
+    `<button class="seg ${state.piece === id ? "on" : ""}" data-act="piece" data-id="${id}" data-hold="${id}" aria-describedby="hold-card">${id === "block_wall" ? "Block" : id === "shade_tree" ? "Tree" : id[0].toUpperCase() + id.slice(1)}</button>`
   ).join("")}</div>`;
 }
 
@@ -294,19 +359,43 @@ function quoteKey() {
   return state.selected + ":" + piece + (state.alt ? ":alt" : "");
 }
 
-function cards() {
+function showWarn(c) {
+  return !!(c.warn && (state.chew || state.kids));
+}
+
+function photoTag(c, cls) {
+  if (c.photo) return `<img src="${c.photo}" alt="${c.name}" class="${cls || ""}">`;
+  return `<div class="ph" style="background:${c.color}"></div>`;
+}
+
+function strip() {
   const rows = pack();
-  const more = state.alt ? 6 : 12;
-  return `<div class="trio">${rows.map((c, i) => `<article class="card${i ? " peek" : ""}">
-    <div class="swatch" style="background:${c.color}"></div>
+  return `<div class="strip">${rows.map((c) => {
+    const hold = c.job.toLowerCase();
+    return `<button type="button" class="tile${state.sheet === c.seat ? " on" : ""}" data-act="open" data-id="${c.seat}" data-hold="${hold}" aria-describedby="hold-card">
+      ${photoTag(c)}
+      <span class="job">${c.job}</span>
+      <div class="name">${c.name}</div>
+      ${showWarn(c) ? `<span class="mark">${c.chip}</span>` : ""}
+    </button>`;
+  }).join("")}</div>`;
+}
+
+function sheet() {
+  if (!state.sheet) return "";
+  const c = pack().find((row) => row.seat === state.sheet);
+  if (!c) return "";
+  return `<div class="sheet" data-sheet="1">
+    <div class="grab" aria-hidden="true"></div>
+    ${photoTag(c)}
     <span class="job">${c.job}</span>
     <div class="name">${c.name}</div>
     <p class="botanical">${c.botanical}</p>
-    <span class="mini ${c.warn ? "warn" : ""}">${c.chip}</span>
+    <p class="meta">${c.meta || ""}</p>
     <p class="why">${c.why}</p>
-    ${c.can_swap ? `<button class="swap" data-act="swap" data-id="${c.seat}">Swap ${c.job}</button>` : ""}
-  </article>`).join("")}</div>
-  <p class="pool">${more} more for this wall</p>`;
+    <span class="mini ${c.warn ? "warn" : ""}">${c.chip}</span>
+    ${c.can_swap ? `<button class="swap" data-act="swap" data-id="${c.seat}" data-hold="swap-${c.seat}" aria-describedby="hold-card">Swap ${c.job}</button>` : ""}
+  </div>`;
 }
 
 function screenAim() {
@@ -348,15 +437,16 @@ function screenQuote() {
     <main>
       <p class="place">${NAME[bearing(state.selected)]} · ${label}</p>
       ${yard()}
-      ${householdBar()}
+      ${householdStatus()}
       ${segs()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
-      ${list(state.selected).length ? cards() : `<p class="lead">Put something on a wall.</p>`}
+      ${list(state.selected).length ? strip() : `<p class="lead">Put something on a wall.</p>`}
     </main>
     <footer>
       <button class="ghost" data-act="mode" data-id="yard">Map</button>
       <button class="pri" data-act="reroll">Three others for this wall</button>
-    </footer>`;
+    </footer>
+    ${sheet()}`;
 }
 
 function render() {
@@ -364,7 +454,71 @@ function render() {
   document.getElementById("app").innerHTML = html;
 }
 
+const holdCard = document.getElementById("hold-card");
+let holdTimer = 0;
+let holding = false;
+let eatClick = false;
+
+function hideHold() {
+  clearTimeout(holdTimer);
+  holdTimer = 0;
+  holdCard.hidden = true;
+  holdCard.style.display = "none";
+  holdCard.textContent = "";
+}
+
+function placeHold(el) {
+  const r = el.getBoundingClientRect();
+  const footer = !!el.closest("footer") || !!el.closest(".sheet");
+  holdCard.style.left = Math.max(8, Math.min(window.innerWidth - 248, r.left)) + "px";
+  if (footer) {
+    holdCard.style.top = (r.top - holdCard.offsetHeight - 12) + "px";
+  } else {
+    holdCard.style.top = (r.bottom + 12) + "px";
+  }
+}
+
+document.getElementById("app").addEventListener("pointerdown", (e) => {
+  const el = e.target.closest("[data-hold]");
+  if (!el) return;
+  holding = false;
+  try { el.setPointerCapture(e.pointerId); } catch (err) {}
+  holdTimer = setTimeout(() => {
+    holdCard.hidden = false;
+    holdCard.style.display = "block";
+    holdCard.textContent = HOLD[el.dataset.hold] || "";
+    placeHold(el);
+    holding = true;
+    eatClick = true;
+    state.sawHold = true;
+  }, 420);
+});
+document.getElementById("app").addEventListener("pointerup", hideHold);
+document.getElementById("app").addEventListener("pointercancel", hideHold);
+document.getElementById("app").addEventListener("contextmenu", (e) => {
+  if (e.target.closest("[data-hold]")) e.preventDefault();
+});
+
 document.getElementById("app").addEventListener("click", (e) => {
+  if (eatClick && e.target.closest("[data-hold]")) {
+    e.preventDefault();
+    e.stopPropagation();
+    eatClick = false;
+    return;
+  }
+  eatClick = false;
+
+  if (e.target.closest("[data-sheet]")) {
+    const inner = e.target.closest("[data-act]");
+    if (!inner && e.target.classList.contains("sheet")) {
+      state.sheet = null;
+      render();
+    }
+    if (!inner) return;
+  } else if (state.sheet && !e.target.closest("[data-act='open']") && e.target.closest(".yard")) {
+    state.sheet = null;
+  }
+
   const b = e.target.closest("[data-act]");
   if (!b) return;
   const act = b.dataset.act;
@@ -373,12 +527,14 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.selected = b.dataset.id;
     const on = list(state.selected);
     if (on.length && !on.includes(state.piece)) state.piece = on[0];
+    state.sheet = null;
     state.last = state.mode === "quote" && !on.length ? "Put something on a wall." : "";
   }
   if (act === "mode") {
     const from = state.mode;
     state.mode = b.dataset.id;
     state.last = "";
+    state.sheet = null;
     if (from === "aim" && b.dataset.id === "yard") state.selected = westSide() || state.selected;
   }
   if (act === "stamp") {
@@ -392,18 +548,20 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.last = "";
   }
   if (act === "cover") state.cover[state.selected] = b.dataset.id;
-  if (act === "piece") state.piece = b.dataset.id;
+  if (act === "piece") { state.piece = b.dataset.id; state.sheet = null; }
   if (act === "tog") state[b.dataset.id] = !state[b.dataset.id];
   if (act === "care") state.care = state.care === "Low" ? "Weekend" : state.care === "Weekend" ? "Hobby" : "Low";
   if (act === "quote") {
     if (!hasAny()) state.last = "Put something on a wall.";
-    else { state.mode = "quote"; state.last = ""; }
+    else { state.mode = "quote"; state.last = ""; state.sheet = null; }
   }
   if (act === "reroll") {
     state.alt = !state.alt;
     state.swaps[quoteKey()] = {};
+    state.sheet = null;
     state.last = state.alt ? "Another legal set for this wall." : "Back to this wall’s first set.";
   }
+  if (act === "open") state.sheet = b.dataset.id;
   if (act === "swap") {
     const key = quoteKey();
     const cur = Object.assign({}, state.swaps[key] || {});
@@ -415,12 +573,24 @@ document.getElementById("app").addEventListener("click", (e) => {
   if (act === "reset") {
     state.surfaces = { front: [], left: [], right: [], back: [] };
     state.cover = { front: "none", left: "none", right: "none", back: "none" };
-    state.mode = "aim";
-    state.last = "";
-    state.swaps = {};
-    state.alt = false;
+    state.kids = false; state.chew = false; state.wildlife = true; state.care = "Low";
+    state.alt = false; state.swaps = {}; state.last = ""; state.mode = "aim"; state.sheet = null;
   }
   render();
+});
+
+let sheetStart = 0;
+document.getElementById("app").addEventListener("pointerdown", (e) => {
+  if (e.target.closest(".grab") || (e.target.classList.contains("sheet") && e.offsetY < 28)) {
+    sheetStart = e.clientY;
+  } else sheetStart = 0;
+});
+document.getElementById("app").addEventListener("pointerup", (e) => {
+  if (sheetStart && e.clientY - sheetStart > 48) {
+    state.sheet = null;
+    sheetStart = 0;
+    render();
+  }
 });
 
 render();

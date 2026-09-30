@@ -24,3 +24,8 @@ Do not implement these unless the user changes `GROK.md`.
 - Printing `short_why`, `chip_pack`, scores, or room codes
 - Dropping `invasive_elsewhere`, or dropping Coral Fountain Grass because the name says fountain
 - A chew toggle that only rewrites the pot on screen
+- Swipe-to-reject or Tinder stacks for Bone / Bloom / Floor
+- A full-screen plant page that hides the house
+- Hold-on-every-control, hold on map walls, or hold as the only way to read a fact
+- Why-lines, Latin, or Swap on the quote strip
+- Pips or bevels on the six-chip stamp row

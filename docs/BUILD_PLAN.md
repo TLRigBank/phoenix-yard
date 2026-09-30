@@ -25,7 +25,7 @@ Phase 0 is in the repo. Do not retune weights to chase the old prototype sketch 
 - **W1.6** 44px targets and 16px body before any later phase.
 - **W2.1** Chew control reruns the whole match and uses the copy-map diff. On the default brief the picks do not change; the banner still runs.
 - **W2.2** Empty-seat sentences. No catalog fallback.
-- **W2.3** Card sheet: botanical, height, toxic who, spine, setback if > 0, support, up to 4 substitutes from the response (already gated).
+- **W2.3** Card sheet: botanical, height, toxic who, spine, setback if > 0, support, up to 4 substitutes from the response (already gated). Quote strip stays photo + job + name. Sheet is a medium detent over the compact map.
 - **W2.4** Kept-off line on the gate. Session note when kids or chew.
 - **W2.5** Plain list by strip for sharing.
 - **W3.1–W3.3** Planted checks, one ghost, local save already shipped in W1.5.

@@ -10,7 +10,7 @@ A person orients the house (which side cooks), chooses a project, then quotes **
 | `docs/DECISION_TREE.md` | Gates, weights, slots. |
 | `docs/COPY_MAP.md` | Words on screen. |
 | `docs/USER_STORIES.md` | Acceptance. |
-| `docs/BUILD_PLAN.md` | Phases. |
+| `docs/DUSK.md` | Tokens, control chrome, hold card, quote fold. |
 | `docs/API.md` | `match(brief)` including `exclude` reroll. |
 | `docs/NOT_V1.md` | Non-goals. |
 | `data/` | Catalog v0.1.9 slim (543 cards). |

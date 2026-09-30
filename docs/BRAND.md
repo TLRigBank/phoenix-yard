@@ -11,3 +11,5 @@ Heat color (ember) is warning chips and keyboard focus only. West climate is a d
 
 
 Product words: yard, wall, front faces, cooks, Bone / Bloom / Floor, Three others for this wall.
+
+Quote is a 3-up photo strip plus a plant sheet, not a tall card carousel.

@@ -4,7 +4,7 @@ Read `GROK.md` first.
 
 Phoenix Yard. Plants that match the wall.
 
-UI is a plan: street top, door on the front edge, fat beds, west is the only hot color. No triangle roof. Copy lives in `docs/COPY_MAP.md` and `docs/BRAND.md`.
+UI is a plan: street top, door on the front edge, fat beds, west is the only hot color. No triangle roof. Copy lives in `docs/COPY_MAP.md` and `docs/BRAND.md`. Quote is a 3-up photo strip plus a plant sheet. Hold lines only on jargon.
 
 
 
