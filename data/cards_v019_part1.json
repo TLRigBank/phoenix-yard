@@ -1497,7 +1497,7 @@
       "confidence": "sourced",
       "qa": "pass_habit"
     },
-    "layer": "A"
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-021",
@@ -1582,7 +1582,7 @@
       "inherits_from": null,
       "confidence": "sourced"
     },
-    "layer": "B"
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-022",
@@ -1667,7 +1667,7 @@
       "confidence": "sourced",
       "qa": "pass_habit"
     },
-    "layer": "A"
+    "layer": "C"
   },
   {
     "card_id": "CCF-CACT-023",
@@ -8488,7 +8488,7 @@
       "confidence": "sourced",
       "qa": "pass_habit"
     },
-    "layer": "A"
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-024",
@@ -10418,7 +10418,7 @@
       "confidence": "sourced",
       "qa": "pass_habit"
     },
-    "layer": "A"
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-051",
@@ -12527,7 +12527,7 @@
     "foliage_color": "variegated",
     "foliage_color_confidence": "sourced",
     "wave_a": true,
-    "layer": "B"
+    "layer": "C"
   },
   {
     "card_id": "CCF-AGAV-081",
@@ -12657,7 +12657,7 @@
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
     "wave_a": true,
-    "layer": "A",
+    "layer": "C",
     "photo": {
       "id": "CCF-AGAV-082",
       "path": "photos/CCF-AGAV-082.webp",

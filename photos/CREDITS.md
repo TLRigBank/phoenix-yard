@@ -181,3 +181,16 @@ CCF-YUCC-011 inherits CCF-YUCC-010.
 | CCF-DTRE-020 | Ebenopsis ebano | cc-by | bacchusrock | https://www.inaturalist.org/observations/260723142 |
 | CCF-OTRE-025 | Pistacia chinensis (Red Push form) | cc-by-sa | Cossey25 | https://commons.wikimedia.org/wiki/File:Tree_011_pistache_habit_005.jpg |
 
+## Layer A expand 2026-09-30
+
+| card_id | species | license | credit | observation |
+|---|---|---|---|---|
+| CCF-YUCC-036 | Dasylirion wheeleri | cc-by | ck2az | https://www.inaturalist.org/observations/38094051 |
+| CCF-FSHB-043 | Hyptis emoryi | cc-by | thunefeld | https://www.inaturalist.org/observations/5520347 |
+| CCF-FSHB-044 | Ericameria laricifolia | cc-by | ck2az | https://www.inaturalist.org/observations/25222494 |
+| CCF-LSHB-026 | Cordia parvifolia | cc-by | maucalderon | https://www.inaturalist.org/observations/134903510 |
+| CCF-PERN-070 | Ambrosia deltoidea | cc0 | macromatt | https://www.inaturalist.org/observations/359660981 |
+| CCF-OTRE-034 | Sophora secundiflora | cc-by | baldeagle | https://www.inaturalist.org/observations/341714461 |
+| CCF-PERN-011 | Chrysactinia mexicana | cc-by-sa | leticia_jimenez | https://www.inaturalist.org/observations/89014032 |
+
+

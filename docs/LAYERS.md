@@ -2,48 +2,59 @@
 
 Every card has `layer: A | B | C`. `legalPool` drops C. Jumping cholla stays C so it can still feed the gate veto, not a seat.
 
+Source: Three Timbers 18-HOA crosswalk + AMWUA fact sheets + contractor staples, mapped to CCF ids. HOA counts are merchandising frequency, not POS.
 
-Source: Three Timbers Best Sellers + HOA frequency + contractor staples, mapped to CCF ids. Sales data is merchandising, not POS.
+## Where a plant sits
 
-## Layer A — live deck (seat these)
+Seat is the job, not a junk drawer.
 
-56 cards. One form per plant people actually buy. Market gaps (hopseed, Texas sage, jojoba, creosote, Torch Glow, brittlebush) are in the JSON as A.
+| Job | What belongs | Matcher groups |
+|---|---|---|
+| **Shade tree** | Canopy you stamp with Tree | Desert-Adapted Trees; Ornamental Trees only as shade_tree B |
+| **Bone** | Year-round silhouette against a wall | Yucca and Allies, Agave, Foliage Shrubs |
+| **Bloom** | Color people buy | Flowering Shrubs, blooming perennials, vines |
+| **Floor / hedge** | Groundcover, grass, or screen | Perennials, grasses, hedge shrubs |
 
-Every Layer A card has a sourced photo with `qa: pass_habit` or `qa: pass_bloom`. See `docs/PHOTO_QA.md`.
+Do not put a 2 ft yellow mound in Bone. Do not put a mesquite in Bloom.
+
+## Layer A — live deck (61)
 
 ### Shade trees
-| id | name |
-|---|---|
-| CCF-DTRE-010 | Desert Museum palo verde |
-| CCF-DTRE-012 | Foothill palo verde |
-| CCF-DTRE-009 | Blue palo verde |
-| CCF-DTRE-027 | Native / velvet mesquite |
-| CCF-DTRE-024 | Chilean mesquite |
-| CCF-DTRE-019 | Ironwood |
-| CCF-DTRE-017 | Desert willow |
-| CCF-DTRE-004 | Sweet acacia |
-| CCF-DTRE-018 | Fern of the desert |
-| CCF-DTRE-020 | Texas ebony |
-| CCF-OTRE-025 | Red Push pistache |
+| id | name | Why here |
+|---|---|---|
+| CCF-DTRE-010 | Desert Museum palo verde | Phoenix spec tree |
+| CCF-DTRE-012 | Foothill palo verde | Native palo verde |
+| CCF-DTRE-009 | Blue palo verde | State tree, 13 HOAs |
+| CCF-DTRE-027 | Native / velvet mesquite | Native canopy |
+| CCF-DTRE-024 | Chilean mesquite | Contractor staple |
+| CCF-DTRE-025 | Honey mesquite | 13 HOAs; add |
+| CCF-DTRE-019 | Ironwood | 17 HOAs |
+| CCF-DTRE-017 | Desert willow | 16 HOAs |
+| CCF-DTRE-004 | Sweet acacia | 15 HOAs |
+| CCF-DTRE-018 | Fern of the desert | Common Lysiloma |
+| CCF-DTRE-020 | Texas ebony | 13 HOAs |
+| CCF-OTRE-025 | Red Push pistache | Valley shade tree |
+| CCF-OTRE-034 | Texas mountain laurel | 16 HOAs; seeds are ingest-toxic |
+
+Not A: catclaw (spines / gate), leatherleaf acacia (puncture), palo brea (fourth Parkinsonia).
 
 ### Bone
-| id | name |
-|---|---|
-| CCF-YUCC-010 | Red yucca |
-| CCF-YUCC-003 | Ocotillo |
-| CCF-YUCC-014 | Banana yucca |
-| CCF-YUCC-016 | Soaptree yucca |
-| CCF-YUCC-027 | Beaked yucca |
-| CCF-AGAV-054 | Parry’s agave |
-| CCF-AGAV-082 | Weber / smooth-edge agave |
-| CCF-AGAV-050 | Whale’s tongue |
-| CCF-AGAV-023 | Desert agave |
-| CCF-CACT-005 | Saguaro |
-| CCF-CACT-019 | Golden barrel |
-| CCF-CACT-031 | Fishhook barrel |
-| CCF-CACT-055 | Beavertail |
-| CCF-CACT-020 | Native hedgehog |
-| CCF-CACT-022 | Claret cup |
+| id | name | Why here |
+|---|---|---|
+| CCF-YUCC-010 | Red yucca | 15 HOAs |
+| CCF-YUCC-003 | Ocotillo | 16 HOAs |
+| CCF-YUCC-014 | Banana yucca | 14 HOAs |
+| CCF-YUCC-016 | Soaptree yucca | 12 HOAs |
+| CCF-YUCC-027 | Beaked yucca | Architectural staple |
+| CCF-YUCC-009 | Giant hesperaloe | 12 HOAs |
+| CCF-YUCC-036 | Desert spoon | 16 HOAs; dasylirion, not a yucca, still Bone |
+| CCF-AGAV-054 | Parry’s agave | Only agave at 10 HOAs |
+| CCF-CACT-005 | Saguaro | 17 HOAs |
+| CCF-CACT-019 | Golden barrel | 13 HOAs |
+| CCF-CACT-031 | Fishhook barrel | Native barrel; habit photo + high-confidence card |
+| CCF-CACT-055 | Beavertail | Most frequent prickly pear (9) |
+
+Archived from Bone: Weber, whale’s tongue, desert agave, hedgehog, claret cup.
 
 ### Bloom
 | id | name |
@@ -54,6 +65,8 @@ Every Layer A card has a sourced photo with `qa: pass_habit` or `qa: pass_bloom`
 | CCF-FSHB-006 | Mexican bird of paradise |
 | CCF-FSHB-007 | Red bird of paradise |
 | CCF-FSHB-020 | Chuparosa |
+| CCF-FSHB-021 | Mexican honeysuckle |
+| CCF-FSHB-043 | Desert lavender |
 | CCF-PERN-054 | Autumn sage |
 | CCF-PERN-039 | Parry’s penstemon |
 | CCF-PERN-038 | Firecracker penstemon |
@@ -64,11 +77,15 @@ Every Layer A card has a sourced photo with `qa: pass_habit` or `qa: pass_bloom`
 | CCF-PERN-004 | Desert milkweed |
 | CCF-PERN-062 | Gooding’s verbena |
 | CCF-PERN-032 | Purple trailing lantana |
+| CCF-VINE-010 | Torch Glow bougainvillea |
 
 ### Floor / hedge
 | id | name |
 |---|---|
 | CCF-PERN-016 | Trailing indigo |
+| CCF-PERN-011 | Damianita |
+| CCF-FSHB-044 | Turpentine bush |
+| CCF-PERN-070 | Triangle-leaf bursage |
 | CCF-GRAS-009 | Deer grass |
 | CCF-GRAS-004 | Regal Mist muhly |
 | CCF-GRAS-006 | Pine muhly |
@@ -80,14 +97,14 @@ Every Layer A card has a sourced photo with `qa: pass_habit` or `qa: pass_bloom`
 | CCF-FSHB-042 | Texas sage |
 | CCF-LSHB-024 | Jojoba |
 | CCF-LSHB-025 | Creosote |
-| CCF-VINE-010 | Torch Glow bougainvillea |
+| CCF-LSHB-026 | Little leaf cordia |
 | CCF-PERN-069 | Brittlebush |
 
-Hopseed is a hedge piece, not a cover-tree.
+Hopseed and cordia are hedge pieces, not cover-trees. Bursage is a nurse / floor plant, not a flower.
 
 ## Layer B — swap only
 
-Same plant, different color or size. Matcher may replace one A seat with its B sibling.
+Same plant, different color or size.
 
 | A | B |
 |---|---|
@@ -97,27 +114,19 @@ Same plant, different color or size. Matcher may replace one A seat with its B s
 | Fairy duster | CCF-FSHB-009 Baja fairy duster |
 | Red bird of paradise | CCF-FSHB-008 yellow form |
 | Trailing lantana | CCF-PERN-033 white trailing; bush lantana CCF-PERN-027 Dallas Red, CCF-PERN-029 New Gold |
-| Weber agave | CCF-AGAV-080 Arizona Star only if a habit photo exists |
 | Parry agave | CCF-AGAV-053 artichoke |
 | Chilean mesquite | CCF-DTRE-021 Cooperi, CCF-DTRE-023 Fuente |
 | Desert Museum | CCF-DTRE-011 Sonoran Emerald |
 | Beavertail | CCF-CACT-056 Beaverita |
-| Hedgehog | CCF-CACT-021 strawberry |
 | Muhly | CCF-GRAS-005 White Cloud |
 | Rosemary | CCF-PERN-046 Tuscan Blue |
 | Red Push | CCF-OTRE-026 Chinese pistache, CCF-OTRE-027 mastic |
 
-## Layer C — archive (dark)
+Weber ‘Arizona Star’ and strawberry hedgehog moved to C with their A parents.
 
-Everything else. Especially:
+## Layer C — archive
 
-- Most remaining Agave / Aloe / Mammillaria / Gymnocalycium / Astrophytum
-- Boxwood, nandina, photinia, pittosporum, privet, euonymus
-- Oleander (toxic; sells, still C)
-- Ficus nitida, Italian cypress (sell, fail our tree gates)
-- Ruellia brittoniana / Katie (invasive-risk cousin of desert ruellia)
-- Live oak as a default Phoenix west-wall tree
-- Jumping cholla stays in JSON for the **gate veto**, not as a live pick
+Everything else. Especially leftover Agave / Aloe / Mammillaria, boxwood, nandina, oleander, ficus, Italian cypress, live oak as a default west-wall tree, catclaw, jumping cholla (gate veto only).
 
 ## Matcher rule
 
@@ -127,10 +136,12 @@ swap_pool = B keyed by A id
 C never enters climate pool
 ```
 
-`pool_size` counts A+B that pass the room, not 543.
+Default west-wall Floor is now beavertail (`CCF-CACT-055`) after hedgehog left A.
 
 ## Do not
 
 - Promote a C card because it has a photo
-- Promote ficus or oleander because they are on a bestseller page
+- Promote ficus or oleander because an HOA list allows them
+- Put desert spoon in the tree list
 - Keep 8 lantana colors in A
+- Seat catclaw

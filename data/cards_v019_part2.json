@@ -1223,9 +1223,10 @@
       "license": "cc-by-sa",
       "source_url": "https://www.inaturalist.org/observations/159654976",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_bloom"
     },
-    "layer": "C"
+    "layer": "A"
   },
   {
     "card_id": "CCF-YUCC-010",
@@ -4125,7 +4126,17 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "A",
+    "photo": {
+      "id": "CCF-PERN-011",
+      "path": "photos/CCF-PERN-011.webp",
+      "credit": "iNaturalist / leticia_jimenez",
+      "license": "cc-by-sa",
+      "source_url": "https://www.inaturalist.org/observations/89014032",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-PERN-012",
@@ -10084,9 +10095,10 @@
       "license": "cc-by",
       "source_url": "https://www.inaturalist.org/observations/383230074",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_bloom"
     },
-    "layer": "C"
+    "layer": "A"
   },
   {
     "card_id": "CCF-FSHB-022",
@@ -16462,9 +16474,10 @@
       "license": "cc-by",
       "source_url": "https://www.inaturalist.org/observations/404261412",
       "inherits_from": null,
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
-    "layer": "C"
+    "layer": "A"
   },
   {
     "card_id": "CCF-DTRE-026",
@@ -18918,8 +18931,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "kids",
+      "dogs",
+      "cats"
+    ],
     "spine_class": "none",
     "litter_class": "leaves",
     "root_class": "seekers",
@@ -18944,10 +18961,10 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin",
-      "sw-native"
+      "sw-native",
+      "toxic"
     ],
-    "phoenix_pocket_tags": "reflected_heat_ok|not_frost_pocket|winter_hardy_phx|walkway_candidate|needs_room|sonoran_native|gravel_hydrozone",
+    "phoenix_pocket_tags": "reflected_heat_ok|not_frost_pocket|winter_hardy_phx|walkway_candidate|needs_room|sonoran_native|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-OTRE-007",
@@ -18959,7 +18976,17 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "layer": "C"
+    "layer": "A",
+    "photo": {
+      "id": "CCF-OTRE-034",
+      "path": "photos/CCF-OTRE-034.webp",
+      "credit": "iNaturalist / baldeagle",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/341714461",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-OTRE-035",
@@ -21192,5 +21219,403 @@
       "confidence": "sourced",
       "qa": "pass_habit"
     }
+  },
+  {
+    "card_id": "CCF-YUCC-036",
+    "display_name": "Desert Spoon",
+    "common_name": "Desert Spoon",
+    "botanical_name": "Dasylirion wheeleri",
+    "source_variety_raw": "Dasylirion wheeleri (Desert Spoon)",
+    "plant_group": "Yucca and Allies",
+    "layer": "A",
+    "habit": "rosette",
+    "size_class": "medium",
+    "water_class": "VL",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "native_class": "sw_us",
+    "phoenix_winter_fit": "reliable_including_cold_pockets",
+    "frost_pocket_ok": true,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 6.0,
+    "height_min_ft": 3.0,
+    "height_max_ft": 6.0,
+    "spine_hazard": true,
+    "pedestrian_avoid": true,
+    "spine_class": "puncture",
+    "toxic_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 4,
+    "nurse_role": "none",
+    "texture_body": "Swords",
+    "color_moods": [
+      "Moon"
+    ],
+    "bloom_colors": [
+      "white"
+    ],
+    "bloom_seasons": [
+      "spring",
+      "summer"
+    ],
+    "wildlife": [
+      "bees"
+    ],
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "chip_pack": [
+      "VL",
+      "west-heat",
+      "thorns",
+      "low-toxin",
+      "sw-native"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|keep_off_paths|sonoran_native|gravel_hydrozone",
+    "substitute_ids": [
+      "CCF-YUCC-010",
+      "CCF-YUCC-009"
+    ],
+    "short_why": "Desert Spoon · Bone · VL",
+    "photo": {
+      "id": "CCF-YUCC-036",
+      "path": "photos/CCF-YUCC-036.webp",
+      "credit": "iNaturalist / ck2az",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/38094051",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    },
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "fruit_colors": [],
+    "needs_support": "none",
+    "n_fixer": false,
+    "toxic_sap": false,
+    "toxic_who": [],
+    "frost_protect_needed": false,
+    "maintenance_level": "low",
+    "match_confidence": "high"
+  },
+  {
+    "card_id": "CCF-FSHB-043",
+    "display_name": "Desert Lavender",
+    "common_name": "Desert Lavender",
+    "botanical_name": "Hyptis emoryi",
+    "source_variety_raw": "Hyptis emoryi / Condea emoryi (Desert Lavender)",
+    "plant_group": "Flowering Shrubs",
+    "layer": "A",
+    "habit": "shrub",
+    "size_class": "medium",
+    "water_class": "VL",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "native_class": "az_native",
+    "phoenix_winter_fit": "reliable_typical_yard",
+    "frost_pocket_ok": false,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 8.0,
+    "height_min_ft": 4.0,
+    "height_max_ft": 10.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "spine_class": "none",
+    "toxic_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 3,
+    "nurse_role": "none",
+    "texture_body": "Felt",
+    "color_moods": [
+      "Moon",
+      "Ember"
+    ],
+    "bloom_colors": [
+      "purple"
+    ],
+    "bloom_seasons": [
+      "spring",
+      "fall"
+    ],
+    "wildlife": [
+      "bees",
+      "butterflies",
+      "hummingbirds"
+    ],
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "chip_pack": [
+      "VL",
+      "west-heat",
+      "walk-soft",
+      "low-toxin"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|not_frost_pocket|walkway_candidate|sonoran_native|gravel_hydrozone",
+    "substitute_ids": [
+      "CCF-FSHB-020",
+      "CCF-PERN-054"
+    ],
+    "short_why": "Desert Lavender · Bloom · VL",
+    "photo": {
+      "id": "CCF-FSHB-043",
+      "path": "photos/CCF-FSHB-043.webp",
+      "credit": "iNaturalist / thunefeld",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/5520347",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    },
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "fruit_colors": [],
+    "needs_support": "none",
+    "n_fixer": false,
+    "toxic_sap": false,
+    "toxic_who": [],
+    "frost_protect_needed": false,
+    "maintenance_level": "low",
+    "match_confidence": "high"
+  },
+  {
+    "card_id": "CCF-FSHB-044",
+    "display_name": "Turpentine Bush",
+    "common_name": "Turpentine Bush",
+    "botanical_name": "Ericameria laricifolia",
+    "source_variety_raw": "Ericameria laricifolia (Turpentine Bush)",
+    "plant_group": "Perennials and Groundcover",
+    "layer": "A",
+    "habit": "shrub",
+    "size_class": "small",
+    "water_class": "VL",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "native_class": "az_native",
+    "phoenix_winter_fit": "reliable_including_cold_pockets",
+    "frost_pocket_ok": true,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 3.0,
+    "height_min_ft": 1.0,
+    "height_max_ft": 2.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "spine_class": "none",
+    "toxic_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 2,
+    "nurse_role": "none",
+    "texture_body": "Gloss",
+    "color_moods": [
+      "Sun",
+      "Pine"
+    ],
+    "bloom_colors": [
+      "yellow"
+    ],
+    "bloom_seasons": [
+      "summer",
+      "fall"
+    ],
+    "wildlife": [
+      "bees",
+      "butterflies"
+    ],
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "chip_pack": [
+      "VL",
+      "west-heat",
+      "walk-soft",
+      "low-toxin"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|sonoran_native|gravel_hydrozone",
+    "substitute_ids": [
+      "CCF-PERN-011",
+      "CCF-PERN-007"
+    ],
+    "short_why": "Turpentine Bush · Floor · VL",
+    "photo": {
+      "id": "CCF-FSHB-044",
+      "path": "photos/CCF-FSHB-044.webp",
+      "credit": "iNaturalist / ck2az",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/25222494",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_bloom"
+    },
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "fruit_colors": [],
+    "needs_support": "none",
+    "n_fixer": false,
+    "toxic_sap": false,
+    "toxic_who": [],
+    "frost_protect_needed": false,
+    "maintenance_level": "low",
+    "match_confidence": "high"
+  },
+  {
+    "card_id": "CCF-LSHB-026",
+    "display_name": "Little Leaf Cordia",
+    "common_name": "Little Leaf Cordia",
+    "botanical_name": "Cordia parvifolia",
+    "source_variety_raw": "Cordia parvifolia (Little Leaf Cordia)",
+    "plant_group": "Foliage Shrubs",
+    "layer": "A",
+    "habit": "shrub",
+    "size_class": "medium",
+    "water_class": "VL",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "native_class": "sw_us_mexico",
+    "phoenix_winter_fit": "reliable_typical_yard",
+    "frost_pocket_ok": true,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 8.0,
+    "height_min_ft": 4.0,
+    "height_max_ft": 6.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "spine_class": "none",
+    "toxic_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 3,
+    "nurse_role": "none",
+    "texture_body": "Wild stem",
+    "color_moods": [
+      "Moon"
+    ],
+    "bloom_colors": [
+      "white"
+    ],
+    "bloom_seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "wildlife": [
+      "bees",
+      "butterflies"
+    ],
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "chip_pack": [
+      "VL",
+      "west-heat",
+      "walk-soft",
+      "low-toxin"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|hedge|gravel_hydrozone",
+    "substitute_ids": [
+      "CCF-LSHB-023",
+      "CCF-FSHB-042"
+    ],
+    "short_why": "Little Leaf Cordia · hedge · VL",
+    "photo": {
+      "id": "CCF-LSHB-026",
+      "path": "photos/CCF-LSHB-026.webp",
+      "credit": "iNaturalist / maucalderon",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/134903510",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    },
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "fruit_colors": [],
+    "needs_support": "none",
+    "n_fixer": false,
+    "toxic_sap": false,
+    "toxic_who": [],
+    "frost_protect_needed": false,
+    "maintenance_level": "low",
+    "match_confidence": "high"
+  },
+  {
+    "card_id": "CCF-PERN-070",
+    "display_name": "Triangle-leaf Bursage",
+    "common_name": "Triangle-leaf Bursage",
+    "botanical_name": "Ambrosia deltoidea",
+    "source_variety_raw": "Ambrosia deltoidea (Triangle-leaf Bursage)",
+    "plant_group": "Perennials and Groundcover",
+    "layer": "A",
+    "habit": "shrub",
+    "size_class": "small",
+    "water_class": "VL",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "native_class": "az_native",
+    "phoenix_winter_fit": "reliable_including_cold_pockets",
+    "frost_pocket_ok": true,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 3.0,
+    "height_min_ft": 1.0,
+    "height_max_ft": 2.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "spine_class": "none",
+    "toxic_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 2,
+    "nurse_role": "understory",
+    "texture_body": "Felt",
+    "color_moods": [
+      "Moon"
+    ],
+    "bloom_colors": [
+      "green"
+    ],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
+    "wildlife": [
+      "bees"
+    ],
+    "bloom_class": "foliage_primary",
+    "bloom_class_confidence": "sourced",
+    "chip_pack": [
+      "VL",
+      "west-heat",
+      "walk-soft",
+      "low-toxin"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|small_yard_ok|sonoran_native|gravel_hydrozone|nurse",
+    "substitute_ids": [
+      "CCF-PERN-016",
+      "CCF-PERN-069"
+    ],
+    "short_why": "Triangle-leaf Bursage · Floor · VL",
+    "photo": {
+      "id": "CCF-PERN-070",
+      "path": "photos/CCF-PERN-070.webp",
+      "credit": "iNaturalist / macromatt",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/359660981",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    },
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "fruit_colors": [],
+    "needs_support": "none",
+    "n_fixer": false,
+    "toxic_sap": false,
+    "toxic_who": [],
+    "frost_protect_needed": false,
+    "maintenance_level": "low",
+    "match_confidence": "high"
   }
 ]

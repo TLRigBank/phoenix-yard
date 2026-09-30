@@ -10,7 +10,21 @@ A photo ships only if **the named plant is the subject** and a neighbor could re
 - Distant landscape where the species is a speck
 - Wrong taxon
 
-Empty is better than a wrong picture.
+## 2026-09-30 Layer A expand
+
+| card | verdict | action |
+|---|---|---|
+| CCF-YUCC-036 Desert Spoon | PASS habit | new |
+| CCF-FSHB-043 Desert Lavender | PASS habit | new |
+| CCF-FSHB-044 Turpentine Bush | PASS bloom | new; 2 ft shrub sold for yellow flush |
+| CCF-LSHB-026 Little Leaf Cordia | PASS habit | new |
+| CCF-PERN-070 Triangle-leaf Bursage | PASS habit | new; fruit close-ups rejected |
+| CCF-OTRE-034 Texas Mountain Laurel | PASS habit | tree form; flower-only rejected |
+| CCF-PERN-011 Damianita | PASS habit | new on existing card |
+| CCF-DTRE-025 Honey Mesquite | PASS habit | existing tree shot |
+| CCF-CACT-031 Fishhook Barrel | KEEP | habit + high-confidence native card |
+| CCF-CACT-020 Native Hedgehog | n/a | archived to C with the plant |
+
 
 ## Pass
 
@@ -35,7 +49,7 @@ Empty is better than a wrong picture.
 
 ## 2026-09-28 Layer A seal
 
-All 56 Layer A cards now have a file + `photo.qa`.
+All then-56 Layer A cards had a file + `photo.qa`. Live A is now 61. See 2026-09-30 expand above.
 
 Replaced or filled:
 

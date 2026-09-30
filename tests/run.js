@@ -54,8 +54,8 @@ function ids(result) {
 }
 
 const catalog = loadCatalog(path.join(__dirname, "..", "data"));
-assert(catalog.length === 549, "catalog length " + catalog.length);
-assert(new Set(catalog.map((card) => card.card_id)).size === 549, "duplicate card ids");
+assert(catalog.length === 554, "catalog length " + catalog.length);
+assert(new Set(catalog.map((card) => card.card_id)).size === 554, "duplicate card ids");
 
 const bannedNames = [
   "1 head 5'-7'",
@@ -83,13 +83,18 @@ assert(catalog.filter((card) => card.layer === "C").length > 400, "layer C shoul
 const fs = require("fs");
 const photoRoot = path.join(__dirname, "..");
 const layerA = catalog.filter((card) => card.layer === "A");
-assert(layerA.length === 56, "layer A count " + layerA.length);
+function byIdSoon(list, id) {
+  return list.find((card) => card.card_id === id);
+}
+assert(layerA.length === 61, "layer A count " + layerA.length);
+assert(byIdSoon(catalog, "CCF-DTRE-025").layer === "A", "honey mesquite not A");
+assert(byIdSoon(catalog, "CCF-YUCC-036").layer === "A", "desert spoon not A");
+assert(byIdSoon(catalog, "CCF-CACT-020").layer === "C", "hedgehog still live");
+assert(byIdSoon(catalog, "CCF-AGAV-082").layer === "C", "weber still live");
+assert(byIdSoon(catalog, "CCF-OTRE-034").toxic_class === "ingest", "mountain laurel seeds must be ingest-toxic");
 for (const id of ["CCF-LSHB-023", "CCF-FSHB-042", "CCF-LSHB-024", "CCF-LSHB-025", "CCF-VINE-010", "CCF-PERN-069"]) {
   const card = byIdSoon(catalog, id);
   assert(card && card.layer === "A", "market gap missing from A " + id);
-}
-function byIdSoon(list, id) {
-  return list.find((card) => card.card_id === id);
 }
 for (const card of layerA) {
   const photo = card.photo || {};
