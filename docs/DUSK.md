@@ -44,7 +44,8 @@ One `#hold-card`. One sentence from `COPY_MAP.md` hold table. `--sand` fill, 2px
 
 - 420ms press. Release, cancel, or leave hides it.
 - The click that ends a shown hold is ignored. The next tap works.
-- Footer holds open above the control. Top-row holds open below the row.
+- The card always opens above the control, 12px gap. Never below. A thumb covers a card that opens under the finger.
+- If the control is too close to the top, pin the card to 8px. Do not flip it under the button.
 - `pointer-events: none` on the card. `-webkit-touch-callout: none` on `[data-hold]`.
 - Same sentence in `aria-describedby`. Hold is extra, not the only path.
 

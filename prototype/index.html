@@ -469,13 +469,9 @@ function hideHold() {
 
 function placeHold(el) {
   const r = el.getBoundingClientRect();
-  const footer = !!el.closest("footer") || !!el.closest(".sheet");
   holdCard.style.left = Math.max(8, Math.min(window.innerWidth - 248, r.left)) + "px";
-  if (footer) {
-    holdCard.style.top = (r.top - holdCard.offsetHeight - 12) + "px";
-  } else {
-    holdCard.style.top = (r.bottom + 12) + "px";
-  }
+  const above = r.top - holdCard.offsetHeight - 12;
+  holdCard.style.top = Math.max(8, above) + "px";
 }
 
 document.getElementById("app").addEventListener("pointerdown", (e) => {
