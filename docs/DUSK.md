@@ -46,7 +46,7 @@ One `#hold-card`. One sentence from `COPY_MAP.md` hold table. `--sand` fill, 2px
 - The click that ends a shown hold is ignored. The next tap works.
 - The card always opens above the control, 12px gap. Never below. A thumb covers a card that opens under the finger.
 - If the control is too close to the top, pin the card to 8px. Do not flip it under the button.
-- `pointer-events: none` on the card. `-webkit-touch-callout: none` on `[data-hold]`.
+- `pointer-events: none` on the card. `-webkit-touch-callout: none` and `user-select: none` on `[data-hold]` and its text. `selectstart` and `touchstart` are cancelled on those controls so iOS does not highlight or magnify the label over the card. Do not scale the label on press.
 - Same sentence in `aria-describedby`. Hold is extra, not the only path.
 
 Hold IDs: `bed`, `pots`, `gate`, `gravel`, `block_wall`, `shade_tree`, `none`, `tree`, `eave`, `structure`, `chew`, `bone`, `bloom`, `floor`, `swap-A`, `swap-B`, `swap-C`.

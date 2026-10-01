@@ -62,7 +62,15 @@
   button.seg { flex: 1; font-size: 14px; }
   .icons { display: flex; gap: 6px; margin: 0 0 10px; }
   button.icon { flex: 1; font-size: 13px; border-radius: 10px; }
-  button[data-hold] { -webkit-touch-callout: none; user-select: none; touch-action: manipulation; }
+  button[data-hold],
+  button[data-hold] * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  button[data-hold]:active { transform: none; font-size: inherit; }
 
   .yard { position: relative; height: 264px; margin: 0 0 10px; background: #161E1B; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
   .yard.compact { height: 176px; }
@@ -503,6 +511,12 @@ function placeHold(el) {
   holdCard.style.top = Math.max(8, above) + "px";
 }
 
+document.getElementById("app").addEventListener("selectstart", (e) => {
+  if (e.target.closest("[data-hold]")) e.preventDefault();
+});
+document.getElementById("app").addEventListener("touchstart", (e) => {
+  if (e.target.closest("[data-hold]")) e.preventDefault();
+}, { passive: false });
 document.getElementById("app").addEventListener("pointerdown", (e) => {
   const el = e.target.closest("[data-hold]");
   if (!el) return;
