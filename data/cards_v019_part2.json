@@ -63,7 +63,7 @@
       "CCF-OSUC-029",
       "CCF-OSUC-001"
     ],
-    "short_why": "Madagascar Palm · swords · VL",
+    "short_why": "Madagascar Palm \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -136,7 +136,7 @@
       "CCF-OSUC-027",
       "CCF-OSUC-036"
     ],
-    "short_why": "Tall Slipper Plant · swords · VL",
+    "short_why": "Tall Slipper Plant \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -213,7 +213,7 @@
       "CCF-OSUC-001",
       "CCF-OSUC-004"
     ],
-    "short_why": "Lady Slipper · swords · VL",
+    "short_why": "Lady Slipper \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -280,7 +280,7 @@
       "CCF-OSUC-015",
       "CCF-OSUC-016"
     ],
-    "short_why": "African Spear · swords · VL",
+    "short_why": "African Spear \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -291,10 +291,10 @@
   },
   {
     "card_id": "CCF-OSUC-059",
-    "display_name": "Mother-in-Law’s Tongue Var.",
-    "common_name": "Mother-in-Law’s Tongue Var.",
+    "display_name": "Mother-in-Law\u2019s Tongue Var.",
+    "common_name": "Mother-in-Law\u2019s Tongue Var.",
     "botanical_name": "Sansevieria laurentii",
-    "source_variety_raw": "Sansevieria laurentii (Mother-in-Law’s Tongue Var.)",
+    "source_variety_raw": "Sansevieria laurentii (Mother-in-Law\u2019s Tongue Var.)",
     "plant_group": "Other Succulents",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -345,7 +345,7 @@
       "CCF-OSUC-046",
       "CCF-OSUC-003"
     ],
-    "short_why": "Mother-in-Law’s Tongue Var. · swords · VL",
+    "short_why": "Mother-in-Law\u2019s Tongue Var. \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -356,10 +356,10 @@
   },
   {
     "card_id": "CCF-OSUC-060",
-    "display_name": "Mother-in-Law’s Tongue",
-    "common_name": "Mother-in-Law’s Tongue",
+    "display_name": "Mother-in-Law\u2019s Tongue",
+    "common_name": "Mother-in-Law\u2019s Tongue",
     "botanical_name": "Sansevieria trifasciata",
-    "source_variety_raw": "Sansevieria trifasciata (Mother-in-Law’s Tongue)",
+    "source_variety_raw": "Sansevieria trifasciata (Mother-in-Law\u2019s Tongue)",
     "plant_group": "Other Succulents",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -410,7 +410,7 @@
       "CCF-OSUC-015",
       "CCF-OSUC-016"
     ],
-    "short_why": "Mother-in-Law’s Tongue · swords · VL",
+    "short_why": "Mother-in-Law\u2019s Tongue \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -482,7 +482,7 @@
       "CCF-OSUC-035",
       "CCF-OSUC-038"
     ],
-    "short_why": "Blue Fingers · swords · VL",
+    "short_why": "Blue Fingers \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -556,7 +556,7 @@
       "CCF-OSUC-007",
       "CCF-OSUC-035"
     ],
-    "short_why": "Blue Chalksticks · swords · VL",
+    "short_why": "Blue Chalksticks \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -626,7 +626,7 @@
       "CCF-YUCC-007",
       "CCF-YUCC-008"
     ],
-    "short_why": "Ponytail Palm · swords · VL",
+    "short_why": "Ponytail Palm \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -708,7 +708,7 @@
       "CCF-YUCC-013",
       "CCF-YUCC-016"
     ],
-    "short_why": "Boojum Tree · swords · VL",
+    "short_why": "Boojum Tree \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -788,7 +788,7 @@
       "CCF-YUCC-013",
       "CCF-YUCC-014"
     ],
-    "short_why": "Ocotillo Bareroot · SW native · wild stem · VL",
+    "short_why": "Ocotillo Bareroot \u00b7 SW native \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -867,7 +867,7 @@
       "CCF-YUCC-012",
       "CCF-YUCC-018"
     ],
-    "short_why": "Brake Lights · swords · VL",
+    "short_why": "Brake Lights \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "layer": "C"
@@ -936,7 +936,7 @@
       "CCF-YUCC-012",
       "CCF-YUCC-018"
     ],
-    "short_why": "Desert Dusk · swords · VL",
+    "short_why": "Desert Dusk \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "layer": "C"
@@ -1005,7 +1005,7 @@
       "CCF-YUCC-019",
       "CCF-YUCC-023"
     ],
-    "short_why": "Little Giant · swords · VL",
+    "short_why": "Little Giant \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "layer": "C"
@@ -1074,7 +1074,7 @@
       "CCF-YUCC-012",
       "CCF-YUCC-018"
     ],
-    "short_why": "Pink Parade · swords · VL",
+    "short_why": "Pink Parade \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "layer": "C"
@@ -1143,7 +1143,7 @@
       "CCF-YUCC-012",
       "CCF-YUCC-018"
     ],
-    "short_why": "Stoplights · swords · VL",
+    "short_why": "Stoplights \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "layer": "C"
@@ -1213,7 +1213,7 @@
       "CCF-YUCC-031",
       "CCF-YUCC-032"
     ],
-    "short_why": "Giant Hesperaloe · SW native · swords · VL",
+    "short_why": "Giant Hesperaloe \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1293,7 +1293,7 @@
       "CCF-YUCC-025",
       "CCF-YUCC-029"
     ],
-    "short_why": "Red Yucca · SW native · swords · VL",
+    "short_why": "Red Yucca \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1373,7 +1373,7 @@
       "CCF-YUCC-023",
       "CCF-YUCC-025"
     ],
-    "short_why": "Yellow Yucca · SW native · swords · VL",
+    "short_why": "Yellow Yucca \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1454,7 +1454,7 @@
       "CCF-YUCC-005",
       "CCF-YUCC-007"
     ],
-    "short_why": "Yucca 'Silver Anniversary' · swords · VL",
+    "short_why": "Yucca 'Silver Anniversary' \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "layer": "C"
@@ -1523,7 +1523,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Spanish Bayonet · swords · VL",
+    "short_why": "Spanish Bayonet \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1606,7 +1606,7 @@
       "CCF-YUCC-010",
       "CCF-YUCC-011"
     ],
-    "short_why": "Banana Yucca · SW native · swords · VL",
+    "short_why": "Banana Yucca \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1684,7 +1684,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Joshua Tree · SW native · swords · VL",
+    "short_why": "Joshua Tree \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1764,7 +1764,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Soaptree Yucca · SW native · swords · VL",
+    "short_why": "Soaptree Yucca \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1844,7 +1844,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Yucca faxoniana · SW native · swords · VL",
+    "short_why": "Yucca faxoniana \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1921,7 +1921,7 @@
       "CCF-YUCC-004",
       "CCF-YUCC-005"
     ],
-    "short_why": "Yucca filamentosa 'Color Guard' · swords · VL",
+    "short_why": "Yucca filamentosa 'Color Guard' \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -1937,10 +1937,10 @@
   },
   {
     "card_id": "CCF-YUCC-019",
-    "display_name": "Adam’s Needle",
-    "common_name": "Adam’s Needle",
+    "display_name": "Adam\u2019s Needle",
+    "common_name": "Adam\u2019s Needle",
     "botanical_name": "Yucca filamentosa",
-    "source_variety_raw": "Yucca filamentosa (Adam’s Needle)",
+    "source_variety_raw": "Yucca filamentosa (Adam\u2019s Needle)",
     "plant_group": "Yucca and Allies",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -1998,7 +1998,7 @@
       "CCF-YUCC-005",
       "CCF-YUCC-007"
     ],
-    "short_why": "Adam’s Needle · swords · VL",
+    "short_why": "Adam\u2019s Needle \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2074,7 +2074,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Mexican Tree Yucca · swords · VL",
+    "short_why": "Mexican Tree Yucca \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2152,7 +2152,7 @@
       "CCF-YUCC-004",
       "CCF-YUCC-005"
     ],
-    "short_why": "Yucca Jewel · swords · VL",
+    "short_why": "Yucca Jewel \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2230,7 +2230,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Spanish Dagger · swords · VL",
+    "short_why": "Spanish Dagger \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2312,7 +2312,7 @@
       "CCF-YUCC-011",
       "CCF-YUCC-004"
     ],
-    "short_why": "Pale Leaf Yucca · SW native · swords · VL",
+    "short_why": "Pale Leaf Yucca \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2387,7 +2387,7 @@
       "CCF-YUCC-004",
       "CCF-YUCC-005"
     ],
-    "short_why": "Yucca recurvifolia 'Variegated' · swords · VL",
+    "short_why": "Yucca recurvifolia 'Variegated' \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2464,7 +2464,7 @@
       "CCF-YUCC-004",
       "CCF-YUCC-005"
     ],
-    "short_why": "Soft Leaf Yucca · swords · VL",
+    "short_why": "Soft Leaf Yucca \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2543,7 +2543,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Blue Yucca · swords · VL",
+    "short_why": "Blue Yucca \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2623,7 +2623,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Beaked Yucca · SW native · swords · VL",
+    "short_why": "Beaked Yucca \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2704,7 +2704,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Yucca rostrata with trunk · SW native · swords · VL",
+    "short_why": "Yucca rostrata with trunk \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2782,7 +2782,7 @@
       "CCF-YUCC-011",
       "CCF-YUCC-004"
     ],
-    "short_why": "Twisted Leaf Yucca · SW native · swords · VL",
+    "short_why": "Twisted Leaf Yucca \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2865,7 +2865,7 @@
       "CCF-YUCC-002",
       "CCF-YUCC-003"
     ],
-    "short_why": "Yucca schidigera · SW native · swords · VL",
+    "short_why": "Yucca schidigera \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2881,8 +2881,8 @@
   },
   {
     "card_id": "CCF-YUCC-031",
-    "display_name": "Thompson’s Yucca, tall head",
-    "common_name": "Thompson’s Yucca, tall head",
+    "display_name": "Thompson\u2019s Yucca, tall head",
+    "common_name": "Thompson\u2019s Yucca, tall head",
     "botanical_name": "Yucca thompsoniana",
     "source_variety_raw": "Yucca thompsoniana (1 head 5'-7')",
     "plant_group": "Yucca and Allies",
@@ -2947,7 +2947,7 @@
       "CCF-YUCC-010",
       "CCF-YUCC-011"
     ],
-    "short_why": "1 head 5'-7' · SW native · swords · VL",
+    "short_why": "1 head 5'-7' \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -2963,8 +2963,8 @@
   },
   {
     "card_id": "CCF-YUCC-032",
-    "display_name": "Thompson’s Yucca, two heads",
-    "common_name": "Thompson’s Yucca, two heads",
+    "display_name": "Thompson\u2019s Yucca, two heads",
+    "common_name": "Thompson\u2019s Yucca, two heads",
     "botanical_name": "Yucca thompsoniana",
     "source_variety_raw": "Yucca thompsoniana (2 head)",
     "plant_group": "Yucca and Allies",
@@ -3029,7 +3029,7 @@
       "CCF-YUCC-010",
       "CCF-YUCC-011"
     ],
-    "short_why": "2 head · SW native · swords · VL",
+    "short_why": "2 head \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -3045,8 +3045,8 @@
   },
   {
     "card_id": "CCF-YUCC-033",
-    "display_name": "Thompson’s Yucca, three heads",
-    "common_name": "Thompson’s Yucca, three heads",
+    "display_name": "Thompson\u2019s Yucca, three heads",
+    "common_name": "Thompson\u2019s Yucca, three heads",
     "botanical_name": "Yucca thompsoniana",
     "source_variety_raw": "Yucca thompsoniana (3 head)",
     "plant_group": "Yucca and Allies",
@@ -3111,7 +3111,7 @@
       "CCF-YUCC-010",
       "CCF-YUCC-011"
     ],
-    "short_why": "3 head · SW native · swords · VL",
+    "short_why": "3 head \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -3127,10 +3127,10 @@
   },
   {
     "card_id": "CCF-YUCC-034",
-    "display_name": "Thompson’s Yucca, one head",
-    "common_name": "Thompson’s Yucca, one head",
+    "display_name": "Thompson\u2019s Yucca, one head",
+    "common_name": "Thompson\u2019s Yucca, one head",
     "botanical_name": "Yucca thompsoniana",
-    "source_variety_raw": "Yucca thompsoniana (Thompson’s Yucca, 1 head 3'-5')",
+    "source_variety_raw": "Yucca thompsoniana (Thompson\u2019s Yucca, 1 head 3'-5')",
     "plant_group": "Yucca and Allies",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -3193,7 +3193,7 @@
       "CCF-YUCC-010",
       "CCF-YUCC-011"
     ],
-    "short_why": "Thompson’s Yucca, 1 head 3'-5' · SW native · swords · VL",
+    "short_why": "Thompson\u2019s Yucca, 1 head 3'-5' \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "photo": {
@@ -3209,10 +3209,10 @@
   },
   {
     "card_id": "CCF-YUCC-035",
-    "display_name": "Our Lord’s Candle",
-    "common_name": "Our Lord’s Candle",
+    "display_name": "Our Lord\u2019s Candle",
+    "common_name": "Our Lord\u2019s Candle",
     "botanical_name": "Yucca whipplei",
-    "source_variety_raw": "Yucca whipplei (Our Lord’s Candle)",
+    "source_variety_raw": "Yucca whipplei (Our Lord\u2019s Candle)",
     "plant_group": "Yucca and Allies",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -3275,7 +3275,7 @@
       "CCF-YUCC-011",
       "CCF-YUCC-004"
     ],
-    "short_why": "Our Lord’s Candle · SW native · swords · VL",
+    "short_why": "Our Lord\u2019s Candle \u00b7 SW native \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "rare_spike",
@@ -3357,7 +3357,7 @@
       "CCF-PERN-027",
       "CCF-PERN-030"
     ],
-    "short_why": "Hearts & Flowers · stone · VL",
+    "short_why": "Hearts & Flowers \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -3437,7 +3437,7 @@
       "CCF-PERN-005",
       "CCF-PERN-024"
     ],
-    "short_why": "Blood Flower · stone · L",
+    "short_why": "Blood Flower \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -3514,7 +3514,7 @@
       "CCF-PERN-035",
       "CCF-PERN-036"
     ],
-    "short_why": "Pine Leaf Milkweed · SW native · stone · VL",
+    "short_why": "Pine Leaf Milkweed \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -3591,7 +3591,7 @@
       "CCF-PERN-035",
       "CCF-PERN-036"
     ],
-    "short_why": "Desert Milkweed · SW native · stone · VL",
+    "short_why": "Desert Milkweed \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -3670,7 +3670,7 @@
       "CCF-PERN-025",
       "CCF-PERN-022"
     ],
-    "short_why": "Foxtail Fern · stone · L",
+    "short_why": "Foxtail Fern \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -3742,7 +3742,7 @@
       "CCF-PERN-024",
       "CCF-PERN-025"
     ],
-    "short_why": "Asparagus Fern · stone · L",
+    "short_why": "Asparagus Fern \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -3818,7 +3818,7 @@
       "CCF-PERN-021",
       "CCF-PERN-066"
     ],
-    "short_why": "Desert Marigold · SW native · stone · VL",
+    "short_why": "Desert Marigold \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -3893,7 +3893,7 @@
     "phoenix_pocket_tags": "open_sun|west_heat_candidate|patio_pot|not_frost_pocket|walkway_candidate|oasis_only|high_care",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Canna Lily · stone · M",
+    "short_why": "Canna Lily \u00b7 stone \u00b7 M",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -3964,7 +3964,7 @@
     "phoenix_pocket_tags": "open_sun|west_heat_candidate|patio_pot|not_frost_pocket|walkway_candidate|oasis_only|high_care",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Tropicanna · stone · M",
+    "short_why": "Tropicanna \u00b7 stone \u00b7 M",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4041,7 +4041,7 @@
       "CCF-PERN-020",
       "CCF-PERN-027"
     ],
-    "short_why": "Red Spike Ice Plant · swords · VL",
+    "short_why": "Red Spike Ice Plant \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4120,7 +4120,7 @@
       "CCF-PERN-021",
       "CCF-PERN-066"
     ],
-    "short_why": "Damianita · SW native · stone · VL",
+    "short_why": "Damianita \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4201,7 +4201,7 @@
       "CCF-PERN-055",
       "CCF-PERN-026"
     ],
-    "short_why": "Bush Morning Glory · stone · VL",
+    "short_why": "Bush Morning Glory \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4272,7 +4272,7 @@
       "CCF-PERN-045",
       "CCF-PERN-055"
     ],
-    "short_why": "Ground Morning Glory · stone · VL",
+    "short_why": "Ground Morning Glory \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4343,7 +4343,7 @@
       "CCF-PERN-034",
       "CCF-PERN-066"
     ],
-    "short_why": "Yellow Dalea · stone · fixes N · VL",
+    "short_why": "Yellow Dalea \u00b7 stone \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4415,7 +4415,7 @@
       "CCF-PERN-053",
       "CCF-PERN-062"
     ],
-    "short_why": "Black Dalea · SW native · stone · fixes N · VL",
+    "short_why": "Black Dalea \u00b7 SW native \u00b7 stone \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4488,7 +4488,7 @@
       "CCF-PERN-053",
       "CCF-PERN-062"
     ],
-    "short_why": "Trailing Indigo · SW native · stone · fixes N · VL",
+    "short_why": "Trailing Indigo \u00b7 SW native \u00b7 stone \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4569,7 +4569,7 @@
       "CCF-PERN-013",
       "CCF-PERN-032"
     ],
-    "short_why": "Purple Ice Plant · stone · VL",
+    "short_why": "Purple Ice Plant \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4640,7 +4640,7 @@
       "CCF-PERN-027",
       "CCF-PERN-030"
     ],
-    "short_why": "Red Ice Plant · stone · VL",
+    "short_why": "Red Ice Plant \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4713,7 +4713,7 @@
       "CCF-PERN-054",
       "CCF-PERN-057"
     ],
-    "short_why": "Gaura Pink · SW native · stone · VL",
+    "short_why": "Gaura Pink \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4785,7 +4785,7 @@
       "CCF-PERN-027",
       "CCF-PERN-030"
     ],
-    "short_why": "Red · stone · VL",
+    "short_why": "Red \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4857,7 +4857,7 @@
       "CCF-PERN-023",
       "CCF-PERN-028"
     ],
-    "short_why": "Yellow w/Green Leaf · stone · VL",
+    "short_why": "Yellow w/Green Leaf \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -4928,7 +4928,7 @@
       "CCF-PERN-024",
       "CCF-PERN-002"
     ],
-    "short_why": "Lavender Starflower · stone · L",
+    "short_why": "Lavender Starflower \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5001,7 +5001,7 @@
       "CCF-PERN-021",
       "CCF-PERN-066"
     ],
-    "short_why": "Angelita Daisy · SW native · stone · VL",
+    "short_why": "Angelita Daisy \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5067,7 +5067,7 @@
       "CCF-PERN-047",
       "CCF-PERN-058"
     ],
-    "short_why": "Sweet Potato Marguerite · stone · L",
+    "short_why": "Sweet Potato Marguerite \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -5141,7 +5141,7 @@
       "CCF-PERN-058",
       "CCF-PERN-002"
     ],
-    "short_why": "Sweet Potato Purple Heart · stone · L",
+    "short_why": "Sweet Potato Purple Heart \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -5221,7 +5221,7 @@
       "CCF-PERN-044",
       "CCF-PERN-012"
     ],
-    "short_why": "Confetti · stone · VL",
+    "short_why": "Confetti \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5294,7 +5294,7 @@
       "CCF-PERN-020",
       "CCF-PERN-038"
     ],
-    "short_why": "Dallas Red · stone · VL",
+    "short_why": "Dallas Red \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5368,7 +5368,7 @@
       "CCF-PERN-068",
       "CCF-PERN-014"
     ],
-    "short_why": "Irene · stone · VL",
+    "short_why": "Irene \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5440,7 +5440,7 @@
       "CCF-PERN-014",
       "CCF-PERN-021"
     ],
-    "short_why": "New Gold · stone · VL",
+    "short_why": "New Gold \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5513,7 +5513,7 @@
       "CCF-PERN-020",
       "CCF-PERN-038"
     ],
-    "short_why": "Radiation · stone · VL",
+    "short_why": "Radiation \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5585,7 +5585,7 @@
       "CCF-PERN-037",
       "CCF-PERN-039"
     ],
-    "short_why": "Rose · stone · VL",
+    "short_why": "Rose \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5657,7 +5657,7 @@
       "CCF-PERN-045",
       "CCF-PERN-055"
     ],
-    "short_why": "Purple Trailing · stone · VL",
+    "short_why": "Purple Trailing \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5739,7 +5739,7 @@
       "CCF-PERN-055",
       "CCF-PERN-013"
     ],
-    "short_why": "White Trailing · stone · VL",
+    "short_why": "White Trailing \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5810,7 +5810,7 @@
       "CCF-PERN-068",
       "CCF-PERN-014"
     ],
-    "short_why": "Rocky Point Ice Plant · stone · VL",
+    "short_why": "Rocky Point Ice Plant \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5883,7 +5883,7 @@
       "CCF-PERN-012",
       "CCF-PERN-023"
     ],
-    "short_why": "Blackfoot Daisy · SW native · stone · VL",
+    "short_why": "Blackfoot Daisy \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -5963,7 +5963,7 @@
       "CCF-PERN-055",
       "CCF-PERN-013"
     ],
-    "short_why": "Myoporum · stone · VL",
+    "short_why": "Myoporum \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6036,7 +6036,7 @@
       "CCF-PERN-054",
       "CCF-PERN-057"
     ],
-    "short_why": "Mexican Evening Primrose · SW native · stone · VL",
+    "short_why": "Mexican Evening Primrose \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6118,7 +6118,7 @@
       "CCF-PERN-027",
       "CCF-PERN-030"
     ],
-    "short_why": "Firecracker Penstemon · SW native · stone · VL",
+    "short_why": "Firecracker Penstemon \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6138,10 +6138,10 @@
   },
   {
     "card_id": "CCF-PERN-039",
-    "display_name": "Parry’s Penstemon",
-    "common_name": "Parry’s Penstemon",
+    "display_name": "Parry\u2019s Penstemon",
+    "common_name": "Parry\u2019s Penstemon",
     "botanical_name": "Penstemon parryi",
-    "source_variety_raw": "Penstemon parryi (Parry’s Penstemon)",
+    "source_variety_raw": "Penstemon parryi (Parry\u2019s Penstemon)",
     "plant_group": "Perennials and Groundcover",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -6201,7 +6201,7 @@
       "CCF-PERN-054",
       "CCF-PERN-057"
     ],
-    "short_why": "Parry’s Penstemon · SW native · stone · VL",
+    "short_why": "Parry\u2019s Penstemon \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6284,7 +6284,7 @@
       "CCF-PERN-027",
       "CCF-PERN-030"
     ],
-    "short_why": "Coral Penstemon · SW native · stone · VL",
+    "short_why": "Coral Penstemon \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6356,7 +6356,7 @@
       "CCF-PERN-045",
       "CCF-PERN-055"
     ],
-    "short_why": "Russian Sage · stone · VL",
+    "short_why": "Russian Sage \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6366,10 +6366,10 @@
   },
   {
     "card_id": "CCF-PERN-042",
-    "display_name": "Dwarf Elephant’s Food",
-    "common_name": "Dwarf Elephant’s Food",
+    "display_name": "Dwarf Elephant\u2019s Food",
+    "common_name": "Dwarf Elephant\u2019s Food",
     "botanical_name": "Portulacaria afra 'Minima'",
-    "source_variety_raw": "Portulacaria afra 'Minima' (Dwarf Elephant’s Food)",
+    "source_variety_raw": "Portulacaria afra 'Minima' (Dwarf Elephant\u2019s Food)",
     "plant_group": "Perennials and Groundcover",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -6422,7 +6422,7 @@
       "CCF-PERN-013",
       "CCF-PERN-027"
     ],
-    "short_why": "Dwarf Elephant’s Food · stone · VL",
+    "short_why": "Dwarf Elephant\u2019s Food \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -6435,10 +6435,10 @@
   },
   {
     "card_id": "CCF-PERN-043",
-    "display_name": "Variegated Elephant’s Food",
-    "common_name": "Variegated Elephant’s Food",
+    "display_name": "Variegated Elephant\u2019s Food",
+    "common_name": "Variegated Elephant\u2019s Food",
     "botanical_name": "Portulacaria afra 'Variegata'",
-    "source_variety_raw": "Portulacaria afra 'Variegata' (Variegated Elephant’s Food)",
+    "source_variety_raw": "Portulacaria afra 'Variegata' (Variegated Elephant\u2019s Food)",
     "plant_group": "Perennials and Groundcover",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -6491,7 +6491,7 @@
       "CCF-PERN-013",
       "CCF-PERN-027"
     ],
-    "short_why": "Variegated Elephant’s Food · stone · VL",
+    "short_why": "Variegated Elephant\u2019s Food \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -6504,10 +6504,10 @@
   },
   {
     "card_id": "CCF-PERN-044",
-    "display_name": "Elephant’s Food",
-    "common_name": "Elephant’s Food",
+    "display_name": "Elephant\u2019s Food",
+    "common_name": "Elephant\u2019s Food",
     "botanical_name": "Portulacaria afra",
-    "source_variety_raw": "Portulacaria afra (Elephant’s Food)",
+    "source_variety_raw": "Portulacaria afra (Elephant\u2019s Food)",
     "plant_group": "Perennials and Groundcover",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -6560,7 +6560,7 @@
       "CCF-PERN-013",
       "CCF-PERN-027"
     ],
-    "short_why": "Elephant’s Food · stone · VL",
+    "short_why": "Elephant\u2019s Food \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -6634,7 +6634,7 @@
       "CCF-PERN-041",
       "CCF-PERN-055"
     ],
-    "short_why": "Trailing Rosemary · stone · VL",
+    "short_why": "Trailing Rosemary \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6721,7 +6721,7 @@
       "CCF-PERN-041",
       "CCF-PERN-055"
     ],
-    "short_why": "Tuscan Blue · stone · VL",
+    "short_why": "Tuscan Blue \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6803,7 +6803,7 @@
       "CCF-PERN-002",
       "CCF-PERN-005"
     ],
-    "short_why": "Pink, Purple, White · stone · L",
+    "short_why": "Pink, Purple, White \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6875,7 +6875,7 @@
       "CCF-PERN-058",
       "CCF-PERN-024"
     ],
-    "short_why": "Purple Ruellia · stone · L",
+    "short_why": "Purple Ruellia \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -6948,7 +6948,7 @@
       "CCF-PERN-052",
       "CCF-PERN-053"
     ],
-    "short_why": "Desert Ruellia · SW native · stone · VL",
+    "short_why": "Desert Ruellia \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7031,7 +7031,7 @@
       "CCF-PERN-001",
       "CCF-PERN-010"
     ],
-    "short_why": "Coral Fountain Grass · cloud · VL",
+    "short_why": "Coral Fountain Grass \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7103,7 +7103,7 @@
       "CCF-PERN-016",
       "CCF-PERN-032"
     ],
-    "short_why": "Mexican Blue Sage · stone · VL",
+    "short_why": "Mexican Blue Sage \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7176,7 +7176,7 @@
       "CCF-PERN-049",
       "CCF-PERN-062"
     ],
-    "short_why": "Chaparral Sage · SW native · stone · VL",
+    "short_why": "Chaparral Sage \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7249,7 +7249,7 @@
       "CCF-PERN-049",
       "CCF-PERN-062"
     ],
-    "short_why": "Mealy Cup Sage · SW native · stone · VL",
+    "short_why": "Mealy Cup Sage \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7262,7 +7262,7 @@
     "display_name": "Autumn Sage",
     "common_name": "Autumn Sage",
     "botanical_name": "Salvia greggii",
-    "source_variety_raw": "Salvia greggii (Autumn Sage – Furman’s Red, Hot Lips, Hot Pink, Pink, Red)",
+    "source_variety_raw": "Salvia greggii (Autumn Sage \u2013 Furman\u2019s Red, Hot Lips, Hot Pink, Pink, Red)",
     "plant_group": "Perennials and Groundcover",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -7325,7 +7325,7 @@
       "CCF-PERN-038",
       "CCF-PERN-039"
     ],
-    "short_why": "Autumn Sage – Furman’s Red, Hot Lips, Hot Pink, Pink, Red · SW native · stone · VL",
+    "short_why": "Autumn Sage \u2013 Furman\u2019s Red, Hot Lips, Hot Pink, Pink, Red \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7408,7 +7408,7 @@
       "CCF-PERN-032",
       "CCF-PERN-033"
     ],
-    "short_why": "Mexican Bush Sage · stone · VL",
+    "short_why": "Mexican Bush Sage \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7480,7 +7480,7 @@
       "CCF-PERN-013",
       "CCF-PERN-028"
     ],
-    "short_why": "Purple Heart · stone · VL",
+    "short_why": "Purple Heart \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -7558,7 +7558,7 @@
       "CCF-PERN-038",
       "CCF-PERN-039"
     ],
-    "short_why": "Globemallow · SW native · stone · VL",
+    "short_why": "Globemallow \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7642,7 +7642,7 @@
       "CCF-PERN-024",
       "CCF-PERN-002"
     ],
-    "short_why": "Tropical Bird of Paradise · stone · L",
+    "short_why": "Tropical Bird of Paradise \u00b7 stone \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7713,7 +7713,7 @@
       "CCF-PERN-013",
       "CCF-PERN-032"
     ],
-    "short_why": "Trailing Germander · stone · VL",
+    "short_why": "Trailing Germander \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7784,7 +7784,7 @@
       "CCF-PERN-041",
       "CCF-PERN-045"
     ],
-    "short_why": "Bush Germander · stone · VL",
+    "short_why": "Bush Germander \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7855,7 +7855,7 @@
       "CCF-PERN-041",
       "CCF-PERN-045"
     ],
-    "short_why": "Mediterranean Carpet · stone · VL",
+    "short_why": "Mediterranean Carpet \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -7865,10 +7865,10 @@
   },
   {
     "card_id": "CCF-PERN-062",
-    "display_name": "Gooding’s Verbena",
-    "common_name": "Gooding’s Verbena",
+    "display_name": "Gooding\u2019s Verbena",
+    "common_name": "Gooding\u2019s Verbena",
     "botanical_name": "Verbena goodingii",
-    "source_variety_raw": "Verbena goodingii (Gooding’s Verbena)",
+    "source_variety_raw": "Verbena goodingii (Gooding\u2019s Verbena)",
     "plant_group": "Perennials and Groundcover",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -7928,7 +7928,7 @@
       "CCF-PERN-049",
       "CCF-PERN-052"
     ],
-    "short_why": "Gooding’s Verbena · SW native · stone · VL",
+    "short_why": "Gooding\u2019s Verbena \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8010,7 +8010,7 @@
       "CCF-PERN-019",
       "CCF-PERN-037"
     ],
-    "short_why": "Pink Verbena · stone · VL",
+    "short_why": "Pink Verbena \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8082,7 +8082,7 @@
       "CCF-PERN-041",
       "CCF-PERN-045"
     ],
-    "short_why": "Sandpaper Verbena · stone · VL",
+    "short_why": "Sandpaper Verbena \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8154,7 +8154,7 @@
       "CCF-PERN-041",
       "CCF-PERN-045"
     ],
-    "short_why": "Moss Verbena · stone · VL",
+    "short_why": "Moss Verbena \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8227,7 +8227,7 @@
       "CCF-PERN-011",
       "CCF-PERN-014"
     ],
-    "short_why": "Goldeneye · SW native · stone · VL",
+    "short_why": "Goldeneye \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8300,7 +8300,7 @@
       "CCF-PERN-011",
       "CCF-PERN-014"
     ],
-    "short_why": "Zexmenia · SW native · stone · VL",
+    "short_why": "Zexmenia \u00b7 SW native \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8372,7 +8372,7 @@
       "CCF-PERN-034",
       "CCF-PERN-014"
     ],
-    "short_why": "Yellow Dot · stone · VL",
+    "short_why": "Yellow Dot \u00b7 stone \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8445,7 +8445,7 @@
       "CCF-FSHB-026",
       "CCF-FSHB-011"
     ],
-    "short_why": "Blue Hibiscus · gloss · VL",
+    "short_why": "Blue Hibiscus \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8529,7 +8529,7 @@
       "CCF-FSHB-009",
       "CCF-FSHB-011"
     ],
-    "short_why": "Flame Honeysuckle · SW native · gloss · VL",
+    "short_why": "Flame Honeysuckle \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8612,7 +8612,7 @@
       "CCF-FSHB-009",
       "CCF-FSHB-010"
     ],
-    "short_why": "Desert Honeysuckle · SW native · gloss · VL",
+    "short_why": "Desert Honeysuckle \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8694,7 +8694,7 @@
       "CCF-FSHB-003",
       "CCF-FSHB-009"
     ],
-    "short_why": "Wooly Butterfly Bush · SW native · gloss · VL",
+    "short_why": "Wooly Butterfly Bush \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8766,7 +8766,7 @@
       "CCF-FSHB-039",
       "CCF-FSHB-040"
     ],
-    "short_why": "Desert Bird of Paradise · gloss · fixes N · VL",
+    "short_why": "Desert Bird of Paradise \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8847,7 +8847,7 @@
       "CCF-FSHB-039",
       "CCF-FSHB-040"
     ],
-    "short_why": "Mexican Bird of Paradise · gloss · fixes N · VL",
+    "short_why": "Mexican Bird of Paradise \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -8931,7 +8931,7 @@
       "CCF-FSHB-036",
       "CCF-FSHB-038"
     ],
-    "short_why": "Red Bird of Paradise · gloss · fixes N · VL",
+    "short_why": "Red Bird of Paradise \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9014,7 +9014,7 @@
       "CCF-FSHB-039",
       "CCF-FSHB-040"
     ],
-    "short_why": "Yellow Bird of Paradise · gloss · fixes N · VL",
+    "short_why": "Yellow Bird of Paradise \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9096,7 +9096,7 @@
       "CCF-FSHB-011",
       "CCF-FSHB-020"
     ],
-    "short_why": "Baja Fairy Duster · gloss · fixes N · VL",
+    "short_why": "Baja Fairy Duster \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9179,7 +9179,7 @@
       "CCF-FSHB-002",
       "CCF-FSHB-004"
     ],
-    "short_why": "Fairy Duster · SW native · gloss · fixes N · VL",
+    "short_why": "Fairy Duster \u00b7 SW native \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9262,7 +9262,7 @@
       "CCF-FSHB-038",
       "CCF-FSHB-041"
     ],
-    "short_why": "Dwarf Bottlebrush · gloss · VL",
+    "short_why": "Dwarf Bottlebrush \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9343,7 +9343,7 @@
       "CCF-FSHB-017",
       "CCF-FSHB-018"
     ],
-    "short_why": "Purple Sky Flower · gloss · L",
+    "short_why": "Purple Sky Flower \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9425,7 +9425,7 @@
       "CCF-FSHB-017",
       "CCF-FSHB-018"
     ],
-    "short_why": "Sky Flower · gloss · L",
+    "short_why": "Sky Flower \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9499,7 +9499,7 @@
     "phoenix_pocket_tags": "patio_pot|not_frost_pocket|walkway_candidate|oasis_only|heat_limit_good|high_care",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Gardenia · gloss · M",
+    "short_why": "Gardenia \u00b7 gloss \u00b7 M",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9573,7 +9573,7 @@
       "CCF-FSHB-012",
       "CCF-FSHB-013"
     ],
-    "short_why": "Firecracker Bush Red · gloss · L",
+    "short_why": "Firecracker Bush Red \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9659,7 +9659,7 @@
       "CCF-FSHB-013",
       "CCF-FSHB-019"
     ],
-    "short_why": "Florida Sunset · gloss · L",
+    "short_why": "Florida Sunset \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9743,7 +9743,7 @@
       "CCF-FSHB-015",
       "CCF-FSHB-019"
     ],
-    "short_why": "Pink Hibiscus Patio Tree · gloss · L",
+    "short_why": "Pink Hibiscus Patio Tree \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9833,7 +9833,7 @@
       "CCF-FSHB-012",
       "CCF-FSHB-013"
     ],
-    "short_why": "Red, Pink, Yellow, White · gloss · L",
+    "short_why": "Red, Pink, Yellow, White \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9912,7 +9912,7 @@
       "CCF-FSHB-013",
       "CCF-FSHB-015"
     ],
-    "short_why": "Arabian Jasmine · gloss · L",
+    "short_why": "Arabian Jasmine \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -9931,10 +9931,10 @@
   },
   {
     "card_id": "CCF-FSHB-020",
-    "display_name": "Chuparosa – Red, Yellow",
-    "common_name": "Chuparosa – Red, Yellow",
+    "display_name": "Chuparosa \u2013 Red, Yellow",
+    "common_name": "Chuparosa \u2013 Red, Yellow",
     "botanical_name": "Justicia californica",
-    "source_variety_raw": "Justicia californica (Chuparosa – Red, Yellow)",
+    "source_variety_raw": "Justicia californica (Chuparosa \u2013 Red, Yellow)",
     "plant_group": "Flowering Shrubs",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -9997,7 +9997,7 @@
       "CCF-FSHB-039",
       "CCF-FSHB-040"
     ],
-    "short_why": "Chuparosa – Red, Yellow · SW native · gloss · VL",
+    "short_why": "Chuparosa \u2013 Red, Yellow \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10082,7 +10082,7 @@
       "CCF-FSHB-038",
       "CCF-FSHB-041"
     ],
-    "short_why": "Mexican Honeysuckle · gloss · VL",
+    "short_why": "Mexican Honeysuckle \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10160,7 +10160,7 @@
       "CCF-FSHB-011",
       "CCF-FSHB-021"
     ],
-    "short_why": "Crape Myrtle · gloss · VL",
+    "short_why": "Crape Myrtle \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10242,7 +10242,7 @@
       "CCF-FSHB-003",
       "CCF-FSHB-010"
     ],
-    "short_why": "French Lavender · gloss · VL",
+    "short_why": "French Lavender \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10321,7 +10321,7 @@
       "CCF-FSHB-003",
       "CCF-FSHB-010"
     ],
-    "short_why": "Fernleaf Lavender · gloss · VL",
+    "short_why": "Fernleaf Lavender \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10402,7 +10402,7 @@
       "CCF-FSHB-010",
       "CCF-FSHB-003"
     ],
-    "short_why": "Lavandula stoechas 'Ghostly Princess' · gloss · VL",
+    "short_why": "Lavandula stoechas 'Ghostly Princess' \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10483,7 +10483,7 @@
       "CCF-FSHB-003",
       "CCF-FSHB-010"
     ],
-    "short_why": "Spanish Lavender · gloss · VL",
+    "short_why": "Spanish Lavender \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10503,9 +10503,9 @@
   {
     "card_id": "CCF-FSHB-027",
     "display_name": "Dwarf Oleander",
-    "common_name": "Dwarf – Petite Pink, Red, White",
+    "common_name": "Dwarf \u2013 Petite Pink, Red, White",
     "botanical_name": "Nerium oleander",
-    "source_variety_raw": "Nerium oleander (Dwarf – Petite Pink, Red, White)",
+    "source_variety_raw": "Nerium oleander (Dwarf \u2013 Petite Pink, Red, White)",
     "plant_group": "Flowering Shrubs",
     "water_class": "VL",
     "heat_class": "excellent",
@@ -10570,7 +10570,7 @@
       "CCF-FSHB-030",
       "CCF-FSHB-036"
     ],
-    "short_why": "Dwarf – Petite Pink, Red, White · gloss · VL",
+    "short_why": "Dwarf \u2013 Petite Pink, Red, White \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10657,7 +10657,7 @@
       "CCF-FSHB-021",
       "CCF-FSHB-030"
     ],
-    "short_why": "Pink, Red, White · gloss · VL",
+    "short_why": "Pink, Red, White \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10738,7 +10738,7 @@
       "CCF-FSHB-026",
       "CCF-FSHB-011"
     ],
-    "short_why": "Blue Cape Plumbago · gloss · VL",
+    "short_why": "Blue Cape Plumbago \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10819,7 +10819,7 @@
       "CCF-FSHB-021",
       "CCF-FSHB-036"
     ],
-    "short_why": "White Cape Plumbago · gloss · VL",
+    "short_why": "White Cape Plumbago \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10896,7 +10896,7 @@
       "CCF-FSHB-015",
       "CCF-FSHB-016"
     ],
-    "short_why": "Plumeria · gloss · L",
+    "short_why": "Plumeria \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -10982,7 +10982,7 @@
       "CCF-FSHB-017",
       "CCF-FSHB-018"
     ],
-    "short_why": "Burgundy Iceberg Rose · gloss · L",
+    "short_why": "Burgundy Iceberg Rose \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11053,7 +11053,7 @@
       "CCF-FSHB-018",
       "CCF-FSHB-012"
     ],
-    "short_why": "Pink Iceberg Rose · gloss · L",
+    "short_why": "Pink Iceberg Rose \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11126,7 +11126,7 @@
       "CCF-FSHB-018",
       "CCF-FSHB-019"
     ],
-    "short_why": "White Iceberg Rose · gloss · L",
+    "short_why": "White Iceberg Rose \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11197,7 +11197,7 @@
       "CCF-FSHB-018",
       "CCF-FSHB-012"
     ],
-    "short_why": "Assorted Rose · gloss · L",
+    "short_why": "Assorted Rose \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11271,7 +11271,7 @@
       "CCF-FSHB-041",
       "CCF-FSHB-002"
     ],
-    "short_why": "Tecoma 'Bells of Fire' · gloss · VL",
+    "short_why": "Tecoma 'Bells of Fire' \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11353,7 +11353,7 @@
       "CCF-FSHB-041",
       "CCF-FSHB-002"
     ],
-    "short_why": "Tecoma 'Orange Jubilee' · gloss · VL",
+    "short_why": "Tecoma 'Orange Jubilee' \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11437,7 +11437,7 @@
       "CCF-FSHB-041",
       "CCF-FSHB-002"
     ],
-    "short_why": "Tecoma 'Sparky' · gloss · VL",
+    "short_why": "Tecoma 'Sparky' \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11520,7 +11520,7 @@
       "CCF-FSHB-004",
       "CCF-FSHB-001"
     ],
-    "short_why": "Arizona Yellow Bells · SW native · gloss · VL",
+    "short_why": "Arizona Yellow Bells \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11604,7 +11604,7 @@
       "CCF-FSHB-004",
       "CCF-FSHB-001"
     ],
-    "short_why": "Yellow Bells · SW native · gloss · VL",
+    "short_why": "Yellow Bells \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11688,7 +11688,7 @@
       "CCF-FSHB-036",
       "CCF-FSHB-038"
     ],
-    "short_why": "Cape Honeysuckle · gloss · VL",
+    "short_why": "Cape Honeysuckle \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -11768,7 +11768,7 @@
       "CCF-LSHB-013",
       "CCF-LSHB-022"
     ],
-    "short_why": "Low Boy Acacia · gloss · fixes N · VL",
+    "short_why": "Low Boy Acacia \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -11846,7 +11846,7 @@
       "CCF-LSHB-017",
       "CCF-LSHB-019"
     ],
-    "short_why": "Japanese Boxwood · gloss · L",
+    "short_why": "Japanese Boxwood \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -11936,7 +11936,7 @@
       "CCF-LSHB-001",
       "CCF-LSHB-014"
     ],
-    "short_why": "Boxwood Beauty · gloss · VL",
+    "short_why": "Boxwood Beauty \u00b7 gloss \u00b7 VL",
     "fruit_colors": [
       "red"
     ],
@@ -12028,7 +12028,7 @@
       "CCF-LSHB-010",
       "CCF-LSHB-013"
     ],
-    "short_why": "Green Carpet · gloss · VL",
+    "short_why": "Green Carpet \u00b7 gloss \u00b7 VL",
     "fruit_colors": [
       "red"
     ],
@@ -12120,7 +12120,7 @@
       "CCF-LSHB-010",
       "CCF-LSHB-013"
     ],
-    "short_why": "Tuttlei · gloss · VL",
+    "short_why": "Tuttlei \u00b7 gloss \u00b7 VL",
     "fruit_colors": [
       "red"
     ],
@@ -12207,7 +12207,7 @@
       "CCF-LSHB-001",
       "CCF-LSHB-014"
     ],
-    "short_why": "Variegated Boxwood Beauty · gloss · VL",
+    "short_why": "Variegated Boxwood Beauty \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12284,7 +12284,7 @@
       "CCF-LSHB-019",
       "CCF-LSHB-020"
     ],
-    "short_why": "Green Euonymus · gloss · L",
+    "short_why": "Green Euonymus \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12359,7 +12359,7 @@
       "CCF-LSHB-018",
       "CCF-LSHB-015"
     ],
-    "short_why": "Boxleaf Euonymus · gloss · L",
+    "short_why": "Boxleaf Euonymus \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12439,7 +12439,7 @@
       "CCF-LSHB-019",
       "CCF-LSHB-020"
     ],
-    "short_why": "Gold Spot Euonymus · gloss · L",
+    "short_why": "Gold Spot Euonymus \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12519,7 +12519,7 @@
       "CCF-LSHB-021",
       "CCF-LSHB-022"
     ],
-    "short_why": "Dwarf Yaupon Holly · gloss · VL",
+    "short_why": "Dwarf Yaupon Holly \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12604,7 +12604,7 @@
       "CCF-LSHB-009",
       "CCF-LSHB-016"
     ],
-    "short_why": "Japanese Privet · gloss · L",
+    "short_why": "Japanese Privet \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12689,7 +12689,7 @@
       "CCF-LSHB-009",
       "CCF-LSHB-016"
     ],
-    "short_why": "Wax Leaf Privet · gloss · L",
+    "short_why": "Wax Leaf Privet \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12771,7 +12771,7 @@
       "CCF-LSHB-010",
       "CCF-LSHB-001"
     ],
-    "short_why": "Roman Myrtle · gloss · VL",
+    "short_why": "Roman Myrtle \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12851,7 +12851,7 @@
       "CCF-LSHB-001",
       "CCF-LSHB-021"
     ],
-    "short_why": "Dwarf Myrtle · gloss · VL",
+    "short_why": "Dwarf Myrtle \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -12934,7 +12934,7 @@
       "CCF-LSHB-008",
       "CCF-LSHB-018"
     ],
-    "short_why": "Dwarf Heavenly Bamboo · gloss · L",
+    "short_why": "Dwarf Heavenly Bamboo \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -13024,7 +13024,7 @@
       "CCF-LSHB-009",
       "CCF-LSHB-011"
     ],
-    "short_why": "Heavenly Bamboo · gloss · L",
+    "short_why": "Heavenly Bamboo \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -13106,7 +13106,7 @@
       "CCF-LSHB-009",
       "CCF-LSHB-019"
     ],
-    "short_why": "Photinia · gloss · L",
+    "short_why": "Photinia \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -13183,7 +13183,7 @@
       "CCF-LSHB-008",
       "CCF-LSHB-009"
     ],
-    "short_why": "Dwarf Pittosporum · gloss · L",
+    "short_why": "Dwarf Pittosporum \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -13267,7 +13267,7 @@
       "CCF-LSHB-009",
       "CCF-LSHB-017"
     ],
-    "short_why": "Mock Orange Pittosporum · gloss · L",
+    "short_why": "Mock Orange Pittosporum \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -13347,7 +13347,7 @@
       "CCF-LSHB-009",
       "CCF-LSHB-017"
     ],
-    "short_why": "Variegated Pittosporum · gloss · L",
+    "short_why": "Variegated Pittosporum \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -13426,7 +13426,7 @@
       "CCF-LSHB-010",
       "CCF-LSHB-014"
     ],
-    "short_why": "Sugar Bush · SW native · gloss · VL",
+    "short_why": "Sugar Bush \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [
       "red"
     ],
@@ -13506,7 +13506,7 @@
       "CCF-LSHB-021",
       "CCF-LSHB-010"
     ],
-    "short_why": "Shiny Xylosma · gloss · VL",
+    "short_why": "Shiny Xylosma \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -13590,7 +13590,7 @@
       "CCF-GRAS-002",
       "CCF-GRAS-006"
     ],
-    "short_why": "Purple Three Awn · SW native · cloud · VL",
+    "short_why": "Purple Three Awn \u00b7 SW native \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -13672,7 +13672,7 @@
       "CCF-GRAS-007",
       "CCF-GRAS-009"
     ],
-    "short_why": "Bouteloua gracilis 'Blonde Ambition' · SW native · cloud · VL",
+    "short_why": "Bouteloua gracilis 'Blonde Ambition' \u00b7 SW native \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -13757,7 +13757,7 @@
       "CCF-GRAS-006",
       "CCF-GRAS-007"
     ],
-    "short_why": "Blue Grama · SW native · cloud · VL",
+    "short_why": "Blue Grama \u00b7 SW native \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -13832,7 +13832,7 @@
     "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|not_frost_pocket|winter_hardy_phx|walkway_candidate|small_yard_ok|low_water_oasis|recode",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Muhlenbergia capillaris 'Regal Mist' · cloud · L",
+    "short_why": "Muhlenbergia capillaris 'Regal Mist' \u00b7 cloud \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -13908,7 +13908,7 @@
     "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|not_frost_pocket|winter_hardy_phx|walkway_candidate|small_yard_ok|low_water_oasis|recode",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Muhlenbergia capillaris 'White Cloud' · cloud · L",
+    "short_why": "Muhlenbergia capillaris 'White Cloud' \u00b7 cloud \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -13990,7 +13990,7 @@
       "CCF-GRAS-003",
       "CCF-GRAS-012"
     ],
-    "short_why": "Pine Muhly · SW native · cloud · VL",
+    "short_why": "Pine Muhly \u00b7 SW native \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14075,7 +14075,7 @@
       "CCF-GRAS-003",
       "CCF-GRAS-011"
     ],
-    "short_why": "Bull Grass · SW native · cloud · VL",
+    "short_why": "Bull Grass \u00b7 SW native \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14151,7 +14151,7 @@
     "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|sonoran_native|gravel_hydrozone",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Muhlenbergia lindheimeri 'Autumn Glow' · SW native · cloud · VL",
+    "short_why": "Muhlenbergia lindheimeri 'Autumn Glow' \u00b7 SW native \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14232,7 +14232,7 @@
       "CCF-GRAS-003",
       "CCF-GRAS-011"
     ],
-    "short_why": "Common Deer Grass · SW native · cloud · VL",
+    "short_why": "Common Deer Grass \u00b7 SW native \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14314,7 +14314,7 @@
       "CCF-GRAS-002",
       "CCF-GRAS-011"
     ],
-    "short_why": "Muhlenbergia rigida 'Nashville' · SW native · cloud · VL",
+    "short_why": "Muhlenbergia rigida 'Nashville' \u00b7 SW native \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14396,7 +14396,7 @@
       "CCF-GRAS-003",
       "CCF-GRAS-006"
     ],
-    "short_why": "Purple Fountain Grass · cloud · VL",
+    "short_why": "Purple Fountain Grass \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14477,7 +14477,7 @@
       "CCF-GRAS-001",
       "CCF-GRAS-003"
     ],
-    "short_why": "Mexican Thread Grass · cloud · VL",
+    "short_why": "Mexican Thread Grass \u00b7 cloud \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14561,7 +14561,7 @@
       "CCF-DTRE-012",
       "CCF-DTRE-021"
     ],
-    "short_why": "Mulga Acacia · gloss · fixes N · VL",
+    "short_why": "Mulga Acacia \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14639,7 +14639,7 @@
       "CCF-DTRE-012",
       "CCF-DTRE-021"
     ],
-    "short_why": "Leather Leaf Acacia · gloss · fixes N · VL",
+    "short_why": "Leather Leaf Acacia \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14716,7 +14716,7 @@
       "CCF-DTRE-010",
       "CCF-DTRE-011"
     ],
-    "short_why": "Willow Acacia · gloss · fixes N · VL",
+    "short_why": "Willow Acacia \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14796,7 +14796,7 @@
       "CCF-DTRE-027",
       "CCF-DTRE-010"
     ],
-    "short_why": "Sweet Acacia · SW native · gloss · fixes N · VL",
+    "short_why": "Sweet Acacia \u00b7 SW native \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14874,7 +14874,7 @@
       "CCF-DTRE-021",
       "CCF-DTRE-022"
     ],
-    "short_why": "Shoestring Acacia · gloss · fixes N · VL",
+    "short_why": "Shoestring Acacia \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -14951,7 +14951,7 @@
       "CCF-DTRE-007",
       "CCF-DTRE-008"
     ],
-    "short_why": "Palo Blanco · cloud · fixes N · VL",
+    "short_why": "Palo Blanco \u00b7 cloud \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15031,7 +15031,7 @@
       "CCF-DTRE-012",
       "CCF-DTRE-021"
     ],
-    "short_why": "Cascalote · gloss · fixes N · VL",
+    "short_why": "Cascalote \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15110,7 +15110,7 @@
       "CCF-DTRE-010",
       "CCF-DTRE-011"
     ],
-    "short_why": "Smoothie Cascalote · gloss · fixes N · VL",
+    "short_why": "Smoothie Cascalote \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15194,7 +15194,7 @@
       "CCF-DTRE-017",
       "CCF-DTRE-025"
     ],
-    "short_why": "Blue Palo Verde · SW native · gloss · fixes N · VL",
+    "short_why": "Blue Palo Verde \u00b7 SW native \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15275,7 +15275,7 @@
       "CCF-DTRE-008",
       "CCF-DTRE-003"
     ],
-    "short_why": "Cercidium hybrid 'Desert Museum' · gloss · fixes N · VL",
+    "short_why": "Cercidium hybrid 'Desert Museum' \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15355,7 +15355,7 @@
       "CCF-DTRE-008",
       "CCF-DTRE-003"
     ],
-    "short_why": "Cercidium hybrid 'Sonoran Emerald' · gloss · fixes N · VL",
+    "short_why": "Cercidium hybrid 'Sonoran Emerald' \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15426,7 +15426,7 @@
       "CCF-DTRE-004",
       "CCF-DTRE-007"
     ],
-    "short_why": "Foothill Palo Verde · SW native · gloss · fixes N · VL",
+    "short_why": "Foothill Palo Verde \u00b7 SW native \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15506,7 +15506,7 @@
       "CCF-DTRE-021",
       "CCF-DTRE-022"
     ],
-    "short_why": "Foothills Palo Brea CCF · gloss · fixes N · VL",
+    "short_why": "Foothills Palo Brea CCF \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15585,7 +15585,7 @@
       "CCF-DTRE-022",
       "CCF-DTRE-023"
     ],
-    "short_why": "Palo Brea · gloss · fixes N · VL",
+    "short_why": "Palo Brea \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15665,7 +15665,7 @@
       "CCF-DTRE-003",
       "CCF-DTRE-010"
     ],
-    "short_why": "Chilopsis linearis 'Bubbalicious' · SW native · gloss · VL",
+    "short_why": "Chilopsis linearis 'Bubbalicious' \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15745,7 +15745,7 @@
       "CCF-DTRE-025",
       "CCF-DTRE-003"
     ],
-    "short_why": "Chilopsis linearis 'Sweet Bubba' · SW native · gloss · VL",
+    "short_why": "Chilopsis linearis 'Sweet Bubba' \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15827,7 +15827,7 @@
       "CCF-DTRE-025",
       "CCF-DTRE-003"
     ],
-    "short_why": "Desert Willow · SW native · gloss · VL",
+    "short_why": "Desert Willow \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15908,7 +15908,7 @@
       "CCF-DTRE-005",
       "CCF-DTRE-012"
     ],
-    "short_why": "Fern of the Desert · SW native · gloss · VL",
+    "short_why": "Fern of the Desert \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -15989,7 +15989,7 @@
       "CCF-DTRE-016",
       "CCF-DTRE-025"
     ],
-    "short_why": "Ironwood · SW native · gloss · fixes N · VL",
+    "short_why": "Ironwood \u00b7 SW native \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16070,7 +16070,7 @@
       "CCF-DTRE-008",
       "CCF-DTRE-015"
     ],
-    "short_why": "Texas Ebony · SW native · gloss · VL",
+    "short_why": "Texas Ebony \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16149,7 +16149,7 @@
       "CCF-DTRE-004",
       "CCF-DTRE-007"
     ],
-    "short_why": "Cooperi Mesquite · gloss · fixes N · VL",
+    "short_why": "Cooperi Mesquite \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16227,7 +16227,7 @@
       "CCF-DTRE-004",
       "CCF-DTRE-007"
     ],
-    "short_why": "Argentine King Mesquite CCF · gloss · fixes N · VL",
+    "short_why": "Argentine King Mesquite CCF \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16305,7 +16305,7 @@
       "CCF-DTRE-004",
       "CCF-DTRE-007"
     ],
-    "short_why": "Chilean Fuente Mesquite CCF · gloss · fixes N · VL",
+    "short_why": "Chilean Fuente Mesquite CCF \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16383,7 +16383,7 @@
       "CCF-DTRE-004",
       "CCF-DTRE-007"
     ],
-    "short_why": "Chilean Mesquite · gloss · fixes N · VL",
+    "short_why": "Chilean Mesquite \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16463,7 +16463,7 @@
       "CCF-DTRE-004",
       "CCF-DTRE-008"
     ],
-    "short_why": "Texas Honey Mesquite · SW native · gloss · fixes N · VL",
+    "short_why": "Texas Honey Mesquite \u00b7 SW native \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16542,7 +16542,7 @@
       "CCF-DTRE-008",
       "CCF-DTRE-013"
     ],
-    "short_why": "Prosopis hybrid 'Leslie Roy' · gloss · fixes N · VL",
+    "short_why": "Prosopis hybrid 'Leslie Roy' \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16612,7 +16612,7 @@
       "CCF-DTRE-010",
       "CCF-DTRE-011"
     ],
-    "short_why": "Native Mesquite · SW native · gloss · fixes N · VL",
+    "short_why": "Native Mesquite \u00b7 SW native \u00b7 gloss \u00b7 fixes N \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16691,7 +16691,7 @@
       "CCF-OTRE-019",
       "CCF-OTRE-003"
     ],
-    "short_why": "Mimosa · gloss · VL",
+    "short_why": "Mimosa \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16764,7 +16764,7 @@
       "CCF-OTRE-026",
       "CCF-OTRE-038"
     ],
-    "short_why": "Hong Kong Orchid · gloss · VL",
+    "short_why": "Hong Kong Orchid \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16836,7 +16836,7 @@
       "CCF-OTRE-010",
       "CCF-OTRE-021"
     ],
-    "short_why": "Anacacho Orchid Tree · SW native · gloss · VL",
+    "short_why": "Anacacho Orchid Tree \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16905,7 +16905,7 @@
       "CCF-OTRE-007",
       "CCF-OTRE-008"
     ],
-    "short_why": "Purple Orchid Tree · gloss · VL",
+    "short_why": "Purple Orchid Tree \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -16976,7 +16976,7 @@
       "CCF-OTRE-025",
       "CCF-OTRE-026"
     ],
-    "short_why": "Lemon Bottle Brush Tree · gloss · VL",
+    "short_why": "Lemon Bottle Brush Tree \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -17046,7 +17046,7 @@
       "CCF-OTRE-019",
       "CCF-OTRE-004"
     ],
-    "short_why": "Chitalpa · gloss · VL",
+    "short_why": "Chitalpa \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -17113,7 +17113,7 @@
       "CCF-OTRE-010",
       "CCF-OTRE-020"
     ],
-    "short_why": "Arizona Cypress · SW native · gloss · VL",
+    "short_why": "Arizona Cypress \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17179,7 +17179,7 @@
       "CCF-OTRE-032",
       "CCF-OTRE-037"
     ],
-    "short_why": "Italian Cypress · gloss · VL",
+    "short_why": "Italian Cypress \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17249,7 +17249,7 @@
       "CCF-OTRE-002",
       "CCF-OTRE-003"
     ],
-    "short_why": "Indian Rosewood · gloss · VL",
+    "short_why": "Indian Rosewood \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -17319,7 +17319,7 @@
       "CCF-OTRE-007",
       "CCF-OTRE-002"
     ],
-    "short_why": "Ghost Gum · gloss · VL",
+    "short_why": "Ghost Gum \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -17385,7 +17385,7 @@
       "CCF-OTRE-015",
       "CCF-OTRE-017"
     ],
-    "short_why": "Indian Laurel Ficus Tree · gloss · L",
+    "short_why": "Indian Laurel Ficus Tree \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17452,7 +17452,7 @@
       "CCF-OTRE-027",
       "CCF-OTRE-032"
     ],
-    "short_why": "Little Leaf Ash · SW native · gloss · VL",
+    "short_why": "Little Leaf Ash \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17518,7 +17518,7 @@
       "CCF-OTRE-031",
       "CCF-OTRE-018"
     ],
-    "short_why": "Shamel Ash · gloss · L",
+    "short_why": "Shamel Ash \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17585,7 +17585,7 @@
       "CCF-OTRE-031",
       "CCF-OTRE-018"
     ],
-    "short_why": "Bonita Ash · SW native · gloss · L",
+    "short_why": "Bonita Ash \u00b7 SW native \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17652,7 +17652,7 @@
       "CCF-OTRE-031",
       "CCF-OTRE-018"
     ],
-    "short_why": "Fan-Tex Ash · SW native · gloss · L",
+    "short_why": "Fan-Tex Ash \u00b7 SW native \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17720,7 +17720,7 @@
       "CCF-OTRE-011",
       "CCF-OTRE-029"
     ],
-    "short_why": "Raywood Ash · gloss · L",
+    "short_why": "Raywood Ash \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17787,7 +17787,7 @@
       "CCF-OTRE-031",
       "CCF-OTRE-018"
     ],
-    "short_why": "Arizona Ash · SW native · gloss · L",
+    "short_why": "Arizona Ash \u00b7 SW native \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -17858,7 +17858,7 @@
       "CCF-OTRE-011",
       "CCF-OTRE-013"
     ],
-    "short_why": "Jacaranda · gloss · L",
+    "short_why": "Jacaranda \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -17928,7 +17928,7 @@
       "CCF-OTRE-003",
       "CCF-OTRE-025"
     ],
-    "short_why": "Pink, Dynamite Red Crape Myrtle · gloss · VL",
+    "short_why": "Pink, Dynamite Red Crape Myrtle \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -17996,7 +17996,7 @@
       "CCF-OTRE-038",
       "CCF-OTRE-007"
     ],
-    "short_why": "Purple Crape Myrtle · gloss · VL",
+    "short_why": "Purple Crape Myrtle \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18064,7 +18064,7 @@
       "CCF-OTRE-003",
       "CCF-OTRE-004"
     ],
-    "short_why": "White Crape Myrtle · gloss · VL",
+    "short_why": "White Crape Myrtle \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18140,7 +18140,7 @@
       "CCF-OTRE-002",
       "CCF-OTRE-003"
     ],
-    "short_why": "Pink, Red, White Oleander Tree · gloss · VL",
+    "short_why": "Pink, Red, White Oleander Tree \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18208,7 +18208,7 @@
       "CCF-OTRE-002",
       "CCF-OTRE-004"
     ],
-    "short_why": "Fruitless Olive · gloss · VL",
+    "short_why": "Fruitless Olive \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18275,7 +18275,7 @@
       "CCF-OTRE-032",
       "CCF-OTRE-037"
     ],
-    "short_why": "Mondell Pine · gloss · VL",
+    "short_why": "Mondell Pine \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -18345,7 +18345,7 @@
       "CCF-OTRE-019",
       "CCF-OTRE-004"
     ],
-    "short_why": "Pistacia chinensis 'Red Push' · gloss · VL",
+    "short_why": "Pistacia chinensis 'Red Push' \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18424,7 +18424,7 @@
       "CCF-OTRE-019",
       "CCF-OTRE-004"
     ],
-    "short_why": "Chinese Pistache · gloss · VL",
+    "short_why": "Chinese Pistache \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18488,7 +18488,7 @@
       "CCF-OTRE-032",
       "CCF-OTRE-037"
     ],
-    "short_why": "Mastic Tree · gloss · VL",
+    "short_why": "Mastic Tree \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -18562,7 +18562,7 @@
       "CCF-OTRE-011",
       "CCF-OTRE-013"
     ],
-    "short_why": "Purple Leaf Plum · gloss · L",
+    "short_why": "Purple Leaf Plum \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18632,7 +18632,7 @@
       "CCF-OTRE-016",
       "CCF-OTRE-018"
     ],
-    "short_why": "Bradford Pear · gloss · L",
+    "short_why": "Bradford Pear \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18696,7 +18696,7 @@
       "CCF-OTRE-014",
       "CCF-OTRE-015"
     ],
-    "short_why": "Quercus virginiana 'Joan Lionetti' · gloss · L",
+    "short_why": "Quercus virginiana 'Joan Lionetti' \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -18762,7 +18762,7 @@
       "CCF-OTRE-014",
       "CCF-OTRE-015"
     ],
-    "short_why": "Live Oak · gloss · L",
+    "short_why": "Live Oak \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -18828,7 +18828,7 @@
       "CCF-OTRE-027",
       "CCF-OTRE-037"
     ],
-    "short_why": "African Sumac · gloss · VL",
+    "short_why": "African Sumac \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -18898,7 +18898,7 @@
       "CCF-OTRE-026",
       "CCF-OTRE-005"
     ],
-    "short_why": "Brazilian Pepper · gloss · VL",
+    "short_why": "Brazilian Pepper \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -18972,7 +18972,7 @@
       "CCF-OTRE-004",
       "CCF-OTRE-020"
     ],
-    "short_why": "Texas Mountain Laurel · SW native · gloss · VL",
+    "short_why": "Texas Mountain Laurel \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -19054,7 +19054,7 @@
       "CCF-OTRE-019",
       "CCF-OTRE-022"
     ],
-    "short_why": "Yellow Oleander Tree · gloss · VL",
+    "short_why": "Yellow Oleander Tree \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -19063,38 +19063,38 @@
   {
     "card_id": "CCF-OTRE-036",
     "display_name": "Tipu Tree",
-    "common_name": "Tipu Tree",
+    "common_name": "Pride of Bolivia",
     "botanical_name": "Tipuana tipu",
     "source_variety_raw": "Tipuana tipu (Tipu Tree)",
     "plant_group": "Ornamental Trees",
-    "water_class": "VL",
-    "heat_class": "excellent",
+    "water_class": "M",
+    "heat_class": "good",
     "sun_class": "full",
     "size_class": "landmark",
     "habit": "tree",
     "maintenance_level": "moderate",
     "native_class": "non_native",
-    "phoenix_winter_fit": "reliable_typical_yard",
-    "frost_pocket_ok": true,
+    "phoenix_winter_fit": "typical_ok_skip_frost_pockets",
+    "frost_pocket_ok": false,
     "frost_protect_needed": true,
     "afternoon_shade_pref": false,
     "reflected_heat_ok": false,
     "container_ok": false,
     "width_max_ft": 50.0,
-    "height_min_ft": 25.0,
-    "height_max_ft": 40.0,
+    "height_min_ft": 35.0,
+    "height_max_ft": 50.0,
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
     "toxic_class": "none",
     "toxic_who": [],
     "spine_class": "none",
-    "litter_class": "leaves",
+    "litter_class": "fruit",
     "root_class": "seekers",
     "setback_ft": 12,
     "needs_support": "none",
-    "n_fixer": false,
-    "nurse_role": "none",
+    "n_fixer": true,
+    "nurse_role": "canopy",
     "texture_body": "Gloss",
     "color_moods": [
       "Sun"
@@ -19109,12 +19109,11 @@
       "bees"
     ],
     "chip_pack": [
-      "VL",
-      "west-heat",
-      "walk-soft",
-      "low-toxin"
+      "M",
+      "litter",
+      "needs-room"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|needs_room|check_setback_utilities|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|mesic|not_frost_pocket|needs_room|check_setback_utilities|pool_litter",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-OTRE-002",
@@ -19122,11 +19121,11 @@
       "CCF-OTRE-008",
       "CCF-OTRE-010"
     ],
-    "short_why": "Tipu Tree · gloss · VL",
+    "short_why": "Tipu Tree \u00b7 yellow summer \u00b7 fruit litter \u00b7 needs regular water",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "layer": "C"
+    "layer": "A"
   },
   {
     "card_id": "CCF-OTRE-037",
@@ -19186,7 +19185,7 @@
       "CCF-OTRE-027",
       "CCF-OTRE-032"
     ],
-    "short_why": "Evergreen Elm · gloss · VL",
+    "short_why": "Evergreen Elm \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -19257,7 +19256,7 @@
       "CCF-OTRE-020",
       "CCF-OTRE-007"
     ],
-    "short_why": "Chaste Tree · gloss · VL",
+    "short_why": "Chaste Tree \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -19323,7 +19322,7 @@
       "CCF-PALM-004",
       "CCF-PALM-006"
     ],
-    "short_why": "Pindo Palm · wild stem · L",
+    "short_why": "Pindo Palm \u00b7 wild stem \u00b7 L",
     "fruit_colors": [
       "yellow"
     ],
@@ -19392,7 +19391,7 @@
       "CCF-PALM-007",
       "CCF-PALM-003"
     ],
-    "short_why": "Mediterranean Fan Palm · wild stem · VL",
+    "short_why": "Mediterranean Fan Palm \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -19461,7 +19460,7 @@
     "substitute_ids": [
       "CCF-PALM-002"
     ],
-    "short_why": "Sago Palm · gloss · VL",
+    "short_why": "Sago Palm \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -19528,7 +19527,7 @@
       "CCF-PALM-006",
       "CCF-PALM-001"
     ],
-    "short_why": "Pineapple Palm · wild stem · L",
+    "short_why": "Pineapple Palm \u00b7 wild stem \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -19595,7 +19594,7 @@
       "CCF-PALM-006",
       "CCF-PALM-001"
     ],
-    "short_why": "Pygmy Date Palm · wild stem · L",
+    "short_why": "Pygmy Date Palm \u00b7 wild stem \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -19663,7 +19662,7 @@
       "CCF-PALM-005",
       "CCF-PALM-001"
     ],
-    "short_why": "Queen Palm · wild stem · L",
+    "short_why": "Queen Palm \u00b7 wild stem \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -19729,7 +19728,7 @@
     "substitute_ids": [
       "CCF-PALM-002"
     ],
-    "short_why": "Mexican Fan Palm · wild stem · VL",
+    "short_why": "Mexican Fan Palm \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
@@ -19808,7 +19807,7 @@
     "phoenix_pocket_tags": "open_sun|west_heat_candidate|patio_pot|not_frost_pocket|walkway_candidate|needs_room|low_water_oasis|high_care",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Cocktail Citrus · gloss · L",
+    "short_why": "Cocktail Citrus \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -19879,7 +19878,7 @@
     "phoenix_pocket_tags": "patio_pot|not_frost_pocket|walkway_candidate|needs_room|check_setback_utilities|low_water_oasis|high_care",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Sour Orange · gloss · L",
+    "short_why": "Sour Orange \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -19947,7 +19946,7 @@
     "phoenix_pocket_tags": "not_frost_pocket|walkway_candidate|needs_room|low_water_oasis|high_care",
     "match_confidence": "high",
     "substitute_ids": [],
-    "short_why": "Call for Varieties · gloss · L",
+    "short_why": "Call for Varieties \u00b7 gloss \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20019,7 +20018,7 @@
     "substitute_ids": [
       "CCF-FRUT-005"
     ],
-    "short_why": "Texas Olive · SW native · gloss · VL",
+    "short_why": "Texas Olive \u00b7 SW native \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20087,7 +20086,7 @@
     "substitute_ids": [
       "CCF-FRUT-004"
     ],
-    "short_why": "Wonderful Pomegranate · gloss · VL",
+    "short_why": "Wonderful Pomegranate \u00b7 gloss \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20166,7 +20165,7 @@
       "CCF-VINE-007",
       "CCF-VINE-002"
     ],
-    "short_why": "Lilac Vine · wild stem · VL",
+    "short_why": "Lilac Vine \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20237,7 +20236,7 @@
       "CCF-VINE-001",
       "CCF-VINE-005"
     ],
-    "short_why": "Cat Claw Vine · wild stem · VL",
+    "short_why": "Cat Claw Vine \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20309,7 +20308,7 @@
       "CCF-VINE-008",
       "CCF-VINE-009"
     ],
-    "short_why": "Bower Vine · wild stem · L",
+    "short_why": "Bower Vine \u00b7 wild stem \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20380,7 +20379,7 @@
       "CCF-VINE-005",
       "CCF-VINE-002"
     ],
-    "short_why": "Parthenocissus sp. 'Hacienda Creeper' · wild stem · VL",
+    "short_why": "Parthenocissus sp. 'Hacienda Creeper' \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20452,7 +20451,7 @@
       "CCF-VINE-004",
       "CCF-VINE-002"
     ],
-    "short_why": "Pink Trumpet · wild stem · VL",
+    "short_why": "Pink Trumpet \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20524,7 +20523,7 @@
       "CCF-VINE-001",
       "CCF-VINE-005"
     ],
-    "short_why": "Pyracantha · wild stem · VL",
+    "short_why": "Pyracantha \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20601,7 +20600,7 @@
       "CCF-VINE-004",
       "CCF-VINE-001"
     ],
-    "short_why": "Lady Banks Rose · wild stem · VL",
+    "short_why": "Lady Banks Rose \u00b7 wild stem \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20671,7 +20670,7 @@
       "CCF-VINE-009",
       "CCF-VINE-003"
     ],
-    "short_why": "Star Jasmine · wild stem · L",
+    "short_why": "Star Jasmine \u00b7 wild stem \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20742,7 +20741,7 @@
       "CCF-VINE-008",
       "CCF-VINE-003"
     ],
-    "short_why": "Snail Vine · wild stem · L",
+    "short_why": "Snail Vine \u00b7 wild stem \u00b7 L",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
@@ -20815,7 +20814,7 @@
       "CCF-LSHB-021",
       "CCF-LSHB-001"
     ],
-    "short_why": "Green Hopseed · hedge · VL",
+    "short_why": "Green Hopseed \u00b7 hedge \u00b7 VL",
     "photo": {
       "id": "CCF-LSHB-023",
       "path": "photos/CCF-LSHB-023.webp",
@@ -20896,7 +20895,7 @@
       "CCF-FSHB-039",
       "CCF-FSHB-003"
     ],
-    "short_why": "Texas Sage · monsoon purple · VL",
+    "short_why": "Texas Sage \u00b7 monsoon purple \u00b7 VL",
     "photo": {
       "id": "CCF-FSHB-042",
       "path": "photos/CCF-FSHB-042.webp",
@@ -20974,7 +20973,7 @@
       "CCF-LSHB-021",
       "CCF-LSHB-023"
     ],
-    "short_why": "Jojoba · Sonoran native · VL",
+    "short_why": "Jojoba \u00b7 Sonoran native \u00b7 VL",
     "photo": {
       "id": "CCF-LSHB-024",
       "path": "photos/CCF-LSHB-024.webp",
@@ -21051,7 +21050,7 @@
       "CCF-LSHB-024",
       "CCF-LSHB-021"
     ],
-    "short_why": "Creosote · Sonoran native · VL",
+    "short_why": "Creosote \u00b7 Sonoran native \u00b7 VL",
     "photo": {
       "id": "CCF-LSHB-025",
       "path": "photos/CCF-LSHB-025.webp",
@@ -21128,7 +21127,7 @@
       "CCF-FSHB-007",
       "CCF-FSHB-039"
     ],
-    "short_why": "Torch Glow · color on a wall · thorns",
+    "short_why": "Torch Glow \u00b7 color on a wall \u00b7 thorns",
     "photo": {
       "id": "CCF-VINE-010",
       "path": "photos/CCF-VINE-010.webp",
@@ -21208,7 +21207,7 @@
       "CCF-PERN-007",
       "CCF-PERN-035"
     ],
-    "short_why": "Brittlebush · silver native · VL",
+    "short_why": "Brittlebush \u00b7 silver native \u00b7 VL",
     "photo": {
       "id": "CCF-PERN-069",
       "path": "photos/CCF-PERN-069.webp",
@@ -21278,7 +21277,7 @@
       "CCF-YUCC-010",
       "CCF-YUCC-009"
     ],
-    "short_why": "Desert Spoon · Bone · VL",
+    "short_why": "Desert Spoon \u00b7 Bone \u00b7 VL",
     "photo": {
       "id": "CCF-YUCC-036",
       "path": "photos/CCF-YUCC-036.webp",
@@ -21359,7 +21358,7 @@
       "CCF-FSHB-020",
       "CCF-PERN-054"
     ],
-    "short_why": "Desert Lavender · Bloom · VL",
+    "short_why": "Desert Lavender \u00b7 Bloom \u00b7 VL",
     "photo": {
       "id": "CCF-FSHB-043",
       "path": "photos/CCF-FSHB-043.webp",
@@ -21439,7 +21438,7 @@
       "CCF-PERN-011",
       "CCF-PERN-007"
     ],
-    "short_why": "Turpentine Bush · Floor · VL",
+    "short_why": "Turpentine Bush \u00b7 Floor \u00b7 VL",
     "photo": {
       "id": "CCF-FSHB-044",
       "path": "photos/CCF-FSHB-044.webp",
@@ -21519,7 +21518,7 @@
       "CCF-LSHB-023",
       "CCF-FSHB-042"
     ],
-    "short_why": "Little Leaf Cordia · hedge · VL",
+    "short_why": "Little Leaf Cordia \u00b7 hedge \u00b7 VL",
     "photo": {
       "id": "CCF-LSHB-026",
       "path": "photos/CCF-LSHB-026.webp",
@@ -21597,7 +21596,7 @@
       "CCF-PERN-016",
       "CCF-PERN-069"
     ],
-    "short_why": "Triangle-leaf Bursage · Floor · VL",
+    "short_why": "Triangle-leaf Bursage \u00b7 Floor \u00b7 VL",
     "photo": {
       "id": "CCF-PERN-070",
       "path": "photos/CCF-PERN-070.webp",
@@ -21617,5 +21616,72 @@
     "frost_protect_needed": false,
     "maintenance_level": "low",
     "match_confidence": "high"
+  },
+  {
+    "card_id": "CCF-OTRE-039",
+    "display_name": "Moringa",
+    "common_name": "Drumstick tree",
+    "botanical_name": "Moringa oleifera",
+    "source_variety_raw": "Moringa oleifera",
+    "plant_group": "Ornamental Trees",
+    "water_class": "L",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "size_class": "large",
+    "habit": "tree",
+    "maintenance_level": "moderate",
+    "native_class": "non_native",
+    "phoenix_winter_fit": "typical_ok_skip_frost_pockets",
+    "frost_pocket_ok": false,
+    "frost_protect_needed": true,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": false,
+    "container_ok": false,
+    "width_max_ft": 20.0,
+    "height_min_ft": 15.0,
+    "height_max_ft": 40.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "none",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "fruit",
+    "root_class": "seekers",
+    "setback_ft": 10,
+    "needs_support": "none",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Matte",
+    "color_moods": [
+      "Sun"
+    ],
+    "bloom_colors": [
+      "white"
+    ],
+    "bloom_seasons": [
+      "spring",
+      "fall"
+    ],
+    "wildlife": [
+      "bees",
+      "birds"
+    ],
+    "chip_pack": [
+      "L",
+      "frost-cut",
+      "pods"
+    ],
+    "phoenix_pocket_tags": "open_sun|not_frost_pocket|needs_room|food_tree|fast",
+    "match_confidence": "medium",
+    "substitute_ids": [
+      "CCF-DTRE-017",
+      "CCF-DTRE-010"
+    ],
+    "short_why": "Moringa \u00b7 fast \u00b7 frost cuts it to the ground \u00b7 seed pods",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "bloom_class": "seasonal",
+    "layer": "A"
   }
 ]

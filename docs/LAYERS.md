@@ -17,7 +17,7 @@ Seat is the job, not a junk drawer.
 
 Do not put a 2 ft yellow mound in Bone. Do not put a mesquite in Bloom.
 
-## Layer A — live deck (61)
+## Layer A — live deck (63)
 
 ### Shade trees
 | id | name | Why here |
@@ -35,6 +35,10 @@ Do not put a 2 ft yellow mound in Bone. Do not put a mesquite in Bloom.
 | CCF-DTRE-020 | Texas ebony | 13 HOAs |
 | CCF-OTRE-025 | Red Push pistache | Valley shade tree |
 | CCF-OTRE-034 | Texas mountain laurel | 16 HOAs; seeds are ingest-toxic |
+| CCF-OTRE-036 | Tipu tree | Valley shade tree. Mesic. Corrected off VL. Water M, so the matcher will not seat it on a Low brief. |
+| CCF-OTRE-039 | Moringa | Food tree. Frost cuts shoots below 30°F. Water L, so it seats only as a shade tree on Weekend or Hobby. |
+
+No habit photo yet on Tipu or Moringa. Do not render them on the strip until a pass_habit file exists.
 
 Not A: catclaw (spines / gate), leatherleaf acacia (puncture), palo brea (fourth Parkinsonia).
 

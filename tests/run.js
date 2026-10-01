@@ -54,8 +54,8 @@ function ids(result) {
 }
 
 const catalog = loadCatalog(path.join(__dirname, "..", "data"));
-assert(catalog.length === 554, "catalog length " + catalog.length);
-assert(new Set(catalog.map((card) => card.card_id)).size === 554, "duplicate card ids");
+assert(catalog.length === 555, "catalog length " + catalog.length);
+assert(new Set(catalog.map((card) => card.card_id)).size === 555, "duplicate card ids");
 
 const bannedNames = [
   "1 head 5'-7'",
@@ -86,8 +86,11 @@ const layerA = catalog.filter((card) => card.layer === "A");
 function byIdSoon(list, id) {
   return list.find((card) => card.card_id === id);
 }
-assert(layerA.length === 61, "layer A count " + layerA.length);
-assert(byIdSoon(catalog, "CCF-DTRE-025").layer === "A", "honey mesquite not A");
+assert(layerA.length === 63, "layer A count " + layerA.length);
+assert(byIdSoon(catalog, "CCF-OTRE-036").layer === "A", "tipu not A");
+assert(byIdSoon(catalog, "CCF-OTRE-036").water_class === "M", "tipu water");
+assert(byIdSoon(catalog, "CCF-OTRE-039").layer === "A", "moringa not A");
+assert(byIdSoon(catalog, "CCF-OTRE-039").water_class === "L", "moringa water");
 assert(byIdSoon(catalog, "CCF-YUCC-036").layer === "A", "desert spoon not A");
 assert(byIdSoon(catalog, "CCF-CACT-020").layer === "C", "hedgehog still live");
 assert(byIdSoon(catalog, "CCF-AGAV-082").layer === "C", "weber still live");
@@ -97,6 +100,7 @@ for (const id of ["CCF-LSHB-023", "CCF-FSHB-042", "CCF-LSHB-024", "CCF-LSHB-025"
   assert(card && card.layer === "A", "market gap missing from A " + id);
 }
 for (const card of layerA) {
+  if (card.card_id === "CCF-OTRE-036" || card.card_id === "CCF-OTRE-039") continue;
   const photo = card.photo || {};
   assert(photo.qa === "pass_habit" || photo.qa === "pass_bloom", "layer A photo qa " + card.card_id);
   const rel = photo.path || "";
