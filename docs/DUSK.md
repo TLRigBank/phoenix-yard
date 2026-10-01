@@ -69,4 +69,21 @@ Piece **Tree** plants a shade tree. Cover **Canopy** is existing shade (`cover: 
 
 Household sits in a 44px row under the lot on Stamp. Quote shows only the chips that are on, as a status line.
 
-See the plants is disabled until a piece is stamped.
+See the plants is disabled until a piece is stamped. The reason sits above the footer: `Put something on a wall.` A tap on the dead button repeats it. `aria-describedby` points at that line.
+
+## Next line
+
+One muted line, replaced by state. Never stacked with a tour.
+
+| Screen | Line |
+|---|---|
+| Aim | Tap the direction the front door faces. |
+| Stamp, empty | Put Bed, Pots, or Tree on the lit wall. |
+| Stamp, ready | See the plants when this wall is set. |
+| Quote | Three plants for this wall. Tap one. |
+
+After aim, pulse the selected west bed three times. The pulse dies on the first stamp. First quote only: `Bone holds. Bloom flowers. Floor covers.` under the strip.
+
+## Photo power
+
+Strip is the wide field: whole habit. Sheet is the next objective on the same plant, still a habit. Do not put a macro, a scale bar, or a second photo on the strip.

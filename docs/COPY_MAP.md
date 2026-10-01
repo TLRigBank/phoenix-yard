@@ -37,6 +37,12 @@ Wall labels: North, South, East, West. Only the west wall uses the heat color.
 | Seat swap | Swap Bone / Swap Bloom / Swap Floor |
 | After seat swap | Swapped one plant. The other two stayed. |
 | Hold coach | Hold a word for a line. |
+| Aim next | Tap the direction the front door faces. |
+| Stamp empty next | Put Bed, Pots, or Tree on the lit wall. |
+| Stamp ready next | See the plants when this wall is set. |
+| Quote next | Three plants for this wall. Tap one. |
+| Quote jobs, once | Bone holds. Bloom flowers. Floor covers. |
+| Disabled primary | Put something on a wall. |
 | Sheet close | implicit swipe down / tap the map |
 
 ## Jobs
@@ -45,12 +51,16 @@ Bone, Bloom, Floor.
 
 ## Strip face
 
+Low power. Whole habit. One plant, recognizable.
+
 - habit photo
 - job eyebrow
 - `display_name`
 - one warn mark only when the current household makes it matter
 
 ## Sheet face
+
+Next power, same plant, still a habit. No macro. No second photo on the strip. Height is the scale. No micron bar.
 
 - habit photo
 - job · `display_name`

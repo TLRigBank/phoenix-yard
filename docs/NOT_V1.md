@@ -29,3 +29,5 @@ Do not implement these unless the user changes `GROK.md`.
 - Hold-on-every-control, hold on map walls, or hold as the only way to read a fact
 - Why-lines, Latin, or Swap on the quote strip
 - Pips or bevels on the six-chip stamp row
+- A product tour, coach-mark chain, or demo plants the matcher did not seat
+- Macro, micron scale bar, or a second photo on the quote strip

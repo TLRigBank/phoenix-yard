@@ -26,7 +26,15 @@ Happy path: aim the front door → stamp pieces on the house map → four househ
 
 **US-49** Working controls use a filled off-state and a 2px border. On-state is pine-fill plus a pine border. Map walls are not chips.
 
-**US-51** Hold a jargon control 420ms for one sentence. Release hides it and does not fire the tap. Primaries, compass bearings, and map walls do not hold.
+**US-51** Hold a jargon control 420ms for one sentence. Release hides it and does not fire the tap. Primaries, compass bearings, and map walls do not hold. The card opens above the control.
+
+**US-52** Each screen has one next line tied to state. Aim tells them to tap a direction. Stamp tells them to put a piece on the lit wall, then that See the plants is ready. Quote tells them to tap one of three.
+
+**US-53** `See the plants` stays off until a piece is stamped. The footer says why. Tapping the dead button repeats `Put something on a wall.`
+
+**US-54** After aim, the selected west bed pulses until the first stamp. No other control pulses.
+
+**US-55** The first quote shows `Bone holds. Bloom flowers. Floor covers.` under the strip. Later quotes do not. Strip photos are whole habits. The sheet uses the same plant, still a habit.
 
 ## Climate (unchanged gates)
 

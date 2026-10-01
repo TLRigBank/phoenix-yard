@@ -26,6 +26,10 @@ A photo ships only if **the named plant is the subject** and a neighbor could re
 | CCF-CACT-020 Native Hedgehog | n/a | archived to C with the plant |
 
 
+## Power
+
+Strip is low power: whole plant, recognizable habit. Sheet may be tighter, same plant, still a habit. Flower-only, spine-only, and cell detail fail the strip. No micron scale bar. Height on the sheet is the scale.
+
 ## Pass
 
 - Whole plant or clear habit for trees and large succulents

@@ -40,13 +40,17 @@
   .lead { margin: 0 0 10px; color: var(--muted); font-weight: 500; }
   .hint { margin: 0 0 8px; color: var(--muted); font-size: 13px; font-weight: 500; }
   .status { margin: 0 0 8px; color: var(--muted); font-size: 13px; font-weight: 650; }
-  footer { padding: 8px 18px 26px; display: flex; gap: 8px; }
+  footer { padding: 8px 18px 26px; display: flex; flex-direction: column; gap: 8px; }
+  .foot-row { display: flex; gap: 8px; }
   button.pri, button.ghost, button.ans, button.chip, button.seg, button.icon, button.swap {
     border-radius: 12px; min-height: 44px; padding: 10px 12px; font-size: 16px; font-weight: 650; cursor: pointer;
     background: var(--sand); color: var(--ink); border: 2px solid var(--line);
   }
   button.pri { flex: 1; background: var(--pine-fill); border-color: var(--pine); }
-  button.pri[disabled] { opacity: .4; cursor: not-allowed; }
+  button.pri[disabled] { opacity: .4; cursor: not-allowed; pointer-events: none; }
+  .pri-wrap { flex: 1; display: flex; }
+  .pri-wrap .pri { width: 100%; }
+  .why-off { margin: 0 0 8px; color: var(--muted); font-size: 13px; font-weight: 650; text-align: center; }
   button.ghost { flex: 1; color: var(--pine); }
   button.quiet { background: none; border: 0; color: var(--muted); font-size: 13px; font-weight: 650; min-height: 36px; padding: 0; cursor: pointer; }
   button.ans.on, button.chip.on, button.seg.on, button.icon.on {
@@ -93,6 +97,11 @@
   .bed.W { background: var(--west); border-color: transparent; }
   .bed.W.filled { border-color: var(--line); border-style: solid; }
   .bed.sel { box-shadow: 0 0 0 3px var(--pine); }
+  .bed.pulse { animation: bedpulse 1.4s ease-in-out 3; }
+  @keyframes bedpulse {
+    0%, 100% { box-shadow: 0 0 0 3px var(--pine); }
+    50% { box-shadow: 0 0 0 7px rgba(159,191,176,.45); }
+  }
   .blabel { font-size: 12px; font-weight: 650; }
   .imarks { display: flex; gap: 4px; align-items: center; }
   .imarks svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; }
@@ -254,7 +263,9 @@ const state = {
   swaps: {},
   last: "",
   sheet: null,
-  sawHold: false
+  sawHold: false,
+  sawStamp: false,
+  sawTrio: false
 };
 
 function faces() { return FACES[state.front]; }
@@ -262,6 +273,12 @@ function bearing(side) { return faces()[side]; }
 function westSide() { return Object.keys(faces()).find((s) => faces()[s] === "W"); }
 function list(side) { return state.surfaces[side] || []; }
 function hasAny() { return ["front", "left", "right", "back"].some((s) => list(s).length); }
+function nextLine() {
+  if (state.mode === "aim") return "Tap the direction the front door faces.";
+  if (state.mode === "yard") return hasAny() ? "See the plants when this wall is set." : "Put Bed, Pots, or Tree on the lit wall.";
+  return "Three plants for this wall. Tap one.";
+}
+
 function placeLine() {
   const w = westSide();
   if (state.front === "W") return "Front faces west · the front wall cooks";
@@ -290,7 +307,8 @@ function yard() {
     const b = bearing(side);
     const filled = list(side).length > 0;
     const label = side === "front" ? "Front · " + NAME[b] : NAME[b];
-    return `<button class="bed ${b} ${filled ? "filled" : ""} ${state.selected === side ? "sel" : ""}" data-act="pick" data-id="${side}">
+    const pulse = state.mode === "yard" && !state.sawStamp && state.selected === side ? " pulse" : "";
+    return `<button class="bed ${b} ${filled ? "filled" : ""} ${state.selected === side ? "sel" : ""}${pulse}" data-act="pick" data-id="${side}">
       <span class="blabel">${label}</span>${markSvgs(side)}
     </button>`;
   }).join("");
@@ -370,6 +388,7 @@ function photoTag(c, cls) {
 
 function strip() {
   const rows = pack();
+  const trio = state.sawTrio ? "" : `<p class="hint">Bone holds. Bloom flowers. Floor covers.</p>`;
   return `<div class="strip">${rows.map((c) => {
     const hold = c.job.toLowerCase();
     return `<button type="button" class="tile${state.sheet === c.seat ? " on" : ""}" data-act="open" data-id="${c.seat}" data-hold="${hold}" aria-describedby="hold-card">
@@ -378,7 +397,7 @@ function strip() {
       <div class="name">${c.name}</div>
       ${showWarn(c) ? `<span class="mark">${c.chip}</span>` : ""}
     </button>`;
-  }).join("")}</div>`;
+  }).join("")}</div>${trio}`;
 }
 
 function sheet() {
@@ -404,6 +423,7 @@ function screenAim() {
       <p class="line">Plants that match the wall.</p>
       <h1>Which way does the front face?</h1>
       <p class="lead">Street is the top. The notch is the front door. West warms itself.</p>
+      <p class="hint">${nextLine()}</p>
       ${yard()}
       <div class="compass">
         ${["N", "S", "E", "W"].map((id) =>
@@ -411,21 +431,27 @@ function screenAim() {
         ).join("")}
       </div>
     </main>
-    <footer><button class="pri" data-act="mode" data-id="yard">That’s the front</button></footer>`;
+    <footer><div class="foot-row"><button class="pri" data-act="mode" data-id="yard">That’s the front</button></div></footer>`;
 }
 
 function screenYard() {
   return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
     <main>
       <p class="place">${placeLine()}</p>
+      <p class="hint">${nextLine()}</p>
       ${yard()}
       ${householdBar()}
       ${tray()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
     </main>
     <footer>
-      <button class="ghost" data-act="mode" data-id="aim">Aim</button>
-      <button class="pri" data-act="quote" ${hasAny() ? "" : "disabled"}>See the plants</button>
+      ${hasAny() ? "" : `<p id="see-why" class="why-off">Put something on a wall.</p>`}
+      <div class="foot-row">
+        <button class="ghost" data-act="mode" data-id="aim">Aim</button>
+        <span class="pri-wrap" data-act="quote-try">
+          <button class="pri" data-act="quote" ${hasAny() ? "" : "disabled"} aria-describedby="see-why">See the plants</button>
+        </span>
+      </div>
     </footer>
     <p style="text-align:center;margin:-8px 18px 20px"><button class="quiet" data-act="reset">Start over</button></p>`;
 }
@@ -436,6 +462,7 @@ function screenQuote() {
   return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
     <main>
       <p class="place">${NAME[bearing(state.selected)]} · ${label}</p>
+      <p class="hint">${list(state.selected).length ? nextLine() : "Put something on a wall."}</p>
       ${yard()}
       ${householdStatus()}
       ${segs()}
@@ -443,8 +470,10 @@ function screenQuote() {
       ${list(state.selected).length ? strip() : `<p class="lead">Put something on a wall.</p>`}
     </main>
     <footer>
-      <button class="ghost" data-act="mode" data-id="yard">Map</button>
-      <button class="pri" data-act="reroll">Three others for this wall</button>
+      <div class="foot-row">
+        <button class="ghost" data-act="mode" data-id="yard">Map</button>
+        <button class="pri" data-act="reroll">Three others for this wall</button>
+      </div>
     </footer>
     ${sheet()}`;
 }
@@ -531,9 +560,11 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.mode = b.dataset.id;
     state.last = "";
     state.sheet = null;
+    if (from === "quote") state.sawTrio = true;
     if (from === "aim" && b.dataset.id === "yard") state.selected = westSide() || state.selected;
   }
   if (act === "stamp") {
+    state.sawStamp = true;
     const side = state.selected;
     const next = list(side).slice();
     const i = next.indexOf(b.dataset.id);
@@ -547,6 +578,7 @@ document.getElementById("app").addEventListener("click", (e) => {
   if (act === "piece") { state.piece = b.dataset.id; state.sheet = null; }
   if (act === "tog") state[b.dataset.id] = !state[b.dataset.id];
   if (act === "care") state.care = state.care === "Low" ? "Weekend" : state.care === "Weekend" ? "Hobby" : "Low";
+  if (act === "quote-try" && !hasAny()) state.last = "Put something on a wall.";
   if (act === "quote") {
     if (!hasAny()) state.last = "Put something on a wall.";
     else { state.mode = "quote"; state.last = ""; state.sheet = null; }
@@ -557,7 +589,7 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.sheet = null;
     state.last = state.alt ? "Another legal set for this wall." : "Back to this wall’s first set.";
   }
-  if (act === "open") state.sheet = b.dataset.id;
+  if (act === "open") { state.sheet = b.dataset.id; state.sawTrio = true; }
   if (act === "swap") {
     const key = quoteKey();
     const cur = Object.assign({}, state.swaps[key] || {});

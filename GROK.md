@@ -20,9 +20,9 @@ Do not invert the old sand UI. Use dusk tokens. West wash, selected ring, and st
 
 ## Walk
 
-1. **Aim.** “Which way does the front face?” N / S / E / W. Writes `front_bearing`. West warms with a dim wash. Primary: `That’s the front.` Then select the west bed.
-2. **Stamp.** Pieces: Bed / Pots / Gate / Gravel / Block / **Tree**. Cover: Open / **Canopy** / Eave / Structure. Tree plants a shade tree. Canopy is existing shade (`cover: tree`). See the plants stays disabled until a piece is on.
-3. **Quote.** Title `West · bed`. Compact map. Three equal photo tiles above the fold. Tap a tile: medium sheet (grabber, swipe down) with photo, botanical, texture · height, why-line, chips, Swap that job. Tap another marked bed: sheet closes, strip updates. Footer: Map + Three others.
+1. **Aim.** “Which way does the front face?” N / S / E / W. Writes `front_bearing`. West warms with a dim wash. Next line: `Tap the direction the front door faces.` Primary: `That’s the front.` Then select the west bed and pulse it once.
+2. **Stamp.** Pieces: Bed / Pots / Gate / Gravel / Block / **Tree**. Cover: Open / **Canopy** / Eave / Structure. Tree plants a shade tree. Canopy is existing shade (`cover: tree`). Next line names the move. `See the plants` stays disabled until a piece is on, with `Put something on a wall.` beside it. A tap on the dead button repeats that line.
+3. **Quote.** Title `West · bed`. Compact map. Next line: `Three plants for this wall. Tap one.` Three equal habit photos above the fold. First visit only: `Bone holds. Bloom flowers. Floor covers.` Tap a tile: medium sheet (grabber, swipe down) with the same plant, still a habit, plus botanical, texture · height, why-line, chips, Swap that job. Tap another marked bed: sheet closes, strip updates. Empty wall: `Put something on a wall.` and Map. No sample plants. Footer: Map + Three others.
 
 Live cards are Layer A + B only (`docs/LAYERS.md`). Layer C stays in JSON and never seats.
 
@@ -33,3 +33,5 @@ Filled off-state + 2px border. On-state is pine-fill + pine border. No bevel. No
 Hold a jargon word (Bed, Pots, Gate, Gravel, Block, Tree, Open, Canopy, Eave, Structure, Chew, Bone / Bloom / Floor, Swap Bone) for one sentence. Release hides it. That hold does not fire the tap. Primaries, Start over, N / S / E / W, and the four map walls are tap-only.
 
 First jargon row may show `Hold a word for a line.` once.
+
+One next line per screen, tied to state. It replaces itself. No tour. No coach-mark chain. Pulse only the selected west bed, and only until the first stamp.
