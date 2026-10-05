@@ -10,7 +10,7 @@ Gates live in `docs/DECISION_TREE.md`. Words live in `docs/COPY_MAP.md`. Brand: 
 
 Aiming the house does not turn on a west bed. After aim, **select** the west bed so stamps have a target. That is focus, not a project.
 
-Do not invert the old sand UI. Use dusk tokens. West wash, selected ring, and stamped icons are three different signals.
+Do not invert the old sand UI. Use Lot tokens in `docs/DUSK.md`. West wash, selected ring, and stamped icons are three different signals. Orange is the beacon, not the wall.
 
 ## Layout
 
