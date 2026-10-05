@@ -87,7 +87,7 @@ One muted line, replaced by state. Never stacked with a tour.
 | Stamp, ready | See the plants when this wall is set. |
 | Quote | Three plants for this wall. Tap one. |
 
-After aim, pulse the selected west bed three times. The pulse dies on the first stamp. First quote only: `Bone holds. Bloom flowers. Floor covers.` under the strip.
+After aim, pulse the selected west bed until the first stamp. The pulse does not restart on another tap. First quote only: `Bone holds. Bloom flowers. Floor covers.` under the strip.
 
 ## Photo power
 

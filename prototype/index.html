@@ -106,7 +106,10 @@
   .bed.W { background: var(--west); border-color: transparent; }
   .bed.W.filled { border-color: var(--line); border-style: solid; }
   .bed.sel { box-shadow: 0 0 0 3px var(--ink); }
-  .bed.pulse { animation: bedpulse 1.4s ease-in-out 3; }
+  .bed.pulse { animation: bedpulse 1.4s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .bed.pulse { animation: none; }
+  }
   @keyframes bedpulse {
     0%, 100% { box-shadow: 0 0 0 3px var(--ink); }
     50% { box-shadow: 0 0 0 7px rgba(26,26,26,.28); }
@@ -310,25 +313,42 @@ function markSvgs(side) {
   return `<span class="imarks">${show.map((k) => ICONS[k] || "").join("")}${extra > 0 ? `<span class="more">+${extra}</span>` : ""}</span>`;
 }
 
-function yard() {
-  const compact = state.mode === "quote" ? " compact" : "";
-  const beds = ["front", "left", "right", "back"].map((side) => {
+function buildYard() {
+  const el = document.createElement("div");
+  el.id = "yard";
+  el.className = "yard";
+  el.innerHTML = `<div class="street">Street</div><div class="walk"></div><div class="house"><span class="notch" title="Front door"></span></div>`;
+  ["front", "left", "right", "back"].forEach((side) => {
+    const b = document.createElement("button");
+    b.className = "bed";
+    b.dataset.side = side;
+    b.dataset.act = "pick";
+    b.dataset.id = side;
+    b.innerHTML = `<span class="blabel"></span><span class="imarks"></span>`;
+    el.appendChild(b);
+  });
+  return el;
+}
+
+function paintYard() {
+  let el = document.getElementById("yard");
+  if (!el) el = buildYard();
+  el.classList.toggle("compact", state.mode === "quote");
+  el.querySelectorAll(".bed").forEach((bed) => {
+    const side = bed.dataset.side;
     const b = bearing(side);
     const filled = list(side).length > 0;
-    const label = side === "front" ? "Front · " + NAME[b] : NAME[b];
-    const pulse = state.mode === "yard" && !state.sawStamp && state.selected === side ? " pulse" : "";
-    return `<button class="bed ${b} ${filled ? "filled" : ""} ${state.selected === side ? "sel" : ""}${pulse}" data-act="pick" data-id="${side}">
-      <span class="blabel">${label}</span>${markSvgs(side)}
-    </button>`;
-  }).join("");
-  const trees = ["front", "left", "right", "back"].filter((s) => state.cover[s] === "tree").map((s) => `<div class="canopy ${s}"></div>`).join("");
-  const blocks = ["front", "left", "right", "back"].filter((s) => list(s).includes("block_wall")).map((s) => `<div class="blk ${s}"></div>`).join("");
-  return `<div class="yard${compact}">
-    <div class="street">Street</div>
-    <div class="walk"></div>
-    ${blocks}${beds}${trees}
-    <div class="house"><span class="notch" title="Front door"></span></div>
-  </div>`;
+    const pulse = state.mode === "yard" && !state.sawStamp && state.selected === side;
+    bed.className = `bed ${b}${filled ? " filled" : ""}${state.selected === side ? " sel" : ""}${pulse ? " pulse" : ""}`;
+    bed.querySelector(".blabel").textContent = side === "front" ? "Front · " + NAME[b] : NAME[b];
+    bed.querySelector(".imarks").outerHTML = markSvgs(side);
+  });
+  el.querySelectorAll(".canopy, .blk").forEach((n) => n.remove());
+  ["front", "left", "right", "back"].forEach((s) => {
+    if (state.cover[s] === "tree") el.insertAdjacentHTML("beforeend", `<div class="canopy ${s}"></div>`);
+    if (list(s).includes("block_wall")) el.insertAdjacentHTML("beforeend", `<div class="blk ${s}"></div>`);
+  });
+  return el;
 }
 
 function householdBar() {
@@ -433,7 +453,7 @@ function screenAim() {
       <h1>Which way does the front face?</h1>
       <p class="lead">Street is the top. The notch is the front door. West warms itself.</p>
       <p class="hint">${nextLine()}</p>
-      ${yard()}
+      <div id="yard-mount"></div>
       <div class="compass">
         ${["N", "S", "E", "W"].map((id) =>
           `<button class="ans ${state.front === id ? "on" : ""}" data-act="front" data-id="${id}">${NAME[id]}</button>`
@@ -448,7 +468,7 @@ function screenYard() {
     <main>
       <p class="place">${placeLine()}</p>
       <p class="hint">${nextLine()}</p>
-      ${yard()}
+      <div id="yard-mount"></div>
       ${householdBar()}
       ${tray()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
@@ -472,7 +492,7 @@ function screenQuote() {
     <main>
       <p class="place">${NAME[bearing(state.selected)]} · ${label}</p>
       <p class="hint">${list(state.selected).length ? nextLine() : "Put something on a wall."}</p>
-      ${yard()}
+      <div id="yard-mount"></div>
       ${householdStatus()}
       ${segs()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
@@ -488,8 +508,11 @@ function screenQuote() {
 }
 
 function render() {
+  const yard = document.getElementById("yard");
+  if (yard) yard.remove();
   const html = state.mode === "aim" ? screenAim() : state.mode === "quote" ? screenQuote() : screenYard();
   document.getElementById("app").innerHTML = html;
+  document.getElementById("yard-mount").replaceWith(paintYard());
 }
 
 const holdCard = document.getElementById("hold-card");
@@ -618,6 +641,7 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.cover = { front: "none", left: "none", right: "none", back: "none" };
     state.kids = false; state.chew = false; state.wildlife = true; state.care = "Low";
     state.alt = false; state.swaps = {}; state.last = ""; state.mode = "aim"; state.sheet = null;
+    state.sawStamp = false; state.sawTrio = false;
   }
   render();
 });
