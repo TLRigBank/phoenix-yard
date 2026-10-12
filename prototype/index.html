@@ -57,7 +57,8 @@
   button.ans.on, button.chip.on, button.seg.on, button.icon.on {
     background: var(--on-fill); color: var(--ink); border-color: var(--pine);
   }
-  .compass { display: flex; gap: 6px; margin: 0 0 8px; }
+  .compass { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 8px; }
+  .compass .ans:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .row { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 8px; }
   button.chip { flex: 1; min-width: 56px; font-size: 14px; }
   button.seg { flex: 1; font-size: 14px; }
@@ -94,11 +95,11 @@
     color: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center;
     gap: 4px; z-index: 3; cursor: pointer; padding: 4px;
   }
-  .bed[data-side="front"] { left: 18%; right: 18%; top: 28px; height: 52px; border-radius: 8px; }
+  .bed[data-side="front"] { left: 18%; right: 18%; top: 28px; height: 52px; border-radius: 8px; align-items: flex-start; justify-content: center; padding-left: 12px; text-align: left; }
   .bed[data-side="back"] { left: 18%; right: 18%; bottom: 8px; height: 52px; border-radius: 8px; }
   .bed[data-side="left"] { left: 6px; top: 78px; width: 72px; height: 112px; border-radius: 8px; }
   .bed[data-side="right"] { right: 6px; top: 78px; width: 72px; height: 112px; border-radius: 8px; }
-  .yard.compact .bed[data-side="front"] { top: 22px; height: 34px; }
+  .yard.compact .bed[data-side="front"] { top: 22px; height: 34px; padding-left: 8px; }
   .yard.compact .bed[data-side="back"] { bottom: 6px; height: 34px; }
   .yard.compact .bed[data-side="left"] { top: 54px; width: 54px; height: 78px; }
   .yard.compact .bed[data-side="right"] { top: 54px; width: 54px; height: 78px; }
@@ -143,8 +144,8 @@
     display: block; width: 100%; height: 88px; object-fit: cover; background: var(--line);
   }
   .tile .job, .sheet .job { display: block; font-size: 10px; font-weight: 650; color: var(--pine); letter-spacing: .04em; text-transform: uppercase; margin: 6px 8px 0; }
-  .tile .name { font-weight: 750; font-size: 13px; line-height: 1.25; margin: 2px 8px 0; }
-  .tile .mark { display: inline-block; margin: 4px 8px 0; font-size: 11px; font-weight: 650; border-radius: 999px; padding: 2px 7px; background: var(--warn-bg); color: var(--warn-ink); }
+  .tile .name { display: block; font-weight: 750; font-size: 13px; line-height: 1.25; margin: 2px 8px 0; min-height: 2.5em; }
+  .tile .mark { display: block; width: max-content; max-width: calc(100% - 16px); margin: 4px 8px 0; font-size: 11px; font-weight: 650; border-radius: 999px; padding: 2px 7px; background: var(--warn-bg); color: var(--warn-ink); }
 
   .sheet {
     position: fixed; left: 50%; bottom: 0; width: min(430px, 100%); margin-left: calc(min(430px, 100%) / -2);
@@ -264,13 +265,19 @@ const SWAP = {
   C: { name: "Trailing Indigo", botanical: "Dalea greggii", job: "Floor", color: "#6B4F8A", why: "Another low plant for this wall.", chip: "Feeds the soil", seat: "C", can_swap: true, photo: "../photos/CCF-PERN-016.webp", meta: "Mat · 1 ft" }
 };
 const state = {
-  mode: "aim",
-  front: "N",
-  selected: "front",
+  mode: "guide",
+  guideStep: 0,
+  wallStep: 0,
+  front: null,
+  who: null,
+  wild: null,
+  draft: null,
+  selected: null,
   piece: "bed",
+  asked: { front: false, left: false, right: false, back: false },
   surfaces: { front: [], left: [], right: [], back: [] },
   cover: { front: "none", left: "none", right: "none", back: "none" },
-  kids: false, chew: false, wildlife: true, care: "Low",
+  kids: false, chew: false, wildlife: true, care: null,
   alt: false,
   swaps: {},
   last: "",
@@ -280,14 +287,19 @@ const state = {
   sawTrio: false
 };
 
-function faces() { return FACES[state.front]; }
+function faces() { return FACES[state.front || "N"]; }
 function bearing(side) { return faces()[side]; }
 function westSide() { return Object.keys(faces()).find((s) => faces()[s] === "W"); }
 function list(side) { return state.surfaces[side] || []; }
 function hasAny() { return ["front", "left", "right", "back"].some((s) => list(s).length); }
 function nextLine() {
-  if (state.mode === "aim") return "Tap the direction the front door faces.";
-  if (state.mode === "yard") return hasAny() ? "See the plants when this wall is set." : "Put Bed, Pots, or Tree on the lit wall.";
+  if (state.mode === "guide") return "Answer to see the house.";
+  if (state.mode === "wall") return state.wallStep === 0 ? "Tap every piece on this wall." : "Answer for this wall, or skip.";
+  if (state.mode === "map") {
+    if (state.last) return state.last;
+    if (state.selected && !list(state.selected).length) return "Put something on a wall.";
+    return "Tap a wall.";
+  }
   return "Three plants for this wall. Tap one.";
 }
 
@@ -446,39 +458,87 @@ function sheet() {
   </div>`;
 }
 
-function screenAim() {
+function screenGuide() {
+  const step = state.guideStep;
+  const titles = ["Which way does the front face?", "Who is in the yard?", "How do you water?", "Birds and pollinators?"];
+  let choices = "";
+  if (step === 0) {
+    choices = ["N", "S", "E", "W"].map((id) =>
+      `<button class="ans ${state.front === id ? "on" : ""}" data-act="front" data-id="${id}">${NAME[id]}</button>`
+    ).join("");
+  } else if (step === 1) {
+    choices = [["kids", "Kids"], ["dogs", "Dogs"], ["neither", "Neither"]].map(([id, label]) =>
+      `<button class="ans ${state.who === id ? "on" : ""}" data-act="who" data-id="${id}">${label}</button>`
+    ).join("");
+  } else if (step === 2) {
+    choices = ["Low", "Weekend", "Hobby"].map((id) =>
+      `<button class="ans ${state.care === id ? "on" : ""}" data-act="care" data-id="${id}">${id}</button>`
+    ).join("");
+  } else {
+    choices = [["yes", "Yes"], ["no", "Not now"], ["skip", "Skip"]].map(([id, label]) =>
+      `<button class="ans ${state.wild === id ? "on" : ""}" data-act="wild" data-id="${id}">${label}</button>`
+    ).join("");
+  }
+  const ready = step === 0 ? !!state.front : step === 1 ? !!state.who : step === 2 ? !!state.care : !!state.wild;
   return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
     <main>
-      <p class="line">Plants that match the wall.</p>
-      <h1>Which way does the front face?</h1>
-      <p class="lead">Street is the top. The notch is the front door. West warms itself.</p>
+      ${step === 0 ? `<p class="line">Plants that match the wall.</p>` : ""}
+      <h1>${titles[step]}</h1>
       <p class="hint">${nextLine()}</p>
-      <div id="yard-mount"></div>
-      <div class="compass">
-        ${["N", "S", "E", "W"].map((id) =>
-          `<button class="ans ${state.front === id ? "on" : ""}" data-act="front" data-id="${id}">${NAME[id]}</button>`
-        ).join("")}
-      </div>
+      <div class="compass">${choices}</div>
     </main>
-    <footer><div class="foot-row"><button class="pri" data-act="mode" data-id="yard">That’s the front</button></div></footer>`;
+    <footer><div class="foot-row"><button class="pri" data-act="next-guide" ${ready ? "" : "disabled"}>Next</button></div></footer>`;
 }
 
-function screenYard() {
+function screenWall() {
+  const wall = NAME[bearing(state.selected)].toLowerCase();
+  const step = state.wallStep;
+  const titles = [
+    `What goes on the ${wall} wall?`,
+    `Color mood on the ${wall} wall?`,
+    `Texture on the ${wall} wall?`,
+    `Growth on the ${wall} wall?`
+  ];
+  let choices = "";
+  if (step === 0) {
+    const on = list(state.selected);
+    choices = PIECES.map(([id, label]) =>
+      `<button class="ans ${on.includes(id) ? "on" : ""}" data-act="stamp" data-id="${id}" data-hold="${id}" aria-describedby="hold-card">${label}</button>`
+    ).join("") + `<button class="ans ${state.draft === "any" ? "on" : ""}" data-act="stamp" data-id="any">Don’t care</button>`;
+  } else {
+    const opts = step === 1 ? ["Cool", "Warm", "Neutral"] : step === 2 ? ["Swords", "Soft", "Stone"] : ["Upright", "Spreading", "Low"];
+    choices = opts.map((id) =>
+      `<button class="ans ${state.draft === id ? "on" : ""}" data-act="draft" data-id="${id}">${id}</button>`
+    ).join("") + `<button class="ans ${state.draft === "any" ? "on" : ""}" data-act="draft" data-id="any">Don’t care</button>`;
+  }
+  const ready = step === 0 ? list(state.selected).length > 0 || state.draft === "any" : !!state.draft;
+  const coach = step === 0 && !state.sawHold ? `<p class="hint">Hold a word for a line.</p>` : "";
   return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
     <main>
-      <p class="place">${placeLine()}</p>
+      <h1>${titles[step]}</h1>
       <p class="hint">${nextLine()}</p>
-      <div id="yard-mount"></div>
-      ${householdBar()}
-      ${tray()}
-      ${state.last ? `<p class="lead">${state.last}</p>` : ""}
+      ${coach}
+      <div class="compass">${choices}</div>
     </main>
     <footer>
-      ${hasAny() ? "" : `<p id="see-why" class="why-off">Put something on a wall.</p>`}
+      <div class="foot-row"><button class="pri" data-act="next-wall" ${ready ? "" : "disabled"}>Next</button></div>
+    </footer>
+    <p style="text-align:center;margin:-8px 18px 20px"><button class="quiet" data-act="reset">Start over</button></p>`;
+}
+
+function screenMap() {
+  const ready = !!(state.selected && list(state.selected).length);
+  return `<header>${glyph()}<span class="brand">Phoenix Yard</span></header>
+    <main>
+      ${hasAny() ? "" : `<p class="line">Plants that match the wall.</p>`}
+      <p class="place">${placeLine()}</p>
+      <p class="hint" id="see-why">${nextLine()}</p>
+      <div id="yard-mount"></div>
+    </main>
+    <footer>
       <div class="foot-row">
-        <button class="ghost" data-act="mode" data-id="aim">Aim</button>
         <span class="pri-wrap" data-act="quote-try">
-          <button class="pri" data-act="quote" ${hasAny() ? "" : "disabled"} aria-describedby="see-why">See the plants</button>
+          <button class="pri" data-act="quote" ${ready ? "" : "disabled"} aria-describedby="see-why">See the plants</button>
         </span>
       </div>
     </footer>
@@ -500,7 +560,7 @@ function screenQuote() {
     </main>
     <footer>
       <div class="foot-row">
-        <button class="ghost" data-act="mode" data-id="yard">Map</button>
+        <button class="ghost" data-act="mode" data-id="map">Map</button>
         <button class="pri" data-act="reroll">Three others for this wall</button>
       </div>
     </footer>
@@ -510,9 +570,10 @@ function screenQuote() {
 function render() {
   const yard = document.getElementById("yard");
   if (yard) yard.remove();
-  const html = state.mode === "aim" ? screenAim() : state.mode === "quote" ? screenQuote() : screenYard();
+  const html = state.mode === "guide" ? screenGuide() : state.mode === "wall" ? screenWall() : state.mode === "quote" ? screenQuote() : screenMap();
   document.getElementById("app").innerHTML = html;
-  document.getElementById("yard-mount").replaceWith(paintYard());
+  const mount = document.getElementById("yard-mount");
+  if (mount) mount.replaceWith(paintYard());
 }
 
 const holdCard = document.getElementById("hold-card");
@@ -585,13 +646,54 @@ document.getElementById("app").addEventListener("click", (e) => {
   const b = e.target.closest("[data-act]");
   if (!b) return;
   const act = b.dataset.act;
-  if (act === "front") state.front = b.dataset.id;
+  if (act === "front" && state.mode === "guide") state.front = b.dataset.id;
+  if (act === "who") state.who = b.dataset.id;
+  if (act === "wild") {
+    state.wild = b.dataset.id;
+    state.wildlife = b.dataset.id !== "no";
+  }
+  if (act === "next-guide") {
+    if (state.guideStep === 0 && !state.front) return;
+    if (state.guideStep === 1 && !state.who) return;
+    if (state.guideStep === 2 && !state.care) return;
+    if (state.guideStep === 3 && !state.wild) return;
+    if (state.who === "kids") { state.kids = true; state.chew = false; }
+    else if (state.who === "dogs") { state.kids = false; state.chew = true; }
+    else if (state.who === "neither") { state.kids = false; state.chew = false; }
+    if (state.guideStep < 3) state.guideStep += 1;
+    else { state.mode = "map"; state.selected = null; state.last = ""; }
+  }
+  if (act === "draft") state.draft = b.dataset.id;
+  if (act === "next-wall") {
+    const side = state.selected;
+    if (state.wallStep === 0) {
+      if (!list(side).length && state.draft !== "any") return;
+      if (!list(side).length) state.surfaces[side] = ["bed"];
+      if (!list(side).includes(state.piece)) state.piece = list(side)[0];
+      state.sawStamp = true;
+    } else if (!state.draft) return;
+    if (state.wallStep < 3) { state.wallStep += 1; state.draft = null; }
+    else {
+      state.asked[side] = true;
+      state.mode = "quote";
+      state.draft = null;
+      state.last = "";
+      state.sheet = null;
+    }
+  }
   if (act === "pick") {
     state.selected = b.dataset.id;
     const on = list(state.selected);
-    if (on.length && !on.includes(state.piece)) state.piece = on[0];
     state.sheet = null;
-    state.last = state.mode === "quote" && !on.length ? "Put something on a wall." : "";
+    state.last = "";
+    if (!state.asked[state.selected]) {
+      state.mode = "wall";
+      state.wallStep = 0;
+      state.draft = null;
+    } else {
+      if (on.length && !on.includes(state.piece)) state.piece = on[0];
+      state.mode = "quote";
+    }
   }
   if (act === "mode") {
     const from = state.mode;
@@ -599,33 +701,35 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.last = "";
     state.sheet = null;
     if (from === "quote") state.sawTrio = true;
-    if (from === "aim" && b.dataset.id === "yard") state.selected = westSide() || state.selected;
   }
-  if (act === "stamp") {
-    state.sawStamp = true;
+  if (act === "stamp" && state.mode === "wall" && state.wallStep === 0) {
     const side = state.selected;
-    const next = list(side).slice();
-    const i = next.indexOf(b.dataset.id);
-    if (i >= 0) next.splice(i, 1);
-    else next.push(b.dataset.id);
-    state.surfaces[side] = next;
-    state.piece = b.dataset.id;
+    if (b.dataset.id === "any") {
+      state.surfaces[side] = [];
+      state.draft = "any";
+    } else {
+      const next = list(side).slice();
+      const i = next.indexOf(b.dataset.id);
+      if (i >= 0) next.splice(i, 1);
+      else next.push(b.dataset.id);
+      state.surfaces[side] = next;
+      state.piece = next.includes(b.dataset.id) ? b.dataset.id : (next[0] || state.piece);
+      state.draft = null;
+    }
     state.last = "";
   }
-  if (act === "cover") state.cover[state.selected] = b.dataset.id;
   if (act === "piece") { state.piece = b.dataset.id; state.sheet = null; }
-  if (act === "tog") state[b.dataset.id] = !state[b.dataset.id];
-  if (act === "care") state.care = state.care === "Low" ? "Weekend" : state.care === "Weekend" ? "Hobby" : "Low";
-  if (act === "quote-try" && !hasAny()) state.last = "Put something on a wall.";
+  if (act === "care" && state.mode === "guide") state.care = b.dataset.id;
+  if (act === "quote-try" && !(state.selected && list(state.selected).length)) state.last = "Put something on a wall.";
   if (act === "quote") {
-    if (!hasAny()) state.last = "Put something on a wall.";
+    if (!(state.selected && list(state.selected).length)) state.last = "Put something on a wall.";
     else { state.mode = "quote"; state.last = ""; state.sheet = null; }
   }
   if (act === "reroll") {
     state.alt = !state.alt;
     state.swaps[quoteKey()] = {};
     state.sheet = null;
-    state.last = state.alt ? "Another legal set for this wall." : "Back to this wall’s first set.";
+    state.last = state.alt ? "" : "Back to this wall’s first set.";
   }
   if (act === "open") { state.sheet = b.dataset.id; state.sawTrio = true; }
   if (act === "swap") {
@@ -640,8 +744,10 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.surfaces = { front: [], left: [], right: [], back: [] };
     state.cover = { front: "none", left: "none", right: "none", back: "none" };
     state.kids = false; state.chew = false; state.wildlife = true; state.care = "Low";
-    state.alt = false; state.swaps = {}; state.last = ""; state.mode = "aim"; state.sheet = null;
-    state.sawStamp = false; state.sawTrio = false;
+    state.alt = false; state.swaps = {}; state.last = ""; state.mode = "guide"; state.guideStep = 0; state.wallStep = 0;
+    state.front = null; state.who = null; state.wild = null; state.care = null; state.draft = null; state.selected = null;
+    state.asked = { front: false, left: false, right: false, back: false };
+    state.sheet = null; state.sawStamp = false; state.sawTrio = false; state.sawHold = false;
   }
   render();
 });

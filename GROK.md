@@ -27,12 +27,12 @@ Do not invert the old sand UI. Use Lot tokens in `docs/DUSK.md`. West wash, sele
    - Any remaining brief fields (skippable).
    After the last answer, the map appears already oriented, west wash applied, household flags set. Next line: `Tap a wall.`
 
-2. **Per-wall questions.** Selecting a wall opens a short sequence for that wall only (one question per screen, always skippable with “Don’t care”):
-   - Job or piece (Bone / Bloom / Floor, or existing stamp pieces).
+2. **Per-wall questions.** Selecting a wall opens a short sequence for that wall only:
+   - Pieces (Bed, Pots, Gate, Gravel, Block, Tree). More than one can be on. Tap again to turn one off. “Don’t care” clears the set. Next line: `Tap every piece on this wall.`
    - Color mood (Cool / Warm / Neutral / Don’t care).
    - Texture (Swords / Soft / Stone / Don’t care).
    - Growth pattern (Upright / Spreading / Low / Don’t care).
-   Answers write into that wall’s brief only. When the sequence ends, the map updates and the 3-up strip refreshes for that wall.
+   Color, texture, and growth are one answer each and always skippable. Piece answers write `surfaces` for that wall. When the sequence ends, the quote shows the active piece. If more than one piece is on, a row under the map switches which piece the strip is for.
 
 3. **Quote.** Title `West · bed`. Compact map. Next line: `Three plants for this wall. Tap one.` Three equal habit photos above the fold. First visit only: `Bone holds. Bloom flowers. Floor covers.` Tap a tile: medium sheet (grabber, swipe down) with the same plant, still a habit, plus botanical, texture · height, why-line, chips, Swap that job. After the existing content, one muted optional control: `Sizes · Cox Oct 2026`. Tap expands dated size and retail prices (wholesale × 1.33). No default selection. Multi-wall total appears only after more than one wall is stamped and at least one sheet is opened: muted footer `All walls · $XX`. Tap for plain list. No sales language. Empty wall: `Put something on a wall.` and Map. Footer: Map + Three others.
 

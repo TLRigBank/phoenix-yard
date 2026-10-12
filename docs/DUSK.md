@@ -82,9 +82,10 @@ One muted line, replaced by state. Never stacked with a tour.
 
 | Screen | Line |
 |---|---|
-| Aim | Tap the direction the front door faces. |
-| Stamp, empty | Put Bed, Pots, or Tree on the lit wall. |
-| Stamp, ready | See the plants when this wall is set. |
+| Guide | Answer to see the house. |
+| Map, no wall yet | Tap a wall. |
+| Piece | Tap every piece on this wall. |
+| Color, texture, growth | Answer for this wall, or skip. |
 | Quote | Three plants for this wall. Tap one. |
 
 After aim, pulse the selected west bed until the first stamp. The pulse does not restart on another tap. First quote only: `Bone holds. Bloom flowers. Floor covers.` under the strip.

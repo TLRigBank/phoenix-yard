@@ -17,12 +17,12 @@ After the last answer the map appears oriented, west wash applied, household fla
 
 Triggered by selecting a wall. One question per screen. Always skippable with Don’t care.
 
-- Job or piece (Bone / Bloom / Floor, or existing stamp pieces).
+- Pieces (Bed / Pots / Gate / Gravel / Block / Tree). More than one may be on. Tap again to turn one off. Don’t care clears the set. Next line: Tap every piece on this wall.
 - Color mood (Cool / Warm / Neutral / Don’t care).
 - Texture (Swords / Soft / Stone / Don’t care).
 - Growth pattern (Upright / Spreading / Low / Don’t care).
 
-Answers write into that wall’s brief only. On completion the map updates and the 3-up strip refreshes for that wall.
+Piece answers write that wall’s `surfaces`. Color, texture, and growth are one answer each. On completion the quote opens for the active piece. More than one piece shows a switcher under the map.
 
 Deeper traits are available but never required on the first pass. A quiet More about this wall control may appear after the first strip is visible.
 

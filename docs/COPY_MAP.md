@@ -40,6 +40,7 @@ Wall labels: North, South, East, West. Only the west wall uses the heat color.
 | Guided entry next | Answer to see the house. |
 | Wall select next | Tap a wall. |
 | Per-wall next | Answer for this wall, or skip. |
+| Piece screen next | Tap every piece on this wall. |
 | Quote next | Three plants for this wall. Tap one. |
 | Quote jobs, once | Bone holds. Bloom flowers. Floor covers. |
 | Disabled primary | Put something on a wall. |
