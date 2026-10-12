@@ -21,8 +21,8 @@ Wall labels: North, South, East, West. Only the west wall uses the heat color.
 
 | Moment | Face |
 |---|---|
-| Aim primary | That’s the front |
-| Stamp primary | See the plants |
+| Guided entry primary | Next |
+| Wall ready primary | See the plants |
 | Cover row | Open · Canopy · Eave · Structure |
 | Cover heading | Already shaded |
 | Piece tree | Tree |
@@ -37,13 +37,15 @@ Wall labels: North, South, East, West. Only the west wall uses the heat color.
 | Seat swap | Swap Bone / Swap Bloom / Swap Floor |
 | After seat swap | Swapped one plant. The other two stayed. |
 | Hold coach | Hold a word for a line. |
-| Aim next | Tap the direction the front door faces. |
-| Stamp empty next | Put Bed, Pots, or Tree on the lit wall. |
-| Stamp ready next | See the plants when this wall is set. |
+| Guided entry next | Answer to see the house. |
+| Wall select next | Tap a wall. |
+| Per-wall next | Answer for this wall, or skip. |
 | Quote next | Three plants for this wall. Tap one. |
 | Quote jobs, once | Bone holds. Bloom flowers. Floor covers. |
 | Disabled primary | Put something on a wall. |
 | Sheet close | implicit swipe down / tap the map |
+| Sizes control | Sizes · Cox Oct 2026 |
+| Multi-wall total | All walls · $XX |
 
 ## Jobs
 
@@ -58,6 +60,8 @@ Low power. Whole habit. One plant, recognizable.
 - `display_name`
 - one warn mark only when the current household makes it matter
 
+No prices. No sizes. No “available” marks.
+
 ## Sheet face
 
 Next power, same plant, still a habit. No macro. No second photo on the strip. Height is the scale. No micron bar.
@@ -69,6 +73,8 @@ Next power, same plant, still a habit. No macro. No second photo on the strip. H
 - Why-line ≤ 140 characters, no “perfect for Phoenix”
 - ≤ 4 chips, warnings first
 - Swap that job
+- Muted optional control after the above: `Sizes · Cox Oct 2026`
+- Hold on that control: Current sizes and prices from the October Cox sheet. Optional.
 
 ## Hold lines
 
@@ -93,3 +99,4 @@ Next power, same plant, still a habit. No macro. No second photo on the strip. H
 | swap-A | Keep Bloom and Floor. Replace only the structure plant. |
 | swap-B | Keep Bone and Floor. Replace only the flower. |
 | swap-C | Keep Bone and Bloom. Replace only the low plant. |
+| sizes | Current sizes and prices from the October Cox sheet. Optional. |

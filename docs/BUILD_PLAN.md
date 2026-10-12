@@ -6,7 +6,8 @@
 |---|---|---|
 | 0 | Spec lock and `engine/match.js` | `node tests/run.js` passes. Default card ids are the fixture, not “any three legal plants.” |
 | 1 | Driveway walk on live match | Orient → project scale → questions → rooms (wall optional) → first **on** strip. Pots-only never shows Afternoon wall. Three others calls `exclude`. |
-
+| A | Guided entry | Opening four short questions populate the map. Selecting a wall opens skippable per-wall questions (job, color mood, texture, growth). Map updates and strip refreshes. |
+| B | Secondary quoting | Layer A limited to plants with priced sizes on the October 2026 Cox sheet. Dated wholesale and retail (wholesale × 1.33) stored by size. Muted optional “Sizes · Cox Oct 2026” control on sheet only. Quiet multi-wall total after more than one wall. No sales language. |
 | 2 | Trust | Chew diff uses the copy-map sentences. Empty seats. Card sheet with re-gated substitutes. Gate shows the jumping-cholla line. Share list. |
 | 3 | Memory, still no account | Planted checks, one greyed near-miss. |
 | 4 | More briefs | Kids only, hobby, wildlife off, each extra off. Face names below are already fixed. |
@@ -23,6 +24,10 @@ Phase 0 is in the repo. Do not retune weights to chase the old prototype sketch 
 - **W1.4** `That's the yard` is a summary, not a loop.
 - **W1.5** Save the brief in localStorage. No account.
 - **W1.6** 44px targets and 16px body before any later phase.
+- **WA.1** Guided opening rounds (front, household, water, remaining). Map populates on completion.
+- **WA.2** Per-wall question sequence (job/piece, color mood, texture, growth pattern). Always “Don’t care.” Map and strip update on completion.
+- **WB.1** Layer A intersection with October 2026 Cox priced plants. Store `ccf_wholesale` dated sizes and retail.
+- **WB.2** Muted sizes control on sheet only. Hold sentence marks it optional. Multi-wall total is one further quiet step.
 - **W2.1** Chew control reruns the whole match and uses the copy-map diff. On the default brief the picks do not change; the banner still runs.
 - **W2.2** Empty-seat sentences. No catalog fallback.
 - **W2.3** Card sheet: botanical, height, toxic who, spine, setback if > 0, support, up to 4 substitutes from the response (already gated). Quote strip stays photo + job + name. Sheet is a medium detent over the compact map.
@@ -41,3 +46,5 @@ Phase 0 is in the repo. Do not retune weights to chase the old prototype sketch 
 - String-matching fountain grass or oleander instead of `native_class` / `toxic_class`.
 - Using `hot_side` as west. It is a label.
 - Scope creep. `docs/NOT_V1.md`.
+- Questions that feel like a form. Keep each screen to one sentence and large tiles. Map is the reward.
+- Prices on the strip or as a primary next line. Quoting stays secondary and optional.
