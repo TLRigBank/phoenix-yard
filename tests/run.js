@@ -234,6 +234,37 @@ const hotFront = match(
 );
 assert(hotFront.strips.map((strip) => strip.id).join() === "wall,shade", "front+back when front is sun should collapse to sun+shade");
 
+const guided = {
+  front_bearing: "N",
+  hot_side: "left",
+  kids: false,
+  chew: false,
+  wildlife: true,
+  care: "Low",
+  guilds: false,
+  extras: { wall: false, shade: false, front: false, back: false, left: false, right: false, gate: false, pots: false, gravel: false },
+  surfaces: { front: ["bed"], left: [], right: [], back: [] },
+};
+const guidedPlain = match(guided, catalog);
+const guidedTraits = match(
+  { ...guided, wall_traits: { front: { color: "Cool", texture: "Swords", growth: "Low" } } },
+  catalog
+);
+assert(!guidedPlain.error, "guided bed failed");
+assert(!guidedTraits.error, "trait bed failed");
+assert(guidedPlain.strips.length === 1 && guidedTraits.strips.length === 1, "guided bed should be one strip");
+assert(guidedPlain.strips[0].pool_size === guidedTraits.strips[0].pool_size, "traits must not shrink the pool");
+assert(
+  guidedPlain.strips[0].picks.map((pick) => pick.job).join() === "Bone,Bloom,Floor" &&
+    guidedTraits.strips[0].picks.map((pick) => pick.job).join() === "Bone,Bloom,Floor",
+  "trait jobs"
+);
+assert(
+  JSON.stringify(guidedPlain.strips[0].picks.map((pick) => pick.card_id)) !==
+    JSON.stringify(guidedTraits.strips[0].picks.map((pick) => pick.card_id)),
+  "wall traits should prefer a different legal set"
+);
+
 const emptyRooms = match(
   { ...defaultBrief, extras: { wall: false, gate: false, pots: false, gravel: false } },
   catalog

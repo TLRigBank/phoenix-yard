@@ -43,6 +43,7 @@ Wall labels: North, South, East, West. Only the west wall uses the heat color.
 | Piece screen next | Tap every piece on this wall. |
 | Quote next | Three plants for this wall. Tap one. |
 | Quote jobs, once | Bone holds. Bloom flowers. Floor covers. |
+| More about this wall | More about this wall |
 | Disabled primary | Put something on a wall. |
 | Sheet close | implicit swipe down / tap the map |
 | Sizes control | Sizes · Cox Oct 2026 |

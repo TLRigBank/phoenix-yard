@@ -23,7 +23,9 @@
 - `hot_side`: `front` | `left` | `right` | `back`. Label only.
 - `project_scale` (optional): `pots` | `bed` | `path` | `yard` | `unsure`. UI uses it to seed extras. Engine does not infer rooms from it.
 - `care`: `Low` | `Weekend` | `Hobby`
-Optional: `block_wall`, `cover` (`none|tree|eave|structure` per side), `pots_side`, `gravel_side`, `gate_side`.
+Optional: `block_wall`, `cover` (`none|tree|eave|structure` per side), `pots_side`, `gravel_side`, `gate_side`, `surfaces`, `wall_traits`.
+
+`wall_traits` is optional. Keys are drawing sides. Values may include `color` (`Cool` | `Warm` | `Neutral`), `texture` (`Swords` | `Soft` | `Stone`), and `growth` (`Upright` | `Spreading` | `Low`). A match is a preference inside the legal pool, not a filter. Leave it off and the default seat order is unchanged.
 
 Block-wall strips use ids `wall-block`, `shade-block`, `front-block`, `back-block`, `left-block`, `right-block`.
 

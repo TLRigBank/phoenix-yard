@@ -61,7 +61,9 @@ Strip ids: `pots-front`, `pots-back`, `gate-left`, `gravel-back`, plus the bed/b
 
 ## Payload extras
 
-Required extras booleans: wall, gate, pots, gravel. Optional: shade, front, back, left, right, `block_wall`, `cover`, `project_side`, `pots_side`, `gravel_side`, `gate_side`.
+Required extras booleans: wall, gate, pots, gravel. Optional: shade, front, back, left, right, `block_wall`, `cover`, `project_side`, `pots_side`, `gravel_side`, `gate_side`, `wall_traits`.
+
+`wall_traits` is optional and keyed by drawing side (`front`, `left`, `right`, `back`). Each side may set `color` (`Cool` | `Warm` | `Neutral`), `texture` (`Swords` | `Soft` | `Stone`), and `growth` (`Upright` | `Spreading` | `Low`). A hit adds 30 inside the already legal pool. It does not add or remove a plant. Omit the key, or send nothing, and the locked seat order stays.
 
 Strip titles start with the bearing: `West · Afternoon sun`.
 

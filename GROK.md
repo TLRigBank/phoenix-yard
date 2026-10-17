@@ -32,7 +32,7 @@ Do not invert the old sand UI. Use Lot tokens in `docs/DUSK.md`. West wash, sele
    - Color mood (Cool / Warm / Neutral / Don’t care).
    - Texture (Swords / Soft / Stone / Don’t care).
    - Growth pattern (Upright / Spreading / Low / Don’t care).
-   Color, texture, and growth are one answer each and always skippable. Piece answers write `surfaces` for that wall. When the sequence ends, the quote shows the active piece. If more than one piece is on, a row under the map switches which piece the strip is for.
+   Color, texture, and growth are one answer each and always skippable. Piece answers write `surfaces` for that wall. Color, texture, and growth write `wall_traits` for that wall and only prefer plants already legal for it. They do not add or remove a plant. When the sequence ends, the quote shows the active piece. If more than one piece is on, a row under the map switches which piece the strip is for. A quiet line, `More about this wall`, returns to the color question for that wall.
 
 3. **Quote.** Title `West · bed`. Compact map. Next line: `Three plants for this wall. Tap one.` Three equal habit photos above the fold. First visit only: `Bone holds. Bloom flowers. Floor covers.` Tap a tile: medium sheet (grabber, swipe down) with the same plant, still a habit, plus botanical, texture · height, why-line, chips, Swap that job. After the existing content, one muted optional control: `Sizes · Cox Oct 2026`. Tap expands dated size and retail prices (wholesale × 1.33). No default selection. Multi-wall total appears only after more than one wall is stamped and at least one sheet is opened: muted footer `All walls · $XX`. Tap for plain list. No sales language. Empty wall: `Put something on a wall.` and Map. Footer: Map + Three others.
 

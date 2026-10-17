@@ -275,6 +275,12 @@ const state = {
   selected: null,
   piece: "bed",
   asked: { front: false, left: false, right: false, back: false },
+  traits: {
+    front: { color: "any", texture: "any", growth: "any" },
+    left: { color: "any", texture: "any", growth: "any" },
+    right: { color: "any", texture: "any", growth: "any" },
+    back: { color: "any", texture: "any", growth: "any" }
+  },
   surfaces: { front: [], left: [], right: [], back: [] },
   cover: { front: "none", left: "none", right: "none", back: "none" },
   kids: false, chew: false, wildlife: true, care: null,
@@ -557,6 +563,7 @@ function screenQuote() {
       ${segs()}
       ${state.last ? `<p class="lead">${state.last}</p>` : ""}
       ${list(state.selected).length ? strip() : `<p class="lead">Put something on a wall.</p>`}
+      ${list(state.selected).length ? `<p style="text-align:center;margin:8px 18px 0"><button class="quiet" data-act="more">More about this wall</button></p>` : ""}
     </main>
     <footer>
       <div class="foot-row">
@@ -672,6 +679,9 @@ document.getElementById("app").addEventListener("click", (e) => {
       if (!list(side).includes(state.piece)) state.piece = list(side)[0];
       state.sawStamp = true;
     } else if (!state.draft) return;
+    else if (state.wallStep === 1) state.traits[side].color = state.draft;
+    else if (state.wallStep === 2) state.traits[side].texture = state.draft;
+    else state.traits[side].growth = state.draft;
     if (state.wallStep < 3) { state.wallStep += 1; state.draft = null; }
     else {
       state.asked[side] = true;
@@ -719,6 +729,13 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.last = "";
   }
   if (act === "piece") { state.piece = b.dataset.id; state.sheet = null; }
+  if (act === "more" && state.selected) {
+    state.mode = "wall";
+    state.wallStep = 1;
+    state.draft = null;
+    state.sheet = null;
+    state.last = "";
+  }
   if (act === "care" && state.mode === "guide") state.care = b.dataset.id;
   if (act === "quote-try" && !(state.selected && list(state.selected).length)) state.last = "Put something on a wall.";
   if (act === "quote") {
@@ -747,6 +764,12 @@ document.getElementById("app").addEventListener("click", (e) => {
     state.alt = false; state.swaps = {}; state.last = ""; state.mode = "guide"; state.guideStep = 0; state.wallStep = 0;
     state.front = null; state.who = null; state.wild = null; state.care = null; state.draft = null; state.selected = null;
     state.asked = { front: false, left: false, right: false, back: false };
+    state.traits = {
+      front: { color: "any", texture: "any", growth: "any" },
+      left: { color: "any", texture: "any", growth: "any" },
+      right: { color: "any", texture: "any", growth: "any" },
+      back: { color: "any", texture: "any", growth: "any" }
+    };
     state.sheet = null; state.sawStamp = false; state.sawTrio = false; state.sawHold = false;
   }
   render();

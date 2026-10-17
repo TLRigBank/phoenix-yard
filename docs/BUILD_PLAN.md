@@ -25,7 +25,7 @@ Phase 0 is in the repo. Do not retune weights to chase the old prototype sketch 
 - **W1.5** Save the brief in localStorage. No account.
 - **W1.6** 44px targets and 16px body before any later phase.
 - **WA.1** Guided opening rounds (front, household, water, remaining). Map populates on completion.
-- **WA.2** Per-wall questions. Pieces are multi-select (Bed, Pots, Gate, Gravel, Block, Tree), Don’t care clears them. Then one each of color mood, texture, growth, always Don’t care. Quote refreshes for the active piece; extra pieces switch under the map.
+- **WA.2** Per-wall questions. Pieces are multi-select (Bed, Pots, Gate, Gravel, Block, Tree), Don’t care clears them. Then one each of color mood, texture, growth, always Don’t care. Those three answers are a preference inside `match`, not a second filter. Quote refreshes for the active piece; extra pieces switch under the map. `More about this wall` returns to color for that wall.
 - **WB.1** Layer A intersection with October 2026 Cox priced plants. Store `ccf_wholesale` dated sizes and retail.
 - **WB.2** Muted sizes control on sheet only. Hold sentence marks it optional. Multi-wall total is one further quiet step.
 - **W2.1** Chew control reruns the whole match and uses the copy-map diff. On the default brief the picks do not change; the banner still runs.

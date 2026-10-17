@@ -2,6 +2,8 @@
 
 /**
  * Phoenix Yard matcher. Contract: docs/DECISION_TREE.md and docs/COPY_MAP.md.
+ * Optional wall_traits prefer color, texture, and growth inside the legal pool.
+ * Briefs without wall_traits keep the locked seat order.
  * Change those and this file in the same commit. Never score in the UI.
  */
 
@@ -591,8 +593,57 @@ function repeatPenalty(card, seat, prior) {
   return genusSeen ? -8 : 0;
 }
 
+const COOL_MOODS = new Set(["Moon", "Silver", "Pine", "Quiet green"]);
+const WARM_MOODS = new Set(["Ember", "Sun", "Blush"]);
+const NEUTRAL_MOODS = new Set(["Dusk", "Silver", "Quiet green"]);
+const SOFT_TEXTURE = new Set(["Cloud", "Felt", "Gloss", "Wild stem", "Matte", "Plush"]);
+
+function traitBag(brief, room) {
+  const side = sideForRoom(room, brief);
+  const all = brief && brief.wall_traits;
+  if (!side || !all || typeof all !== "object") return null;
+  const bag = all[side];
+  return bag && typeof bag === "object" ? bag : null;
+}
+
+function colorHit(card, mood) {
+  const moods = Array.isArray(card.color_moods) ? card.color_moods : [];
+  const set = mood === "Cool" ? COOL_MOODS : mood === "Warm" ? WARM_MOODS : mood === "Neutral" ? NEUTRAL_MOODS : null;
+  if (!set) return false;
+  return moods.some((item) => set.has(item));
+}
+
+function textureHit(card, texture) {
+  if (texture === "Swords") return card.texture_body === "Swords";
+  if (texture === "Stone") return card.texture_body === "Stone";
+  if (texture === "Soft") return SOFT_TEXTURE.has(card.texture_body);
+  return false;
+}
+
+function growthHit(card, growth) {
+  const height = card.height_max_ft;
+  const habit = card.habit;
+  const low = habit === "groundcover" || (height != null && height <= 2);
+  const upright =
+    habit === "columnar" || habit === "tree" || habit === "tree_like" || (height != null && height >= 8 && !low);
+  if (growth === "Low") return low;
+  if (growth === "Upright") return upright && !low;
+  if (growth === "Spreading") return !low && !upright;
+  return false;
+}
+
+function traitScore(card, room, brief) {
+  const bag = traitBag(brief, room);
+  if (!bag) return 0;
+  let score = 0;
+  if (bag.color && bag.color !== "any" && colorHit(card, bag.color)) score += 30;
+  if (bag.texture && bag.texture !== "any" && textureHit(card, bag.texture)) score += 30;
+  if (bag.growth && bag.growth !== "any" && growthHit(card, bag.growth)) score += 30;
+  return score;
+}
+
 function totalScore(card, room, seat, brief, prior) {
-  return baseScore(card, room, brief) + seatBonus(card, room, seat) + repeatPenalty(card, seat, prior);
+  return baseScore(card, room, brief) + seatBonus(card, room, seat) + repeatPenalty(card, seat, prior) + traitScore(card, room, brief);
 }
 
 function validate(brief) {
