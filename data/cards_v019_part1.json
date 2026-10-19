@@ -15691,11 +15691,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": true,
-    "toxic_class": "ingest",
+    "toxic_class": "deadly",
     "toxic_who": [
       "kids",
       "dogs",
-      "cats"
+      "cats",
+      "livestock"
     ],
     "spine_class": "none",
     "litter_class": "clean",
@@ -15750,7 +15751,12 @@
       "inherits_from": null,
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Adenium obesum",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F02, S15. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-OSUC-002",
@@ -15847,8 +15853,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
     "spine_class": "none",
     "litter_class": "clean",
     "root_class": "polite",
@@ -15873,9 +15883,9 @@
       "VL",
       "heat-ok",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "patio_pot|not_frost_pocket|walkway_candidate|small_yard_ok|gravel_hydrozone|ignore_frost_protect_rank",
+    "phoenix_pocket_tags": "patio_pot|not_frost_pocket|walkway_candidate|small_yard_ok|gravel_hydrozone|ignore_frost_protect_rank|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-OSUC-019",
@@ -15891,7 +15901,14 @@
     "texture_confidence": "sourced",
     "wave_e": true,
     "wave_e_note": "jade leaves",
-    "layer": "C"
+    "layer": "C",
+    "wave_pilot": true,
+    "wave_pilot_note": "toxic_who filled from pilot pass 3 (sourced). toxic_class none -> ingest as pet caution (species-level).",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Crassula argentea",
+    "toxic_class_confidence": "sourced",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S01. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-OSUC-004",

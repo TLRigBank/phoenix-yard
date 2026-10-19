@@ -829,7 +829,7 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
+    "toxic_class": "ingest",
     "toxic_who": [],
     "spine_class": "none",
     "litter_class": "clean",
@@ -857,9 +857,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|recode",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|recode|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-YUCC-001",
@@ -870,7 +870,12 @@
     "short_why": "Brake Lights \u00b7 swords \u00b7 VL",
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "cultivar-level",
+    "toxic_basis_species": "Hesperaloe parviflora 'Perpa'",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S02. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-YUCC-005",
@@ -5181,8 +5186,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
     "spine_class": "none",
     "litter_class": "flowers",
     "root_class": "polite",
@@ -5211,9 +5220,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-PERN-042",
@@ -5228,7 +5237,12 @@
     "bloom_class_confidence": "sourced",
     "wave_b": true,
     "wave_b_note": "Lantana camara Confetti is a mixed-head cultivar; lantana in Phoenix peaks spring and fall",
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Lantana camara",
+    "toxic_class_confidence": "sourced",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S06. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-027",
@@ -5256,8 +5270,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
     "spine_class": "none",
     "litter_class": "flowers",
     "root_class": "polite",
@@ -5284,9 +5302,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-PERN-001",
@@ -5300,7 +5318,12 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "B"
+    "layer": "B",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Lantana camara",
+    "toxic_class_confidence": "sourced",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S07. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-028",
@@ -5328,8 +5351,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
     "spine_class": "none",
     "litter_class": "flowers",
     "root_class": "polite",
@@ -5358,9 +5385,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-PERN-034",
@@ -5374,7 +5401,12 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Lantana camara",
+    "toxic_class_confidence": "sourced",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S08. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-029",
@@ -5402,8 +5434,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
     "spine_class": "none",
     "litter_class": "flowers",
     "root_class": "polite",
@@ -5430,9 +5466,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-PERN-034",
@@ -5446,7 +5482,12 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "B"
+    "layer": "B",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Lantana camara",
+    "toxic_class_confidence": "sourced",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S09. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-030",
@@ -5474,8 +5515,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
     "spine_class": "none",
     "litter_class": "flowers",
     "root_class": "polite",
@@ -5503,9 +5548,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-PERN-001",
@@ -5519,7 +5564,12 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Lantana camara",
+    "toxic_class_confidence": "sourced",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S10. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-031",
@@ -5547,8 +5597,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
     "spine_class": "none",
     "litter_class": "flowers",
     "root_class": "polite",
@@ -5575,9 +5629,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-PERN-063",
@@ -5591,7 +5645,12 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Lantana camara",
+    "toxic_class_confidence": "sourced",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S11. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-032",
@@ -5619,7 +5678,7 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
+    "toxic_class": "ingest",
     "toxic_who": [],
     "spine_class": "none",
     "litter_class": "flowers",
@@ -5647,9 +5706,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-PERN-013",
@@ -5673,7 +5732,12 @@
       "inherits_from": null,
       "confidence": "sourced",
       "qa": "pass_bloom"
-    }
+    },
+    "toxic_basis": "genus-level",
+    "toxic_basis_species": "Lantana (ASU Phoenix lantana page)",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S12. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-033",
@@ -5701,7 +5765,7 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
+    "toxic_class": "ingest",
     "toxic_who": [],
     "spine_class": "none",
     "litter_class": "flowers",
@@ -5729,9 +5793,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-PERN-012",
@@ -5745,7 +5809,12 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "B"
+    "layer": "B",
+    "toxic_basis": "genus-level",
+    "toxic_basis_species": "Lantana (ASU Phoenix lantana page)",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S13. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-034",
@@ -9468,8 +9537,12 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
-    "toxic_who": [],
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
     "spine_class": "none",
     "litter_class": "flowers",
     "root_class": "polite",
@@ -9494,9 +9567,9 @@
       "M",
       "heat-limit",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "patio_pot|not_frost_pocket|walkway_candidate|oasis_only|heat_limit_good|high_care",
+    "phoenix_pocket_tags": "patio_pot|not_frost_pocket|walkway_candidate|oasis_only|heat_limit_good|high_care|toxic",
     "match_confidence": "high",
     "substitute_ids": [],
     "short_why": "Gardenia \u00b7 gloss \u00b7 M",
@@ -9505,7 +9578,12 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Gardenia jasminoides",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F01, S14. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-015",
@@ -12164,15 +12242,11 @@
     "width_max_ft": 5.0,
     "height_min_ft": 3.0,
     "height_max_ft": 5.0,
-    "spine_hazard": true,
-    "pedestrian_avoid": true,
-    "toxic_sap": true,
-    "toxic_class": "ingest",
-    "toxic_who": [
-      "kids",
-      "dogs",
-      "cats"
-    ],
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "none",
+    "toxic_who": [],
     "spine_class": "puncture",
     "litter_class": "clean",
     "root_class": "polite",
@@ -12196,10 +12270,10 @@
     "chip_pack": [
       "VL",
       "heat-ok",
-      "thorns",
-      "toxic"
+      "walk-soft",
+      "low-toxin"
     ],
-    "phoenix_pocket_tags": "not_frost_pocket|keep_off_paths|gravel_hydrozone|toxic",
+    "phoenix_pocket_tags": "not_frost_pocket|walkway_candidate|gravel_hydrozone",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-LSHB-013",
@@ -12224,7 +12298,12 @@
       "inherits_from": "CCF-LSHB-003",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Carissa macrocarpa (ASPCA lists C. grandiflora)",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S05. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-LSHB-007",
@@ -15072,7 +15151,7 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
+    "toxic_class": "ingest",
     "toxic_who": [],
     "spine_class": "none",
     "litter_class": "leaves",
@@ -15100,9 +15179,9 @@
       "VL",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|needs_room|gravel_hydrozone",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|winter_hardy_phx|walkway_candidate|needs_room|gravel_hydrozone|toxic",
     "match_confidence": "high",
     "substitute_ids": [
       "CCF-DTRE-001",
@@ -15123,7 +15202,14 @@
       "inherits_from": "CCF-DTRE-007",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Caesalpinia cacalaco",
+    "toxic_class_confidence": "needs_review",
+    "wave_pilot": true,
+    "wave_pilot_note": "toxic_class none -> ingest as pet caution (species-level).",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S03. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-DTRE-009",
@@ -19774,7 +19860,7 @@
     "spine_hazard": false,
     "pedestrian_avoid": false,
     "toxic_sap": false,
-    "toxic_class": "none",
+    "toxic_class": "ingest",
     "toxic_who": [],
     "spine_class": "none",
     "litter_class": "fruit",
@@ -19802,9 +19888,9 @@
       "L",
       "west-heat",
       "walk-soft",
-      "low-toxin"
+      "toxic"
     ],
-    "phoenix_pocket_tags": "open_sun|west_heat_candidate|patio_pot|not_frost_pocket|walkway_candidate|needs_room|low_water_oasis|high_care",
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|patio_pot|not_frost_pocket|walkway_candidate|needs_room|low_water_oasis|high_care|toxic",
     "match_confidence": "high",
     "substitute_ids": [],
     "short_why": "Cocktail Citrus \u00b7 gloss \u00b7 L",
@@ -19815,7 +19901,14 @@
     "sun_class_confidence": "sourced",
     "wave_f": true,
     "wave_f_note": "Citrus in the low desert: avoid west afternoon burn (Valley citrus guides).",
-    "layer": "C"
+    "layer": "C",
+    "toxic_basis": "species-level",
+    "toxic_basis_species": "Citrus (identity ambiguous)",
+    "toxic_class_confidence": "needs_review",
+    "wave_pilot": true,
+    "wave_pilot_note": "toxic_class none -> ingest as pet caution (species-level).",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: S04. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FRUT-002",
