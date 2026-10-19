@@ -7113,7 +7113,19 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Big Red",
+        "vp_name": "Russelia 'Big Red'",
+        "vp_code": "300903",
+        "vp_common": "Coral Fountains",
+        "list": "V&P availability 2026-10-15",
+        "note": "Species assumed equisetiformis (Coral Fountain)."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F06. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-051",
@@ -7417,7 +7429,19 @@
       "confidence": "sourced",
       "qa": "pass_bloom"
     },
-    "layer": "A"
+    "layer": "A",
+    "also_sold_as": [
+      {
+        "name": "Purple",
+        "vp_name": "Salvia greggii 'Purple'",
+        "vp_code": "349605",
+        "vp_common": "Autumn Sage",
+        "list": "V&P availability 2026-10-15",
+        "note": "Card lists Furman's Red, Hot Lips, Hot Pink, Pink and Red; purple isn't one of them."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F14. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PERN-055",
@@ -9194,7 +9218,19 @@
       "inherits_from": null,
       "confidence": "sourced"
     },
-    "layer": "B"
+    "layer": "B",
+    "also_sold_as": [
+      {
+        "name": "Baja Red",
+        "vp_name": "Calliandra calif 'Baja Red'",
+        "vp_code": "205003",
+        "vp_common": "Baja Fairy Duster",
+        "list": "V&P availability 2026-10-15",
+        "note": "Card is species-level Baja Fairy Duster."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F04. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-010",
@@ -9360,7 +9396,19 @@
       "inherits_from": null,
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Little John",
+        "vp_name": "Callistemon 'Little John'",
+        "vp_code": "111505",
+        "vp_common": "Dwarf Bottle Brush",
+        "list": "V&P availability 2026-10-15",
+        "note": "Possible duplicate: FSHB-011 is the dwarf Callistemon viminalis card and Little John is the usual dwarf; folded as an alias, no new card."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F09. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-012",
@@ -9597,7 +9645,17 @@
     "toxic_basis_species": "Gardenia jasminoides",
     "toxic_class_confidence": "needs_review",
     "wave_vp": true,
-    "wave_vp_note": "V&P pass 2026-10-19: F01, S14. See docs/WAVE_VP_LOG.md."
+    "wave_vp_note": "V&P pass 2026-10-19: F01, S14. See docs/WAVE_VP_LOG.md.",
+    "also_sold_as": [
+      {
+        "name": "Veitchii",
+        "vp_name": "Gardenia jas 'Veitchii'",
+        "vp_code": "114005;114013",
+        "vp_common": "Gardenia",
+        "list": "V&P availability 2026-10-15",
+        "note": "Card is genus-only 'Gardenia'; treated as G. jasminoides."
+      }
+    ]
   },
   {
     "card_id": "CCF-FSHB-015",
@@ -9940,7 +9998,51 @@
       "inherits_from": "CCF-FSHB-016",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Brilliant Red",
+        "vp_name": "Hibiscus 'Brilliant Red'",
+        "vp_code": "141103;141105",
+        "vp_common": "Red Hbiscus",
+        "list": "V&P availability 2026-10-15",
+        "note": "Species assumed rosa-sinensis (tropical hibiscus). FSHB-018 is a generic red/pink/yellow/white card."
+      },
+      {
+        "name": "Rico Suave",
+        "vp_name": "Hibiscus 'Rico Suave'",
+        "vp_code": "124103",
+        "vp_common": "Hibiscus 'Rico Suave'",
+        "list": "V&P availability 2026-10-15",
+        "note": "Species assumed rosa-sinensis."
+      },
+      {
+        "name": "Sunny Wind (TradeWinds series)",
+        "vp_name": "Hibiscus TW 'Sunny Wind'",
+        "vp_code": "131503",
+        "vp_common": "",
+        "list": "V&P availability 2026-10-15",
+        "note": "TW read as TradeWinds series. No common name on the V&P line."
+      },
+      {
+        "name": "Vice President",
+        "vp_name": "Hibiscus 'Vice President'",
+        "vp_code": "133005",
+        "vp_common": "Redish Orange Hibiscus",
+        "list": "V&P availability 2026-10-15",
+        "note": "Species assumed rosa-sinensis."
+      },
+      {
+        "name": "TradeWinds 'Elis?' (unclear)",
+        "vp_name": "Hibiscus TW 'Trade Winds' Elis",
+        "vp_code": "132513TW",
+        "vp_common": "Hibiscus",
+        "list": "V&P availability 2026-10-15",
+        "note": "UNCERTAIN: 'Elis' is truncated; cultivar couldn't be identified. #13 Cache Trade Winds size."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F05. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-019",
@@ -10268,7 +10370,19 @@
       "inherits_from": null,
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Pink Velour",
+        "vp_name": "Lagerstroemia 'Pink Velour'",
+        "vp_code": "139005",
+        "vp_common": "Crape Myrtle",
+        "list": "V&P availability 2026-10-15",
+        "note": "Also see OTRE-019. Pink Velour is sometimes listed as an indica hybrid."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F10. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-023",
@@ -10677,7 +10791,19 @@
       "inherits_from": null,
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "White Sands",
+        "vp_name": "Nerium 'White Sands'",
+        "vp_code": "143505",
+        "vp_common": "Dwarf White Oleander Bush",
+        "list": "V&P availability 2026-10-15",
+        "note": "Possible duplicate: FSHB-027 lists a white dwarf oleander; folded as an alias, no new card."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F12. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-028",
@@ -11295,7 +11421,43 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Blaze",
+        "vp_name": "Rosa Climber 'Blaze'",
+        "vp_code": "703205",
+        "vp_common": "Rose",
+        "list": "V&P availability 2026-10-15",
+        "note": "Climbing rose; cards are genus-level Rosa."
+      },
+      {
+        "name": "Golden Showers",
+        "vp_name": "Rosa Climber 'Golden Showers'",
+        "vp_code": "705705",
+        "vp_common": "Rose",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      },
+      {
+        "name": "Pinata",
+        "vp_name": "Rosa Climber 'Pinata'",
+        "vp_code": "703405",
+        "vp_common": "Rose",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      },
+      {
+        "name": "Iceberg Red",
+        "vp_name": "Rosa 'Iceberg Red'",
+        "vp_code": "706005",
+        "vp_common": "Red Iceberg",
+        "list": "V&P availability 2026-10-15",
+        "note": "Folded into the genus Rosa card (FSHB-035) instead of the Burgundy Iceberg cultivar card."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F13. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-036",
@@ -11711,7 +11873,27 @@
       "inherits_from": "CCF-FSHB-039",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Sparklette",
+        "vp_name": "Tecoma x Sparklette TM",
+        "vp_code": "155603SP",
+        "vp_common": "Sparklette Tecoma",
+        "list": "V&P availability 2026-10-15",
+        "note": "Sunset Plant Collection lists Sparklette as T. stans. The 4575806 on the line looks like a stray number, not a price."
+      },
+      {
+        "name": "Sundance",
+        "vp_name": "Tecoma stans 'Sundance'",
+        "vp_code": "152505",
+        "vp_common": "Yellow Bells",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F07. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-041",
@@ -15711,7 +15893,19 @@
       "inherits_from": null,
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "AZT",
+        "vp_name": "Cercidium praecox 'AZT'",
+        "vp_code": "908148",
+        "vp_common": "AZT Palo Brea",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F19. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-DTRE-015",
@@ -15954,7 +16148,27 @@
       "confidence": "sourced",
       "qa": "pass_bloom"
     },
-    "layer": "A"
+    "layer": "A",
+    "also_sold_as": [
+      {
+        "name": "Bubba",
+        "vp_name": "Chilopsis 'Bubba'",
+        "vp_code": "939815;393824;393825",
+        "vp_common": "Desert Willow",
+        "list": "V&P availability 2026-10-15",
+        "note": "Not the same as the 'Bubbalicious'/'Sweet Bubba' cards (DTRE-015/016)."
+      },
+      {
+        "name": "Rio Salado",
+        "vp_name": "Chilopsis 'Rio Salado'",
+        "vp_code": "910015;910024;910025;910036",
+        "vp_common": "Desert Willow",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F17. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-DTRE-018",
@@ -16590,7 +16804,19 @@
       "confidence": "sourced",
       "qa": "pass_habit"
     },
-    "layer": "A"
+    "layer": "A",
+    "also_sold_as": [
+      {
+        "name": "AZT",
+        "vp_name": "Prosopis glandulosa 'AZT'",
+        "vp_code": "930048",
+        "vp_common": "Honey mesquite",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F20. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-DTRE-026",
@@ -18887,7 +19113,19 @@
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
     "wave_d": true,
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Cathedral",
+        "vp_name": "Quercus v Cathedral",
+        "vp_code": "934724;934748",
+        "vp_common": "Catheral Oak",
+        "list": "V&P availability 2026-10-15",
+        "note": "Card has the species and 'Joan Lionetti' only."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F18. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-OTRE-032",
@@ -21034,7 +21272,27 @@
       "inherits_from": null,
       "confidence": "sourced",
       "qa": "pass_habit"
-    }
+    },
+    "also_sold_as": [
+      {
+        "name": "Compacta",
+        "vp_name": "Leucophyllum 'Compacta'",
+        "vp_code": "221505",
+        "vp_common": "Texas Sage 'Compacta'",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      },
+      {
+        "name": "Green Cloud",
+        "vp_name": "Leucophyllum 'Green Cloud'",
+        "vp_code": "222005SP",
+        "vp_common": "'Green Cloud' Texas Sage",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F11. See docs/WAVE_VP_LOG.md."
   },
   {
     "water_class": "VL",
@@ -21586,7 +21844,19 @@
     "toxic_who": [],
     "frost_protect_needed": false,
     "maintenance_level": "low",
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "also_sold_as": [
+      {
+        "name": "Aguirre",
+        "vp_name": "Ericameria lar. 'Aguirre\" tm",
+        "vp_code": "215501",
+        "vp_common": "Turpentine Bush",
+        "list": "V&P availability 2026-10-15",
+        "note": "Card is species-level Turpentine Bush; 'Aguirre' TM selection is new. Mismatched quote fixed."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F03. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-LSHB-026",
@@ -21812,5 +22082,873 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "layer": "A"
+  },
+  {
+    "card_id": "CCF-FSHB-045",
+    "display_name": "Winter Blaze Emu Bush",
+    "common_name": "Winter Blaze Emu Bush",
+    "botanical_name": "Eremophila glabra subsp. carnosa 'Winter Blaze'",
+    "source_variety_raw": "Eremophila carnosa | Winter Blaze (V&P 214601; 214603)",
+    "plant_group": "Flowering Shrubs",
+    "water_class": "L",
+    "heat_class": "excellent",
+    "sun_class": "full_to_part",
+    "size_class": "small",
+    "habit": "shrub",
+    "maintenance_level": "low",
+    "native_class": "non_native",
+    "phoenix_winter_fit": "reliable_typical_yard",
+    "frost_pocket_ok": false,
+    "frost_protect_needed": false,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 5.0,
+    "height_min_ft": 3.0,
+    "height_max_ft": 4.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "ingest",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 2,
+    "needs_support": "none",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Gloss",
+    "color_moods": [
+      "Ember"
+    ],
+    "bloom_colors": [
+      "red"
+    ],
+    "bloom_seasons": [],
+    "wildlife": [
+      "hummingbirds"
+    ],
+    "chip_pack": [
+      "L",
+      "west-heat",
+      "walk-soft",
+      "toxic"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
+    "match_confidence": "medium",
+    "substitute_ids": [],
+    "short_why": "Winter Blaze \u00b7 red winter bloom \u00b7 L",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "needs_review",
+    "bloom_seasons_confidence": "needs_review",
+    "name_note": "'Winter Blaze' is the Mountain States trade name for E. glabra subsp. carnosa; MSWN says it is no longer in production.",
+    "toxic_basis": "unverified-caution",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "bloom_seasons",
+      "color_moods",
+      "container_ok",
+      "fruit_colors",
+      "litter_class",
+      "n_fixer",
+      "needs_support",
+      "spine_class",
+      "texture_body",
+      "toxic_class",
+      "water_class"
+    ],
+    "photo": {
+      "id": "CCF-FSHB-045",
+      "path": "photos/CCF-FSHB-045.webp",
+      "credit": "Wikimedia Commons / Geoff Derrin",
+      "license": "cc-by-sa",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eremophila_glabra_carnosa_(habit).jpg",
+      "inherits_from": null,
+      "confidence": "needs_review",
+      "qa": "warn"
+    }
+  },
+  {
+    "card_id": "CCF-PERN-071",
+    "display_name": "Outback Sunrise Emu",
+    "common_name": "Outback Sunrise Emu",
+    "botanical_name": "Eremophila glabra 'Mingenew Gold'",
+    "source_variety_raw": "Eremophila 'Mingenew Gold' | Mingenew Gold Emu (V&P 124801; 124803)",
+    "plant_group": "Perennials and Groundcover",
+    "water_class": "L",
+    "heat_class": "excellent",
+    "sun_class": "full_to_part",
+    "size_class": "small",
+    "habit": "groundcover",
+    "maintenance_level": "low",
+    "native_class": "non_native",
+    "phoenix_winter_fit": "reliable_including_cold_pockets",
+    "frost_pocket_ok": true,
+    "frost_protect_needed": false,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 15.0,
+    "height_min_ft": 1.0,
+    "height_max_ft": 3.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "ingest",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 0,
+    "needs_support": "none",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Gloss",
+    "color_moods": [
+      "Sun"
+    ],
+    "bloom_colors": [
+      "yellow"
+    ],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
+    "wildlife": [
+      "hummingbirds"
+    ],
+    "chip_pack": [
+      "L",
+      "west-heat",
+      "walk-soft",
+      "toxic",
+      "needs-room"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|needs_room|gravel_hydrozone|toxic",
+    "match_confidence": "medium",
+    "substitute_ids": [],
+    "short_why": "Outback Sunrise \u00b7 yellow groundcover \u00b7 needs room",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "bloom_seasons_confidence": "sourced",
+    "foliage_color": "green",
+    "foliage_color_confidence": "sourced",
+    "name_note": "V&P sells it as Mingenew Gold Emu; MSWN and ASU trade name Outback Sunrise. ASU: do not plant in beds less than 10 ft wide.",
+    "toxic_basis": "unverified-caution",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "color_moods",
+      "container_ok",
+      "litter_class",
+      "n_fixer",
+      "needs_support",
+      "spine_class",
+      "texture_body",
+      "toxic_class",
+      "width_max_ft"
+    ]
+  },
+  {
+    "card_id": "CCF-FSHB-046",
+    "display_name": "Blue Bell Emu Bush",
+    "common_name": "Blue Bell Emu Bush",
+    "botanical_name": "Eremophila hygrophana",
+    "source_variety_raw": "Eremophila hygrophana blue | Blue bell emu bush (V&P 124703)",
+    "plant_group": "Flowering Shrubs",
+    "water_class": "L",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "size_class": "small",
+    "habit": "shrub",
+    "maintenance_level": "low",
+    "native_class": "non_native",
+    "phoenix_winter_fit": "reliable_typical_yard",
+    "frost_pocket_ok": false,
+    "frost_protect_needed": false,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 5.0,
+    "height_min_ft": 2.0,
+    "height_max_ft": 3.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "ingest",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 2,
+    "needs_support": "none",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Felt",
+    "color_moods": [
+      "Silver",
+      "Dusk"
+    ],
+    "bloom_colors": [
+      "purple"
+    ],
+    "bloom_seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "wildlife": [
+      "hummingbirds"
+    ],
+    "chip_pack": [
+      "L",
+      "west-heat",
+      "walk-soft",
+      "toxic"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|small_yard_ok|gravel_hydrozone|toxic",
+    "match_confidence": "medium",
+    "substitute_ids": [],
+    "short_why": "Blue Bell Emu \u00b7 year-round violet \u00b7 L",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "bloom_seasons_confidence": "sourced",
+    "name_note": "ASU gives 'blue bells' as the species' common name. MSWN sells a Blue Bells (TM) selection; V&P's 'hygrophana blue' is carded at species level.",
+    "toxic_basis": "unverified-caution",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "color_moods",
+      "container_ok",
+      "foliage_color",
+      "litter_class",
+      "n_fixer",
+      "needs_support",
+      "spine_class",
+      "toxic_class",
+      "width_max_ft"
+    ],
+    "photo": {
+      "id": "CCF-FSHB-046",
+      "path": "photos/CCF-FSHB-046.webp",
+      "credit": "Wikimedia Commons / Geoff Derrin",
+      "license": "cc-by-sa",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eremophila_hygrophana_(habit).jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
+  },
+  {
+    "card_id": "CCF-FSHB-047",
+    "display_name": "Langman's Sage",
+    "common_name": "Langman's Sage",
+    "botanical_name": "Leucophyllum langmaniae",
+    "source_variety_raw": "Leucophyllum lang Lynns EB (V&P 235003); Leucophyllum 'Rio Bravo' (V&P 222605)",
+    "plant_group": "Flowering Shrubs",
+    "water_class": "VL",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "size_class": "medium",
+    "habit": "shrub",
+    "maintenance_level": "low",
+    "native_class": "mexico",
+    "phoenix_winter_fit": "reliable_including_cold_pockets",
+    "frost_pocket_ok": true,
+    "frost_protect_needed": false,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 8.0,
+    "height_min_ft": 3.0,
+    "height_max_ft": 8.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "ingest",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "flowers",
+    "root_class": "polite",
+    "setback_ft": 2,
+    "needs_support": "none",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Felt",
+    "color_moods": [
+      "Dusk"
+    ],
+    "bloom_colors": [
+      "purple"
+    ],
+    "bloom_seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "wildlife": [],
+    "chip_pack": [
+      "VL",
+      "west-heat",
+      "walk-soft",
+      "toxic"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|regional_native|gravel_hydrozone|toxic",
+    "match_confidence": "medium",
+    "substitute_ids": [
+      "CCF-FSHB-042"
+    ],
+    "short_why": "Langman's Sage \u00b7 lavender flush \u00b7 VL",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "bloom_seasons_confidence": "sourced",
+    "foliage_color": "green",
+    "foliage_color_confidence": "needs_review",
+    "also_sold_as": [
+      {
+        "name": "Lynn's Legacy",
+        "vp_name": "Leucophyllum lang Lynns EB",
+        "vp_code": "235003",
+        "vp_common": "Lynn's Everblooming Sage",
+        "list": "V&P availability 2026-10-15",
+        "note": "MSWN: Lynn's Everblooming is the Texas name for Lynn's Legacy. ASU: denser, green-leaved, blooms all summer and fall. MSWN 5x5 ft."
+      },
+      {
+        "name": "Rio Bravo",
+        "vp_name": "Leucophyllum 'Rio Bravo'",
+        "vp_code": "222605",
+        "vp_common": "Texas Sage",
+        "list": "V&P availability 2026-10-15",
+        "note": "MSWN and ASU place Rio Bravo in L. langmaniae, not L. frutescens. Blooms best after monsoon rain (ASU). MSWN 5x5 ft."
+      }
+    ],
+    "name_note": "Species card with Lynn's Legacy and Rio Bravo folded in (Tyson, Oct 19: fold cultivars into species cards).",
+    "toxic_basis": "unverified-caution",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "color_moods",
+      "container_ok",
+      "foliage_color",
+      "litter_class",
+      "n_fixer",
+      "texture_body",
+      "toxic_class",
+      "wildlife"
+    ],
+    "photo": {
+      "id": "CCF-FSHB-047",
+      "path": "photos/CCF-FSHB-047.webp",
+      "credit": "Wikimedia Commons / Emmanuel Douzery",
+      "license": "cc-by-sa",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leucophyllum_langmaniae2-Clapiers-5712~2016_10_02.jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_bloom"
+    }
+  },
+  {
+    "card_id": "CCF-FSHB-048",
+    "display_name": "Silvery Cassia",
+    "common_name": "Silvery Cassia",
+    "botanical_name": "Senna phyllodinea",
+    "source_variety_raw": "Senna phylodenia (Cassia) | Silver Cassia (V&P 207005SP)",
+    "plant_group": "Flowering Shrubs",
+    "water_class": "L",
+    "heat_class": "excellent",
+    "sun_class": "full",
+    "size_class": "medium",
+    "habit": "shrub",
+    "maintenance_level": "low",
+    "native_class": "non_native",
+    "phoenix_winter_fit": "typical_ok_skip_frost_pockets",
+    "frost_pocket_ok": false,
+    "frost_protect_needed": true,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": false,
+    "width_max_ft": 10.0,
+    "height_min_ft": 6.0,
+    "height_max_ft": 10.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "ingest",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "fruit",
+    "root_class": "polite",
+    "setback_ft": 4,
+    "needs_support": "none",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Cloud",
+    "color_moods": [
+      "Silver",
+      "Sun"
+    ],
+    "bloom_colors": [
+      "yellow"
+    ],
+    "bloom_seasons": [
+      "spring"
+    ],
+    "wildlife": [],
+    "chip_pack": [
+      "L",
+      "west-heat",
+      "walk-soft",
+      "toxic",
+      "pods"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|walkway_candidate|needs_room|not_frost_pocket|gravel_hydrozone|toxic",
+    "match_confidence": "medium",
+    "substitute_ids": [],
+    "short_why": "Silvery Cassia \u00b7 silver screen \u00b7 spring yellow \u00b7 L",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "bloom_seasons_confidence": "needs_review",
+    "foliage_color": "silver",
+    "foliage_color_confidence": "sourced",
+    "name_note": "V&P and MSWN sell it as Senna phyllodinea (V&P spells it \"phylodenia\"); UA Campus Arboretum taxon 1026 uses S. phyllodinea; ASU files it as S. artemisioides subsp. petiolaris (formerly Cassia phyllodenia).",
+    "toxic_basis": "unverified-caution",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "bloom_seasons",
+      "color_moods",
+      "fruit_colors",
+      "n_fixer",
+      "needs_support",
+      "spine_class",
+      "texture_body",
+      "toxic_class",
+      "wildlife"
+    ],
+    "photo": {
+      "id": "CCF-FSHB-048",
+      "path": "photos/CCF-FSHB-048.webp",
+      "credit": "Wikimedia Commons / cultivar413",
+      "license": "cc-by",
+      "source_url": "https://commons.wikimedia.org/wiki/File:210205_074_San_Diego_Botanic_Gdn_-_Australian_Gdn,_Senna_phyllodinea_Silver_Leaf_Cassia_from_Australia_with_seed_pods_and_flowers.jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
+  },
+  {
+    "card_id": "CCF-YUCC-037",
+    "display_name": "Toothless Desert Spoon",
+    "common_name": "Toothless Desert Spoon",
+    "botanical_name": "Dasylirion quadrangulatum",
+    "source_variety_raw": "Dasylirion longissima | Toothless Desert Spoon (V&P 213005)",
+    "plant_group": "Yucca and Allies",
+    "water_class": "L",
+    "heat_class": "good",
+    "sun_class": "full",
+    "size_class": "medium",
+    "habit": "rosette",
+    "maintenance_level": "low",
+    "native_class": "mexico",
+    "phoenix_winter_fit": "reliable_including_cold_pockets",
+    "frost_pocket_ok": true,
+    "frost_protect_needed": false,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": true,
+    "container_ok": true,
+    "width_max_ft": 6.0,
+    "height_min_ft": 6.0,
+    "height_max_ft": 10.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "none",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "clean",
+    "root_class": "polite",
+    "setback_ft": 4,
+    "needs_support": "none",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Swords",
+    "color_moods": [
+      "Quiet green"
+    ],
+    "bloom_colors": [],
+    "bloom_seasons": [
+      "summer"
+    ],
+    "wildlife": [],
+    "chip_pack": [
+      "L",
+      "west-heat",
+      "walk-soft",
+      "low-toxin"
+    ],
+    "phoenix_pocket_tags": "open_sun|west_heat_candidate|reflected_heat_ok|winter_hardy_phx|walkway_candidate|patio_pot|gravel_hydrozone|heat_limit_good",
+    "match_confidence": "medium",
+    "substitute_ids": [
+      "CCF-YUCC-036"
+    ],
+    "short_why": "Toothless Desert Spoon \u00b7 soft Bone \u00b7 L",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "rare_spike",
+    "bloom_class_confidence": "sourced",
+    "bloom_seasons_confidence": "needs_review",
+    "foliage_color": "green",
+    "foliage_color_confidence": "sourced",
+    "toxic_class_confidence": "needs_review",
+    "name_note": "Sold by V&P as \"Dasylirion longissima\". AMWUA: may be sold as D. longissimum; UA and ASU list D. longissimum as a synonym of D. quadrangulatum.",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "bloom_colors",
+      "color_moods",
+      "n_fixer",
+      "texture_body",
+      "toxic_class",
+      "wildlife"
+    ],
+    "photo": {
+      "id": "CCF-YUCC-037",
+      "path": "photos/CCF-YUCC-037.webp",
+      "credit": "Wikimedia Commons / Daderot",
+      "license": "cc0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dasylirion_longissimum_-_Leaning_Pine_Arboretum_-_DSC05570.jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
+  },
+  {
+    "card_id": "CCF-VINE-011",
+    "display_name": "Hall's Honeysuckle",
+    "common_name": "Hall's Honeysuckle",
+    "botanical_name": "Lonicera japonica 'Halliana'",
+    "source_variety_raw": "Lonicera jap 'Halliana' | Halls Honeysuckle (V&P 603005S, #5 Staked)",
+    "plant_group": "Vines and Climbers",
+    "water_class": "M",
+    "heat_class": "good",
+    "sun_class": "full_to_part",
+    "size_class": "large",
+    "habit": "vine",
+    "maintenance_level": "moderate",
+    "native_class": "invasive_risk",
+    "phoenix_winter_fit": "reliable_including_cold_pockets",
+    "frost_pocket_ok": true,
+    "frost_protect_needed": false,
+    "afternoon_shade_pref": true,
+    "reflected_heat_ok": false,
+    "container_ok": true,
+    "width_max_ft": 50.0,
+    "height_min_ft": 1.0,
+    "height_max_ft": 20.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "ingest",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "clean",
+    "root_class": "aggressive",
+    "setback_ft": 4,
+    "needs_support": "trellis",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Gloss",
+    "color_moods": [
+      "Moon",
+      "Sun"
+    ],
+    "bloom_colors": [
+      "white",
+      "yellow"
+    ],
+    "bloom_seasons": [
+      "spring"
+    ],
+    "wildlife": [
+      "hummingbirds",
+      "butterflies",
+      "birds"
+    ],
+    "chip_pack": [
+      "M",
+      "walk-soft",
+      "toxic",
+      "invasive",
+      "needs-room"
+    ],
+    "phoenix_pocket_tags": "afternoon_shade_phx|winter_hardy_phx|walkway_candidate|needs_room|needs_support|spreads|aggressive_roots|invasive|invasive_elsewhere|patio_pot|toxic",
+    "match_confidence": "medium",
+    "substitute_ids": [],
+    "short_why": "Hall's Honeysuckle \u00b7 fragrant \u00b7 invasive",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "bloom_seasons_confidence": "needs_review",
+    "foliage_color": "green",
+    "foliage_color_confidence": "sourced",
+    "name_note": "Grown as a vine on a fence or trellis (ASU; V&P sells it staked); UA Extension AZ1110 also lists it as a groundcover. invasive_risk keeps it out of every brief, like Purple Fountain Grass (GRAS-011).",
+    "toxic_basis": "unverified-caution",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "color_moods",
+      "height_max_ft",
+      "height_min_ft",
+      "litter_class",
+      "maintenance_level",
+      "n_fixer",
+      "spine_class",
+      "texture_body",
+      "toxic_class"
+    ],
+    "photo": {
+      "id": "CCF-VINE-011",
+      "path": "photos/CCF-VINE-011.webp",
+      "credit": "iNaturalist / Senna Bryce Robeson",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/188204248",
+      "inherits_from": null,
+      "confidence": "needs_review",
+      "qa": "warn"
+    }
+  },
+  {
+    "card_id": "CCF-VINE-012",
+    "display_name": "Mandevilla",
+    "common_name": "Mandevilla",
+    "botanical_name": "Mandevilla",
+    "source_variety_raw": "Mandevilla Red (V&P 141203); Mandevillea Pink (V&P 143903); Mandevilla Assorted (V&P 179013)",
+    "plant_group": "Vines and Climbers",
+    "water_class": "M",
+    "heat_class": "good",
+    "sun_class": "full_to_part",
+    "size_class": "small",
+    "habit": "vine",
+    "maintenance_level": "high",
+    "native_class": "non_native",
+    "phoenix_winter_fit": "container_or_courtyard_only",
+    "frost_pocket_ok": false,
+    "frost_protect_needed": true,
+    "afternoon_shade_pref": true,
+    "reflected_heat_ok": false,
+    "container_ok": true,
+    "width_max_ft": 3.0,
+    "height_min_ft": 3.0,
+    "height_max_ft": 4.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "ingest",
+    "toxic_who": [],
+    "spine_class": "none",
+    "litter_class": "flowers",
+    "root_class": "polite",
+    "setback_ft": 0,
+    "needs_support": "trellis",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Gloss",
+    "color_moods": [
+      "Ember",
+      "Blush"
+    ],
+    "bloom_colors": [
+      "red",
+      "pink"
+    ],
+    "bloom_seasons": [],
+    "wildlife": [],
+    "chip_pack": [
+      "M",
+      "walk-soft",
+      "toxic"
+    ],
+    "phoenix_pocket_tags": "patio_pot|not_frost_pocket|afternoon_shade_phx|needs_support|high_care|toxic",
+    "match_confidence": "medium",
+    "substitute_ids": [],
+    "short_why": "Mandevilla \u00b7 patio vine \u00b7 red or pink",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "needs_review",
+    "bloom_seasons_confidence": "needs_review",
+    "also_sold_as": [
+      {
+        "name": "Red",
+        "vp_name": "Mandevilla Red",
+        "vp_code": "141203",
+        "vp_common": "Red Mandevillea",
+        "list": "V&P availability 2026-10-15",
+        "note": "color only"
+      },
+      {
+        "name": "Pink",
+        "vp_name": "Mandevillea Pink",
+        "vp_code": "143903",
+        "vp_common": "Pink Madevillea",
+        "list": "V&P availability 2026-10-15",
+        "note": "color only"
+      },
+      {
+        "name": "Assorted",
+        "vp_name": "Mandevilla Assorted",
+        "vp_code": "179013",
+        "vp_common": "Mandevillea",
+        "list": "V&P availability 2026-10-15",
+        "note": "#13 Cache, mixed"
+      }
+    ],
+    "name_note": "Genus-level card. V&P lists colors only (Red, Pink, Assorted) and its plant index lists just \"Mandevilla (Rocktrumpet)\". No approved source names the species or series, so it is not guessed.",
+    "toxic_basis": "unverified-caution",
+    "toxic_class_confidence": "needs_review",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "afternoon_shade_pref",
+      "color_moods",
+      "container_ok",
+      "frost_pocket_ok",
+      "frost_protect_needed",
+      "habit",
+      "heat_class",
+      "height_max_ft",
+      "height_min_ft",
+      "litter_class",
+      "maintenance_level",
+      "n_fixer",
+      "needs_support",
+      "phoenix_winter_fit",
+      "plant_group",
+      "reflected_heat_ok",
+      "size_class",
+      "spine_class",
+      "sun_class",
+      "texture_body",
+      "toxic_class",
+      "toxic_sap",
+      "water_class",
+      "width_max_ft"
+    ]
+  },
+  {
+    "card_id": "CCF-PERN-072",
+    "display_name": "Garden Geranium",
+    "common_name": "Garden Geranium",
+    "botanical_name": "Pelargonium",
+    "source_variety_raw": "Geranium Assorted (V&P 320413, #13 Cache)",
+    "plant_group": "Perennials and Groundcover",
+    "water_class": "M",
+    "heat_class": "good",
+    "sun_class": "full_to_part",
+    "size_class": "small",
+    "habit": "perennial",
+    "maintenance_level": "moderate",
+    "native_class": "non_native",
+    "phoenix_winter_fit": "container_or_courtyard_only",
+    "frost_pocket_ok": false,
+    "frost_protect_needed": true,
+    "afternoon_shade_pref": false,
+    "reflected_heat_ok": false,
+    "container_ok": true,
+    "width_max_ft": 4.0,
+    "height_min_ft": 1.0,
+    "height_max_ft": 4.0,
+    "spine_hazard": false,
+    "pedestrian_avoid": false,
+    "toxic_sap": false,
+    "toxic_class": "ingest",
+    "toxic_who": [
+      "dogs",
+      "cats",
+      "livestock"
+    ],
+    "spine_class": "none",
+    "litter_class": "flowers",
+    "root_class": "polite",
+    "setback_ft": 0,
+    "needs_support": "none",
+    "n_fixer": false,
+    "nurse_role": "none",
+    "texture_body": "Plush",
+    "color_moods": [
+      "Blush",
+      "Ember"
+    ],
+    "bloom_colors": [
+      "red",
+      "pink",
+      "white",
+      "purple"
+    ],
+    "bloom_seasons": [
+      "winter",
+      "spring"
+    ],
+    "wildlife": [],
+    "chip_pack": [
+      "M",
+      "walk-soft",
+      "toxic"
+    ],
+    "phoenix_pocket_tags": "patio_pot|not_frost_pocket|walkway_candidate|small_yard_ok|toxic",
+    "match_confidence": "medium",
+    "substitute_ids": [],
+    "short_why": "Garden Geranium \u00b7 cool-season pots",
+    "fruit_colors": [],
+    "schema_version": "0.1.9-phoenix-p1-enums",
+    "layer": "C",
+    "bloom_class": "seasonal",
+    "bloom_class_confidence": "sourced",
+    "bloom_seasons_confidence": "sourced",
+    "toxic_basis": "genus-level",
+    "toxic_basis_species": "Pelargonium species (ASPCA \"Geranium\")",
+    "toxic_class_confidence": "sourced",
+    "name_note": "V&P's 'Geranium Assorted' is Pelargonium, not true Geranium: V&P's own Feb 2024 post sells 'cach\u00e9' geraniums in America, Calliope, Pretty Little, Rocky Mountain and Tango (Pelargonium series), 'an annual [that] does well October - May'. ASU calls Pelargonium the garden geranium. Genus-level card because the assortment mixes zonal and interspecific series.",
+    "wave_vp": true,
+    "wave_vp_note": "New card from the V&P availability cross-check (Oct 15, 2026 list). Draft: Layer C until vp_unverified_fields is empty.",
+    "vp_unverified_fields": [
+      "color_moods",
+      "height_min_ft",
+      "litter_class",
+      "maintenance_level",
+      "n_fixer",
+      "reflected_heat_ok",
+      "size_class",
+      "spine_class",
+      "texture_body"
+    ]
   }
 ]

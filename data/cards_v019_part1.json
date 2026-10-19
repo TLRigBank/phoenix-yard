@@ -8792,7 +8792,19 @@
       "inherits_from": "CCF-AGAV-024",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Socha",
+        "vp_name": "Agave desmettiana 'Socha'",
+        "vp_code": "503505",
+        "vp_common": "Smooth Agave",
+        "list": "V&P availability 2026-10-15",
+        "note": "Possible duplicate: V&P common name is Smooth Agave, likely the plain species; folded as an alias, no new card."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F08. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-AGAV-028",
@@ -9784,7 +9796,19 @@
       "inherits_from": "CCF-AGAV-039",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Quadricolor",
+        "vp_name": "Agave lophantha 'Quadricolor'",
+        "vp_code": "503107",
+        "vp_common": "Quadicolor Century Plant",
+        "list": "V&P availability 2026-10-15",
+        "note": ""
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F15. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-AGAV-042",
@@ -12353,7 +12377,19 @@
       "inherits_from": "CCF-AGAV-076",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "also_sold_as": [
+      {
+        "name": "Porcupine",
+        "vp_name": "Agave victoriae 'Porcupine'",
+        "vp_code": "510208",
+        "vp_common": "Porcupine Agave",
+        "list": "V&P availability 2026-10-15",
+        "note": "Abbreviated epithet expanded."
+      }
+    ],
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: F16. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-AGAV-078",
@@ -15775,7 +15811,18 @@
     "toxic_basis_species": "Adenium obesum",
     "toxic_class_confidence": "needs_review",
     "wave_vp": true,
-    "wave_vp_note": "V&P pass 2026-10-19: F02, S15. See docs/WAVE_VP_LOG.md."
+    "wave_vp_note": "V&P pass 2026-10-19: F02, S15. See docs/WAVE_VP_LOG.md.",
+    "also_sold_as": [
+      {
+        "name": "Adenium arabicum",
+        "vp_name": "Adenium arabicum",
+        "vp_code": "352108",
+        "vp_common": "Desert Rose",
+        "list": "V&P availability 2026-10-15",
+        "note": "V&P sells A. arabicum (some treat it as A. obesum subsp. arabicum). Card stays genus-level."
+      }
+    ],
+    "name_note": "Genus-level card. V&P sells Adenium arabicum; UA and ASPCA cover A. obesum only."
   },
   {
     "card_id": "CCF-OSUC-002",

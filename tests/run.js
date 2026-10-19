@@ -54,8 +54,8 @@ function ids(result) {
 }
 
 const catalog = loadCatalog(path.join(__dirname, "..", "data"));
-assert(catalog.length === 555, "catalog length " + catalog.length);
-assert(new Set(catalog.map((card) => card.card_id)).size === 555, "duplicate card ids");
+assert(catalog.length === 564, "catalog length " + catalog.length);
+assert(new Set(catalog.map((card) => card.card_id)).size === 564, "duplicate card ids");
 
 const bannedNames = [
   "1 head 5'-7'",
