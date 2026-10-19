@@ -6911,7 +6911,9 @@
     "color_moods": [
       "Dusk"
     ],
-    "bloom_colors": [],
+    "bloom_colors": [
+      "yellow"
+    ],
     "bloom_seasons": [],
     "wildlife": [
       "bees"
@@ -6933,7 +6935,10 @@
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
     "wave_a": true,
-    "layer": "C"
+    "layer": "C",
+    "bloom_colors_confidence": "sourced",
+    "wave_pilot": true,
+    "wave_pilot_note": "bloom_colors filled from pilot pass 3 (sourced)."
   },
   {
     "card_id": "CCF-AGAV-002",
@@ -6975,8 +6980,13 @@
       "Dusk",
       "Silver"
     ],
-    "bloom_colors": [],
-    "bloom_seasons": [],
+    "bloom_colors": [
+      "yellow"
+    ],
+    "bloom_seasons": [
+      "fall",
+      "winter"
+    ],
     "wildlife": [
       "bees"
     ],
@@ -6997,7 +7007,11 @@
     "foliage_color": "blue",
     "foliage_color_confidence": "sourced",
     "wave_a": true,
-    "layer": "C"
+    "layer": "C",
+    "bloom_seasons_confidence": "needs_review",
+    "wave_pilot": true,
+    "wave_pilot_note": "bloom_seasons filled from pilot pass 3 (needs_review). bloom_colors filled from pilot pass 3 (sourced).",
+    "bloom_colors_confidence": "sourced"
   },
   {
     "card_id": "CCF-AGAV-003",
@@ -8855,7 +8869,7 @@
     "card_id": "CCF-AGAV-029",
     "display_name": "King Ferdinand Agave",
     "common_name": "King Ferdinand Agave",
-    "botanical_name": "Agave ferdinand-regis",
+    "botanical_name": "Agave ferdinandi-regis",
     "source_variety_raw": "Agave ferdinand-regis (King Ferdinand Agave)",
     "plant_group": "Agave",
     "water_class": "VL",
@@ -8911,7 +8925,10 @@
     "bloom_class_confidence": "genus_uniform",
     "foliage_color_confidence": "needs_review",
     "wave_a": true,
-    "layer": "C"
+    "layer": "C",
+    "name_note": "Often sold as Agave nickelsiae (Green Things Nursery, Tucson: https://greenthingsaz.com/plant_database/agave-nickelsiae-king-ferdinand-agave/).",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: N11. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-AGAV-030",
@@ -13774,9 +13791,9 @@
   },
   {
     "card_id": "CCF-ALOE-015",
-    "display_name": "Aloe brevifolia var. Blue Elf",
-    "common_name": "",
-    "botanical_name": "Aloe brevifolia var. Blue Elf",
+    "display_name": "Aloe 'Blue Elf'",
+    "common_name": "Aloe 'Blue Elf'",
+    "botanical_name": "Aloe x 'Blue Elf'",
     "source_variety_raw": "Aloe brevifolia var. Blue Elf",
     "plant_group": "Aloe",
     "water_class": "VL",
@@ -13851,7 +13868,9 @@
       "inherits_from": "CCF-ALOE-014",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: N14. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-ALOE-016",
@@ -16403,9 +16422,9 @@
   },
   {
     "card_id": "CCF-OSUC-011",
-    "display_name": "Candellia",
-    "common_name": "Candellia",
-    "botanical_name": "Euphorbia antisphyllitica",
+    "display_name": "Candelilla",
+    "common_name": "Candelilla",
+    "botanical_name": "Euphorbia antisyphilitica",
     "source_variety_raw": "Euphorbia antisphyllitica (Candellia)",
     "plant_group": "Other Succulents",
     "water_class": "VL",
@@ -16467,7 +16486,9 @@
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
     "wave_d": true,
-    "layer": "C"
+    "layer": "C",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: N12. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-OSUC-012",

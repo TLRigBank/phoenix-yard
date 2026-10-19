@@ -807,7 +807,7 @@
     "card_id": "CCF-YUCC-004",
     "display_name": "Brake Lights",
     "common_name": "Brake Lights",
-    "botanical_name": "Hesperaloe",
+    "botanical_name": "Hesperaloe parviflora 'Perpa'",
     "source_variety_raw": "Hesperaloe (Brake Lights)",
     "plant_group": "Yucca and Allies",
     "water_class": "VL",
@@ -875,7 +875,9 @@
     "toxic_basis_species": "Hesperaloe parviflora 'Perpa'",
     "toxic_class_confidence": "needs_review",
     "wave_vp": true,
-    "wave_vp_note": "V&P pass 2026-10-19: S02. See docs/WAVE_VP_LOG.md."
+    "wave_vp_note": "V&P pass 2026-10-19: S02. See docs/WAVE_VP_LOG.md.",
+    "wave_pilot": true,
+    "wave_pilot_note": "botanical_name from plant patent PP21,729. toxic_class none -> ingest as pet caution (cultivar-level)."
   },
   {
     "card_id": "CCF-YUCC-005",
@@ -3676,7 +3678,9 @@
       "CCF-PERN-022"
     ],
     "short_why": "Foxtail Fern \u00b7 stone \u00b7 L",
-    "fruit_colors": [],
+    "fruit_colors": [
+      "red"
+    ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
@@ -3684,7 +3688,10 @@
     "foliage_color_confidence": "sourced",
     "wave_b": true,
     "wave_b_note": "Foxtail fern grown for foliage; flowers not a garden trait",
-    "layer": "C"
+    "layer": "C",
+    "fruit_colors_confidence": "sourced",
+    "wave_pilot": true,
+    "wave_pilot_note": "fruit_colors filled from pilot pass 3 (sourced)."
   },
   {
     "card_id": "CCF-PERN-006",
@@ -8703,7 +8710,7 @@
     "card_id": "CCF-FSHB-004",
     "display_name": "Wooly Butterfly Bush",
     "common_name": "Wooly Butterfly Bush",
-    "botanical_name": "Buddleja marrubifolia",
+    "botanical_name": "Buddleja marrubiifolia",
     "source_variety_raw": "Buddleja marrubifolia (Wooly Butterfly Bush)",
     "plant_group": "Flowering Shrubs",
     "water_class": "VL",
@@ -8742,6 +8749,7 @@
       "orange"
     ],
     "bloom_seasons": [
+      "spring",
       "summer"
     ],
     "wildlife": [
@@ -8769,13 +8777,16 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "C",
+    "bloom_seasons_confidence": "sourced",
+    "wave_pilot": true,
+    "wave_pilot_note": "bloom_seasons and botanical spelling from AMWUA."
   },
   {
     "card_id": "CCF-FSHB-005",
     "display_name": "Desert Bird of Paradise",
     "common_name": "Desert Bird of Paradise",
-    "botanical_name": "Caesalpinia gillesii",
+    "botanical_name": "Caesalpinia gilliesii",
     "source_variety_raw": "Caesalpinia gillesii (Desert Bird of Paradise)",
     "plant_group": "Flowering Shrubs",
     "water_class": "VL",
@@ -8850,7 +8861,10 @@
       "inherits_from": null,
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "name_note": "ASU now files this as Erythrostemon gilliesii.",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: N10. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-FSHB-006",
@@ -12247,7 +12261,7 @@
     "toxic_sap": false,
     "toxic_class": "none",
     "toxic_who": [],
-    "spine_class": "puncture",
+    "spine_class": "none",
     "litter_class": "clean",
     "root_class": "polite",
     "setback_ft": 0,
@@ -12262,7 +12276,12 @@
     "bloom_colors": [
       "white"
     ],
-    "bloom_seasons": [],
+    "bloom_seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
     "wildlife": [
       "birds",
       "fruit"
@@ -12282,7 +12301,9 @@
       "CCF-LSHB-014"
     ],
     "short_why": "Variegated Boxwood Beauty \u00b7 gloss \u00b7 VL",
-    "fruit_colors": [],
+    "fruit_colors": [
+      "red"
+    ],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "foliage_primary",
     "bloom_class_confidence": "sourced",
@@ -12303,7 +12324,12 @@
     "toxic_basis_species": "Carissa macrocarpa (ASPCA lists C. grandiflora)",
     "toxic_class_confidence": "needs_review",
     "wave_vp": true,
-    "wave_vp_note": "V&P pass 2026-10-19: S05. See docs/WAVE_VP_LOG.md."
+    "wave_vp_note": "V&P pass 2026-10-19: S05. See docs/WAVE_VP_LOG.md.",
+    "bloom_seasons_confidence": "needs_review",
+    "wave_pilot": true,
+    "wave_pilot_note": "bloom_seasons filled from pilot pass 3 (needs_review). fruit_colors filled from pilot pass 3 (needs_review). Thornless and non-toxic (species-level). Variegated form unconfirmed.",
+    "fruit_colors_confidence": "needs_review",
+    "spine_class_confidence": "sourced"
   },
   {
     "card_id": "CCF-LSHB-007",
@@ -13810,9 +13836,7 @@
     "color_moods": [
       "Dusk"
     ],
-    "bloom_colors": [
-      "blue"
-    ],
+    "bloom_colors": [],
     "bloom_seasons": [
       "summer",
       "fall"
@@ -13851,7 +13875,10 @@
       "inherits_from": "CCF-GRAS-002",
       "confidence": "sourced"
     },
-    "layer": "C"
+    "layer": "C",
+    "bloom_colors_confidence": "needs_review",
+    "wave_pilot": true,
+    "wave_pilot_note": "bloom_colors cleared: sources disagree."
   },
   {
     "card_id": "CCF-GRAS-004",
@@ -16830,7 +16857,8 @@
     ],
     "bloom_seasons": [
       "fall",
-      "winter"
+      "winter",
+      "spring"
     ],
     "wildlife": [
       "butterflies",
@@ -16854,7 +16882,10 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "layer": "C"
+    "layer": "C",
+    "bloom_seasons_confidence": "needs_review",
+    "wave_pilot": true,
+    "wave_pilot_note": "spring added to bloom_seasons."
   },
   {
     "card_id": "CCF-OTRE-003",
@@ -18371,9 +18402,9 @@
   },
   {
     "card_id": "CCF-OTRE-025",
-    "display_name": "Pistacia chinensis 'Red Push'",
-    "common_name": "",
-    "botanical_name": "Pistacia chinensis 'Red Push'",
+    "display_name": "Pistacia 'Red Push'",
+    "common_name": "Pistacia 'Red Push'",
+    "botanical_name": "Pistacia x 'Red Push'",
     "source_variety_raw": "Pistacia chinensis 'Red Push'",
     "plant_group": "Ornamental Trees",
     "water_class": "VL",
@@ -18445,7 +18476,9 @@
       "inherits_from": null,
       "confidence": "sourced",
       "qa": "pass_habit"
-    }
+    },
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: N13. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-OTRE-026",
@@ -19352,7 +19385,7 @@
     "card_id": "CCF-PALM-001",
     "display_name": "Pindo Palm",
     "common_name": "Pindo Palm",
-    "botanical_name": "Butia capitata",
+    "botanical_name": "Butia odorata",
     "source_variety_raw": "Butia capitata (Pindo Palm)",
     "plant_group": "Palms",
     "water_class": "L",
@@ -19418,7 +19451,10 @@
     "foliage_color": "gray_green",
     "foliage_color_confidence": "sourced",
     "wave_a": true,
-    "layer": "C"
+    "layer": "C",
+    "name_note": "Sold as Butia capitata. UA Campus Arboretum (taxon 40) treats the cultivated pindo palm as B. odorata; ASU Virtual Library still uses B. capitata.",
+    "wave_vp": true,
+    "wave_vp_note": "V&P pass 2026-10-19: N09. See docs/WAVE_VP_LOG.md."
   },
   {
     "card_id": "CCF-PALM-002",
