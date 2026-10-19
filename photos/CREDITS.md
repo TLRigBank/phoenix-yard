@@ -194,3 +194,37 @@ CCF-YUCC-011 inherits CCF-YUCC-010.
 | CCF-PERN-011 | Chrysactinia mexicana | cc-by-sa | leticia_jimenez | https://www.inaturalist.org/observations/89014032 |
 
 
+
+## Plant pilot 2026-10-18
+
+Source files: `/workspace/plant-pilot/photos/*.jpg` (pilot pass 3). Each was resized to fit 1024×1024 and re-encoded as WebP (quality 80). For CC BY and CC BY-SA files, that is a modification of the original; the CC BY-SA files stay under the same license.
+
+| file | card_id | species | author | license | source | license URL | qa |
+|---|---|---|---|---|---|---|---|
+| `photos/CCF-CACT-001.webp` | CCF-CACT-001 | Acanthocereus tetragonus | Yercaud-elango | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Acanthocereus_tetragonus_Cv.Fairy_Castle-3-R.M.Nagar-bengaluru-India.jpg | https://creativecommons.org/licenses/by/4.0 | warn |
+| `photos/CCF-OSUC-002.webp` | CCF-OSUC-002 | Alluaudia procera | William Stephens | cc-by | https://www.inaturalist.org/observations/48547936 | not recorded in pilot (version on observation page) | pass_habit |
+| `photos/CCF-PERN-001.webp` | CCF-PERN-001 | Aptenia cordifolia | matthias55 | cc0 | https://www.inaturalist.org/observations/20269425 | https://creativecommons.org/publicdomain/zero/1.0/ | pass_bloom |
+| `photos/CCF-OTRE-001.webp` | CCF-OTRE-001 | Albizia julibrissin | Joshua | cc-by | https://www.inaturalist.org/observations/50289290 | not recorded in pilot (version on observation page) | pass_habit |
+| `photos/CCF-FSHB-004.webp` | CCF-FSHB-004 | Buddleja marrubiifolia | Mauricio Calderón | cc-by | https://www.inaturalist.org/observations/243411935 | not recorded in pilot (version on observation page) | pass_bloom |
+| `photos/CCF-VINE-001.webp` | CCF-VINE-001 | Hardenbergia violacea | cobic | cc-by | https://www.inaturalist.org/observations/33623414 | not recorded in pilot (version on observation page) | pass_bloom |
+| `photos/CCF-PALM-001.webp` | CCF-PALM-001 | Butia capitata | B. Phalan | cc-by | https://www.inaturalist.org/observations/342951640 | not recorded in pilot (version on observation page) | pass_habit |
+| `photos/CCF-LSHB-006.webp` | CCF-LSHB-006 | Carissa macrocarpa | David J. Stang | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Carissa_macrocarpa_Boxwood_Beauty_1zz.jpg | https://creativecommons.org/licenses/by-sa/4.0 | warn |
+| `photos/CCF-GRAS-003.webp` | CCF-GRAS-003 | Bouteloua gracilis | Paul Asman and Jill Lenoble | cc-by | https://www.inaturalist.org/observations/133383354 | not recorded in pilot (version on observation page) | pass_habit |
+| `photos/CCF-CACT-002.webp` | CCF-CACT-002 | Astrophytum capricorne | Karla M. Benítez | cc-by | https://www.inaturalist.org/observations/60580706 | not recorded in pilot (version on observation page) | pass_habit |
+| `photos/CCF-PERN-005.webp` | CCF-PERN-005 | Asparagus meyeri | Daderot | CC0 | https://commons.wikimedia.org/wiki/File:Asparagus_densiflorus_%27Myers%27_-_Christchurch_Botanic_Gardens_-_Christchurch,_NZ_-_DSC01278.jpg | http://creativecommons.org/publicdomain/zero/1.0/deed.en | pass_habit |
+| `photos/CCF-AGAV-002.webp` | CCF-AGAV-002 | Agave 'Blue Flame' | Daderot | CC0 | https://commons.wikimedia.org/wiki/File:Agave_%27Blue_Flame%27_-_Huntington_Botanical_Gardens_-_San_Marino,_CA_-_DSC01114.jpg | http://creativecommons.org/publicdomain/zero/1.0/deed.en | pass_habit |
+| `photos/CCF-OTRE-002.webp` | CCF-OTRE-002 | Bauhinia blakeana | Eugene Popov | cc-by | https://www.inaturalist.org/observations/149024106 | not recorded in pilot (version on observation page) | warn |
+| `photos/CCF-ALOE-002.webp` | CCF-ALOE-002 | Aloe 'Doran Black' | peganum from Small Dole, England | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Aloe_Doran_Black_(17496015042).jpg | https://creativecommons.org/licenses/by-sa/2.0 | warn |
+
+## V&P new cards 2026-10-19
+
+Source files: `/workspace/plant-pilot/photos/vp-*.jpg` (Signal Desk, checked 2026-10-18). Resized to fit 1024x1024 and re-encoded as WebP (quality 80). For CC BY and CC BY-SA files that is a modification of the original; CC BY-SA files stay CC BY-SA.
+
+| file | card_id | species | author | license | source | license URL | qa | note |
+|---|---|---|---|---|---|---|---|---|
+| `photos/CCF-FSHB-045.webp` | CCF-FSHB-045 | Eremophila glabra subsp. carnosa | Geoff Derrin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Eremophila_glabra_carnosa_(habit).jpg | https://creativecommons.org/licenses/by-sa/4.0 | warn | Stand-in: wild subsp. carnosa (Port Gregory WA), not a labelled Winter Blaze plant |
+| `photos/CCF-FSHB-046.webp` | CCF-FSHB-046 | Eremophila hygrophana | Geoff Derrin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Eremophila_hygrophana_(habit).jpg | https://creativecommons.org/licenses/by-sa/4.0 | pass_habit | Wild plants near Wiluna WA; several shrubs at a distance |
+| `photos/CCF-FSHB-047.webp` | CCF-FSHB-047 | Leucophyllum langmaniae | Emmanuel Douzery | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Leucophyllum_langmaniae2-Clapiers-5712~2016_10_02.jpg | https://creativecommons.org/licenses/by-sa/4.0 | pass_bloom | Species in bloom (Clapiers, France) |
+| `photos/CCF-FSHB-048.webp` | CCF-FSHB-048 | Senna phyllodinea | cultivar413 | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:210205_074_San_Diego_Botanic_Gdn_-_Australian_Gdn,_Senna_phyllodinea_Silver_Leaf_Cassia_from_Australia_with_seed_pods_and_flowers.jpg | https://creativecommons.org/licenses/by/2.0 | pass_habit | San Diego Botanic Garden; pods dominate (warn) |
+| `photos/CCF-YUCC-037.webp` | CCF-YUCC-037 | Dasylirion quadrangulatum (labelled D. longissimum) | Daderot | CC0 | https://commons.wikimedia.org/wiki/File:Dasylirion_longissimum_-_Leaning_Pine_Arboretum_-_DSC05570.jpg | http://creativecommons.org/publicdomain/zero/1.0/deed.en | pass_habit | Leaning Pine Arboretum, labelled D. longissimum (a synonym) |
+| `photos/CCF-VINE-011.webp` | CCF-VINE-011 | Lonicera japonica | Senna Bryce Robeson | CC BY 4.0 | https://www.inaturalist.org/observations/188204248 | https://creativecommons.org/licenses/by/4.0/ | warn | Stand-in: research-grade L. japonica (Indiana), not labelled Halliana; tangled with other plants |

@@ -3373,7 +3373,17 @@
     "foliage_color_confidence": "sourced",
     "wave_b": true,
     "wave_b_note": "Aptenia/heartleaf iceplant: red flowers; low-desert iceplants peak spring and fall",
-    "layer": "C"
+    "layer": "C",
+    "photo": {
+      "id": "CCF-PERN-001",
+      "path": "photos/CCF-PERN-001.webp",
+      "credit": "iNaturalist / matthias55",
+      "license": "cc0",
+      "source_url": "https://www.inaturalist.org/observations/20269425",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_bloom"
+    }
   },
   {
     "card_id": "CCF-PERN-002",
@@ -3691,7 +3701,17 @@
     "layer": "C",
     "fruit_colors_confidence": "sourced",
     "wave_pilot": true,
-    "wave_pilot_note": "fruit_colors filled from pilot pass 3 (sourced)."
+    "wave_pilot_note": "fruit_colors filled from pilot pass 3 (sourced).",
+    "photo": {
+      "id": "CCF-PERN-005",
+      "path": "photos/CCF-PERN-005.webp",
+      "credit": "Wikimedia Commons / Daderot",
+      "license": "cc0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Asparagus_densiflorus_%27Myers%27_-_Christchurch_Botanic_Gardens_-_Christchurch,_NZ_-_DSC01278.jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-PERN-006",
@@ -8804,7 +8824,17 @@
     "layer": "C",
     "bloom_seasons_confidence": "sourced",
     "wave_pilot": true,
-    "wave_pilot_note": "bloom_seasons and botanical spelling from AMWUA."
+    "wave_pilot_note": "bloom_seasons and botanical spelling from AMWUA.",
+    "photo": {
+      "id": "CCF-FSHB-004",
+      "path": "photos/CCF-FSHB-004.webp",
+      "credit": "iNaturalist / Mauricio Calder\u00f3n",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/243411935",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_bloom"
+    }
   },
   {
     "card_id": "CCF-FSHB-005",
@@ -12494,12 +12524,13 @@
     "wave_a": true,
     "photo": {
       "id": "CCF-LSHB-006",
-      "path": "photos/CCF-LSHB-003.webp",
-      "credit": "iNaturalist / kristofz",
-      "license": "cc-by",
-      "source_url": "https://www.inaturalist.org/observations/404066627",
-      "inherits_from": "CCF-LSHB-003",
-      "confidence": "sourced"
+      "path": "photos/CCF-LSHB-006.webp",
+      "credit": "Wikimedia Commons / David J. Stang",
+      "license": "cc-by-sa",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Carissa_macrocarpa_Boxwood_Beauty_1zz.jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "warn"
     },
     "layer": "C",
     "toxic_basis": "species-level",
@@ -14050,12 +14081,13 @@
     "wave_b": true,
     "photo": {
       "id": "CCF-GRAS-003",
-      "path": "photos/CCF-GRAS-002.webp",
-      "credit": "iNaturalist / calinsdad",
-      "license": "cc0",
-      "source_url": "https://www.inaturalist.org/observations/404008215",
-      "inherits_from": "CCF-GRAS-002",
-      "confidence": "sourced"
+      "path": "photos/CCF-GRAS-003.webp",
+      "credit": "iNaturalist / Paul Asman and Jill Lenoble",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/133383354",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
     },
     "layer": "C",
     "bloom_colors_confidence": "needs_review",
@@ -17034,7 +17066,17 @@
     "fruit_colors": [],
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
-    "layer": "C"
+    "layer": "C",
+    "photo": {
+      "id": "CCF-OTRE-001",
+      "path": "photos/CCF-OTRE-001.webp",
+      "credit": "iNaturalist / Joshua",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/50289290",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-OTRE-002",
@@ -17111,7 +17153,17 @@
     "layer": "C",
     "bloom_seasons_confidence": "needs_review",
     "wave_pilot": true,
-    "wave_pilot_note": "spring added to bloom_seasons."
+    "wave_pilot_note": "spring added to bloom_seasons.",
+    "photo": {
+      "id": "CCF-OTRE-002",
+      "path": "photos/CCF-OTRE-002.webp",
+      "credit": "iNaturalist / Eugene Popov",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/149024106",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "warn"
+    }
   },
   {
     "card_id": "CCF-OTRE-003",
@@ -19692,7 +19744,17 @@
     "layer": "C",
     "name_note": "Sold as Butia capitata. UA Campus Arboretum (taxon 40) treats the cultivated pindo palm as B. odorata; ASU Virtual Library still uses B. capitata.",
     "wave_vp": true,
-    "wave_vp_note": "V&P pass 2026-10-19: N09. See docs/WAVE_VP_LOG.md."
+    "wave_vp_note": "V&P pass 2026-10-19: N09. See docs/WAVE_VP_LOG.md.",
+    "photo": {
+      "id": "CCF-PALM-001",
+      "path": "photos/CCF-PALM-001.webp",
+      "credit": "iNaturalist / B. Phalan",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/342951640",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-PALM-002",
@@ -20538,7 +20600,17 @@
     "bloom_class": "seasonal",
     "bloom_class_confidence": "sourced",
     "wave_b": true,
-    "layer": "C"
+    "layer": "C",
+    "photo": {
+      "id": "CCF-VINE-001",
+      "path": "photos/CCF-VINE-001.webp",
+      "credit": "iNaturalist / cobic",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/33623414",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_bloom"
+    }
   },
   {
     "card_id": "CCF-VINE-002",

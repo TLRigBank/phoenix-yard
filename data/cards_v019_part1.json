@@ -72,7 +72,17 @@
     "texture_confidence": "sourced",
     "wave_e": true,
     "wave_e_note": "miniature clustered columns",
-    "layer": "C"
+    "layer": "C",
+    "photo": {
+      "id": "CCF-CACT-001",
+      "path": "photos/CCF-CACT-001.webp",
+      "credit": "Wikimedia Commons / Yercaud-elango",
+      "license": "cc-by",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Acanthocereus_tetragonus_Cv.Fairy_Castle-3-R.M.Nagar-bengaluru-India.jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "warn"
+    }
   },
   {
     "card_id": "CCF-CACT-002",
@@ -141,7 +151,17 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "layer": "C"
+    "layer": "C",
+    "photo": {
+      "id": "CCF-CACT-002",
+      "path": "photos/CCF-CACT-002.webp",
+      "credit": "iNaturalist / Karla M. Benítez",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/60580706",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-CACT-003",
@@ -7011,7 +7031,17 @@
     "bloom_seasons_confidence": "needs_review",
     "wave_pilot": true,
     "wave_pilot_note": "bloom_seasons filled from pilot pass 3 (needs_review). bloom_colors filled from pilot pass 3 (sourced).",
-    "bloom_colors_confidence": "sourced"
+    "bloom_colors_confidence": "sourced",
+    "photo": {
+      "id": "CCF-AGAV-002",
+      "path": "photos/CCF-AGAV-002.webp",
+      "credit": "Wikimedia Commons / Daderot",
+      "license": "cc0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Agave_%27Blue_Flame%27_-_Huntington_Botanical_Gardens_-_San_Marino,_CA_-_DSC01114.jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-AGAV-003",
@@ -12932,7 +12962,17 @@
     "bloom_class_confidence": "genus_uniform",
     "bloom_seasons_confidence": "genus_uniform",
     "wave_c": true,
-    "layer": "C"
+    "layer": "C",
+    "photo": {
+      "id": "CCF-ALOE-002",
+      "path": "photos/CCF-ALOE-002.webp",
+      "credit": "Wikimedia Commons / peganum from Small Dole, England",
+      "license": "cc-by-sa",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aloe_Doran_Black_(17496015042).jpg",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "warn"
+    }
   },
   {
     "card_id": "CCF-ALOE-003",
@@ -15891,7 +15931,17 @@
     "schema_version": "0.1.9-phoenix-p1-enums",
     "bloom_class": "seasonal",
     "bloom_class_confidence": "genus_uniform",
-    "layer": "C"
+    "layer": "C",
+    "photo": {
+      "id": "CCF-OSUC-002",
+      "path": "photos/CCF-OSUC-002.webp",
+      "credit": "iNaturalist / William Stephens",
+      "license": "cc-by",
+      "source_url": "https://www.inaturalist.org/observations/48547936",
+      "inherits_from": null,
+      "confidence": "sourced",
+      "qa": "pass_habit"
+    }
   },
   {
     "card_id": "CCF-OSUC-003",
